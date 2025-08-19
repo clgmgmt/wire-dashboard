@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300"><!-- Auto-refresh every 5 minutes -->
+    <title>Wire Transfer Confirmation Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c5282 0%, #2b6cb1 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .last-updated {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 0.9em;
+            color: white;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 15px;
+        }
+        
+        .search-section {
+            background: #f7fafc;
+            padding: 30px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+        }
+        
+        .search-box label {
+            display: block;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #cbd5e0;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+        }
+        
+        .search-status {
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: none;
+        }
+        
+        .search-status.found {
+            background: #c6f6d5;
+            color: #22543d;
+            display: block;
+        }
+        
+        .search-status.not-found {
+            background: #fed7d7;
+            color: #742a2a;
+            display: block;
+        }
+        
+        .table-section {
+            padding: 30px;
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            color: white;
+        }
+        
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+            letter-spacing: 0.5px;
+        }
+        
+        th:first-child {
+            border-top-left-radius: 12px;
+        }
+        
+        th:last-child {
+            border-top-right-radius: 12px;
+        }
+        
+        tbody tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        tbody tr:hover {
+            background: #f7fafc;
+            transform: scale(1.01);
+        }
+        
+        tbody tr.highlight {
+            background: #fef3c7 !important;  /* Light yellow highlight */
+        }
+        
+        td {
+            padding: 12px 15px;
+            color: #2d3748;
+        }
+        
+        .amount {
+            font-weight: 600;
+            color: #2b6cb1;
+            font-size: 1.05em;
+        }
+        
+        .date {
+            color: #4a5568;
+            font-weight: 500;
+        }
+        
+        .originator {
+            color: #2d3748;
+            max-width: 400px;
+            line-height: 1.4;
+        }
+        
+        .reference {
+            color: #2d3748;
+            max-width: 500px;
+            line-height: 1.4;
+        }
+        
+        .footer {
+            background: #f7fafc;
+            padding: 20px;
+            text-align: center;
+            color: #718096;
+            font-size: 0.9em;
+        }
+        
+        .info-badge {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Wire Transfer Confirmation Dashboard</h1>
+            <p>CLG - New Tenant Wire Receipts</p>
+            <div class="last-updated">Last Updated: 8/19 10:29 AM</div>
+        </div>
+        
+        <div class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <label for="amountSearch">Search by Wire Amount</label>
+                    <input type="number" id="amountSearch" placeholder="Enter amount...">
+                </div>
+                <div class="search-box">
+                    <label for="tenantSearch">Search by Tenant</label>
+                    <input type="text" id="tenantSearch" placeholder="Enter tenant name...">
+                </div>
+            </div>
+            <div id="searchStatus" class="search-status"></div>
+        </div>
+        
+        <div class="table-section">
+            <div class="table-wrapper">
+                <table id="wireTable">
+                    <thead>
+                        <tr>
+                            <th>Date Received</th>
+                            <th>Wire Amount</th>
+                            <th>Originator</th>
+                            <th>Reference / Tenant Info</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td class="date">08/19/2025</td>
+                            <td class="amount">$6,195.00</td>
+                            <td class="originator">Dianna R Eisenberg TTEE U/A DTD 06/ 12/2024 By Dianna R Eisenberg 1625 Lincoln BLVD W327 Santa Monica CA 9 0404-3793 United States</td>
+                            <td class="reference">RE:  R2LOFTS, 1016 EISENBERG</td>
+                        </tr>
+                        <tr>
+                            <td class="date">08/19/2025</td>
+                            <td class="amount">$4,076.83</td>
+                            <td class="originator">Mitchell A Kuppersmith 9201 Lake Forest CT N College Station TX 77845</td>
+                            <td class="reference">Mitchell Kuppersmith 3855 motor uni t 307</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span class="info-badge">📊 14-Day Rolling Window</span>
+            <span class="info-badge">✓ Duplicate Detection Enabled</span>
+            <span class="info-badge">⏰ Updates Every Hour at :15 (6:15 AM - 5:15 PM PST)</span>
+            <span class="info-badge">🔄 Auto-refreshes every 5 minutes</span>
+        </div>
+    </div>
+    
+    <script>
+        // Search functionality
+        const tenantSearch = document.getElementById('tenantSearch');
+        const amountSearch = document.getElementById('amountSearch');
+        const searchStatus = document.getElementById('searchStatus');
+        const tableBody = document.getElementById('tableBody');
+        
+        function clearHighlights() {
+            document.querySelectorAll('tr.highlight').forEach(row => {
+                row.classList.remove('highlight');
+            });
+        }
+        
+        function searchTable() {
+            clearHighlights();
+            searchStatus.style.display = 'none';
+            
+            const tenantValue = tenantSearch.value.toLowerCase();
+            const amountValue = amountSearch.value;
+            
+            if (!tenantValue && !amountValue) return;
+            
+            const rows = tableBody.getElementsByTagName('tr');
+            let foundMatch = false;
+            
+            for (let row of rows) {
+                const originator = row.cells[2].textContent.toLowerCase();
+                const reference = row.cells[3].textContent.toLowerCase();
+                const amount = row.cells[1].textContent.replace(/[$,]/g, '');
+                
+                let matchTenant = !tenantValue || originator.includes(tenantValue) || reference.includes(tenantValue);
+                let matchAmount = !amountValue || parseFloat(amount) === parseFloat(amountValue);
+                
+                if (matchTenant && matchAmount) {
+                    row.classList.add('highlight');
+                    foundMatch = true;
+                    
+                    // Scroll to first match
+                    if (!searchStatus.classList.contains('found')) {
+                        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            }
+            
+            if (foundMatch) {
+                searchStatus.textContent = '✓ Match found!';
+                searchStatus.className = 'search-status found';
+            } else {
+                searchStatus.textContent = '✗ No matches found';
+                searchStatus.className = 'search-status not-found';
+            }
+        }
+        
+        tenantSearch.addEventListener('input', searchTable);
+        amountSearch.addEventListener('input', searchTable);
+    </script>
+</body>
+</html>
