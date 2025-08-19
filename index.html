@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="300"><!-- Auto-refresh every 5 minutes -->
-    <title>Wire Transfer Receipts</title>
+    <title>Wire Transfer Confirmation Dashboard</title>
     <style>
         * {
             margin: 0;
@@ -98,6 +98,17 @@
             outline: none;
             border-color: #4299e1;
             box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+        }
+        
+        /* Hide number input arrows */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        input[type="number"] {
+            -moz-appearance: textfield;
         }
         
         .search-status {
@@ -224,7 +235,7 @@
         <div class="header">
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 8/19 12:13 PM</div>
+            <div class="last-updated">Last Updated: 8/19 12:40 PM</div>
         </div>
         
         <div class="search-section">
