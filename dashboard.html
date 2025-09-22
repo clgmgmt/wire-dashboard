@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
+    <title>Wire Transfer Receipts - Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #667eea;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #2c5282;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .last-updated {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 0.9em;
+            color: white;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 15px;
+        }
+        
+        .logout-btn {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .search-section {
+            background: #f7fafc;
+            padding: 30px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+        }
+        
+        .search-box label {
+            display: block;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #cbd5e0;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+        }
+        
+        /* Hide number input arrows */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        
+        .search-status {
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: none;
+        }
+        
+        .search-status.found {
+            background: #c6f6d5;
+            color: #22543d;
+            display: block;
+        }
+        
+        .search-status.not-found {
+            background: #fed7d7;
+            color: #742a2a;
+            display: block;
+        }
+        
+        .table-section {
+            padding: 30px;
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        thead {
+            background: #4a5568;
+            color: white;
+        }
+        
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+            letter-spacing: 0.5px;
+        }
+        
+        th:first-child {
+            border-top-left-radius: 12px;
+        }
+        
+        th:last-child {
+            border-top-right-radius: 12px;
+        }
+        
+        tbody tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        tbody tr:hover {
+            background: #f7fafc;
+            transform: scale(1.01);
+        }
+        
+        tbody tr.highlight {
+            background: #fef3c7 !important;
+        }
+        
+        td {
+            padding: 12px 15px;
+            color: #2d3748;
+        }
+        
+        .amount {
+            font-weight: 600;
+            color: #2b6cb1;
+            font-size: 1.05em;
+        }
+        
+        .date {
+            color: #4a5568;
+            font-weight: 500;
+        }
+        
+        .originator {
+            color: #2d3748;
+            max-width: 400px;
+            line-height: 1.4;
+        }
+        
+        .reference {
+            color: #2d3748;
+            max-width: 500px;
+            line-height: 1.4;
+        }
+        
+        .footer {
+            background: #f7fafc;
+            padding: 20px;
+            text-align: center;
+            color: #718096;
+            font-size: 0.9em;
+        }
+        
+        .info-badge {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 5px;
+        }
+        
+        .account-info {
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Check authentication
+        const isAuth = sessionStorage.getItem('wireAuth');
+        const authTime = sessionStorage.getItem('authTime');
+        
+        // Check if authenticated and not expired (12 hour timeout)
+        if (!isAuth || !authTime || (Date.now() - parseInt(authTime) > 12 * 60 * 60 * 1000)) {
+            // Not authenticated or expired - redirect to login
+            window.location.href = './';
+        }
+        
+        function logout() {
+            sessionStorage.removeItem('wireAuth');
+            sessionStorage.removeItem('authTime');
+            window.location.href = './';
+        }
+        
+        // Wait for DOM to load before setting up search
+        document.addEventListener('DOMContentLoaded', function() {
+            setupSearch();
+        });
+        
+        function setupSearch() {
+            // Search functionality with relaxed matching
+            const tenantSearch = document.getElementById('tenantSearch');
+            const amountSearch = document.getElementById('amountSearch');
+            const searchStatus = document.getElementById('searchStatus');
+            const tableBody = document.getElementById('tableBody');
+            
+            function clearHighlights() {
+                document.querySelectorAll('tr.highlight').forEach(row => {
+                    row.classList.remove('highlight');
+                });
+            }
+            
+            function normalizeSearchText(text) {
+                // Remove ALL spaces, dashes, and special characters, convert to lowercase
+                return text.replace(/[\s\-\_\.\,]/g, '').toLowerCase().trim();
+            }
+            
+            function searchTable() {
+                clearHighlights();
+                searchStatus.style.display = 'none';
+                
+                const tenantValue = tenantSearch.value.trim();
+                const amountValue = amountSearch.value.trim();
+                
+                // Check if inputs are empty or too short
+                if (!tenantValue && !amountValue) {
+                    searchStatus.style.display = 'none';
+                    return;
+                }
+                
+                // For tenant search, require at least 5 characters
+                if (tenantValue && tenantValue.length < 5) {
+                    searchStatus.style.display = 'none';
+                    return;
+                }
+                
+                // For amount search, require at least 2 digits
+                if (amountValue && amountValue.length < 2) {
+                    searchStatus.style.display = 'none';
+                    return;
+                }
+                
+                // Normalize the tenant search value for flexible matching
+                const normalizedTenantSearch = normalizeSearchText(tenantValue);
+                
+                const rows = tableBody.getElementsByTagName('tr');
+                let foundMatch = false;
+                let matchCount = 0;
+                
+                for (let row of rows) {
+                    const originator = row.cells[2].textContent;
+                    const reference = row.cells[3].textContent;
+                    const amount = row.cells[1].textContent.replace(/[$,]/g, '');
+                    
+                    // Normalize originator and reference for comparison
+                    const normalizedOriginator = normalizeSearchText(originator);
+                    const normalizedReference = normalizeSearchText(reference);
+                    
+                    // Relaxed tenant matching
+                    let matchTenant = false;
+                    if (tenantValue && tenantValue.length >= 5) {
+                        // Check if normalized versions contain the search term
+                        matchTenant = normalizedOriginator.includes(normalizedTenantSearch) ||
+                                     normalizedReference.includes(normalizedTenantSearch);
+                    } else if (!tenantValue) {
+                        matchTenant = true; // If no tenant search, consider it a match for amount-only search
+                    }
+                    
+                    let matchAmount = false;
+                    if (amountValue && amountValue.length >= 2) {
+                        matchAmount = Math.abs(parseFloat(amount) - parseFloat(amountValue)) < 0.01;
+                    } else if (!amountValue) {
+                        matchAmount = true; // If no amount search, consider it a match for tenant-only search
+                    }
+                    
+                    if (matchTenant && matchAmount) {
+                        row.classList.add('highlight');
+                        foundMatch = true;
+                        matchCount++;
+                        
+                        // Scroll to first match
+                        if (matchCount === 1) {
+                            row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                }
+                
+                if (foundMatch) {
+                    const matchText = matchCount === 1 ? 'Match found' : `${matchCount} matches found`;
+                    searchStatus.textContent = `✓ ${matchText} - see highlighted row${matchCount > 1 ? 's' : ''} below`;
+                    searchStatus.className = 'search-status found';
+                    searchStatus.style.display = 'block';
+                } else {
+                    searchStatus.textContent = '✗ No matches found';
+                    searchStatus.className = 'search-status not-found';
+                    searchStatus.style.display = 'block';
+                }
+            }
+            
+            if (tenantSearch && amountSearch) {
+                tenantSearch.addEventListener('input', searchTable);
+                amountSearch.addEventListener('input', searchTable);
+            }
+        }
+    </script>
+    
+    <div class="container">
+        <div class="header">
+            <button class="logout-btn" onclick="logout()">← Logout</button>
+            <h1>Wire Transfer Receipts</h1>
+            <p>CLG Management</p>
+            <div class="last-updated">Last Updated: 9/22 10:17 AM</div>
+        </div>
+        
+        <div class="account-info">
+            Account: CLG MGT MOVE IN FUNDS 07786
+        </div>
+        
+        <div class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <label for="amountSearch">Search by Wire Amount</label>
+                    <input type="number" id="amountSearch" placeholder="Enter amount...">
+                </div>
+                <div class="search-box">
+                    <label for="tenantSearch">Search by Tenant</label>
+                    <input type="text" id="tenantSearch" placeholder="Enter tenant last name or ID...">
+                </div>
+            </div>
+            <div id="searchStatus" class="search-status"></div>
+        </div>
+        
+        <div class="table-section">
+            <div class="table-wrapper">
+                <table id="wireTable">
+                    <thead>
+                        <tr>
+                            <th>Date Received</th>
+                            <th>Wire Amount</th>
+                            <th>Originator</th>
+                            <th>Reference / Tenant Info</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td class="date">09/22/2025 08:57:48</td>
+                            <td class="amount">$4,095.00</td>
+                            <td class="originator">052185526533 JOSEPH TIMOTHY KANE 1381 BROOKHAVEN VILLAGE CIRCLE NE B ROOKHAVEN GA 30319 UNITED STATES OF AMERICA (THE)</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025 06:11:31</td>
+                            <td class="amount">$4,418.83</td>
+                            <td class="originator">000405366058 1/MICHELLE HODGES KERRY M HODGES 2/5831 COUNTRY VIEW DR 3/US/YORBA LINDA, CA 92886-5519</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025 05:14:39</td>
+                            <td class="amount">$2,200.00</td>
+                            <td class="originator">917691201 KURT PHILIP WHITCOE OR CHRISTOPHER M WHITCOE 1620 N FREMONT AVE # 2 TUCSON AZ 85719-4120 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025 05:08:46</td>
+                            <td class="amount">$6,642.83</td>
+                            <td class="originator">004662963167 1/KYLE JOSEPH KITLINSKI 2/37 WEST ST 3/US/MANSFIELD 02048</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025</td>
+                            <td class="amount">$4,095.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000089 -citibank, New York -111 Wall St -new York, Ny Org=/052185526533...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025</td>
+                            <td class="amount">$4,418.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/000405366058 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025</td>
+                            <td class="amount">$2,200.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025</td>
+                            <td class="amount">$6,642.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/004662963167 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025</td>
+                            <td class="amount">$6,947.83</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025</td>
+                            <td class="amount">$4,095.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">T-kane-resident Code t0010570</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025</td>
+                            <td class="amount">$4,418.83</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025</td>
+                            <td class="amount">$2,200.00</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/22/2025</td>
+                            <td class="amount">$6,642.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">G8 5303</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/19/2025 14:14:32</td>
+                            <td class="amount">$2,064.44</td>
+                            <td class="originator">1803838820 MICHAEL ITO 12231 EAGLE RIDGE WAY PORTER RANCH CA 91326-3844 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/19/2025 12:16:00</td>
+                            <td class="amount">$1,985.00</td>
+                            <td class="originator">893803186 DIEGO DELMASTRO 1003 GREENE AVE APT 2A BROOKLYN NY 11221-6220 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/19/2025 07:04:51</td>
+                            <td class="amount">$45,505.30</td>
+                            <td class="originator">402111526 CITRONIA LANDMARK LLC 10600 Santa Monica Blvd Los Angeles, CA 90025-4808 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/19/2025</td>
+                            <td class="amount">$2,064.44</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/19/2025</td>
+                            <td class="amount">$1,985.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/19/2025</td>
+                            <td class="amount">$45,505.30</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/056073502 -capital One, Na -mclean, Va Org=/402111526 -citronia Landmark L...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/19/2025</td>
+                            <td class="amount">$2,064.44</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010603 - Michael Ito18402 Halsted ST Northridge, CA 91325</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/19/2025</td>
+                            <td class="amount">$1,985.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010613 - Delmastro</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/18/2025 13:56:46</td>
+                            <td class="amount">$3,975.83</td>
+                            <td class="originator">325157339862 1/DBA JF SARDILLI ENTERPRISES JULIA N FRANCIS SARDILLI SOLE PROP 2/7266 FRANKLIN AVE APT 416 3/US/LOS ANGELES, CA 90046 8311</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/18/2025</td>
+                            <td class="amount">$3,975.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/325157339862 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/18/2025</td>
+                            <td class="amount">$3,975.83</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/17/2025 05:08:15</td>
+                            <td class="amount">$2,075.00</td>
+                            <td class="originator">325037822512 1/ANIX LYNCH 2/3075 WILSHIRE BLVD APT 201 3/US/LOS ANGELES, CA 90010 1286</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/17/2025 05:04:46</td>
+                            <td class="amount">$4,995.00</td>
+                            <td class="originator">501015101833 1/CHANELLE VICTORIA MARTIN 2/12401 MATTESON AVE APT 203 3/US/LOS ANGELES, CA 90066 3864</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/17/2025</td>
+                            <td class="amount">$2,075.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/325037822512 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/17/2025</td>
+                            <td class="amount">$4,995.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/501015101833 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/17/2025</td>
+                            <td class="amount">$2,075.00</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/17/2025</td>
+                            <td class="amount">$4,995.00</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/16/2025 15:56:14</td>
+                            <td class="amount">$6,071.83</td>
+                            <td class="originator">000002803755863 CHRISTIAN J MUNOZ 1951 E DYER RD PH 555 SANTA ANA CA 92705</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/16/2025</td>
+                            <td class="amount">$6,071.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/16/2025</td>
+                            <td class="amount">$6,071.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010569 Munoz Cody</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025 14:28:03</td>
+                            <td class="amount">$5,416.00</td>
+                            <td class="originator">000001916118258 BLAKE N WALLACE 11929 COURTLEIGH DR APT 307 LOS ANGELES CA 90066</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025 14:08:30</td>
+                            <td class="amount">$1,366.77</td>
+                            <td class="originator">3190012232 1/STEPHEN SILLER TUNNEL TO TOWERS F 1/OUNDATION 2/HYLAN BLVD 2361 3/US/STATEN ISLAND,10306 3100,NY</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025 13:13:41</td>
+                            <td class="amount">$4,651.83</td>
+                            <td class="originator">006060188406 LYNN KAUFMAN 9441 BEVERLYWOOD ST LOS ANGELES, CA 90034-1821</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025 10:02:38</td>
+                            <td class="amount">$1,315.00</td>
+                            <td class="originator">695278112 JOSE SOBRAL 1221 MYRA AVE APT 323-A LOS ANGELES CA 90029-2264 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025 05:16:31</td>
+                            <td class="amount">$3,457.83</td>
+                            <td class="originator">850873659 ABRAHAM A GRADILLAS OR NORAH M ABRIL 905 APIO CT RIO RICO AZ 85648-1841 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025 05:16:18</td>
+                            <td class="amount">$1,934.44</td>
+                            <td class="originator">705332370 AAF CONSULTING INC 11920 VERONA DR FONTANA CA 92337-0957 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$5,416.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$1,366.77</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/231372691 -santander Bank, N.a. -wilmington, De Org=/3190012232 -1/stephen...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$4,651.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/053100300 -first-citizens Bank & Trust Co -raleigh, Nc Org=/006060188406 -...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$1,315.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$3,457.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$1,934.44</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$5,416.00</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$1,366.77</td>
+                            <td class="originator"></td>
+                            <td class="reference">Apt 3104 - Ignacio Montoya</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$4,651.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Joanie Moskowitz Tennant # T001052 4</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$1,315.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Jose Sobral 1221 Myra Ave Los Angel Es Ca 90029 Unit Ph523b</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$3,457.83</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/15/2025</td>
+                            <td class="amount">$1,934.44</td>
+                            <td class="originator"></td>
+                            <td class="reference">Reference Number : Flores t0010565</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/12/2025 10:33:32</td>
+                            <td class="amount">$3,885.83</td>
+                            <td class="originator">000005256837864 LANCE HOLLANDSWORTH 21501 ROSCOE BLVD APT. 219 CANOGA PARK CA 91304</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/12/2025</td>
+                            <td class="amount">$3,885.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/12/2025</td>
+                            <td class="amount">$3,885.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010554 Hollandsworth</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025 14:15:32</td>
+                            <td class="amount">$6,650.00</td>
+                            <td class="originator">000007256289518 DEBORAH A GLASSMAN 3761 ASHWOOD AVE LOS ANGELES CA 90066</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025 06:13:31</td>
+                            <td class="amount">$4,633.00</td>
+                            <td class="originator">2902975964 BRIGITTE K ANDERSON 5957 RADMERE DR ELK GROVE CA 95757-4020 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025 05:08:00</td>
+                            <td class="amount">$5,004.00</td>
+                            <td class="originator">325139324743 1/NICOLAS SIMON SCHMIDT 2/3369 COY DR 3/US/SHERMAN OAKS 91423</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025 05:05:30</td>
+                            <td class="amount">$4,402.83</td>
+                            <td class="originator">004637385819 1/CHUNG HANG ROY FAN 2/440 N BARRANCA AVE PMB 7720 3/US/COVINA 91723</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025</td>
+                            <td class="amount">$6,650.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025</td>
+                            <td class="amount">$4,633.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025</td>
+                            <td class="amount">$5,004.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/325139324743 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025</td>
+                            <td class="amount">$4,402.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/004637385819 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025</td>
+                            <td class="amount">$6,650.00</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025</td>
+                            <td class="amount">$4,633.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Resident T-code t0010549 -anderson</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025</td>
+                            <td class="amount">$5,004.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">1344 Harper Deposit + October Rent</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/11/2025</td>
+                            <td class="amount">$4,402.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010573 - Fan</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025 09:28:20</td>
+                            <td class="amount">$224,414.37</td>
+                            <td class="originator">1029081769 SITUS ASSET MANAGEMENT LLC 6450 SPRINT PKWY # 100 LEAWOOD KS US 66211-1166</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025 09:26:48</td>
+                            <td class="amount">$2,309.00</td>
+                            <td class="originator">383031769 MANUEL RICO OR PEERA THONGDEJ 14811 BONHAMFORD CT HUMBLE TX 77396-6045 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025 07:56:37</td>
+                            <td class="amount">$5,697.86</td>
+                            <td class="originator">440020753149 1/SINA KAMRAN 3/US/LOS ANGELES,90015,CA</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025 05:14:46</td>
+                            <td class="amount">$4,677.83</td>
+                            <td class="originator">855500176 ZIQI JIN 198 PINEVIEW IRVINE CA 92620-1927 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025</td>
+                            <td class="amount">$224,414.37</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/043000096 -pnc Bank, National Association -wilmington, De -usa Org=/102908...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025</td>
+                            <td class="amount">$2,309.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025</td>
+                            <td class="amount">$5,697.86</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121202211 -charles Schwab Bank, Ssb -westlake, Tx Org=/440020753149 -1/sin...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025</td>
+                            <td class="amount">$4,677.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025</td>
+                            <td class="amount">$2,309.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Name: Manuel Rico Address: 13448 Be Ach Ave. Unit Number: 5510-e</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025</td>
+                            <td class="amount">$5,697.86</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/10/2025</td>
+                            <td class="amount">$4,677.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Ziqi Jin, 11311 LA Grange AVE Unit2 04, Los Angeles, CA 90025. t1599165 53-MOVE IN Funds</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/09/2025 14:28:41</td>
+                            <td class="amount">$4,177.83</td>
+                            <td class="originator">205756130 WISE US, INC. 30 W. 26TH ST, 6TH FLOOR NEW YORK NY 10010- US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/09/2025 05:14:51</td>
+                            <td class="amount">$9,257.83</td>
+                            <td class="originator">1952100229 DELANY DEL PRETE 2222 SUNSET CREST DR LOS ANGELES CA 90046-1846 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/09/2025</td>
+                            <td class="amount">$4,177.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/09/2025</td>
+                            <td class="amount">$9,257.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/09/2025</td>
+                            <td class="amount">$4,177.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dassonneville 1221 Myra 311 -wr</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/09/2025</td>
+                            <td class="amount">$9,257.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Move In Funds: Resident Id: T001055 5/delaney Del Prete Unit 230</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025 13:48:33</td>
+                            <td class="amount">$1,500.00</td>
+                            <td class="originator">0000198890 PATOCCHI, MARY 22 ANDREW DR APT 68 TIBURON, CA 94920-2157</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025 12:49:07</td>
+                            <td class="amount">$339,512.10</td>
+                            <td class="originator">4126586221 G8 LIVING, LLC 10600 SANTA MONICA BLVD LOS ANGELES CA 900254808 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025 12:49:07</td>
+                            <td class="amount">$211,304.13</td>
+                            <td class="originator">4126586221 G8 LIVING, LLC 10600 SANTA MONICA BLVD LOS ANGELES CA 900254808 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025 10:23:43</td>
+                            <td class="amount">$4,852.83</td>
+                            <td class="originator">042041833205 TYLER D DEWITT 303 255 S GRAND AVE LOS ANGELES CA USA 90012</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025 05:01:57</td>
+                            <td class="amount">$4,287.83</td>
+                            <td class="originator">887040128 XIAOJUN WU 155 WILLOWBEND IRVINE CA/US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025</td>
+                            <td class="amount">$1,500.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/321177586 -redwood Credit Union -santa Rosa, Ca Org=/0000198890 -patocchi,...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025</td>
+                            <td class="amount">$211,304.13</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025</td>
+                            <td class="amount">$339,512.10</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025</td>
+                            <td class="amount">$4,852.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000089 -citibank, New York -111 Wall St -new York, Ny Org=/042041833205...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025</td>
+                            <td class="amount">$4,287.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021001088 -hsbc Bank Usa, Na -buffalo, Ny Org=/887040128 -xiaojun Wu -155 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025</td>
+                            <td class="amount">$1,500.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010419 - Patocchi</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025</td>
+                            <td class="amount">$4,852.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Tyler D Dewitt</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/08/2025</td>
+                            <td class="amount">$4,287.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010553 - Wut0010553 - Wu</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025 16:26:53</td>
+                            <td class="amount">$4,395.00</td>
+                            <td class="originator">325148408935 1/ADITYA V AGARKAR 2/5710 CRESCENT PARK E APT 253 3/US/PLAYA VISTA, CA 90094-2202</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025 13:12:47</td>
+                            <td class="amount">$5,145.00</td>
+                            <td class="originator">000002862817844 IAN M KISTNER 104 E WARNER ST VENTURA CA 93001</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025 10:51:14</td>
+                            <td class="amount">$3,932.83</td>
+                            <td class="originator">325099535847 1/DANILO REAL LAUREL BRAUER 2/12801 PANORAMA CRST 3/US/SANTA ANA 92705</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025 08:44:21</td>
+                            <td class="amount">$3,481.29</td>
+                            <td class="originator">752368087 SHOBANA SHANMUGAM 1359 N ECHO RIDGE WAY CHULA VISTA CA 91915-1626 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025</td>
+                            <td class="amount">$4,395.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/325148408935 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025</td>
+                            <td class="amount">$5,145.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025</td>
+                            <td class="amount">$3,932.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/325099535847 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025</td>
+                            <td class="amount">$3,481.29</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025</td>
+                            <td class="amount">$4,395.00</td>
+                            <td class="originator"></td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025</td>
+                            <td class="amount">$5,145.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Kistners Apt 74j t0010545</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025</td>
+                            <td class="amount">$3,932.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">1221 Myra Ave, #317, La Ca 90029</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/05/2025</td>
+                            <td class="amount">$3,481.29</td>
+                            <td class="originator"></td>
+                            <td class="reference">T - Shanmugam (apartment 27)</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/04/2025 12:46:42</td>
+                            <td class="amount">$3,795.00</td>
+                            <td class="originator">000002806312274 BENJAMIN COSTA 624 LINCOLN BLVD APT D SANTA MONICA CA 90402</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/04/2025 08:12:45</td>
+                            <td class="amount">$7,422.83</td>
+                            <td class="originator">325170310211 1/BUILD SOLUTIONS 2/2226 PATRICIA AVE 3/US/LOS ANGELES 90064</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/04/2025 05:09:20</td>
+                            <td class="amount">$3,572.83</td>
+                            <td class="originator">000006335168487 LOUISA L FLAIG 7712 W COUNTY LINE RD ODESSA FL 33556</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/04/2025</td>
+                            <td class="amount">$3,795.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/04/2025</td>
+                            <td class="amount">$7,422.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/325170310211 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/04/2025</td>
+                            <td class="amount">$3,572.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/04/2025</td>
+                            <td class="amount">$3,795.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010514 Costa</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/04/2025</td>
+                            <td class="amount">$7,422.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">T0010536, Sofia Piper Salinas</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/04/2025</td>
+                            <td class="amount">$3,572.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Move IN Funds</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/03/2025 15:42:32</td>
+                            <td class="amount">$28,865.00</td>
+                            <td class="originator">325141322733 VITAMIN WELL USA LLC 1633 Electric Ave Unit A Venice 902914803 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/03/2025 14:12:59</td>
+                            <td class="amount">$2,447.50</td>
+                            <td class="originator">5000144369 MADELEINE RUPP 711 RIESLING CT PETALUMA, CA 94954</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/03/2025</td>
+                            <td class="amount">$28,865.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/325141322733 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/03/2025</td>
+                            <td class="amount">$2,447.50</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121101985 -exchange Bank -santa Rosa, Ca Org=/5000144369 -madeleine Rupp -...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/03/2025</td>
+                            <td class="amount">$2,447.50</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010466 Rupp 965 Magnolia AVE Apt 71-J</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 16:23:11</td>
+                            <td class="amount">$4,442.83</td>
+                            <td class="originator">325074883488 1/ALEX T WANG CHRISTINA WANG 2/18802 JUNIPER SPRINGS DR 3/US/CANYON CNTRY 91387</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 12:48:48</td>
+                            <td class="amount">$2,447.50</td>
+                            <td class="originator">966207018 VALENTINA BIASATTI 33 TERRACE DR SAUSALITO CA 94965-4006 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 11:28:49</td>
+                            <td class="amount">$26,875.85</td>
+                            <td class="originator">000157536504309 CDTI ADVANCED MATERIALS INC 1641 FISKE PL OXNARD,CA,93033 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 08:22:32</td>
+                            <td class="amount">$2,350.00</td>
+                            <td class="originator">001010142186130 DAVID T WILDER 245 E 11TH ST APT 6J NEW YORK NY 10003</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 07:55:37</td>
+                            <td class="amount">$3,532.83</td>
+                            <td class="originator">137382229 SALLY NYARKO ANDOH 53 W TAM O SHANTER DR CRETE IL 60417-6302 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 07:01:55</td>
+                            <td class="amount">$4,694.83</td>
+                            <td class="originator">218477310010 Ramzi Farza NW Passage Apt 307 Marina Del Rey CA 90292-7490 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 06:52:18</td>
+                            <td class="amount">$5,844.44</td>
+                            <td class="originator">7384209420 MICHAEL G ADAMS 740 S GENESEE AVE APT 3 LOS ANGELES CA 900364530 USA</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 05:19:22</td>
+                            <td class="amount">$3,691.83</td>
+                            <td class="originator">893555737 MANOEL DO AMARAL 1120 S BURNSIDE AVE LOS ANGELES CA 90019-6720 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 05:18:47</td>
+                            <td class="amount">$3,975.00</td>
+                            <td class="originator">3513204721 LORI A HENSIC 3708 MOUNT ALMAGOSA PL SAN DIEGO CA 92111-3833 US</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025 05:16:05</td>
+                            <td class="amount">$2,145.00</td>
+                            <td class="originator">13300000569009 GARABID SAHAG BEDIVIAN AL TAMIN ST AN NAHDAH DIST 23523ZI PCODE JEDDAH KSA</td>
+                            <td class="reference"></td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$4,442.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/026009593 -bank Of America, N.a., Ny -new York, Ny -usa Org=/325074883488 ...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$2,447.50</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$26,875.85</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121122676 -us Bank, Na -portland, OR Org=/000157536504309 -cdti Advanced M...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$2,350.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/121000248 -wells Fargo Bank -420 Montgomery St. -san Francisco, Ca 94104 O...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$3,532.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/021000021 -chase Manhattan Bank -4 New York Plaza 15 Flr -new York City Ny...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$4,694.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Dbt=a/101019644 -lead Bank -kansas City, MO Org=/218477310010 -ramzi Farza -nw P...</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$4,442.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">t0010496 - Wang (move-in Costs)</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$2,447.50</td>
+                            <td class="originator"></td>
+                            <td class="reference">T0010466- Biasatti</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$2,350.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">David Wilder 1221 Myra Unit 326e</td>
+                        </tr>
+                        <tr>
+                            <td class="date">09/02/2025</td>
+                            <td class="amount">$3,532.83</td>
+                            <td class="originator"></td>
+                            <td class="reference">Reference: T0010531-andoh</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span class="info-badge">📊 30-Day Rolling Window</span>
+            <span class="info-badge">⏰ Updates Every Hour</span>
+            <span class="info-badge">🏦 CLG MGT MOVE IN FUNDS Only</span>
+        </div>
+    </div>
+</body>
+</html>
