@@ -20,7 +20,7 @@
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -225,6 +225,10 @@
             background: #fef3c7 !important;
         }
         
+        tbody tr.has-input {
+            background: #f0fff4;
+        }
+        
         td {
             padding: 12px 15px;
             color: #2d3748;
@@ -245,14 +249,86 @@
         
         .originator {
             color: #2d3748;
-            max-width: 400px;
+            max-width: 350px;
             line-height: 1.4;
         }
         
         .reference {
             color: #2d3748;
-            max-width: 500px;
+            max-width: 300px;
             line-height: 1.4;
+        }
+        
+        /* Manager input styles */
+        .manager-input {
+            min-width: 400px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .manager-input.completed {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .tenant-display, .manager-display {
+            font-weight: 600;
+            color: #22543d;
+        }
+        
+        .status-icon {
+            font-size: 1.2em;
+        }
+        
+        .tenant-id-input, .manager-name-input {
+            padding: 8px 10px;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        
+        .tenant-id-input {
+            width: 100px;
+        }
+        
+        .manager-name-input {
+            width: 120px;
+        }
+        
+        .tenant-id-input:focus, .manager-name-input:focus {
+            outline: none;
+            border-color: #4299e1;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+        }
+        
+        .submit-btn {
+            padding: 8px 16px;
+            background: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: #3182ce;
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .submit-status {
+            margin-left: 8px;
+            font-weight: 600;
+            font-size: 0.9em;
         }
         
         .footer {
@@ -313,9 +389,91 @@
             window.location.href = './';
         }
         
+        // Google Apps Script URL - YOU MUST REPLACE THIS
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzIaTBkz7upZrUpGdgcIyfBeBN22o1vAd_OcwAqnO3Gc-43K1IKNdasmwAe8w0wMfTJkQ/exec';
+        
+        function submitToSheets(date, amount, originator, reference, wireId) {
+            // Get input values
+            const tenantInput = document.getElementById('tenant-' + wireId);
+            const managerInput = document.getElementById('manager-' + wireId);
+            const submitBtn = document.querySelector(`#tenant-${wireId}`).parentElement.querySelector('.submit-btn');
+            const statusSpan = document.getElementById('status-' + wireId);
+            
+            // Validate tenant ID
+            const tenantId = tenantInput.value.trim();
+            if (!tenantId.match(/^t\d{7}$/)) {
+                alert('Please enter tenant ID in format t####### (t followed by 7 digits)');
+                tenantInput.focus();
+                return;
+            }
+            
+            // Validate manager name
+            const managerName = managerInput.value.trim();
+            if (!managerName) {
+                alert('Please enter your name');
+                managerInput.focus();
+                return;
+            }
+            
+            // Prepare data for Google Sheets
+            const wireData = {
+                date: date,
+                amount: amount,
+                originator: originator,
+                reference: reference,
+                tenantId: tenantId,
+                managerName: managerName
+            };
+            
+            // Disable submit button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            statusSpan.textContent = '';
+            
+            // Send to Google Apps Script
+            fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Required for Google Apps Script
+                body: JSON.stringify(wireData)
+            })
+            .then(() => {
+                // With no-cors, we can't read response, assume success
+                statusSpan.innerHTML = '✅ Submitted';
+                statusSpan.style.color = '#48bb78';
+                submitBtn.textContent = 'Submitted';
+                submitBtn.style.backgroundColor = '#48bb78';
+                
+                // Disable inputs
+                tenantInput.disabled = true;
+                managerInput.disabled = true;
+                
+                // Save to localStorage as backup
+                const submissions = JSON.parse(localStorage.getItem('wireSubmissions') || '{}');
+                submissions[wireId] = {
+                    tenantId: tenantId,
+                    managerName: managerName,
+                    submittedAt: new Date().toISOString()
+                };
+                localStorage.setItem('wireSubmissions', JSON.stringify(submissions));
+            })
+            .catch(error => {
+                console.error('Submit failed:', error);
+                statusSpan.innerHTML = '❌ Failed';
+                statusSpan.style.color = '#f56565';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Retry';
+                alert('Submit failed. Please try again.');
+            });
+        }
+        
         // Wait for DOM to load before setting up search
         document.addEventListener('DOMContentLoaded', function() {
             setupSearch();
+            
+            // Check if Apps Script URL is configured
+            if (APPS_SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') {
+                console.warn('Google Apps Script URL not configured. Manager inputs will not be saved.');
+            }
         });
         
         function setupSearch() {
@@ -408,7 +566,7 @@
                 
                 if (foundMatch) {
                     const matchText = matchCount === 1 ? 'Match found' : `${matchCount} matches found`;
-                    searchStatus.textContent = `✔ ${matchText} - see highlighted row${matchCount > 1 ? 's' : ''} below`;
+                    searchStatus.textContent = `✓ ${matchText} - see highlighted row${matchCount > 1 ? 's' : ''} below`;
                     searchStatus.className = 'search-status found';
                     searchStatus.style.display = 'block';
                 } else {
@@ -430,7 +588,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 9/24 4:49 PM</div>
+            <div class="last-updated">Last Updated: 9/24 4:55 PM</div>
         </div>
         
         <div class="account-info">
@@ -460,302 +618,977 @@
                             <th>Wire Amount</th>
                             <th>Tenant Info</th>
                             <th>Wire Reference</th>
+                            <th>Manager Input</th>
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr>
+                        <tr data-wire-id="09-24-2025_08-38-25_7560.0_Albert_Woo-_Jin_Shin">
                             <td class="date">9/24/2025 8:38 AM</td>
                             <td class="amount">$7,560.00</td>
                             <td class="originator">Albert Woo- Jin Shin 8564 Day ST Sunland CA 91040</td>
                             <td class="reference">Albert AND Olivia Move IN Funds</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-24-2025_08-38-25_7560.0_Albert_Woo-_Jin_Shin"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-24-2025_08-38-25_7560.0_Albert_Woo-_Jin_Shin"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/24/2025 8:38 AM', '7560.0', 'Albert Woo- Jin Shin 8564 Day ST Sunland CA 91040', 'Albert AND Olivia Move IN Funds', '09-24-2025_08-38-25_7560.0_Albert_Woo-_Jin_Shin')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-24-2025_08-38-25_7560.0_Albert_Woo-_Jin_Shin"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-24-2025_05-10-02_1645.0_Garabid_Sahag_Bedivi">
                             <td class="date">9/24/2025 5:10 AM</td>
                             <td class="amount">$1,645.00</td>
                             <td class="originator">Garabid Sahag Bedivian AL Tamin ST An Nahdah Dist 23523zi Pcode Jeddah Ksa</td>
                             <td class="reference">Business Business</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-24-2025_05-10-02_1645.0_Garabid_Sahag_Bedivi"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-24-2025_05-10-02_1645.0_Garabid_Sahag_Bedivi"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/24/2025 5:10 AM', '1645.0', 'Garabid Sahag Bedivian AL Tamin ST An Nahdah Dist 23523zi Pcode Jeddah Ksa', 'Business Business', '09-24-2025_05-10-02_1645.0_Garabid_Sahag_Bedivi')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-24-2025_05-10-02_1645.0_Garabid_Sahag_Bedivi"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-23-2025_13-56-14_5964.0_William_Hayenga_2-34">
                             <td class="date">9/23/2025 1:56 PM</td>
                             <td class="amount">$5,964.00</td>
                             <td class="originator">William Hayenga 2/3450 Sawtelle BLVD Apt 227 3/us/los Angeles, CA 90066 2137</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-23-2025_13-56-14_5964.0_William_Hayenga_2-34"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-23-2025_13-56-14_5964.0_William_Hayenga_2-34"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/23/2025 1:56 PM', '5964.0', 'William Hayenga 2/3450 Sawtelle BLVD Apt 227 3/us/los Angeles, CA 90066 2137', '', '09-23-2025_13-56-14_5964.0_William_Hayenga_2-34')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-23-2025_13-56-14_5964.0_William_Hayenga_2-34"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-23-2025_10-19-23_9707.83_Jesica_Ryzenberg_930">
                             <td class="date">9/23/2025 10:19 AM</td>
                             <td class="amount">$9,707.83</td>
                             <td class="originator">Jesica Ryzenberg 930 N Wetherly DR Apt 201 W Hollywood CA 90069-4437 U Nited States</td>
                             <td class="reference">Reference t0010594 Ryzenberg</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-23-2025_10-19-23_9707.83_Jesica_Ryzenberg_930"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-23-2025_10-19-23_9707.83_Jesica_Ryzenberg_930"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/23/2025 10:19 AM', '9707.83', 'Jesica Ryzenberg 930 N Wetherly DR Apt 201 W Hollywood CA 90069-4437 U Nited States', 'Reference t0010594 Ryzenberg', '09-23-2025_10-19-23_9707.83_Jesica_Ryzenberg_930')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-23-2025_10-19-23_9707.83_Jesica_Ryzenberg_930"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-23-2025_09-55-08_1500.0_Michael_D_Strevel_83">
                             <td class="date">9/23/2025 9:55 AM</td>
                             <td class="amount">$1,500.00</td>
                             <td class="originator">Michael D Strevel 834 4th ST Apt 107 Santa Monica CA US 90403-1239</td>
                             <td class="reference">1500 Deposit For G8 Apartment</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-23-2025_09-55-08_1500.0_Michael_D_Strevel_83"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-23-2025_09-55-08_1500.0_Michael_D_Strevel_83"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/23/2025 9:55 AM', '1500.0', 'Michael D Strevel 834 4th ST Apt 107 Santa Monica CA US 90403-1239', '1500 Deposit For G8 Apartment', '09-23-2025_09-55-08_1500.0_Michael_D_Strevel_83')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-23-2025_09-55-08_1500.0_Michael_D_Strevel_83"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-23-2025_05-23-23_4322.83_Faisal_M_Malas_2-551">
                             <td class="date">9/23/2025 5:23 AM</td>
                             <td class="amount">$4,322.83</td>
                             <td class="originator">Faisal M Malas 2/5517 Glennie LN 3/us/los Angeles 90016</td>
                             <td class="reference">Faisal Malas Move-in Costs, M1 #422</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-23-2025_05-23-23_4322.83_Faisal_M_Malas_2-551"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-23-2025_05-23-23_4322.83_Faisal_M_Malas_2-551"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/23/2025 5:23 AM', '4322.83', 'Faisal M Malas 2/5517 Glennie LN 3/us/los Angeles 90016', 'Faisal Malas Move-in Costs, M1 #422', '09-23-2025_05-23-23_4322.83_Faisal_M_Malas_2-551')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-23-2025_05-23-23_4322.83_Faisal_M_Malas_2-551"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-23-2025_05-08-43_4897.83_Elisheva_R_Praw_1524">
                             <td class="date">9/23/2025 5:08 AM</td>
                             <td class="amount">$4,897.83</td>
                             <td class="originator">Elisheva R Praw 1524 Reeves ST Los Angeles CA 90035 USA</td>
                             <td class="reference">Reference Number : t0010581</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-23-2025_05-08-43_4897.83_Elisheva_R_Praw_1524"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-23-2025_05-08-43_4897.83_Elisheva_R_Praw_1524"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/23/2025 5:08 AM', '4897.83', 'Elisheva R Praw 1524 Reeves ST Los Angeles CA 90035 USA', 'Reference Number : t0010581', '09-23-2025_05-08-43_4897.83_Elisheva_R_Praw_1524')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-23-2025_05-08-43_4897.83_Elisheva_R_Praw_1524"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-22-2025_09-51-03_6947.83_Danijel_Mocic_3-us-m">
                             <td class="date">9/22/2025 9:51 AM</td>
                             <td class="amount">$6,947.83</td>
                             <td class="originator">Danijel Mocic 3/us/marina Del Rey,90292,ca</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-22-2025_09-51-03_6947.83_Danijel_Mocic_3-us-m"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-22-2025_09-51-03_6947.83_Danijel_Mocic_3-us-m"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/22/2025 9:51 AM', '6947.83', 'Danijel Mocic 3/us/marina Del Rey,90292,ca', '', '09-22-2025_09-51-03_6947.83_Danijel_Mocic_3-us-m')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-22-2025_09-51-03_6947.83_Danijel_Mocic_3-us-m"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-22-2025_08-57-48_4095.0_Joseph_Timothy_Kane_">
                             <td class="date">9/22/2025 8:57 AM</td>
                             <td class="amount">$4,095.00</td>
                             <td class="originator">Joseph Timothy Kane 1381 Brookhaven Village Circle NE B Rookhaven GA 30319 United States Of America (the)</td>
                             <td class="reference">T-kane-resident Code t0010570</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-22-2025_08-57-48_4095.0_Joseph_Timothy_Kane_"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-22-2025_08-57-48_4095.0_Joseph_Timothy_Kane_"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/22/2025 8:57 AM', '4095.0', 'Joseph Timothy Kane 1381 Brookhaven Village Circle NE B Rookhaven GA 30319 United States Of America (the)', 'T-kane-resident Code t0010570', '09-22-2025_08-57-48_4095.0_Joseph_Timothy_Kane_')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-22-2025_08-57-48_4095.0_Joseph_Timothy_Kane_"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-22-2025_06-11-31_4418.83_Michelle_Hodges_Kerr">
                             <td class="date">9/22/2025 6:11 AM</td>
                             <td class="amount">$4,418.83</td>
                             <td class="originator">Michelle Hodges Kerry M Hodges 2/5831 Country View DR 3/us/yorba Linda, CA 92886-5519</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-22-2025_06-11-31_4418.83_Michelle_Hodges_Kerr"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-22-2025_06-11-31_4418.83_Michelle_Hodges_Kerr"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/22/2025 6:11 AM', '4418.83', 'Michelle Hodges Kerry M Hodges 2/5831 Country View DR 3/us/yorba Linda, CA 92886-5519', '', '09-22-2025_06-11-31_4418.83_Michelle_Hodges_Kerr')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-22-2025_06-11-31_4418.83_Michelle_Hodges_Kerr"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-22-2025_05-14-39_2200.0_Kurt_Philip_Whitcoe_">
                             <td class="date">9/22/2025 5:14 AM</td>
                             <td class="amount">$2,200.00</td>
                             <td class="originator">Kurt Philip Whitcoe OR Christopher M Whitcoe 1620 N Fremont AVE # 2 Tucson AZ 85719-4120 US</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-22-2025_05-14-39_2200.0_Kurt_Philip_Whitcoe_"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-22-2025_05-14-39_2200.0_Kurt_Philip_Whitcoe_"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/22/2025 5:14 AM', '2200.0', 'Kurt Philip Whitcoe OR Christopher M Whitcoe 1620 N Fremont AVE # 2 Tucson AZ 85719-4120 US', '', '09-22-2025_05-14-39_2200.0_Kurt_Philip_Whitcoe_')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-22-2025_05-14-39_2200.0_Kurt_Philip_Whitcoe_"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-22-2025_05-08-46_6642.83_Kyle_Joseph_Kitlinsk">
                             <td class="date">9/22/2025 5:08 AM</td>
                             <td class="amount">$6,642.83</td>
                             <td class="originator">Kyle Joseph Kitlinski 2/37 West ST 3/us/mansfield 02048</td>
                             <td class="reference">G8 5303</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-22-2025_05-08-46_6642.83_Kyle_Joseph_Kitlinsk"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-22-2025_05-08-46_6642.83_Kyle_Joseph_Kitlinsk"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/22/2025 5:08 AM', '6642.83', 'Kyle Joseph Kitlinski 2/37 West ST 3/us/mansfield 02048', 'G8 5303', '09-22-2025_05-08-46_6642.83_Kyle_Joseph_Kitlinsk')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-22-2025_05-08-46_6642.83_Kyle_Joseph_Kitlinsk"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-19-2025_14-14-32_2064.44_Michael_Ito_12231_Ea">
                             <td class="date">9/19/2025 2:14 PM</td>
                             <td class="amount">$2,064.44</td>
                             <td class="originator">Michael Ito 12231 Eagle Ridge Way Porter Ranch CA 91326-3844 US</td>
                             <td class="reference">t0010603 - Michael Ito18402 Halsted ST Northridge, CA 91325</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-19-2025_14-14-32_2064.44_Michael_Ito_12231_Ea"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-19-2025_14-14-32_2064.44_Michael_Ito_12231_Ea"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/19/2025 2:14 PM', '2064.44', 'Michael Ito 12231 Eagle Ridge Way Porter Ranch CA 91326-3844 US', 't0010603 - Michael Ito18402 Halsted ST Northridge, CA 91325', '09-19-2025_14-14-32_2064.44_Michael_Ito_12231_Ea')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-19-2025_14-14-32_2064.44_Michael_Ito_12231_Ea"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-19-2025_12-16-00_1985.0_Diego_Delmastro_1003">
                             <td class="date">9/19/2025 12:16 PM</td>
                             <td class="amount">$1,985.00</td>
                             <td class="originator">Diego Delmastro 1003 Greene AVE Apt 2a Brooklyn NY 11221-6220 US</td>
                             <td class="reference">t0010613 - Delmastro</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-19-2025_12-16-00_1985.0_Diego_Delmastro_1003"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-19-2025_12-16-00_1985.0_Diego_Delmastro_1003"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/19/2025 12:16 PM', '1985.0', 'Diego Delmastro 1003 Greene AVE Apt 2a Brooklyn NY 11221-6220 US', 't0010613 - Delmastro', '09-19-2025_12-16-00_1985.0_Diego_Delmastro_1003')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-19-2025_12-16-00_1985.0_Diego_Delmastro_1003"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-18-2025_13-56-46_3975.83_Dba_Jf_Sardilli_Ente">
                             <td class="date">9/18/2025 1:56 PM</td>
                             <td class="amount">$3,975.83</td>
                             <td class="originator">Dba Jf Sardilli Enterprises Julia N Francis Sardilli Sole Prop 2/7266 Franklin AVE Apt 416 3/us/los Angeles, CA 90046 8311</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-18-2025_13-56-46_3975.83_Dba_Jf_Sardilli_Ente"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-18-2025_13-56-46_3975.83_Dba_Jf_Sardilli_Ente"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/18/2025 1:56 PM', '3975.83', 'Dba Jf Sardilli Enterprises Julia N Francis Sardilli Sole Prop 2/7266 Franklin AVE Apt 416 3/us/los Angeles, CA 90046 8311', '', '09-18-2025_13-56-46_3975.83_Dba_Jf_Sardilli_Ente')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-18-2025_13-56-46_3975.83_Dba_Jf_Sardilli_Ente"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-17-2025_05-08-15_2075.0_Anix_Lynch_2-3075_Wi">
                             <td class="date">9/17/2025 5:08 AM</td>
                             <td class="amount">$2,075.00</td>
                             <td class="originator">Anix Lynch 2/3075 Wilshire BLVD Apt 201 3/us/los Angeles, CA 90010 1286</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-17-2025_05-08-15_2075.0_Anix_Lynch_2-3075_Wi"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-17-2025_05-08-15_2075.0_Anix_Lynch_2-3075_Wi"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/17/2025 5:08 AM', '2075.0', 'Anix Lynch 2/3075 Wilshire BLVD Apt 201 3/us/los Angeles, CA 90010 1286', '', '09-17-2025_05-08-15_2075.0_Anix_Lynch_2-3075_Wi')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-17-2025_05-08-15_2075.0_Anix_Lynch_2-3075_Wi"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-17-2025_05-04-46_4995.0_Chanelle_Victoria_Ma">
                             <td class="date">9/17/2025 5:04 AM</td>
                             <td class="amount">$4,995.00</td>
                             <td class="originator">Chanelle Victoria Martin 2/12401 Matteson AVE Apt 203 3/us/los Angeles, CA 90066 3864</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-17-2025_05-04-46_4995.0_Chanelle_Victoria_Ma"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-17-2025_05-04-46_4995.0_Chanelle_Victoria_Ma"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/17/2025 5:04 AM', '4995.0', 'Chanelle Victoria Martin 2/12401 Matteson AVE Apt 203 3/us/los Angeles, CA 90066 3864', '', '09-17-2025_05-04-46_4995.0_Chanelle_Victoria_Ma')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-17-2025_05-04-46_4995.0_Chanelle_Victoria_Ma"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-16-2025_15-56-14_6071.83_Christian_J_Munoz_19">
                             <td class="date">9/16/2025 3:56 PM</td>
                             <td class="amount">$6,071.83</td>
                             <td class="originator">Christian J Munoz 1951 E Dyer RD Ph 555 Santa Ana CA 92705</td>
                             <td class="reference">t0010569 Munoz Cody</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-16-2025_15-56-14_6071.83_Christian_J_Munoz_19"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-16-2025_15-56-14_6071.83_Christian_J_Munoz_19"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/16/2025 3:56 PM', '6071.83', 'Christian J Munoz 1951 E Dyer RD Ph 555 Santa Ana CA 92705', 't0010569 Munoz Cody', '09-16-2025_15-56-14_6071.83_Christian_J_Munoz_19')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-16-2025_15-56-14_6071.83_Christian_J_Munoz_19"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-15-2025_14-28-03_5416.0_Blake_N_Wallace_1192">
                             <td class="date">9/15/2025 2:28 PM</td>
                             <td class="amount">$5,416.00</td>
                             <td class="originator">Blake N Wallace 11929 Courtleigh DR Apt 307 Los Angeles CA 90066</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-15-2025_14-28-03_5416.0_Blake_N_Wallace_1192"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-15-2025_14-28-03_5416.0_Blake_N_Wallace_1192"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/15/2025 2:28 PM', '5416.0', 'Blake N Wallace 11929 Courtleigh DR Apt 307 Los Angeles CA 90066', '', '09-15-2025_14-28-03_5416.0_Blake_N_Wallace_1192')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-15-2025_14-28-03_5416.0_Blake_N_Wallace_1192"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-15-2025_14-08-30_1366.77_Stephen_Siller_Tunne">
                             <td class="date">9/15/2025 2:08 PM</td>
                             <td class="amount">$1,366.77</td>
                             <td class="originator">Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny</td>
                             <td class="reference">Apt 3104 - Ignacio Montoya</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-15-2025_14-08-30_1366.77_Stephen_Siller_Tunne"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-15-2025_14-08-30_1366.77_Stephen_Siller_Tunne"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/15/2025 2:08 PM', '1366.77', 'Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny', 'Apt 3104 - Ignacio Montoya', '09-15-2025_14-08-30_1366.77_Stephen_Siller_Tunne')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-15-2025_14-08-30_1366.77_Stephen_Siller_Tunne"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-15-2025_13-13-41_4651.83_Lynn_Kaufman_9441_Be">
                             <td class="date">9/15/2025 1:13 PM</td>
                             <td class="amount">$4,651.83</td>
                             <td class="originator">Lynn Kaufman 9441 Beverlywood ST Los Angeles, CA 90034-1821</td>
                             <td class="reference">Joanie Moskowitz Tennant # T001052 4</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-15-2025_13-13-41_4651.83_Lynn_Kaufman_9441_Be"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-15-2025_13-13-41_4651.83_Lynn_Kaufman_9441_Be"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/15/2025 1:13 PM', '4651.83', 'Lynn Kaufman 9441 Beverlywood ST Los Angeles, CA 90034-1821', 'Joanie Moskowitz Tennant # T001052 4', '09-15-2025_13-13-41_4651.83_Lynn_Kaufman_9441_Be')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-15-2025_13-13-41_4651.83_Lynn_Kaufman_9441_Be"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-15-2025_10-02-38_1315.0_Jose_Sobral_1221_Myr">
                             <td class="date">9/15/2025 10:02 AM</td>
                             <td class="amount">$1,315.00</td>
                             <td class="originator">Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US</td>
                             <td class="reference">Jose Sobral 1221 Myra AVE Los Angel Es CA 90029 Unit Ph523b</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-15-2025_10-02-38_1315.0_Jose_Sobral_1221_Myr"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-15-2025_10-02-38_1315.0_Jose_Sobral_1221_Myr"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/15/2025 10:02 AM', '1315.0', 'Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US', 'Jose Sobral 1221 Myra AVE Los Angel Es CA 90029 Unit Ph523b', '09-15-2025_10-02-38_1315.0_Jose_Sobral_1221_Myr')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-15-2025_10-02-38_1315.0_Jose_Sobral_1221_Myr"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-15-2025_05-16-31_3457.83_Abraham_A_Gradillas_">
                             <td class="date">9/15/2025 5:16 AM</td>
                             <td class="amount">$3,457.83</td>
                             <td class="originator">Abraham A Gradillas OR Norah M Abril 905 Apio CT Rio Rico AZ 85648-1841 US</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-15-2025_05-16-31_3457.83_Abraham_A_Gradillas_"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-15-2025_05-16-31_3457.83_Abraham_A_Gradillas_"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/15/2025 5:16 AM', '3457.83', 'Abraham A Gradillas OR Norah M Abril 905 Apio CT Rio Rico AZ 85648-1841 US', '', '09-15-2025_05-16-31_3457.83_Abraham_A_Gradillas_')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-15-2025_05-16-31_3457.83_Abraham_A_Gradillas_"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-15-2025_05-16-18_1934.44_Aaf_Consulting_Inc_1">
                             <td class="date">9/15/2025 5:16 AM</td>
                             <td class="amount">$1,934.44</td>
                             <td class="originator">Aaf Consulting Inc 11920 Verona DR Fontana CA 92337-0957 US</td>
                             <td class="reference">Reference Number : Flores t0010565</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-15-2025_05-16-18_1934.44_Aaf_Consulting_Inc_1"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-15-2025_05-16-18_1934.44_Aaf_Consulting_Inc_1"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/15/2025 5:16 AM', '1934.44', 'Aaf Consulting Inc 11920 Verona DR Fontana CA 92337-0957 US', 'Reference Number : Flores t0010565', '09-15-2025_05-16-18_1934.44_Aaf_Consulting_Inc_1')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-15-2025_05-16-18_1934.44_Aaf_Consulting_Inc_1"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-12-2025_10-33-32_3885.83_Lance_Hollandsworth_">
                             <td class="date">9/12/2025 10:33 AM</td>
                             <td class="amount">$3,885.83</td>
                             <td class="originator">Lance Hollandsworth 21501 Roscoe BLVD Apt. 219 Canoga Park CA 91304</td>
                             <td class="reference">t0010554 Hollandsworth</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-12-2025_10-33-32_3885.83_Lance_Hollandsworth_"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-12-2025_10-33-32_3885.83_Lance_Hollandsworth_"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/12/2025 10:33 AM', '3885.83', 'Lance Hollandsworth 21501 Roscoe BLVD Apt. 219 Canoga Park CA 91304', 't0010554 Hollandsworth', '09-12-2025_10-33-32_3885.83_Lance_Hollandsworth_')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-12-2025_10-33-32_3885.83_Lance_Hollandsworth_"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-11-2025_14-15-32_6650.0_Deborah_A_Glassman_3">
                             <td class="date">9/11/2025 2:15 PM</td>
                             <td class="amount">$6,650.00</td>
                             <td class="originator">Deborah A Glassman 3761 Ashwood AVE Los Angeles CA 90066</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-11-2025_14-15-32_6650.0_Deborah_A_Glassman_3"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-11-2025_14-15-32_6650.0_Deborah_A_Glassman_3"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/11/2025 2:15 PM', '6650.0', 'Deborah A Glassman 3761 Ashwood AVE Los Angeles CA 90066', '', '09-11-2025_14-15-32_6650.0_Deborah_A_Glassman_3')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-11-2025_14-15-32_6650.0_Deborah_A_Glassman_3"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-11-2025_06-13-31_4633.0_Brigitte_K_Anderson_">
                             <td class="date">9/11/2025 6:13 AM</td>
                             <td class="amount">$4,633.00</td>
                             <td class="originator">Brigitte K Anderson 5957 Radmere DR Elk Grove CA 95757-4020 US</td>
                             <td class="reference">Resident T-code t0010549 -anderson</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-11-2025_06-13-31_4633.0_Brigitte_K_Anderson_"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-11-2025_06-13-31_4633.0_Brigitte_K_Anderson_"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/11/2025 6:13 AM', '4633.0', 'Brigitte K Anderson 5957 Radmere DR Elk Grove CA 95757-4020 US', 'Resident T-code t0010549 -anderson', '09-11-2025_06-13-31_4633.0_Brigitte_K_Anderson_')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-11-2025_06-13-31_4633.0_Brigitte_K_Anderson_"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-11-2025_05-08-00_5004.0_Nicolas_Simon_Schmid">
                             <td class="date">9/11/2025 5:08 AM</td>
                             <td class="amount">$5,004.00</td>
                             <td class="originator">Nicolas Simon Schmidt 2/3369 Coy DR 3/us/sherman Oaks 91423</td>
                             <td class="reference">1344 Harper Deposit + October Rent</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-11-2025_05-08-00_5004.0_Nicolas_Simon_Schmid"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-11-2025_05-08-00_5004.0_Nicolas_Simon_Schmid"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/11/2025 5:08 AM', '5004.0', 'Nicolas Simon Schmidt 2/3369 Coy DR 3/us/sherman Oaks 91423', '1344 Harper Deposit + October Rent', '09-11-2025_05-08-00_5004.0_Nicolas_Simon_Schmid')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-11-2025_05-08-00_5004.0_Nicolas_Simon_Schmid"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-11-2025_05-05-30_4402.83_Chung_Hang_Roy_Fan_2">
                             <td class="date">9/11/2025 5:05 AM</td>
                             <td class="amount">$4,402.83</td>
                             <td class="originator">Chung Hang Roy Fan 2/440 N Barranca AVE Pmb 7720 3/us/covina 91723</td>
                             <td class="reference">t0010573 - Fan</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-11-2025_05-05-30_4402.83_Chung_Hang_Roy_Fan_2"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-11-2025_05-05-30_4402.83_Chung_Hang_Roy_Fan_2"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/11/2025 5:05 AM', '4402.83', 'Chung Hang Roy Fan 2/440 N Barranca AVE Pmb 7720 3/us/covina 91723', 't0010573 - Fan', '09-11-2025_05-05-30_4402.83_Chung_Hang_Roy_Fan_2')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-11-2025_05-05-30_4402.83_Chung_Hang_Roy_Fan_2"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-10-2025_09-26-48_2309.0_Manuel_Rico_OR_Peera">
                             <td class="date">9/10/2025 9:26 AM</td>
                             <td class="amount">$2,309.00</td>
                             <td class="originator">Manuel Rico OR Peera Thongdej 14811 Bonhamford CT Humble TX 77396-6045 US</td>
                             <td class="reference">Name: Manuel Rico Address: 13448 Be Ach Ave. Unit Number: 5510-E</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-10-2025_09-26-48_2309.0_Manuel_Rico_OR_Peera"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-10-2025_09-26-48_2309.0_Manuel_Rico_OR_Peera"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/10/2025 9:26 AM', '2309.0', 'Manuel Rico OR Peera Thongdej 14811 Bonhamford CT Humble TX 77396-6045 US', 'Name: Manuel Rico Address: 13448 Be Ach Ave. Unit Number: 5510-E', '09-10-2025_09-26-48_2309.0_Manuel_Rico_OR_Peera')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-10-2025_09-26-48_2309.0_Manuel_Rico_OR_Peera"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-10-2025_07-56-37_5697.86_Sina_Kamran_3-us-los">
                             <td class="date">9/10/2025 7:56 AM</td>
                             <td class="amount">$5,697.86</td>
                             <td class="originator">Sina Kamran 3/us/los Angeles,90015,ca</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-10-2025_07-56-37_5697.86_Sina_Kamran_3-us-los"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-10-2025_07-56-37_5697.86_Sina_Kamran_3-us-los"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/10/2025 7:56 AM', '5697.86', 'Sina Kamran 3/us/los Angeles,90015,ca', '', '09-10-2025_07-56-37_5697.86_Sina_Kamran_3-us-los')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-10-2025_07-56-37_5697.86_Sina_Kamran_3-us-los"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-10-2025_05-14-46_4677.83_Ziqi_Jin_198_Pinevie">
                             <td class="date">9/10/2025 5:14 AM</td>
                             <td class="amount">$4,677.83</td>
                             <td class="originator">Ziqi Jin 198 Pineview Irvine CA 92620-1927 US</td>
                             <td class="reference">Ziqi Jin, 11311 LA Grange AVE Unit2 04, Los Angeles, CA 90025. t1599165 53-MOVE IN Funds</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-10-2025_05-14-46_4677.83_Ziqi_Jin_198_Pinevie"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-10-2025_05-14-46_4677.83_Ziqi_Jin_198_Pinevie"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/10/2025 5:14 AM', '4677.83', 'Ziqi Jin 198 Pineview Irvine CA 92620-1927 US', 'Ziqi Jin, 11311 LA Grange AVE Unit2 04, Los Angeles, CA 90025. t1599165 53-MOVE IN Funds', '09-10-2025_05-14-46_4677.83_Ziqi_Jin_198_Pinevie')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-10-2025_05-14-46_4677.83_Ziqi_Jin_198_Pinevie"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-09-2025_14-28-41_4177.83_Wise_Us,_Inc._30_W._">
                             <td class="date">9/9/2025 2:28 PM</td>
                             <td class="amount">$4,177.83</td>
                             <td class="originator">Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US</td>
                             <td class="reference">Dassonneville 1221 Myra 311 -wr</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-09-2025_14-28-41_4177.83_Wise_Us,_Inc._30_W._"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-09-2025_14-28-41_4177.83_Wise_Us,_Inc._30_W._"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/9/2025 2:28 PM', '4177.83', 'Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US', 'Dassonneville 1221 Myra 311 -wr', '09-09-2025_14-28-41_4177.83_Wise_Us,_Inc._30_W._')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-09-2025_14-28-41_4177.83_Wise_Us,_Inc._30_W._"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-09-2025_05-14-51_9257.83_Delany_Del_Prete_222">
                             <td class="date">9/9/2025 5:14 AM</td>
                             <td class="amount">$9,257.83</td>
                             <td class="originator">Delany Del Prete 2222 Sunset Crest DR Los Angeles CA 90046-1846 US</td>
                             <td class="reference">Move IN Funds: Resident Id: T001055 5/delaney Del Prete Unit 230</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-09-2025_05-14-51_9257.83_Delany_Del_Prete_222"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-09-2025_05-14-51_9257.83_Delany_Del_Prete_222"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/9/2025 5:14 AM', '9257.83', 'Delany Del Prete 2222 Sunset Crest DR Los Angeles CA 90046-1846 US', 'Move IN Funds: Resident Id: T001055 5/delaney Del Prete Unit 230', '09-09-2025_05-14-51_9257.83_Delany_Del_Prete_222')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-09-2025_05-14-51_9257.83_Delany_Del_Prete_222"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-08-2025_13-48-33_1500.0_Patocchi,_Mary_22_An">
                             <td class="date">9/8/2025 1:48 PM</td>
                             <td class="amount">$1,500.00</td>
                             <td class="originator">Patocchi, Mary 22 Andrew DR Apt 68 Tiburon, CA 94920-2157</td>
                             <td class="reference">t0010419 - Patocchi</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-08-2025_13-48-33_1500.0_Patocchi,_Mary_22_An"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-08-2025_13-48-33_1500.0_Patocchi,_Mary_22_An"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/8/2025 1:48 PM', '1500.0', 'Patocchi, Mary 22 Andrew DR Apt 68 Tiburon, CA 94920-2157', 't0010419 - Patocchi', '09-08-2025_13-48-33_1500.0_Patocchi,_Mary_22_An')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-08-2025_13-48-33_1500.0_Patocchi,_Mary_22_An"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-08-2025_10-23-43_4852.83_Tyler_D_Dewitt_303_2">
                             <td class="date">9/8/2025 10:23 AM</td>
                             <td class="amount">$4,852.83</td>
                             <td class="originator">Tyler D Dewitt 303 255 S Grand AVE Los Angeles CA USA 90012</td>
                             <td class="reference">Tyler D Dewitt</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-08-2025_10-23-43_4852.83_Tyler_D_Dewitt_303_2"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-08-2025_10-23-43_4852.83_Tyler_D_Dewitt_303_2"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/8/2025 10:23 AM', '4852.83', 'Tyler D Dewitt 303 255 S Grand AVE Los Angeles CA USA 90012', 'Tyler D Dewitt', '09-08-2025_10-23-43_4852.83_Tyler_D_Dewitt_303_2')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-08-2025_10-23-43_4852.83_Tyler_D_Dewitt_303_2"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-08-2025_05-01-57_4287.83_Xiaojun_Wu_155_Willo">
                             <td class="date">9/8/2025 5:01 AM</td>
                             <td class="amount">$4,287.83</td>
                             <td class="originator">Xiaojun Wu 155 Willowbend Irvine Ca/us</td>
                             <td class="reference">t0010553 - Wut0010553 - Wu</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-08-2025_05-01-57_4287.83_Xiaojun_Wu_155_Willo"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-08-2025_05-01-57_4287.83_Xiaojun_Wu_155_Willo"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/8/2025 5:01 AM', '4287.83', 'Xiaojun Wu 155 Willowbend Irvine Ca/us', 't0010553 - Wut0010553 - Wu', '09-08-2025_05-01-57_4287.83_Xiaojun_Wu_155_Willo')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-08-2025_05-01-57_4287.83_Xiaojun_Wu_155_Willo"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-05-2025_16-26-53_4395.0_Aditya_V_Agarkar_2-5">
                             <td class="date">9/5/2025 4:26 PM</td>
                             <td class="amount">$4,395.00</td>
                             <td class="originator">Aditya V Agarkar 2/5710 Crescent Park E Apt 253 3/us/playa Vista, CA 90094-2202</td>
                             <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-05-2025_16-26-53_4395.0_Aditya_V_Agarkar_2-5"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-05-2025_16-26-53_4395.0_Aditya_V_Agarkar_2-5"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/5/2025 4:26 PM', '4395.0', 'Aditya V Agarkar 2/5710 Crescent Park E Apt 253 3/us/playa Vista, CA 90094-2202', '', '09-05-2025_16-26-53_4395.0_Aditya_V_Agarkar_2-5')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-05-2025_16-26-53_4395.0_Aditya_V_Agarkar_2-5"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-05-2025_13-12-47_5145.0_Ian_M_Kistner_104_E_">
                             <td class="date">9/5/2025 1:12 PM</td>
                             <td class="amount">$5,145.00</td>
                             <td class="originator">Ian M Kistner 104 E Warner ST Ventura CA 93001</td>
                             <td class="reference">Kistners Apt 74j t0010545</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-05-2025_13-12-47_5145.0_Ian_M_Kistner_104_E_"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-05-2025_13-12-47_5145.0_Ian_M_Kistner_104_E_"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/5/2025 1:12 PM', '5145.0', 'Ian M Kistner 104 E Warner ST Ventura CA 93001', 'Kistners Apt 74j t0010545', '09-05-2025_13-12-47_5145.0_Ian_M_Kistner_104_E_')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-05-2025_13-12-47_5145.0_Ian_M_Kistner_104_E_"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-05-2025_10-51-14_3932.83_Danilo_Real_Laurel_B">
                             <td class="date">9/5/2025 10:51 AM</td>
                             <td class="amount">$3,932.83</td>
                             <td class="originator">Danilo Real Laurel Brauer 2/12801 Panorama Crst 3/us/santa Ana 92705</td>
                             <td class="reference">1221 Myra Ave, #317, LA CA 90029</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-05-2025_10-51-14_3932.83_Danilo_Real_Laurel_B"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-05-2025_10-51-14_3932.83_Danilo_Real_Laurel_B"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/5/2025 10:51 AM', '3932.83', 'Danilo Real Laurel Brauer 2/12801 Panorama Crst 3/us/santa Ana 92705', '1221 Myra Ave, #317, LA CA 90029', '09-05-2025_10-51-14_3932.83_Danilo_Real_Laurel_B')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-05-2025_10-51-14_3932.83_Danilo_Real_Laurel_B"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-05-2025_08-44-21_3481.29_Shobana_Shanmugam_13">
                             <td class="date">9/5/2025 8:44 AM</td>
                             <td class="amount">$3,481.29</td>
                             <td class="originator">Shobana Shanmugam 1359 N Echo Ridge Way Chula Vista CA 91915-1626 US</td>
                             <td class="reference">T - Shanmugam (apartment 27)</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-05-2025_08-44-21_3481.29_Shobana_Shanmugam_13"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-05-2025_08-44-21_3481.29_Shobana_Shanmugam_13"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/5/2025 8:44 AM', '3481.29', 'Shobana Shanmugam 1359 N Echo Ridge Way Chula Vista CA 91915-1626 US', 'T - Shanmugam (apartment 27)', '09-05-2025_08-44-21_3481.29_Shobana_Shanmugam_13')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-05-2025_08-44-21_3481.29_Shobana_Shanmugam_13"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-04-2025_12-46-42_3795.0_Benjamin_Costa_624_L">
                             <td class="date">9/4/2025 12:46 PM</td>
                             <td class="amount">$3,795.00</td>
                             <td class="originator">Benjamin Costa 624 Lincoln BLVD Apt D Santa Monica CA 90402</td>
                             <td class="reference">t0010514 Costa</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-04-2025_12-46-42_3795.0_Benjamin_Costa_624_L"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-04-2025_12-46-42_3795.0_Benjamin_Costa_624_L"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/4/2025 12:46 PM', '3795.0', 'Benjamin Costa 624 Lincoln BLVD Apt D Santa Monica CA 90402', 't0010514 Costa', '09-04-2025_12-46-42_3795.0_Benjamin_Costa_624_L')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-04-2025_12-46-42_3795.0_Benjamin_Costa_624_L"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-04-2025_08-12-45_7422.83_Build_Solutions_2-22">
                             <td class="date">9/4/2025 8:12 AM</td>
                             <td class="amount">$7,422.83</td>
                             <td class="originator">Build Solutions 2/2226 Patricia AVE 3/us/los Angeles 90064</td>
                             <td class="reference">T0010536, Sofia Piper Salinas</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-04-2025_08-12-45_7422.83_Build_Solutions_2-22"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-04-2025_08-12-45_7422.83_Build_Solutions_2-22"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/4/2025 8:12 AM', '7422.83', 'Build Solutions 2/2226 Patricia AVE 3/us/los Angeles 90064', 'T0010536, Sofia Piper Salinas', '09-04-2025_08-12-45_7422.83_Build_Solutions_2-22')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-04-2025_08-12-45_7422.83_Build_Solutions_2-22"></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr data-wire-id="09-04-2025_05-09-20_3572.83_Louisa_L_Flaig_7712_">
                             <td class="date">9/4/2025 5:09 AM</td>
                             <td class="amount">$3,572.83</td>
                             <td class="originator">Louisa L Flaig 7712 W County Line RD Odessa FL 33556</td>
                             <td class="reference">Move IN Funds</td>
-                        </tr>
-                        <tr>
-                            <td class="date">9/3/2025 2:12 PM</td>
-                            <td class="amount">$2,447.50</td>
-                            <td class="originator">Madeleine Rupp 711 Riesling CT Petaluma, CA 94954</td>
-                            <td class="reference">t0010466 Rupp 965 Magnolia AVE Apt 71-J</td>
-                        </tr>
-                        <tr>
-                            <td class="date">9/2/2025 4:23 PM</td>
-                            <td class="amount">$4,442.83</td>
-                            <td class="originator">Alex T Wang Christina Wang 2/18802 Juniper Springs DR 3/us/canyon Cntry 91387</td>
-                            <td class="reference">t0010496 - Wang (move-in Costs)</td>
-                        </tr>
-                        <tr>
-                            <td class="date">9/2/2025 12:48 PM</td>
-                            <td class="amount">$2,447.50</td>
-                            <td class="originator">Valentina Biasatti 33 Terrace DR Sausalito CA 94965-4006 US</td>
-                            <td class="reference">T0010466- Biasatti</td>
-                        </tr>
-                        <tr>
-                            <td class="date">9/2/2025 8:22 AM</td>
-                            <td class="amount">$2,350.00</td>
-                            <td class="originator">David T Wilder 245 E 11th ST Apt 6j New York NY 10003</td>
-                            <td class="reference">David Wilder 1221 Myra Unit 326e</td>
-                        </tr>
-                        <tr>
-                            <td class="date">9/2/2025 7:55 AM</td>
-                            <td class="amount">$3,532.83</td>
-                            <td class="originator">Sally Nyarko Andoh 53 W Tam O Shanter DR Crete IL 60417-6302 US</td>
-                            <td class="reference">Reference: T0010531-andoh</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-09-04-2025_05-09-20_3572.83_Louisa_L_Flaig_7712_"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-09-04-2025_05-09-20_3572.83_Louisa_L_Flaig_7712_"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/4/2025 5:09 AM', '3572.83', 'Louisa L Flaig 7712 W County Line RD Odessa FL 33556', 'Move IN Funds', '09-04-2025_05-09-20_3572.83_Louisa_L_Flaig_7712_')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-09-04-2025_05-09-20_3572.83_Louisa_L_Flaig_7712_"></span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -765,7 +1598,8 @@
         <div class="footer">
             <span class="info-badge">📊 30-Day Rolling Window</span>
             <span class="info-badge">⏰ Updates Every Hour</span>
-            <span class="info-badge">🏦 CLG MGT MOVE IN FUNDS Only</span>
+            <span class="info-badge">🦏 CLG MGT MOVE IN FUNDS Only</span>
+            <span class="info-badge">☁️ Syncs with Google Sheets</span>
         </div>
     </div>
 </body>
