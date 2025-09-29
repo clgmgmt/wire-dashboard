@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 9/29 8:52 AM</div>
+            <div class="last-updated">Last Updated: 9/29 9:56 AM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_37277ed446cf">
+                            <td class="date">9/29/2025 9:10 AM</td>
+                            <td class="amount">$4,923.83</td>
+                            <td class="originator">Kamisha R Harris 5348 Overdale DR Windsor Hills CA 90043</td>
+                            <td class="reference">Dominique Harris 10401 Washington B Lvd Unit 331</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_37277ed446cf"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_37277ed446cf"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/29/2025 9:10 AM', '4923.83', 'Kamisha R Harris 5348 Overdale DR Windsor Hills CA 90043', 'Dominique Harris 10401 Washington B Lvd Unit 331', 'wire_37277ed446cf')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_37277ed446cf"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_d133cb42b73d">
                             <td class="date">9/29/2025 5:11 AM</td>
                             <td class="amount">$4,901.83</td>
