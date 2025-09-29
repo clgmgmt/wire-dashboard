@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 9/26 5:25 PM</div>
+            <div class="last-updated">Last Updated: 9/29 8:52 AM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,50 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_d133cb42b73d">
+                            <td class="date">9/29/2025 5:11 AM</td>
+                            <td class="amount">$4,901.83</td>
+                            <td class="originator">Yasmin Hakim 2/1243 Tammany LN 3/us/saint Louis, MO 63131 1052</td>
+                            <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_d133cb42b73d"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_d133cb42b73d"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/29/2025 5:11 AM', '4901.83', 'Yasmin Hakim 2/1243 Tammany LN 3/us/saint Louis, MO 63131 1052', '', 'wire_d133cb42b73d')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_d133cb42b73d"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_50e7b1c9bf5e">
+                            <td class="date">9/29/2025 5:10 AM</td>
+                            <td class="amount">$4,677.83</td>
+                            <td class="originator">Samantha Yick Dennis G Yick 2/2021 Fairburn AVE 3/us/los Angeles 90025</td>
+                            <td class="reference">Samantha Yick, SW By Clg, Unit 326</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_50e7b1c9bf5e"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_50e7b1c9bf5e"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('9/29/2025 5:10 AM', '4677.83', 'Samantha Yick Dennis G Yick 2/2021 Fairburn AVE 3/us/los Angeles 90025', 'Samantha Yick, SW By Clg, Unit 326', 'wire_50e7b1c9bf5e')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_50e7b1c9bf5e"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_24aaadaddfc2">
                             <td class="date">9/26/2025 12:23 PM</td>
                             <td class="amount">$3,572.83</td>
