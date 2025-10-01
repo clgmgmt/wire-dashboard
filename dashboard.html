@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/01 9:22 AM</div>
+            <div class="last-updated">Last Updated: 10/01 10:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_05016da7d504">
+                            <td class="date">10/1/2025 9:25 AM</td>
+                            <td class="amount">$3,957.83</td>
+                            <td class="originator">Z206978441 Ellen Kelly Reisman TTEE Ellen K Re Isman Revocable Trust 2/4 Lafata LN 3/us/killingworth CT 06419-2435</td>
+                            <td class="reference">Michael Reisman Rent. Unit 622</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_05016da7d504"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_05016da7d504"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/1/2025 9:25 AM', '3957.83', 'Z206978441 Ellen Kelly Reisman TTEE Ellen K Re Isman Revocable Trust 2/4 Lafata LN 3/us/killingworth CT 06419-2435', 'Michael Reisman Rent. Unit 622', 'wire_05016da7d504')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_05016da7d504"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_c1b7f25dd21c">
                             <td class="date">10/1/2025 8:13 AM</td>
                             <td class="amount">$6,097.83</td>
@@ -727,26 +749,15 @@
                                 <span class="submit-status" id="status-wire_094741405915"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_8a1712ccd8f7">
+                        <tr data-wire-id="wire_8a1712ccd8f7" class="has-input">
                             <td class="date">9/30/2025 2:06 PM</td>
                             <td class="amount">$2,125.00</td>
                             <td class="originator">Viktor Kravchenko 2/2042 S Corning ST Apt 5 3/us/los Angeles, CA 90034 1453</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_8a1712ccd8f7"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_8a1712ccd8f7"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('9/30/2025 2:06 PM', '2125.0', 'Viktor Kravchenko 2/2042 S Corning ST Apt 5 3/us/los Angeles, CA 90034 1453', '', 'wire_8a1712ccd8f7')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_8a1712ccd8f7"></span>
+                            <td class="manager-input completed">
+                                <span class="tenant-display">t0010653</span>
+                                <span class="manager-display">Jessica Favela</span>
+                                <span class="status-icon">✅</span>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_077c2eb92af4" class="has-input">
