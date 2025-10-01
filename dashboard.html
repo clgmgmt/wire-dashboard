@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/01 10:52 AM</div>
+            <div class="last-updated">Last Updated: 10/01 11:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_d1f72c99c9b0">
+                            <td class="date">10/1/2025 10:51 AM</td>
+                            <td class="amount">$4,852.83</td>
+                            <td class="originator">Malcolm J Holmes OR Cynthia L Hol Mes 2/14060 Panay Way Apt 215 3/us/marina Del Rey 90292</td>
+                            <td class="reference">G8 Move IN Funds</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_d1f72c99c9b0"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_d1f72c99c9b0"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/1/2025 10:51 AM', '4852.83', 'Malcolm J Holmes OR Cynthia L Hol Mes 2/14060 Panay Way Apt 215 3/us/marina Del Rey 90292', 'G8 Move IN Funds', 'wire_d1f72c99c9b0')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_d1f72c99c9b0"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_05016da7d504">
                             <td class="date">10/1/2025 9:25 AM</td>
                             <td class="amount">$3,957.83</td>
@@ -650,48 +672,26 @@
                                 <span class="status-icon">✅</span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_7f49c1116143">
+                        <tr data-wire-id="wire_7f49c1116143" class="has-input">
                             <td class="date">10/1/2025 5:39 AM</td>
                             <td class="amount">$2,401.42</td>
                             <td class="originator">Paige Macnguyen Vincent G Macngu+ 2/4965 Blackhorse RD 3/us/rancho Palos Verdes, CA 90275+</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_7f49c1116143"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_7f49c1116143"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/1/2025 5:39 AM', '2401.42', 'Paige Macnguyen Vincent G Macngu+ 2/4965 Blackhorse RD 3/us/rancho Palos Verdes, CA 90275+', '', 'wire_7f49c1116143')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_7f49c1116143"></span>
+                            <td class="manager-input completed">
+                                <span class="tenant-display">t0010648</span>
+                                <span class="manager-display">Kenneth Stone</span>
+                                <span class="status-icon">✅</span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_ee68474fc2a5">
+                        <tr data-wire-id="wire_ee68474fc2a5" class="has-input">
                             <td class="date">10/1/2025 5:04 AM</td>
                             <td class="amount">$4,797.83</td>
                             <td class="originator">Ziqun He 433 Pine AVE Unit 308long Beach CA US 90802</td>
                             <td class="reference">For Tenant Number t0010637 Ziqun He 11311 LA Grange AVE Apt 207 Los An Geles CA 90025</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_ee68474fc2a5"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_ee68474fc2a5"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/1/2025 5:04 AM', '4797.83', 'Ziqun He 433 Pine AVE Unit 308long Beach CA US 90802', 'For Tenant Number t0010637 Ziqun He 11311 LA Grange AVE Apt 207 Los An Geles CA 90025', 'wire_ee68474fc2a5')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_ee68474fc2a5"></span>
+                            <td class="manager-input completed">
+                                <span class="tenant-display">t0010637</span>
+                                <span class="manager-display">Rosa Hernandez</span>
+                                <span class="status-icon">✅</span>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_38f939f5c0c6">
@@ -859,26 +859,15 @@
                                 <span class="status-icon">✅</span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_50e7b1c9bf5e">
+                        <tr data-wire-id="wire_50e7b1c9bf5e" class="has-input">
                             <td class="date">9/29/2025 5:10 AM</td>
                             <td class="amount">$4,677.83</td>
                             <td class="originator">Samantha Yick Dennis G Yick 2/2021 Fairburn AVE 3/us/los Angeles 90025</td>
                             <td class="reference">Samantha Yick, SW By Clg, Unit 326</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_50e7b1c9bf5e"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_50e7b1c9bf5e"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('9/29/2025 5:10 AM', '4677.83', 'Samantha Yick Dennis G Yick 2/2021 Fairburn AVE 3/us/los Angeles 90025', 'Samantha Yick, SW By Clg, Unit 326', 'wire_50e7b1c9bf5e')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_50e7b1c9bf5e"></span>
+                            <td class="manager-input completed">
+                                <span class="tenant-display">t0010621</span>
+                                <span class="manager-display">Rosa Hernandez</span>
+                                <span class="status-icon">✅</span>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_24aaadaddfc2" class="has-input">
