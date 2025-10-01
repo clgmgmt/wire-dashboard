@@ -561,7 +561,7 @@
                 
                 if (foundMatch) {
                     const matchText = matchCount === 1 ? 'Match found' : `${matchCount} matches found`;
-                    searchStatus.textContent = `✔ ${matchText} - see highlighted row${matchCount > 1 ? 's' : ''} below`;
+                    searchStatus.textContent = `✓ ${matchText} - see highlighted row${matchCount > 1 ? 's' : ''} below`;
                     searchStatus.className = 'search-status found';
                     searchStatus.style.display = 'block';
                 } else {
@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/01 8:08 AM</div>
+            <div class="last-updated">Last Updated: 10/01 9:22 AM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_c1b7f25dd21c">
+                            <td class="date">10/1/2025 8:13 AM</td>
+                            <td class="amount">$6,097.83</td>
+                            <td class="originator">Jordan Watkins 734 W Sheridan RD Apt 513 Chicago, Il, 60613</td>
+                            <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_c1b7f25dd21c"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_c1b7f25dd21c"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/1/2025 8:13 AM', '6097.83', 'Jordan Watkins 734 W Sheridan RD Apt 513 Chicago, Il, 60613', '', 'wire_c1b7f25dd21c')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_c1b7f25dd21c"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_7f49c1116143">
                             <td class="date">10/1/2025 5:39 AM</td>
                             <td class="amount">$2,401.42</td>
