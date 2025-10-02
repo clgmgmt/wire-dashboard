@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/02 2:07 PM</div>
+            <div class="last-updated">Last Updated: 10/02 3:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_c40d850ac676">
+                            <td class="date">10/2/2025 2:50 PM</td>
+                            <td class="amount">$4,700.00</td>
+                            <td class="originator">Tim L Nagy 3539 Sawtelle BLVD Apt 201 Los Angeles CA 90066-2947 US</td>
+                            <td class="reference">Reference Code: T0010633-nagy</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_c40d850ac676"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_c40d850ac676"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/2/2025 2:50 PM', '4700.0', 'Tim L Nagy 3539 Sawtelle BLVD Apt 201 Los Angeles CA 90066-2947 US', 'Reference Code: T0010633-nagy', 'wire_c40d850ac676')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_c40d850ac676"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_9069efab0bd1">
                             <td class="date">10/2/2025 11:31 AM</td>
                             <td class="amount">$5,145.00</td>
