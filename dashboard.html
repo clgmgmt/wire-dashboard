@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/01 6:07 PM</div>
+            <div class="last-updated">Last Updated: 10/02 6:22 AM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_497ec84b794b">
+                            <td class="date">10/2/2025 5:07 AM</td>
+                            <td class="amount">$4,197.83</td>
+                            <td class="originator">Nicholas J Noel Nicole C Noel 2/620 S Virgil AVE Apt 467 3/us/los Angeles, CA 90005 4089</td>
+                            <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_497ec84b794b"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_497ec84b794b"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/2/2025 5:07 AM', '4197.83', 'Nicholas J Noel Nicole C Noel 2/620 S Virgil AVE Apt 467 3/us/los Angeles, CA 90005 4089', '', 'wire_497ec84b794b')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_497ec84b794b"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_48c972363e4c">
                             <td class="date">10/1/2025 2:32 PM</td>
                             <td class="amount">$3,517.83</td>
