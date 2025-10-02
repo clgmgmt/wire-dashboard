@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/02 11:08 AM</div>
+            <div class="last-updated">Last Updated: 10/02 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_9069efab0bd1">
+                            <td class="date">10/2/2025 11:31 AM</td>
+                            <td class="amount">$5,145.00</td>
+                            <td class="originator">John Guz 101 Post ST Petaluma,ca,</td>
+                            <td class="reference">Reference T001065- Guz</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_9069efab0bd1"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_9069efab0bd1"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/2/2025 11:31 AM', '5145.0', 'John Guz 101 Post ST Petaluma,ca,', 'Reference T001065- Guz', 'wire_9069efab0bd1')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_9069efab0bd1"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_27505b371b1c">
                             <td class="date">10/2/2025 9:56 AM</td>
                             <td class="amount">$5,261.83</td>
