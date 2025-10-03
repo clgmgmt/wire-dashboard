@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/03 9:08 AM</div>
+            <div class="last-updated">Last Updated: 10/03 10:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,50 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_3131d698199e">
+                            <td class="date">10/3/2025 10:03 AM</td>
+                            <td class="amount">$4,801.83</td>
+                            <td class="originator">Christian Knudsen 555 Saint Vincent Irvine CA 92618 US</td>
+                            <td class="reference">Christianknudsen,13448beachave,mari Nadelrey,4212,t0010662</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_3131d698199e"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_3131d698199e"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/3/2025 10:03 AM', '4801.83', 'Christian Knudsen 555 Saint Vincent Irvine CA 92618 US', 'Christianknudsen,13448beachave,mari Nadelrey,4212,t0010662', 'wire_3131d698199e')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_3131d698199e"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_9d901e84591f">
+                            <td class="date">10/3/2025 10:02 AM</td>
+                            <td class="amount">$4,245.00</td>
+                            <td class="originator">Daniel A Wilson 1440 Clay ST Apt 7 San Francisco CA 94109-3905 US</td>
+                            <td class="reference">Move IN Funds</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_9d901e84591f"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_9d901e84591f"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/3/2025 10:02 AM', '4245.0', 'Daniel A Wilson 1440 Clay ST Apt 7 San Francisco CA 94109-3905 US', 'Move IN Funds', 'wire_9d901e84591f')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_9d901e84591f"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_07ea17a626e4">
                             <td class="date">10/3/2025 7:06 AM</td>
                             <td class="amount">$4,664.00</td>
