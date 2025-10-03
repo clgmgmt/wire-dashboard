@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/03 11:07 AM</div>
+            <div class="last-updated">Last Updated: 10/03 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,50 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_3b0aaeb3b8af">
+                            <td class="date">10/3/2025 11:57 AM</td>
+                            <td class="amount">$7,752.83</td>
+                            <td class="originator">Wood Wrench , Inc. 12616 Bonaparte AVE Los Angeles CA 90066</td>
+                            <td class="reference">t0010670 Hays</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_3b0aaeb3b8af"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_3b0aaeb3b8af"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/3/2025 11:57 AM', '7752.83', 'Wood Wrench , Inc. 12616 Bonaparte AVE Los Angeles CA 90066', 't0010670 Hays', 'wire_3b0aaeb3b8af')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_3b0aaeb3b8af"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_088ff0cb8914">
+                            <td class="date">10/3/2025 11:29 AM</td>
+                            <td class="amount">$4,148.00</td>
+                            <td class="originator">Julia Kuchins 13348 W Washington Blvdlos Angeles CA US 90066-5108</td>
+                            <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_088ff0cb8914"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_088ff0cb8914"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/3/2025 11:29 AM', '4148.0', 'Julia Kuchins 13348 W Washington Blvdlos Angeles CA US 90066-5108', '', 'wire_088ff0cb8914')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_088ff0cb8914"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_11c9619d284d">
                             <td class="date">10/3/2025 10:23 AM</td>
                             <td class="amount">$4,344.83</td>
@@ -650,26 +694,15 @@
                                 <span class="status-icon">✅</span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_9d901e84591f">
+                        <tr data-wire-id="wire_9d901e84591f" class="has-input">
                             <td class="date">10/3/2025 10:02 AM</td>
                             <td class="amount">$4,245.00</td>
                             <td class="originator">Daniel A Wilson 1440 Clay ST Apt 7 San Francisco CA 94109-3905 US</td>
                             <td class="reference">Move IN Funds</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_9d901e84591f"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_9d901e84591f"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/3/2025 10:02 AM', '4245.0', 'Daniel A Wilson 1440 Clay ST Apt 7 San Francisco CA 94109-3905 US', 'Move IN Funds', 'wire_9d901e84591f')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_9d901e84591f"></span>
+                            <td class="manager-input completed">
+                                <span class="tenant-display">t0010551</span>
+                                <span class="manager-display">Gaea Arnold</span>
+                                <span class="status-icon">✅</span>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_07ea17a626e4">
