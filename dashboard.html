@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/07 9:07 AM</div>
+            <div class="last-updated">Last Updated: 10/07 10:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -617,6 +617,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_729801c9ca86">
+                            <td class="date">10/7/2025 9:07 AM</td>
+                            <td class="amount">$3,144.44</td>
+                            <td class="originator">Ana L Davila 18627 Liggett ST Northridge,ca,</td>
+                            <td class="reference">P0167637 Ana Davila Corona 18402 Ha Lsted ST Unit 43 Northridgeca 91325</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_729801c9ca86"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_729801c9ca86"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/7/2025 9:07 AM', '3144.44', 'Ana L Davila 18627 Liggett ST Northridge,ca,', 'P0167637 Ana Davila Corona 18402 Ha Lsted ST Unit 43 Northridgeca 91325', 'wire_729801c9ca86')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_729801c9ca86"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_cd01a68e4f03">
                             <td class="date">10/7/2025 8:34 AM</td>
                             <td class="amount">$5,340.83</td>
