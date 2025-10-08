@@ -583,7 +583,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/08 9:07 AM</div>
+            <div class="last-updated">Last Updated: 10/08 10:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -617,48 +617,70 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_733ee7b345c1">
+                        <tr data-wire-id="wire_22179cf4889d">
+                            <td class="date">10/8/2025 9:57 AM</td>
+                            <td class="amount">$2,467.42</td>
+                            <td class="originator">Alicia S Criniti OR Alfred Crinit I 2/10 Franklin RD 3/us/lexington 02420</td>
+                            <td class="reference">Vince Criniti Move IN Fees</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_22179cf4889d"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_22179cf4889d"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/8/2025 9:57 AM', '2467.42', 'Alicia S Criniti OR Alfred Crinit I 2/10 Franklin RD 3/us/lexington 02420', 'Vince Criniti Move IN Fees', 'wire_22179cf4889d')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_22179cf4889d"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_ddb4b75a2106">
+                            <td class="date">10/8/2025 9:29 AM</td>
+                            <td class="amount">$2,833.01</td>
+                            <td class="originator">Daniel A Levine 536 Seaward RD Corona Del Mar CA 92625</td>
+                            <td class="reference">t0010674 Levine</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_ddb4b75a2106"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_ddb4b75a2106"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/8/2025 9:29 AM', '2833.01', 'Daniel A Levine 536 Seaward RD Corona Del Mar CA 92625', 't0010674 Levine', 'wire_ddb4b75a2106')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_ddb4b75a2106"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_733ee7b345c1" class="has-input">
                             <td class="date">10/8/2025 7:34 AM</td>
                             <td class="amount">$6,097.83</td>
                             <td class="originator">Tiffany Tran 2745 NW 131st PL Portland,or,97229 US</td>
                             <td class="reference">Griffin Tran - Move IN Funds 13448 Beach Ave. 90292 # 6412</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_733ee7b345c1"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_733ee7b345c1"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/8/2025 7:34 AM', '6097.83', 'Tiffany Tran 2745 NW 131st PL Portland,or,97229 US', 'Griffin Tran - Move IN Funds 13448 Beach Ave. 90292 # 6412', 'wire_733ee7b345c1')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_733ee7b345c1"></span>
+                            <td class="manager-input completed">
+                                <span class="tenant-display">t0010689</span>
+                                <span class="manager-display">Avy Stockton</span>
+                                <span class="status-icon">✅</span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_d5de7a72e5d5">
+                        <tr data-wire-id="wire_d5de7a72e5d5" class="has-input">
                             <td class="date">10/8/2025 6:59 AM</td>
                             <td class="amount">$2,467.41</td>
                             <td class="originator">M AND R Schulein Family Trust Dated 06/29/15 1712 Antigua Way Newport Beach CA 92660</td>
                             <td class="reference">Passero t0010674</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_d5de7a72e5d5"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_d5de7a72e5d5"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/8/2025 6:59 AM', '2467.41', 'M AND R Schulein Family Trust Dated 06/29/15 1712 Antigua Way Newport Beach CA 92660', 'Passero t0010674', 'wire_d5de7a72e5d5')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_d5de7a72e5d5"></span>
+                            <td class="manager-input completed">
+                                <span class="tenant-display">t0010674</span>
+                                <span class="manager-display">Dietrich McWhorter-Riley</span>
+                                <span class="status-icon">✅</span>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_729801c9ca86">
