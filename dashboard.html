@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/09 3:07 PM</div>
+            <div class="last-updated">Last Updated: 10/09 4:08 PM</div>
         </div>
         
         <div class="account-info">
@@ -855,26 +855,33 @@
                                 <span class="submit-status" id="status-wire_cd01a68e4f03"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_fdb07c423e96">
+                        <tr data-wire-id="wire_fdb07c423e96" class="has-input">
                             <td class="date">10/6/2025 1:39 PM</td>
                             <td class="amount">$6,297.00</td>
                             <td class="originator">Jennifer Jackson 2550 Regent ST Apt 4 Berkeley,ca,94704 US</td>
                             <td class="reference">Security Deposit For Apartment</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_fdb07c423e96"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_fdb07c423e96"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/6/2025 1:39 PM', '6297.0', `Jennifer Jackson 2550 Regent ST Apt 4 Berkeley,ca,94704 US`, 'Security Deposit For Apartment', 'wire_fdb07c423e96')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_fdb07c423e96"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010664</span>
+                                    <span class="manager-display" style="margin-left: 12px;">lopez</span>
+                                    
+                        <button id="book-wire_fdb07c423e96"
+                                onclick="bookInYardi('10/6/2025 1:39 PM', '6297.0', `Jennifer Jackson 2550 Regent ST Apt 4 Berkeley,ca,94704 US`, 'wire_fdb07c423e96')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_fdb07c423e96" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_18e87bb32f70" class="has-input">
