@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/14 10:07 AM</div>
+            <div class="last-updated">Last Updated: 10/14 11:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_25de9a2e7128">
+                            <td class="date">10/14/2025 10:39 AM</td>
+                            <td class="amount">$2,612.00</td>
+                            <td class="originator">Frank H Lin 13940 Tahiti Way Apt 232 Marina Dl Rey,ca,90292</td>
+                            <td class="reference">Move IN Funds</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_25de9a2e7128"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_25de9a2e7128"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/14/2025 10:39 AM', '2612.0', `Frank H Lin 13940 Tahiti Way Apt 232 Marina Dl Rey,ca,90292`, 'Move IN Funds', 'wire_25de9a2e7128')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_25de9a2e7128"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_afd28001c16b">
                             <td class="date">10/14/2025 5:43 AM</td>
                             <td class="amount">$8,289.00</td>
@@ -714,26 +736,33 @@
                                 <span class="submit-status" id="status-wire_d321159b13cf"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_1cbc02c797e9">
+                        <tr data-wire-id="wire_1cbc02c797e9" class="has-input">
                             <td class="date">10/14/2025 5:31 AM</td>
                             <td class="amount">$1,366.77</td>
                             <td class="originator">Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny</td>
                             <td class="reference">Rent</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_1cbc02c797e9"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_1cbc02c797e9"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/14/2025 5:31 AM', '1366.77', `Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny`, 'Rent', 'wire_1cbc02c797e9')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_1cbc02c797e9"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0004799</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Chad</span>
+                                    
+                        <button id="book-wire_1cbc02c797e9"
+                                onclick="bookInYardi('10/14/2025 5:31 AM', '1366.77', `Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny`, 'wire_1cbc02c797e9')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_1cbc02c797e9" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_c2d0739d591a">
@@ -2923,26 +2952,33 @@
                                 <span class="submit-status" id="status-wire_944f2df4c6f9"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_14b372b9a4c9">
+                        <tr data-wire-id="wire_14b372b9a4c9" class="has-input">
                             <td class="date">9/15/2025 2:08 PM</td>
                             <td class="amount">$1,366.77</td>
                             <td class="originator">Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny</td>
                             <td class="reference">Apt 3104 - Ignacio Montoya</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_14b372b9a4c9"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_14b372b9a4c9"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('9/15/2025 2:08 PM', '1366.77', `Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny`, 'Apt 3104 - Ignacio Montoya', 'wire_14b372b9a4c9')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_14b372b9a4c9"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0004799</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Chad</span>
+                                    
+                        <button id="book-wire_14b372b9a4c9"
+                                onclick="bookInYardi('9/15/2025 2:08 PM', '1366.77', `Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny`, 'wire_14b372b9a4c9')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_14b372b9a4c9" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_cf336d4f6cbc">
