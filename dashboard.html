@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/14 1:07 PM</div>
+            <div class="last-updated">Last Updated: 10/14 2:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_1a00b5640937">
+                            <td class="date">10/14/2025 1:25 PM</td>
+                            <td class="amount">$2,185.00</td>
+                            <td class="originator">Kristina Wright 2/120 Sunridge DR 3/us/elgin, SC 29045 8725</td>
+                            <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_1a00b5640937"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_1a00b5640937"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/14/2025 1:25 PM', '2185.0', `Kristina Wright 2/120 Sunridge DR 3/us/elgin, SC 29045 8725`, '', 'wire_1a00b5640937')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_1a00b5640937"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_dcc9bfaadf35" class="has-input">
                             <td class="date">10/14/2025 11:58 AM</td>
                             <td class="amount">$2,300.00</td>
