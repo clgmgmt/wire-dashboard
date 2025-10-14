@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/14 12:07 PM</div>
+            <div class="last-updated">Last Updated: 10/14 1:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_dcc9bfaadf35">
+                        <tr data-wire-id="wire_dcc9bfaadf35" class="has-input">
                             <td class="date">10/14/2025 11:58 AM</td>
                             <td class="amount">$2,300.00</td>
                             <td class="originator">Katherine E Bice 4118 Inglewood BLVD # 4 Los Angeles CA 90066-5244 US</td>
                             <td class="reference">Katherine Bice - Tenant ID t0010701</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_dcc9bfaadf35"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_dcc9bfaadf35"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/14/2025 11:58 AM', '2300.0', `Katherine E Bice 4118 Inglewood BLVD # 4 Los Angeles CA 90066-5244 US`, 'Katherine Bice - Tenant ID t0010701', 'wire_dcc9bfaadf35')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_dcc9bfaadf35"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010701</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Chad Hirschman</span>
+                                    
+                        <button id="book-wire_dcc9bfaadf35"
+                                onclick="bookInYardi('10/14/2025 11:58 AM', '2300.0', `Katherine E Bice 4118 Inglewood BLVD # 4 Los Angeles CA 90066-5244 US`, 'wire_dcc9bfaadf35')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_dcc9bfaadf35" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_25de9a2e7128">
@@ -736,26 +743,33 @@
                                 <span class="submit-status" id="status-wire_afd28001c16b"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_d321159b13cf">
+                        <tr data-wire-id="wire_d321159b13cf" class="has-input">
                             <td class="date">10/14/2025 5:31 AM</td>
                             <td class="amount">$5,195.00</td>
                             <td class="originator">Megan Olsen 48 Raymond AVE San Anselmo CA 94960</td>
                             <td class="reference">t0010694 Olsen</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_d321159b13cf"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_d321159b13cf"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/14/2025 5:31 AM', '5195.0', `Megan Olsen 48 Raymond AVE San Anselmo CA 94960`, 't0010694 Olsen', 'wire_d321159b13cf')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_d321159b13cf"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010694</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Gaea Arnold</span>
+                                    
+                        <button id="book-wire_d321159b13cf"
+                                onclick="bookInYardi('10/14/2025 5:31 AM', '5195.0', `Megan Olsen 48 Raymond AVE San Anselmo CA 94960`, 'wire_d321159b13cf')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_d321159b13cf" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_1cbc02c797e9" class="has-input">
@@ -787,26 +801,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_c2d0739d591a">
+                        <tr data-wire-id="wire_c2d0739d591a" class="has-input">
                             <td class="date">10/14/2025 5:03 AM</td>
                             <td class="amount">$4,950.00</td>
                             <td class="originator">Camelia L Negrea 16 Edna CT Kentfield CA 94904 USA</td>
                             <td class="reference">Resident Code: t0010528</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_c2d0739d591a"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_c2d0739d591a"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/14/2025 5:03 AM', '4950.0', `Camelia L Negrea 16 Edna CT Kentfield CA 94904 USA`, 'Resident Code: t0010528', 'wire_c2d0739d591a')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_c2d0739d591a"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010528</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Gaea Arnold</span>
+                                    
+                        <button id="book-wire_c2d0739d591a"
+                                onclick="bookInYardi('10/14/2025 5:03 AM', '4950.0', `Camelia L Negrea 16 Edna CT Kentfield CA 94904 USA`, 'wire_c2d0739d591a')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_c2d0739d591a" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_46fbf1557d4f">
