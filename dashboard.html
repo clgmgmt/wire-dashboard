@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/15 12:07 PM</div>
+            <div class="last-updated">Last Updated: 10/15 1:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -758,26 +758,33 @@
                                 <span class="submit-status" id="status-wire_da8ca5b9ac90"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_13d47a5ebcc4">
+                        <tr data-wire-id="wire_13d47a5ebcc4" class="has-input">
                             <td class="date">10/14/2025 4:58 PM</td>
                             <td class="amount">$2,400.00</td>
                             <td class="originator">Abigail Wright 120 Sunridge DR Elgin SC 29045 US</td>
                             <td class="reference">Move IN Funds For T0010667- Wright</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_13d47a5ebcc4"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_13d47a5ebcc4"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/14/2025 4:58 PM', '2400.0', `Abigail Wright 120 Sunridge DR Elgin SC 29045 US`, 'Move IN Funds For T0010667- Wright', 'wire_13d47a5ebcc4')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_13d47a5ebcc4"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010667</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Karmine</span>
+                                    
+                        <button id="book-wire_13d47a5ebcc4"
+                                onclick="bookInYardi('10/14/2025 4:58 PM', '2400.0', `Abigail Wright 120 Sunridge DR Elgin SC 29045 US`, 'wire_13d47a5ebcc4')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_13d47a5ebcc4" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_1a00b5640937">
