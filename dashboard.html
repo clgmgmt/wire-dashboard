@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/15 11:07 AM</div>
+            <div class="last-updated">Last Updated: 10/15 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,50 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_0d2caa65714f">
+                            <td class="date">10/15/2025 11:39 AM</td>
+                            <td class="amount">$5,275.00</td>
+                            <td class="originator">Iwanaga, Alison 120 Redwood RD San Anselmo, CA 94960-2135</td>
+                            <td class="reference">Purpose: Apartment Deposit For 50g. Ref#: t0010599 Iwanaga</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_0d2caa65714f"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_0d2caa65714f"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/15/2025 11:39 AM', '5275.0', `Iwanaga, Alison 120 Redwood RD San Anselmo, CA 94960-2135`, 'Purpose: Apartment Deposit For 50g. Ref#: t0010599 Iwanaga', 'wire_0d2caa65714f')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_0d2caa65714f"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_63843415740e">
+                            <td class="date">10/15/2025 11:31 AM</td>
+                            <td class="amount">$5,950.00</td>
+                            <td class="originator">Michael Andrew Zeppetello 2/121 Summerhaven DR S 3/us/east Syracuse 13057</td>
+                            <td class="reference">t0010658 Spitler</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_63843415740e"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_63843415740e"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/15/2025 11:31 AM', '5950.0', `Michael Andrew Zeppetello 2/121 Summerhaven DR S 3/us/east Syracuse 13057`, 't0010658 Spitler', 'wire_63843415740e')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_63843415740e"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_a8b89d020813">
                             <td class="date">10/15/2025 10:23 AM</td>
                             <td class="amount">$6,383.83</td>
