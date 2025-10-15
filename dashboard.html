@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/15 10:07 AM</div>
+            <div class="last-updated">Last Updated: 10/15 11:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_a8b89d020813">
+                            <td class="date">10/15/2025 10:23 AM</td>
+                            <td class="amount">$6,383.83</td>
+                            <td class="originator">Mia Christine Fields 517 28th ST Sacramento CA 95816-3225</td>
+                            <td class="reference">Mia Christine Fieldsref#t001069 3 - Fields</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_a8b89d020813"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_a8b89d020813"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/15/2025 10:23 AM', '6383.83', `Mia Christine Fields 517 28th ST Sacramento CA 95816-3225`, 'Mia Christine Fieldsref#t001069 3 - Fields', 'wire_a8b89d020813')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_a8b89d020813"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_da8ca5b9ac90">
                             <td class="date">10/15/2025 5:12 AM</td>
                             <td class="amount">$4,582.83</td>
