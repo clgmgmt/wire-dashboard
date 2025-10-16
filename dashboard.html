@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/16 10:07 AM</div>
+            <div class="last-updated">Last Updated: 10/16 11:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -892,26 +892,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_25de9a2e7128">
+                        <tr data-wire-id="wire_25de9a2e7128" class="has-input">
                             <td class="date">10/14/2025 10:39 AM</td>
                             <td class="amount">$2,612.00</td>
                             <td class="originator">Frank H Lin 13940 Tahiti Way Apt 232 Marina Dl Rey,ca,90292</td>
                             <td class="reference">Move IN Funds</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_25de9a2e7128"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_25de9a2e7128"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/14/2025 10:39 AM', '2612.0', `Frank H Lin 13940 Tahiti Way Apt 232 Marina Dl Rey,ca,90292`, 'Move IN Funds', 'wire_25de9a2e7128')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_25de9a2e7128"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010692</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Avy Stockton</span>
+                                    
+                        <button id="book-wire_25de9a2e7128"
+                                onclick="bookInYardi('10/14/2025 10:39 AM', '2612.0', `Frank H Lin 13940 Tahiti Way Apt 232 Marina Dl Rey,ca,90292`, 'wire_25de9a2e7128')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_25de9a2e7128" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_afd28001c16b">
