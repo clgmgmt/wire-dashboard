@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/15 6:06 PM</div>
+            <div class="last-updated">Last Updated: 10/16 8:34 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_510fa28447dd">
+                            <td class="date">10/16/2025 7:20 AM</td>
+                            <td class="amount">$4,691.83</td>
+                            <td class="originator">Chengfeng Li 2/2435 S Sepulveda BLVD Apt 3900 3/us/los Angeles 90064</td>
+                            <td class="reference">t0010595 - Li</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_510fa28447dd"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_510fa28447dd"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/16/2025 7:20 AM', '4691.83', `Chengfeng Li 2/2435 S Sepulveda BLVD Apt 3900 3/us/los Angeles 90064`, 't0010595 - Li', 'wire_510fa28447dd')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_510fa28447dd"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_bb1bbd552fb9">
                             <td class="date">10/15/2025 3:08 PM</td>
                             <td class="amount">$5,366.83</td>
