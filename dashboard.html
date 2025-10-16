@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/16 11:07 AM</div>
+            <div class="last-updated">Last Updated: 10/16 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -692,26 +692,33 @@
                                 <span class="submit-status" id="status-wire_510fa28447dd"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_bb1bbd552fb9">
+                        <tr data-wire-id="wire_bb1bbd552fb9" class="has-input">
                             <td class="date">10/15/2025 3:08 PM</td>
                             <td class="amount">$5,366.83</td>
                             <td class="originator">David M Steinberg 822 N Edinburgh AVE Los Angeles CA 90046-6904 US</td>
                             <td class="reference">Move IN Funds For David Steinberg, Tenant ID T0010606, 13448 Beach AVE . Apt 5410, Marina Del Rey, CA 9029 2</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_bb1bbd552fb9"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_bb1bbd552fb9"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/15/2025 3:08 PM', '5366.83', `David M Steinberg 822 N Edinburgh AVE Los Angeles CA 90046-6904 US`, 'Move IN Funds For David Steinberg, Tenant ID T0010606, 13448 Beach AVE . Apt 5410, Marina Del Rey, CA 9029 2', 'wire_bb1bbd552fb9')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_bb1bbd552fb9"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010606</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Avy Stockton</span>
+                                    
+                        <button id="book-wire_bb1bbd552fb9"
+                                onclick="bookInYardi('10/15/2025 3:08 PM', '5366.83', `David M Steinberg 822 N Edinburgh AVE Los Angeles CA 90046-6904 US`, 'wire_bb1bbd552fb9')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_bb1bbd552fb9" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_0d2caa65714f" class="has-input">
@@ -1286,26 +1293,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_729801c9ca86">
+                        <tr data-wire-id="wire_729801c9ca86" class="has-input">
                             <td class="date">10/7/2025 9:07 AM</td>
                             <td class="amount">$3,144.44</td>
                             <td class="originator">Ana L Davila 18627 Liggett ST Northridge,ca,</td>
                             <td class="reference">P0167637 Ana Davila Corona 18402 Ha Lsted ST Unit 43 Northridgeca 91325</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_729801c9ca86"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_729801c9ca86"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/7/2025 9:07 AM', '3144.44', `Ana L Davila 18627 Liggett ST Northridge,ca,`, 'P0167637 Ana Davila Corona 18402 Ha Lsted ST Unit 43 Northridgeca 91325', 'wire_729801c9ca86')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_729801c9ca86"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010672</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Tanya</span>
+                                    
+                        <button id="book-wire_729801c9ca86"
+                                onclick="bookInYardi('10/7/2025 9:07 AM', '3144.44', `Ana L Davila 18627 Liggett ST Northridge,ca,`, 'wire_729801c9ca86')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_729801c9ca86" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_cd01a68e4f03">
