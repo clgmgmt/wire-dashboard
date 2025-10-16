@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/15 5:07 PM</div>
+            <div class="last-updated">Last Updated: 10/15 6:06 PM</div>
         </div>
         
         <div class="account-info">
@@ -692,26 +692,33 @@
                                 <span class="submit-status" id="status-wire_bb1bbd552fb9"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_0d2caa65714f">
+                        <tr data-wire-id="wire_0d2caa65714f" class="has-input">
                             <td class="date">10/15/2025 11:39 AM</td>
                             <td class="amount">$5,275.00</td>
                             <td class="originator">Iwanaga, Alison 120 Redwood RD San Anselmo, CA 94960-2135</td>
                             <td class="reference">Purpose: Apartment Deposit For 50g. Ref#: t0010599 Iwanaga</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_0d2caa65714f"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_0d2caa65714f"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/15/2025 11:39 AM', '5275.0', `Iwanaga, Alison 120 Redwood RD San Anselmo, CA 94960-2135`, 'Purpose: Apartment Deposit For 50g. Ref#: t0010599 Iwanaga', 'wire_0d2caa65714f')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_0d2caa65714f"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010599</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Gaea Arnold</span>
+                                    
+                        <button id="book-wire_0d2caa65714f"
+                                onclick="bookInYardi('10/15/2025 11:39 AM', '5275.0', `Iwanaga, Alison 120 Redwood RD San Anselmo, CA 94960-2135`, 'wire_0d2caa65714f')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_0d2caa65714f" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_63843415740e">
