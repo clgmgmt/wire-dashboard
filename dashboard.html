@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/16 6:07 PM</div>
+            <div class="last-updated">Last Updated: 10/17 8:54 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_e12bfbb188fc">
+                            <td class="date">10/17/2025 5:17 AM</td>
+                            <td class="amount">$5,897.83</td>
+                            <td class="originator">X783264261 Todd Brandon Stein 2/11925 Venice BLVD Apt 10 3/us/los Angeles CA 90066-3995</td>
+                            <td class="reference">Move-in Funds</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_e12bfbb188fc"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_e12bfbb188fc"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/17/2025 5:17 AM', '5897.83', `X783264261 Todd Brandon Stein 2/11925 Venice BLVD Apt 10 3/us/los Angeles CA 90066-3995`, 'Move-in Funds', 'wire_e12bfbb188fc')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_e12bfbb188fc"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_510fa28447dd" class="has-input">
                             <td class="date">10/16/2025 7:20 AM</td>
                             <td class="amount">$4,691.83</td>
