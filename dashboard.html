@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/21 10:08 AM</div>
+            <div class="last-updated">Last Updated: 10/21 11:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -692,26 +692,33 @@
                                 <span class="submit-status" id="status-wire_833d34df2511"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_8d86924057cf">
+                        <tr data-wire-id="wire_8d86924057cf" class="has-input">
                             <td class="date">10/21/2025 5:11 AM</td>
                             <td class="amount">$4,517.83</td>
                             <td class="originator">Martin J Petruzzi 5862 Cosley Ridge DR Westerville OH 43081-0021 US</td>
                             <td class="reference">t0010715 - Petruzzi (707)</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_8d86924057cf"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_8d86924057cf"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/21/2025 5:11 AM', '4517.83', `Martin J Petruzzi 5862 Cosley Ridge DR Westerville OH 43081-0021 US`, 't0010715 - Petruzzi (707)', 'wire_8d86924057cf')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_8d86924057cf"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010715</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Dietrich McWhorter-Riley</span>
+                                    
+                        <button id="book-wire_8d86924057cf"
+                                onclick="bookInYardi('10/21/2025 5:11 AM', '4517.83', `Martin J Petruzzi 5862 Cosley Ridge DR Westerville OH 43081-0021 US`, 'wire_8d86924057cf')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_8d86924057cf" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_eca82b8c0f32">
