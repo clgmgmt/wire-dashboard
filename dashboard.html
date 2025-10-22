@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/22 11:07 AM</div>
+            <div class="last-updated">Last Updated: 10/22 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -883,48 +883,62 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_9ffc13c5cad2">
+                        <tr data-wire-id="wire_9ffc13c5cad2" class="has-input">
                             <td class="date">10/20/2025 5:07 AM</td>
                             <td class="amount">$2,050.00</td>
                             <td class="originator">Nobuhiko Sawai 2/founders Apartment, 2610 Portland 3/us/los Angeles, CA 90007</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_9ffc13c5cad2"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_9ffc13c5cad2"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/20/2025 5:07 AM', '2050.0', `Nobuhiko Sawai 2/founders Apartment, 2610 Portland 3/us/los Angeles, CA 90007`, '', 'wire_9ffc13c5cad2')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_9ffc13c5cad2"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010669</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Joslyn Y</span>
+                                    
+                        <button id="book-wire_9ffc13c5cad2"
+                                onclick="bookInYardi('10/20/2025 5:07 AM', '2050.0', `Nobuhiko Sawai 2/founders Apartment, 2610 Portland 3/us/los Angeles, CA 90007`, 'wire_9ffc13c5cad2')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_9ffc13c5cad2" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_c27144ab76f3">
+                        <tr data-wire-id="wire_c27144ab76f3" class="has-input">
                             <td class="date">10/17/2025 10:02 AM</td>
                             <td class="amount">$2,025.00</td>
                             <td class="originator">Carlyn K Krautsak OR Cheryl Krautsak 214 Elder LN Fox River Grove IL 60021-1532 US</td>
                             <td class="reference">T0010706-krautsak</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_c27144ab76f3"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_c27144ab76f3"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/17/2025 10:02 AM', '2025.0', `Carlyn K Krautsak OR Cheryl Krautsak 214 Elder LN Fox River Grove IL 60021-1532 US`, 'T0010706-krautsak', 'wire_c27144ab76f3')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_c27144ab76f3"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010706</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Karmine</span>
+                                    
+                        <button id="book-wire_c27144ab76f3"
+                                onclick="bookInYardi('10/17/2025 10:02 AM', '2025.0', `Carlyn K Krautsak OR Cheryl Krautsak 214 Elder LN Fox River Grove IL 60021-1532 US`, 'wire_c27144ab76f3')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_c27144ab76f3" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_e12bfbb188fc" class="has-input">
