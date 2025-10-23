@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/23 12:07 PM</div>
+            <div class="last-updated">Last Updated: 10/23 1:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,50 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_4f8d7ed9744c">
+                            <td class="date">10/23/2025 12:52 PM</td>
+                            <td class="amount">$4,714.00</td>
+                            <td class="originator"></td>
+                            <td class="reference">Acct T0010718-lawson 4133 Redwood A Ve Security Deposit + November 2025 Rent [ E1596]</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_4f8d7ed9744c"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_4f8d7ed9744c"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/23/2025 12:52 PM', '4714.0', ``, 'Acct T0010718-lawson 4133 Redwood A Ve Security Deposit + November 2025 Rent [ E1596]', 'wire_4f8d7ed9744c')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_4f8d7ed9744c"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_1ea17dc34839">
+                            <td class="date">10/23/2025 12:29 PM</td>
+                            <td class="amount">$1,975.00</td>
+                            <td class="originator">Martin Zieler 426 S Serrano AVE Los Angeles CA 90020-3670 US</td>
+                            <td class="reference">T0010727- Zieler</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_1ea17dc34839"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_1ea17dc34839"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/23/2025 12:29 PM', '1975.0', `Martin Zieler 426 S Serrano AVE Los Angeles CA 90020-3670 US`, 'T0010727- Zieler', 'wire_1ea17dc34839')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_1ea17dc34839"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_9837f303444f">
                             <td class="date">10/23/2025 11:36 AM</td>
                             <td class="amount">$2,715.00</td>
