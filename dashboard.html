@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/24 10:07 AM</div>
+            <div class="last-updated">Last Updated: 10/24 11:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -795,26 +795,33 @@
                                 <span class="submit-status" id="status-wire_4f8d7ed9744c"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_1ea17dc34839">
+                        <tr data-wire-id="wire_1ea17dc34839" class="has-input">
                             <td class="date">10/23/2025 12:29 PM</td>
                             <td class="amount">$1,975.00</td>
                             <td class="originator">Martin Zieler 426 S Serrano AVE Los Angeles CA 90020-3670 US</td>
                             <td class="reference">T0010727- Zieler</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_1ea17dc34839"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_1ea17dc34839"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/23/2025 12:29 PM', '1975.0', `Martin Zieler 426 S Serrano AVE Los Angeles CA 90020-3670 US`, 'T0010727- Zieler', 'wire_1ea17dc34839')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_1ea17dc34839"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010727</span>
+                                    <span class="manager-display" style="margin-left: 12px;">lopez</span>
+                                    
+                        <button id="book-wire_1ea17dc34839"
+                                onclick="bookInYardi('10/23/2025 12:29 PM', '1975.0', `Martin Zieler 426 S Serrano AVE Los Angeles CA 90020-3670 US`, 'wire_1ea17dc34839')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_1ea17dc34839" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_9837f303444f" class="has-input">
