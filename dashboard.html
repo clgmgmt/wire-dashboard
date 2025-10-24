@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/23 6:07 PM</div>
+            <div class="last-updated">Last Updated: 10/24 6:25 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,50 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_14cdc5bad4e5">
+                            <td class="date">10/24/2025 5:06 AM</td>
+                            <td class="amount">$4,737.83</td>
+                            <td class="originator">Sloane Perras 526 1st AVE S Apt 517 Seattle WA US 98104-2863</td>
+                            <td class="reference">t0010725 - Perras Roth</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_14cdc5bad4e5"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_14cdc5bad4e5"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/24/2025 5:06 AM', '4737.83', `Sloane Perras 526 1st AVE S Apt 517 Seattle WA US 98104-2863`, 't0010725 - Perras Roth', 'wire_14cdc5bad4e5')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_14cdc5bad4e5"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_5b19bf3bac85">
+                            <td class="date">10/24/2025 5:04 AM</td>
+                            <td class="amount">$4,877.83</td>
+                            <td class="originator">Justin Dueck 6706 Leyland Park DR San Jose CA 95 120 USA</td>
+                            <td class="reference">Move IN</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_5b19bf3bac85"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_5b19bf3bac85"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/24/2025 5:04 AM', '4877.83', `Justin Dueck 6706 Leyland Park DR San Jose CA 95 120 USA`, 'Move IN', 'wire_5b19bf3bac85')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_5b19bf3bac85"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_a76db614ec1c" class="has-input">
                             <td class="date">10/23/2025 3:38 PM</td>
                             <td class="amount">$4,172.83</td>
