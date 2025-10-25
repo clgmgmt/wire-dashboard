@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/24 5:07 PM</div>
+            <div class="last-updated">Last Updated: 10/24 6:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_7cf28eb62147">
+                        <tr data-wire-id="wire_7cf28eb62147" class="has-input">
                             <td class="date">10/24/2025 2:38 PM</td>
                             <td class="amount">$5,897.83</td>
                             <td class="originator">Christian A Mastrocinque OR Tracey A Tipton 8841 Tiger Tooth AVE Las Vegas NV 89178-5712 US</td>
                             <td class="reference">Refrence: Christian Mastrocinque 13 448 Beach AVE Unit 6408 Marina Del Ray CA 90292</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_7cf28eb62147"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_7cf28eb62147"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/24/2025 2:38 PM', '5897.83', `Christian A Mastrocinque OR Tracey A Tipton 8841 Tiger Tooth AVE Las Vegas NV 89178-5712 US`, 'Refrence: Christian Mastrocinque 13 448 Beach AVE Unit 6408 Marina Del Ray CA 90292', 'wire_7cf28eb62147')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_7cf28eb62147"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010739</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Avy Stockton</span>
+                                    
+                        <button id="book-wire_7cf28eb62147"
+                                onclick="bookInYardi('10/24/2025 2:38 PM', '5897.83', `Christian A Mastrocinque OR Tracey A Tipton 8841 Tiger Tooth AVE Las Vegas NV 89178-5712 US`, 'wire_7cf28eb62147')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_7cf28eb62147" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_dace9b6b7995">
