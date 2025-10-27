@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/27 8:07 AM</div>
+            <div class="last-updated">Last Updated: 10/27 9:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_73baf5848ed0">
+                        <tr data-wire-id="wire_73baf5848ed0" class="has-input">
                             <td class="date">10/27/2025 7:25 AM</td>
                             <td class="amount">$1,799.44</td>
                             <td class="originator">Joel E Orrego 6708 Gifford AVE Bell CA 90201-2408 US</td>
                             <td class="reference">Joel Orrego Security Deposit 1st MO Nth Rent</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_73baf5848ed0"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_73baf5848ed0"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/27/2025 7:25 AM', '1799.44', `Joel E Orrego 6708 Gifford AVE Bell CA 90201-2408 US`, 'Joel Orrego Security Deposit 1st MO Nth Rent', 'wire_73baf5848ed0')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_73baf5848ed0"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010741</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Lopez</span>
+                                    
+                        <button id="book-wire_73baf5848ed0"
+                                onclick="bookInYardi('10/27/2025 7:25 AM', '1799.44', `Joel E Orrego 6708 Gifford AVE Bell CA 90201-2408 US`, 'wire_73baf5848ed0')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_73baf5848ed0" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_09b49e7fa7c4">
@@ -889,26 +896,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_d09548738a9c">
+                        <tr data-wire-id="wire_d09548738a9c" class="has-input">
                             <td class="date">10/24/2025 9:16 AM</td>
                             <td class="amount">$2,574.44</td>
                             <td class="originator">Anna Carol Christie 2/14144 Burbank BLVD Unit 2 3/us/sherman Oaks 91401</td>
                             <td class="reference">t0010730 Christie</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_d09548738a9c"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_d09548738a9c"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/24/2025 9:16 AM', '2574.44', `Anna Carol Christie 2/14144 Burbank BLVD Unit 2 3/us/sherman Oaks 91401`, 't0010730 Christie', 'wire_d09548738a9c')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_d09548738a9c"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010730</span>
+                                    <span class="manager-display" style="margin-left: 12px;">lopez</span>
+                                    
+                        <button id="book-wire_d09548738a9c"
+                                onclick="bookInYardi('10/24/2025 9:16 AM', '2574.44', `Anna Carol Christie 2/14144 Burbank BLVD Unit 2 3/us/sherman Oaks 91401`, 'wire_d09548738a9c')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_d09548738a9c" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_14cdc5bad4e5" class="has-input">
