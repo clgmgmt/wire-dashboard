@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/27 1:07 PM</div>
+            <div class="last-updated">Last Updated: 10/27 1:56 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_589dd80b3c02">
+                            <td class="date">10/27/2025 1:37 PM</td>
+                            <td class="amount">$2,300.00</td>
+                            <td class="originator">Jeremy J Reddig 522 N Central AVE # 2092 Phoenix AZ 85004-2185 US</td>
+                            <td class="reference">Reference:jeremy J Reddig Address: 13448 Beach AVE 1501-A</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_589dd80b3c02"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_589dd80b3c02"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/27/2025 1:37 PM', '2300.0', `Jeremy J Reddig 522 N Central AVE # 2092 Phoenix AZ 85004-2185 US`, 'Reference:jeremy J Reddig Address: 13448 Beach AVE 1501-A', 'wire_589dd80b3c02')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_589dd80b3c02"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_9745f539f5a9">
                             <td class="date">10/27/2025 12:09 PM</td>
                             <td class="amount">$5,146.83</td>
