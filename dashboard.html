@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/28 11:07 AM</div>
+            <div class="last-updated">Last Updated: 10/28 12:08 PM</div>
         </div>
         
         <div class="account-info">
@@ -819,48 +819,62 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_8516284ee55f">
+                        <tr data-wire-id="wire_8516284ee55f" class="has-input">
                             <td class="date">10/27/2025 5:15 AM</td>
                             <td class="amount">$3,751.83</td>
                             <td class="originator">Kacey Adams Herring 1714 N McCadden PL Apt 2205 Los Angeles CA 90028-4689 US</td>
                             <td class="reference">t0010732 - Herring</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_8516284ee55f"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_8516284ee55f"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/27/2025 5:15 AM', '3751.83', `Kacey Adams Herring 1714 N McCadden PL Apt 2205 Los Angeles CA 90028-4689 US`, 't0010732 - Herring', 'wire_8516284ee55f')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_8516284ee55f"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010732</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Andrew Menzies</span>
+                                    
+                        <button id="book-wire_8516284ee55f"
+                                onclick="bookInYardi('10/27/2025 5:15 AM', '3751.83', `Kacey Adams Herring 1714 N McCadden PL Apt 2205 Los Angeles CA 90028-4689 US`, 'wire_8516284ee55f')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_8516284ee55f" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_42799be4d2f1">
+                        <tr data-wire-id="wire_42799be4d2f1" class="has-input">
                             <td class="date">10/27/2025 5:08 AM</td>
                             <td class="amount">$2,245.00</td>
                             <td class="originator">Nelsa Yuspita Dewi 2/1515 Colby AVE Ph 14 3/us/los Angeles 90025</td>
                             <td class="reference">Move IN Fund 3800 Mentone AVE 310b</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_42799be4d2f1"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_42799be4d2f1"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/27/2025 5:08 AM', '2245.0', `Nelsa Yuspita Dewi 2/1515 Colby AVE Ph 14 3/us/los Angeles 90025`, 'Move IN Fund 3800 Mentone AVE 310b', 'wire_42799be4d2f1')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_42799be4d2f1"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010707</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Joslyn Y</span>
+                                    
+                        <button id="book-wire_42799be4d2f1"
+                                onclick="bookInYardi('10/27/2025 5:08 AM', '2245.0', `Nelsa Yuspita Dewi 2/1515 Colby AVE Ph 14 3/us/los Angeles 90025`, 'wire_42799be4d2f1')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_42799be4d2f1" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_7cf28eb62147" class="has-input">
