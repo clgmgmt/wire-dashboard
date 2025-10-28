@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/28 12:08 PM</div>
+            <div class="last-updated">Last Updated: 10/28 1:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -3004,26 +3004,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_d46a372213df">
+                        <tr data-wire-id="wire_d46a372213df" class="has-input">
                             <td class="date">10/1/2025 11:23 AM</td>
                             <td class="amount">$2,401.42</td>
                             <td class="originator">Brian Drue OR Ryann Drue 1089 Rahara DR Lafayette CA 94549-2742 US</td>
                             <td class="reference">t0010648 - Drue</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_d46a372213df"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_d46a372213df"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/1/2025 11:23 AM', '2401.42', `Brian Drue OR Ryann Drue 1089 Rahara DR Lafayette CA 94549-2742 US`, 't0010648 - Drue', 'wire_d46a372213df')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_d46a372213df"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010648</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Kenneth Stone</span>
+                                    
+                        <button id="book-wire_d46a372213df"
+                                onclick="bookInYardi('10/1/2025 11:23 AM', '2401.42', `Brian Drue OR Ryann Drue 1089 Rahara DR Lafayette CA 94549-2742 US`, 'wire_d46a372213df')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_d46a372213df" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_d1f72c99c9b0" class="has-input">
