@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/27 6:07 PM</div>
+            <div class="last-updated">Last Updated: 10/28 7:55 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_aa4cf74c3cc4">
+                            <td class="date">10/28/2025 5:08 AM</td>
+                            <td class="amount">$2,950.00</td>
+                            <td class="originator">Stefan R Gimmillaro Pod Romana DE Bruijn 2/410 California ST 3/us/huntington Beach 92648</td>
+                            <td class="reference">T0010748-gimmillaro</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_aa4cf74c3cc4"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_aa4cf74c3cc4"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/28/2025 5:08 AM', '2950.0', `Stefan R Gimmillaro Pod Romana DE Bruijn 2/410 California ST 3/us/huntington Beach 92648`, 'T0010748-gimmillaro', 'wire_aa4cf74c3cc4')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_aa4cf74c3cc4"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_589dd80b3c02" class="has-input">
                             <td class="date">10/27/2025 1:37 PM</td>
                             <td class="amount">$2,300.00</td>
