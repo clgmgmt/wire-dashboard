@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/29 11:07 AM</div>
+            <div class="last-updated">Last Updated: 10/29 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_880e85510942">
+                        <tr data-wire-id="wire_880e85510942" class="has-input">
                             <td class="date">10/29/2025 10:56 AM</td>
                             <td class="amount">$3,567.83</td>
                             <td class="originator">Kristoffer W Shepherd Kimberly P Shepherd 2/225 S Lake AVE Ste 830 3/us/pasadena 91101</td>
                             <td class="reference">Kris Shepherd - t0010695</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_880e85510942"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_880e85510942"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/29/2025 10:56 AM', '3567.83', `Kristoffer W Shepherd Kimberly P Shepherd 2/225 S Lake AVE Ste 830 3/us/pasadena 91101`, 'Kris Shepherd - t0010695', 'wire_880e85510942')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_880e85510942"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010753</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Jessica Favela</span>
+                                    
+                        <button id="book-wire_880e85510942"
+                                onclick="bookInYardi('10/29/2025 10:56 AM', '3567.83', `Kristoffer W Shepherd Kimberly P Shepherd 2/225 S Lake AVE Ste 830 3/us/pasadena 91101`, 'wire_880e85510942')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_880e85510942" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_aa4cf74c3cc4" class="has-input">
