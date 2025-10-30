@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/30 11:07 AM</div>
+            <div class="last-updated">Last Updated: 10/30 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_0680647b9733">
+                            <td class="date">10/30/2025 11:50 AM</td>
+                            <td class="amount">$3,497.83</td>
+                            <td class="originator">Duncan A. McDonald 2/washington BLVD Apt 707 415 3/us/marina Del Rey,90292,ca</td>
+                            <td class="reference">"move IN Funds" Duncan Alexander Mc Donald, 13448 Beach Ave. #4210, Mar Ina Del Rey, CA 90292,.t-code T001 0757</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_0680647b9733"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_0680647b9733"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('10/30/2025 11:50 AM', '3497.83', `Duncan A. McDonald 2/washington BLVD Apt 707 415 3/us/marina Del Rey,90292,ca`, '"move IN Funds" Duncan Alexander Mc Donald, 13448 Beach Ave. #4210, Mar Ina Del Rey, CA 90292,.t-code T001 0757', 'wire_0680647b9733')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_0680647b9733"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_716a0e7dd58d" class="has-input">
                             <td class="date">10/30/2025 8:42 AM</td>
                             <td class="amount">$3,497.83</td>
