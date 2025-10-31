@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 10/31 2:07 PM</div>
+            <div class="last-updated">Last Updated: 10/31 3:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,55 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_a21af39d58f9">
-                            <td class="date">10/31/2025 1:40 PM</td>
-                            <td class="amount">$6,562.83</td>
-                            <td class="originator">Jesus F DE LA Cruz 1111 Wilshire BLVD Apt 329 Los Angeles CA US</td>
-                            <td class="reference">Jesus F DE LA Cruz13448 Beach Ave. Apt 6315marina Del Rey, CA 90292</td>
+                        <tr data-wire-id="wire_7d80068d33c4">
+                            <td class="date">10/31/2025 2:51 PM</td>
+                            <td class="amount">$6,192.83</td>
+                            <td class="originator">Cynthia A Kitner 2/867 Horizon Way 3/us/martinsburg,,wv</td>
+                            <td class="reference">Move IN Funds - Stephen Kitner, 421 0 Del Rey AVE #502 Marina Del Rey C A 90292 T-code t0010756</td>
                             <td class="manager-input">
                                 <input type="text" 
                                        class="tenant-id-input" 
-                                       id="tenant-wire_a21af39d58f9"
+                                       id="tenant-wire_7d80068d33c4"
                                        placeholder="t#######" 
                                        maxlength="8">
                                 <input type="text" 
                                        class="manager-name-input" 
-                                       id="manager-wire_a21af39d58f9"
+                                       id="manager-wire_7d80068d33c4"
                                        placeholder="Your name">
                                 <button class="submit-btn" 
-                                        onclick="submitToSheets('10/31/2025 1:40 PM', '6562.83', `Jesus F DE LA Cruz 1111 Wilshire BLVD Apt 329 Los Angeles CA US`, 'Jesus F DE LA Cruz13448 Beach Ave. Apt 6315marina Del Rey, CA 90292', 'wire_a21af39d58f9')">
+                                        onclick="submitToSheets('10/31/2025 2:51 PM', '6192.83', `Cynthia A Kitner 2/867 Horizon Way 3/us/martinsburg,,wv`, 'Move IN Funds - Stephen Kitner, 421 0 Del Rey AVE #502 Marina Del Rey C A 90292 T-code t0010756', 'wire_7d80068d33c4')">
                                     Submit
                                 </button>
-                                <span class="submit-status" id="status-wire_a21af39d58f9"></span>
+                                <span class="submit-status" id="status-wire_7d80068d33c4"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_a21af39d58f9" class="has-input">
+                            <td class="date">10/31/2025 1:40 PM</td>
+                            <td class="amount">$6,562.83</td>
+                            <td class="originator">Jesus F DE LA Cruz 1111 Wilshire BLVD Apt 329 Los Angeles CA US</td>
+                            <td class="reference">Jesus F DE LA Cruz13448 Beach Ave. Apt 6315marina Del Rey, CA 90292</td>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010754</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Chad Hirschman</span>
+                                    
+                        <button id="book-wire_a21af39d58f9"
+                                onclick="bookInYardi('10/31/2025 1:40 PM', '6562.83', `Jesus F DE LA Cruz 1111 Wilshire BLVD Apt 329 Los Angeles CA US`, 'wire_a21af39d58f9')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_a21af39d58f9" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_498a778e029d">
@@ -3249,36 +3278,6 @@
                                 <div style="display: flex; align-items: center;">
                                     <span class="tenant-display">t0010661</span>
                                     <span class="manager-display" style="margin-left: 12px;">Dietrich McWhorter-Riley</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_48c972363e4c" class="has-input">
-                            <td class="date">10/1/2025 2:32 PM</td>
-                            <td class="amount">$3,517.83</td>
-                            <td class="originator">May Myeong Hee Kim 10639 Rockhurst AVE Santa Ana CA 92705</td>
-                            <td class="reference">Annie Kim 13448 Beach AVE No 5502ma Ria Del Rey CA 90292</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010659</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Avy Stockton</span>
                                     
                         <div style="display: flex; align-items: center; margin-left: 8px;">
                             <div style="
