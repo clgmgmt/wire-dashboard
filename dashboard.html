@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/03 3:07 PM</div>
+            <div class="last-updated">Last Updated: 11/03 4:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -758,26 +758,33 @@
                                 <span class="submit-status" id="status-wire_cc0b1a34942b"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_7d80068d33c4">
+                        <tr data-wire-id="wire_7d80068d33c4" class="has-input">
                             <td class="date">10/31/2025 2:51 PM</td>
                             <td class="amount">$6,192.83</td>
                             <td class="originator">Cynthia A Kitner 2/867 Horizon Way 3/us/martinsburg,,wv</td>
                             <td class="reference">Move IN Funds - Stephen Kitner, 421 0 Del Rey AVE #502 Marina Del Rey C A 90292 T-code t0010756</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_7d80068d33c4"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_7d80068d33c4"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('10/31/2025 2:51 PM', '6192.83', `Cynthia A Kitner 2/867 Horizon Way 3/us/martinsburg,,wv`, 'Move IN Funds - Stephen Kitner, 421 0 Del Rey AVE #502 Marina Del Rey C A 90292 T-code t0010756', 'wire_7d80068d33c4')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_7d80068d33c4"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010756</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Jessica Favela</span>
+                                    
+                        <button id="book-wire_7d80068d33c4"
+                                onclick="bookInYardi('10/31/2025 2:51 PM', '6192.83', `Cynthia A Kitner 2/867 Horizon Way 3/us/martinsburg,,wv`, 'wire_7d80068d33c4')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_7d80068d33c4" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_a21af39d58f9" class="has-input">
