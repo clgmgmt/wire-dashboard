@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/04 1:07 PM</div>
+            <div class="last-updated">Last Updated: 11/04 2:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_2dfa56cfe18d">
+                        <tr data-wire-id="wire_2dfa56cfe18d" class="has-input">
                             <td class="date">11/4/2025 1:04 PM</td>
                             <td class="amount">$3,997.83</td>
                             <td class="originator">William Huston 5914 Farralone AVE Woodland Hills CA 91367</td>
                             <td class="reference">Move IN Funds t0010767 Huston</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_2dfa56cfe18d"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_2dfa56cfe18d"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/4/2025 1:04 PM', '3997.83', `William Huston 5914 Farralone AVE Woodland Hills CA 91367`, 'Move IN Funds t0010767 Huston', 'wire_2dfa56cfe18d')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_2dfa56cfe18d"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010767</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Dietrich McWhorter-Riley</span>
+                                    
+                        <button id="book-wire_2dfa56cfe18d"
+                                onclick="bookInYardi('11/4/2025 1:04 PM', '3997.83', `William Huston 5914 Farralone AVE Woodland Hills CA 91367`, 'wire_2dfa56cfe18d')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_2dfa56cfe18d" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_2d6dc50ad544">
