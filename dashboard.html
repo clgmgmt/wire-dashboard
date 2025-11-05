@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/05 10:07 AM</div>
+            <div class="last-updated">Last Updated: 11/05 11:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_5a81aaa11ebd">
+                            <td class="date">11/5/2025 10:50 AM</td>
+                            <td class="amount">$4,899.00</td>
+                            <td class="originator">Pacifica Group Llc 2/4316 Marina City DR Unit 303g 3/us/marina Del Rey 90292</td>
+                            <td class="reference">T0010755- Kharytynich</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_5a81aaa11ebd"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_5a81aaa11ebd"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('11/5/2025 10:50 AM', '4899.0', `Pacifica Group Llc 2/4316 Marina City DR Unit 303g 3/us/marina Del Rey 90292`, 'T0010755- Kharytynich', 'wire_5a81aaa11ebd')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_5a81aaa11ebd"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_2dfa56cfe18d" class="has-input">
                             <td class="date">11/4/2025 1:04 PM</td>
                             <td class="amount">$3,997.83</td>
@@ -2893,36 +2915,6 @@
                                 <div style="display: flex; align-items: center;">
                                     <span class="tenant-display">t0010657</span>
                                     <span class="manager-display" style="margin-left: 12px;">lopez</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_f43e1f3a1986" class="has-input">
-                            <td class="date">10/6/2025 10:35 AM</td>
-                            <td class="amount">$4,744.83</td>
-                            <td class="originator">Jeremy Janssen 5742 Lipscomb ST SE Salem,or,97317 US</td>
-                            <td class="reference">Deposit + Rent t0010619 - Janssen</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010619</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Jeremy</span>
                                     
                         <div style="display: flex; align-items: center; margin-left: 8px;">
                             <div style="
