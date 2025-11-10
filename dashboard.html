@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/10 1:07 PM</div>
+            <div class="last-updated">Last Updated: 11/10 2:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_d8a80fcb164f">
+                            <td class="date">11/10/2025 1:35 PM</td>
+                            <td class="amount">$4,519.83</td>
+                            <td class="originator">Andrew P Ahmadi 2/1742 Evergreen AVE 3/us/fullerton, CA 92835 2123</td>
+                            <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_d8a80fcb164f"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_d8a80fcb164f"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('11/10/2025 1:35 PM', '4519.83', `Andrew P Ahmadi 2/1742 Evergreen AVE 3/us/fullerton, CA 92835 2123`, '', 'wire_d8a80fcb164f')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_d8a80fcb164f"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_30b1db83f643">
                             <td class="date">11/10/2025 12:29 PM</td>
                             <td class="amount">$5,702.83</td>
