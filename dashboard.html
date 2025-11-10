@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/10 11:07 AM</div>
+            <div class="last-updated">Last Updated: 11/10 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,48 +670,62 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_05c2ca2e63db">
+                        <tr data-wire-id="wire_05c2ca2e63db" class="has-input">
                             <td class="date">11/10/2025 10:58 AM</td>
                             <td class="amount">$2,642.83</td>
                             <td class="originator">Chenchen Ye 1301 David ST Apt 126 San Mateo CA 94403-1911 US</td>
                             <td class="reference">Chenchen Ye. 11311 LA Grange Ave. U Nit 413, Los Angeles CA 90025</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_05c2ca2e63db"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_05c2ca2e63db"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/10/2025 10:58 AM', '2642.83', `Chenchen Ye 1301 David ST Apt 126 San Mateo CA 94403-1911 US`, 'Chenchen Ye. 11311 LA Grange Ave. U Nit 413, Los Angeles CA 90025', 'wire_05c2ca2e63db')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_05c2ca2e63db"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010778</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Rosa Hernandez</span>
+                                    
+                        <button id="book-wire_05c2ca2e63db"
+                                onclick="bookInYardi('11/10/2025 10:58 AM', '2642.83', `Chenchen Ye 1301 David ST Apt 126 San Mateo CA 94403-1911 US`, 'wire_05c2ca2e63db')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_05c2ca2e63db" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_df70cddea44a">
+                        <tr data-wire-id="wire_df70cddea44a" class="has-input">
                             <td class="date">11/10/2025 10:17 AM</td>
                             <td class="amount">$2,395.00</td>
                             <td class="originator">Kim E Siehl 2809 Crest DR # B Manhattan Bch CA 90266-2010 US</td>
                             <td class="reference">James Houston Moveinfunds 1501f</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_df70cddea44a"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_df70cddea44a"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/10/2025 10:17 AM', '2395.0', `Kim E Siehl 2809 Crest DR # B Manhattan Bch CA 90266-2010 US`, 'James Houston Moveinfunds 1501f', 'wire_df70cddea44a')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_df70cddea44a"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010782</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Avy Stockton</span>
+                                    
+                        <button id="book-wire_df70cddea44a"
+                                onclick="bookInYardi('11/10/2025 10:17 AM', '2395.0', `Kim E Siehl 2809 Crest DR # B Manhattan Bch CA 90266-2010 US`, 'wire_df70cddea44a')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_df70cddea44a" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_e849ce2c53cf">
@@ -736,48 +750,62 @@
                                 <span class="submit-status" id="status-wire_e849ce2c53cf"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_83ac446f2246">
+                        <tr data-wire-id="wire_83ac446f2246" class="has-input">
                             <td class="date">11/10/2025 6:30 AM</td>
                             <td class="amount">$4,717.83</td>
                             <td class="originator">Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646</td>
                             <td class="reference">t0010710</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_83ac446f2246"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_83ac446f2246"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/10/2025 6:30 AM', '4717.83', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 't0010710', 'wire_83ac446f2246')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_83ac446f2246"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010710</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
+                                    
+                        <button id="book-wire_83ac446f2246"
+                                onclick="bookInYardi('11/10/2025 6:30 AM', '4717.83', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'wire_83ac446f2246')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_83ac446f2246" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_9ca83d7c3b73">
+                        <tr data-wire-id="wire_9ca83d7c3b73" class="has-input">
                             <td class="date">11/10/2025 5:19 AM</td>
                             <td class="amount">$4,816.83</td>
                             <td class="originator">Vignesh Suthendran 115 Castlebury CT Coppell TX 75019-3332 US</td>
                             <td class="reference">Ph735 Move IN Funds Vignesh</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_9ca83d7c3b73"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_9ca83d7c3b73"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/10/2025 5:19 AM', '4816.83', `Vignesh Suthendran 115 Castlebury CT Coppell TX 75019-3332 US`, 'Ph735 Move IN Funds Vignesh', 'wire_9ca83d7c3b73')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_9ca83d7c3b73"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010735</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
+                                    
+                        <button id="book-wire_9ca83d7c3b73"
+                                onclick="bookInYardi('11/10/2025 5:19 AM', '4816.83', `Vignesh Suthendran 115 Castlebury CT Coppell TX 75019-3332 US`, 'wire_9ca83d7c3b73')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_9ca83d7c3b73" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_47e8fef99494">
