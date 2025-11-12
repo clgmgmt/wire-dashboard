@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/11 6:07 PM</div>
+            <div class="last-updated">Last Updated: 11/12 7:14 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_dce464a01cfc">
+                            <td class="date">11/12/2025 5:52 AM</td>
+                            <td class="amount">$4,816.83</td>
+                            <td class="originator">Verlyn Juwono 12411 W Fielding Cir Apt 4216 Los Angeles CA 90094-2582 US</td>
+                            <td class="reference">T### - Verlyn Juwono</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_dce464a01cfc"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_dce464a01cfc"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('11/12/2025 5:52 AM', '4816.83', `Verlyn Juwono 12411 W Fielding Cir Apt 4216 Los Angeles CA 90094-2582 US`, 'T### - Verlyn Juwono', 'wire_dce464a01cfc')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_dce464a01cfc"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_d8a80fcb164f">
                             <td class="date">11/10/2025 1:35 PM</td>
                             <td class="amount">$4,519.83</td>
