@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/17 2:28 PM</div>
+            <div class="last-updated">Last Updated: 11/17 3:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,48 +670,62 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_79d42213d09b">
+                        <tr data-wire-id="wire_79d42213d09b" class="has-input">
                             <td class="date">11/17/2025 10:17 AM</td>
                             <td class="amount">$2,249.44</td>
                             <td class="originator">Madeline C Malsey 2/5922 N Albina AVE Apt 5 3/us/portland,97217,or</td>
                             <td class="reference">Move IN Funds For Rent, Reference # T0010895-malsey</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_79d42213d09b"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_79d42213d09b"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/17/2025 10:17 AM', '2249.44', `Madeline C Malsey 2/5922 N Albina AVE Apt 5 3/us/portland,97217,or`, 'Move IN Funds For Rent, Reference # T0010895-malsey', 'wire_79d42213d09b')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_79d42213d09b"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010795</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Lopez</span>
+                                    
+                        <button id="book-wire_79d42213d09b"
+                                onclick="bookInYardi('11/17/2025 10:17 AM', '2249.44', `Madeline C Malsey 2/5922 N Albina AVE Apt 5 3/us/portland,97217,or`, 'wire_79d42213d09b')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_79d42213d09b" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_2a2c89d91709">
+                        <tr data-wire-id="wire_2a2c89d91709" class="has-input">
                             <td class="date">11/17/2025 9:01 AM</td>
                             <td class="amount">$7,027.83</td>
                             <td class="originator">Rare Collectors Item Films Llc 4317 Mont Eagle PL Los Angeles CA 90041-3414 US</td>
                             <td class="reference">Ahbra Perry, 13448 Beach Avenue, #4 320marina Del Rey, CA 90292t-code: t0010769</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_2a2c89d91709"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_2a2c89d91709"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/17/2025 9:01 AM', '7027.83', `Rare Collectors Item Films Llc 4317 Mont Eagle PL Los Angeles CA 90041-3414 US`, 'Ahbra Perry, 13448 Beach Avenue, #4 320marina Del Rey, CA 90292t-code: t0010769', 'wire_2a2c89d91709')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_2a2c89d91709"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010769</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Avy Stockton</span>
+                                    
+                        <button id="book-wire_2a2c89d91709"
+                                onclick="bookInYardi('11/17/2025 9:01 AM', '7027.83', `Rare Collectors Item Films Llc 4317 Mont Eagle PL Los Angeles CA 90041-3414 US`, 'wire_2a2c89d91709')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_2a2c89d91709" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_eb85be93c331">
