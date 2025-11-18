@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/18 12:07 PM</div>
+            <div class="last-updated">Last Updated: 11/18 1:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -840,26 +840,33 @@
                                 <span class="submit-status" id="status-wire_eb85be93c331"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_7fa0d33859ba">
+                        <tr data-wire-id="wire_7fa0d33859ba" class="has-input">
                             <td class="date">11/13/2025 7:36 AM</td>
                             <td class="amount">$5,399.00</td>
                             <td class="originator">Jasmine Cheng 2/920 N El Centro AVE Apt 3 3/us/los Angeles 90038</td>
                             <td class="reference">T0010786- Chau</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_7fa0d33859ba"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_7fa0d33859ba"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/13/2025 7:36 AM', '5399.0', `Jasmine Cheng 2/920 N El Centro AVE Apt 3 3/us/los Angeles 90038`, 'T0010786- Chau', 'wire_7fa0d33859ba')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_7fa0d33859ba"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0001078</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Carisa Magdaleno</span>
+                                    
+                        <button id="book-wire_7fa0d33859ba"
+                                onclick="bookInYardi('11/13/2025 7:36 AM', '5399.0', `Jasmine Cheng 2/920 N El Centro AVE Apt 3 3/us/los Angeles 90038`, 'wire_7fa0d33859ba')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_7fa0d33859ba" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_d5c727b1cc58" class="has-input">
