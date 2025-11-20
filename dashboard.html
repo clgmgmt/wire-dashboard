@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/19 6:07 PM</div>
+            <div class="last-updated">Last Updated: 11/20 9:01 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_e04f26659f49">
+                            <td class="date">11/20/2025 5:11 AM</td>
+                            <td class="amount">$6,097.83</td>
+                            <td class="originator">Patricia Ann Donald 2/525 Broadway Apt 5025 3/us/santa Monica, CA 90401 2963</td>
+                            <td class="reference"></td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_e04f26659f49"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_e04f26659f49"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('11/20/2025 5:11 AM', '6097.83', `Patricia Ann Donald 2/525 Broadway Apt 5025 3/us/santa Monica, CA 90401 2963`, '', 'wire_e04f26659f49')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_e04f26659f49"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_d18a514a94a8" class="has-input">
                             <td class="date">11/18/2025 2:29 PM</td>
                             <td class="amount">$4,212.83</td>
@@ -2713,156 +2735,6 @@
                                 <div style="display: flex; align-items: center;">
                                     <span class="tenant-display">t0010703</span>
                                     <span class="manager-display" style="margin-left: 12px;">Andrew Menzies</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_833d34df2511" class="has-input">
-                            <td class="date">10/21/2025 7:27 AM</td>
-                            <td class="amount">$2,782.83</td>
-                            <td class="originator">Jieyi Shang 2/900 Weyburn PL Apt 303 3/us/los Angeles 90024</td>
-                            <td class="reference">Jieyi Shang Move IN Fund</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010714</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Rosa Hernandez</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_8d86924057cf" class="has-input">
-                            <td class="date">10/21/2025 5:11 AM</td>
-                            <td class="amount">$4,517.83</td>
-                            <td class="originator">Martin J Petruzzi 5862 Cosley Ridge DR Westerville OH 43081-0021 US</td>
-                            <td class="reference">t0010715 - Petruzzi (707)</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010715</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Dietrich McWhorter-Riley</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_eca82b8c0f32" class="has-input">
-                            <td class="date">10/20/2025 7:04 AM</td>
-                            <td class="amount">$5,349.83</td>
-                            <td class="originator">Thomas Mayr 9416 E 57th AVE Denver CO 80238</td>
-                            <td class="reference">t0010576 Mayr</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010576</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_0c55d6e2084a" class="has-input">
-                            <td class="date">10/20/2025 5:08 AM</td>
-                            <td class="amount">$4,552.83</td>
-                            <td class="originator">Melissa Wilkinson 3646 Sunburst BLVD Palm Springs CA 92262</td>
-                            <td class="reference">Tenant ID t0010728</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010728</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Chad Hirschman</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_9ffc13c5cad2" class="has-input">
-                            <td class="date">10/20/2025 5:07 AM</td>
-                            <td class="amount">$2,050.00</td>
-                            <td class="originator">Nobuhiko Sawai 2/founders Apartment, 2610 Portland 3/us/los Angeles, CA 90007</td>
-                            <td class="reference"></td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010669</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Joslyn Y</span>
                                     
                         <div style="display: flex; align-items: center; margin-left: 8px;">
                             <div style="
