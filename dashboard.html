@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/21 11:08 AM</div>
+            <div class="last-updated">Last Updated: 11/21 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -810,26 +810,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_45a617f6e4f7">
+                        <tr data-wire-id="wire_45a617f6e4f7" class="has-input">
                             <td class="date">11/17/2025 4:40 PM</td>
                             <td class="amount">$2,642.83</td>
                             <td class="originator">Lama AL Kassis 7725 Gateway Unit 2505 Irvine CA 92618</td>
                             <td class="reference">Lama Alkassis Tenant t0010784 Addrs S 11311 LA Grange AVE Unit 409 LA</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_45a617f6e4f7"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_45a617f6e4f7"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/17/2025 4:40 PM', '2642.83', `Lama AL Kassis 7725 Gateway Unit 2505 Irvine CA 92618`, 'Lama Alkassis Tenant t0010784 Addrs S 11311 LA Grange AVE Unit 409 LA', 'wire_45a617f6e4f7')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_45a617f6e4f7"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010784</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Rosa Hernandez</span>
+                                    
+                        <button id="book-wire_45a617f6e4f7"
+                                onclick="bookInYardi('11/17/2025 4:40 PM', '2642.83', `Lama AL Kassis 7725 Gateway Unit 2505 Irvine CA 92618`, 'wire_45a617f6e4f7')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_45a617f6e4f7" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_79d42213d09b" class="has-input">
