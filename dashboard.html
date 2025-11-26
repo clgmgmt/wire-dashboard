@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 11/26 2:07 PM</div>
+            <div class="last-updated">Last Updated: 11/26 3:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_425141ea77ac">
+                        <tr data-wire-id="wire_425141ea77ac" class="has-input">
                             <td class="date">11/26/2025 5:23 AM</td>
                             <td class="amount">$4,395.00</td>
                             <td class="originator">Dongren Shi Rm 2404 Building 59 Yongjin Garden N 2038 Changning AVE Shushan Dist Hefei Anhui China</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_425141ea77ac"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_425141ea77ac"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/26/2025 5:23 AM', '4395.0', `Dongren Shi Rm 2404 Building 59 Yongjin Garden N 2038 Changning AVE Shushan Dist Hefei Anhui China`, '', 'wire_425141ea77ac')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_425141ea77ac"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010814</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Joslyn Y</span>
+                                    
+                        <button id="book-wire_425141ea77ac"
+                                onclick="bookInYardi('11/26/2025 5:23 AM', '4395.0', `Dongren Shi Rm 2404 Building 59 Yongjin Garden N 2038 Changning AVE Shushan Dist Hefei Anhui China`, 'wire_425141ea77ac')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_425141ea77ac" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_82b49bc6e465" class="has-input">
