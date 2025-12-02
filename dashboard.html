@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/02 10:07 AM</div>
+            <div class="last-updated">Last Updated: 12/02 11:08 AM</div>
         </div>
         
         <div class="account-info">
@@ -692,70 +692,91 @@
                                 <span class="submit-status" id="status-wire_480aef5d6084"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_0e48b6b15db9">
+                        <tr data-wire-id="wire_0e48b6b15db9" class="has-input">
                             <td class="date">12/1/2025 5:19 AM</td>
                             <td class="amount">$16,927.83</td>
                             <td class="originator">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
                             <td class="reference">No. 301 Tenant ID t0010788</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_0e48b6b15db9"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_0e48b6b15db9"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/1/2025 5:19 AM', '16927.83', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'No. 301 Tenant ID t0010788', 'wire_0e48b6b15db9')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_0e48b6b15db9"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010789</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Aria</span>
+                                    
+                        <button id="book-wire_0e48b6b15db9"
+                                onclick="bookInYardi('12/1/2025 5:19 AM', '16927.83', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'wire_0e48b6b15db9')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_0e48b6b15db9" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_db7afcf73fd1">
+                        <tr data-wire-id="wire_db7afcf73fd1" class="has-input">
                             <td class="date">12/1/2025 5:19 AM</td>
                             <td class="amount">$19,827.83</td>
                             <td class="originator">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
                             <td class="reference">No. 302 Tenant ID t0010789</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_db7afcf73fd1"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_db7afcf73fd1"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/1/2025 5:19 AM', '19827.83', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'No. 302 Tenant ID t0010789', 'wire_db7afcf73fd1')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_db7afcf73fd1"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010789</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Aria</span>
+                                    
+                        <button id="book-wire_db7afcf73fd1"
+                                onclick="bookInYardi('12/1/2025 5:19 AM', '19827.83', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'wire_db7afcf73fd1')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_db7afcf73fd1" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_1f91d7d79766">
+                        <tr data-wire-id="wire_1f91d7d79766" class="has-input">
                             <td class="date">11/28/2025 5:28 AM</td>
                             <td class="amount">$2,349.44</td>
                             <td class="originator">Gabriel M Mustin 7603 N Honor Way Van Nuys CA 91405-5652 US</td>
                             <td class="reference">T0010816- Mustin</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_1f91d7d79766"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_1f91d7d79766"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/28/2025 5:28 AM', '2349.44', `Gabriel M Mustin 7603 N Honor Way Van Nuys CA 91405-5652 US`, 'T0010816- Mustin', 'wire_1f91d7d79766')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_1f91d7d79766"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010816</span>
+                                    <span class="manager-display" style="margin-left: 12px;">lopez</span>
+                                    
+                        <button id="book-wire_1f91d7d79766"
+                                onclick="bookInYardi('11/28/2025 5:28 AM', '2349.44', `Gabriel M Mustin 7603 N Honor Way Van Nuys CA 91405-5652 US`, 'wire_1f91d7d79766')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_1f91d7d79766" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_425141ea77ac" class="has-input">
