@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/05 2:07 PM</div>
+            <div class="last-updated">Last Updated: 12/05 3:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -714,26 +714,33 @@
                                 <span class="submit-status" id="status-wire_4f48f8c03f40"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_c2e36459c7f3">
+                        <tr data-wire-id="wire_c2e36459c7f3" class="has-input">
                             <td class="date">12/4/2025 5:03 AM</td>
                             <td class="amount">$4,630.83</td>
                             <td class="originator">Mary E Feuker 67 Pancoast RD Waretown NJ US 08758-2649</td>
                             <td class="reference">t0010805 - Mackintosh</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_c2e36459c7f3"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_c2e36459c7f3"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/4/2025 5:03 AM', '4630.83', `Mary E Feuker 67 Pancoast RD Waretown NJ US 08758-2649`, 't0010805 - Mackintosh', 'wire_c2e36459c7f3')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_c2e36459c7f3"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010805</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
+                                    
+                        <button id="book-wire_c2e36459c7f3"
+                                onclick="bookInYardi('12/4/2025 5:03 AM', '4630.83', `Mary E Feuker 67 Pancoast RD Waretown NJ US 08758-2649`, 'wire_c2e36459c7f3')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_c2e36459c7f3" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_12ef721a7b52" class="has-input">
