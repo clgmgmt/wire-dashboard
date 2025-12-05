@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/05 8:07 AM</div>
+            <div class="last-updated">Last Updated: 12/05 9:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_4f48f8c03f40">
+                            <td class="date">12/5/2025 8:38 AM</td>
+                            <td class="amount">$4,591.83</td>
+                            <td class="originator">James Andrew Brennan Iii OR James A Brennan 3425 Motor AVE Apt Ph5 Los Angeles CA 90034-4517 US</td>
+                            <td class="reference">t0010799 Brennan</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_4f48f8c03f40"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_4f48f8c03f40"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('12/5/2025 8:38 AM', '4591.83', `James Andrew Brennan Iii OR James A Brennan 3425 Motor AVE Apt Ph5 Los Angeles CA 90034-4517 US`, 't0010799 Brennan', 'wire_4f48f8c03f40')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_4f48f8c03f40"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_c2e36459c7f3">
                             <td class="date">12/4/2025 5:03 AM</td>
                             <td class="amount">$4,630.83</td>
@@ -2095,36 +2117,6 @@
                                 <div style="display: flex; align-items: center;">
                                     <span class="tenant-display">t0010766</span>
                                     <span class="manager-display" style="margin-left: 12px;">Carisa Magdaleno</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_2dfa56cfe18d" class="has-input">
-                            <td class="date">11/4/2025 1:04 PM</td>
-                            <td class="amount">$3,997.83</td>
-                            <td class="originator">William Huston 5914 Farralone AVE Woodland Hills CA 91367</td>
-                            <td class="reference">Move IN Funds t0010767 Huston</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010767</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Dietrich McWhorter-Riley</span>
                                     
                         <div style="display: flex; align-items: center; margin-left: 8px;">
                             <div style="
