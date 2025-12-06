@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/05 5:07 PM</div>
+            <div class="last-updated">Last Updated: 12/05 6:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_c38fd19b5c13">
+                        <tr data-wire-id="wire_c38fd19b5c13" class="has-input">
                             <td class="date">12/5/2025 10:30 AM</td>
                             <td class="amount">$4,940.00</td>
                             <td class="originator">Brendan J Morais 2/4750 Lincoln BLVD Apt 360 3/us/marina Del Rey, CA 90292-9303</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_c38fd19b5c13"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_c38fd19b5c13"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/5/2025 10:30 AM', '4940.0', `Brendan J Morais 2/4750 Lincoln BLVD Apt 360 3/us/marina Del Rey, CA 90292-9303`, '', 'wire_c38fd19b5c13')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_c38fd19b5c13"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010813</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Carisa Magdaleno</span>
+                                    
+                        <button id="book-wire_c38fd19b5c13"
+                                onclick="bookInYardi('12/5/2025 10:30 AM', '4940.0', `Brendan J Morais 2/4750 Lincoln BLVD Apt 360 3/us/marina Del Rey, CA 90292-9303`, 'wire_c38fd19b5c13')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_c38fd19b5c13" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_4f48f8c03f40">
