@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/08 2:07 PM</div>
+            <div class="last-updated">Last Updated: 12/08 3:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_cbd0453e6425">
+                            <td class="date">12/8/2025 2:28 PM</td>
+                            <td class="amount">$4,167.83</td>
+                            <td class="originator">Katie Wood 4210 Del Rey AVE 202c Marina Del Rey CA 90292</td>
+                            <td class="reference">Katiewood 4210 Delreyave 305b Marin A Del Rey CA 90292 t0010834</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_cbd0453e6425"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_cbd0453e6425"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('12/8/2025 2:28 PM', '4167.83', `Katie Wood 4210 Del Rey AVE 202c Marina Del Rey CA 90292`, 'Katiewood 4210 Delreyave 305b Marin A Del Rey CA 90292 t0010834', 'wire_cbd0453e6425')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_cbd0453e6425"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_c01ecff61dee">
                             <td class="date">12/8/2025 5:15 AM</td>
                             <td class="amount">$4,630.83</td>
