@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/11 2:11 PM</div>
+            <div class="last-updated">Last Updated: 12/11 2:19 PM</div>
         </div>
         
         <div class="account-info">
@@ -700,64 +700,48 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_f7abecd8f624" class="has-input">
+                        <tr data-wire-id="wire_f7abecd8f624">
                             <td class="date">12/10/2025 5:19 AM</td>
                             <td class="amount">$17,352.83</td>
                             <td class="originator">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
                             <td class="reference">t0010827 - Np 2025</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010789</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Aria</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_f7abecd8f624"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_f7abecd8f624"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('12/10/2025 5:19 AM', '17352.83', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 't0010827 - Np 2025', 'wire_f7abecd8f624')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_f7abecd8f624"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_be5994dd13a8" class="has-input">
+                        <tr data-wire-id="wire_be5994dd13a8">
                             <td class="date">12/9/2025 4:29 PM</td>
                             <td class="amount">$1,405.49</td>
                             <td class="originator">Sabrina Labelle 8040 Woodrow Wilson DR Los Angeles CA 90046</td>
                             <td class="reference">316</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010752</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Thomas Lofton</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_be5994dd13a8"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_be5994dd13a8"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('12/9/2025 4:29 PM', '1405.49', `Sabrina Labelle 8040 Woodrow Wilson DR Los Angeles CA 90046`, '316', 'wire_be5994dd13a8')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_be5994dd13a8"></span>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_319eebeada3f" class="has-input">
@@ -1109,7 +1093,7 @@
                             <td class="reference">No. 301 Tenant ID t0010788</td>
                             <td class="manager-input completed">
                                 <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010789</span>
+                                    <span class="tenant-display">t0010788</span>
                                     <span class="manager-display" style="margin-left: 12px;">Aria</span>
                                     
                         <div style="display: flex; align-items: center; margin-left: 8px;">
@@ -1822,34 +1806,26 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_d5c727b1cc58" class="has-input">
+                        <tr data-wire-id="wire_d5c727b1cc58">
                             <td class="date">11/12/2025 1:19 PM</td>
                             <td class="amount">$1,366.77</td>
                             <td class="originator">Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny</td>
                             <td class="reference">t0004799</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0004799</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Chad</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_d5c727b1cc58"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_d5c727b1cc58"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('11/12/2025 1:19 PM', '1366.77', `Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny`, 't0004799', 'wire_d5c727b1cc58')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_d5c727b1cc58"></span>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_4cc59fdb0282" class="has-input">
