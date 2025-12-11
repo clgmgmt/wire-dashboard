@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/11 12:07 PM</div>
+            <div class="last-updated">Last Updated: 12/11 1:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -1595,26 +1595,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_acb7622e1b9e">
+                        <tr data-wire-id="wire_acb7622e1b9e" class="has-input">
                             <td class="date">11/18/2025 5:10 AM</td>
                             <td class="amount">$4,447.83</td>
                             <td class="originator">Tsgireda Gebre 125 Palmdale CT Holly Springs NC 27540</td>
                             <td class="reference">Move IN Funds</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_acb7622e1b9e"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_acb7622e1b9e"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/18/2025 5:10 AM', '4447.83', `Tsgireda Gebre 125 Palmdale CT Holly Springs NC 27540`, 'Move IN Funds', 'wire_acb7622e1b9e')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_acb7622e1b9e"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010773</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
+                                    
+                        <button id="book-wire_acb7622e1b9e"
+                                onclick="bookInYardi('11/18/2025 5:10 AM', '4447.83', `Tsgireda Gebre 125 Palmdale CT Holly Springs NC 27540`, 'wire_acb7622e1b9e')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_acb7622e1b9e" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_f06378d22f1e" class="has-input">
