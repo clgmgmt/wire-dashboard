@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/12 9:08 AM</div>
+            <div class="last-updated">Last Updated: 12/12 10:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_96a7eddbc5e1">
+                        <tr data-wire-id="wire_96a7eddbc5e1" class="has-input">
                             <td class="date">12/12/2025 5:05 AM</td>
                             <td class="amount">$2,195.00</td>
                             <td class="originator">Popshorts, Inc. 2/24651 LA Cresta DR Apt A 3/us/dana Point 92629</td>
                             <td class="reference">13448 Beach AVE 1501 D Movein Funds</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_96a7eddbc5e1"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_96a7eddbc5e1"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/12/2025 5:05 AM', '2195.0', `Popshorts, Inc. 2/24651 LA Cresta DR Apt A 3/us/dana Point 92629`, '13448 Beach AVE 1501 D Movein Funds', 'wire_96a7eddbc5e1')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_96a7eddbc5e1"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010831</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Avy Stockton</span>
+                                    
+                        <button id="book-wire_96a7eddbc5e1"
+                                onclick="bookInYardi('12/12/2025 5:05 AM', '2195.0', `Popshorts, Inc. 2/24651 LA Cresta DR Apt A 3/us/dana Point 92629`, 'wire_96a7eddbc5e1')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_96a7eddbc5e1" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_fde72e8b2d67">
