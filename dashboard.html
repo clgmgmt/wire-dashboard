@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/12 3:07 PM</div>
+            <div class="last-updated">Last Updated: 12/12 4:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_f5916a6b9bda">
+                            <td class="date">12/12/2025 3:22 PM</td>
+                            <td class="amount">$7,215.00</td>
+                            <td class="originator">Queen Roofing Inc 14060 Marquesas Way Apt 2319 Marina Del Rey CA 90292-7511 US</td>
+                            <td class="reference">Reference: T0010841- Malka</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_f5916a6b9bda"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_f5916a6b9bda"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('12/12/2025 3:22 PM', '7215.0', `Queen Roofing Inc 14060 Marquesas Way Apt 2319 Marina Del Rey CA 90292-7511 US`, 'Reference: T0010841- Malka', 'wire_f5916a6b9bda')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_f5916a6b9bda"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_96a7eddbc5e1" class="has-input">
                             <td class="date">12/12/2025 5:05 AM</td>
                             <td class="amount">$2,195.00</td>
@@ -914,26 +936,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_f2f8aaeca58d">
+                        <tr data-wire-id="wire_f2f8aaeca58d" class="has-input">
                             <td class="date">12/8/2025 5:11 AM</td>
                             <td class="amount">$5,425.00</td>
                             <td class="originator">Nancy Ann Doyle 516 24th PL Hermosa Beach CA 90254</td>
                             <td class="reference">Move IN Funds t0010812</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_f2f8aaeca58d"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_f2f8aaeca58d"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/8/2025 5:11 AM', '5425.0', `Nancy Ann Doyle 516 24th PL Hermosa Beach CA 90254`, 'Move IN Funds t0010812', 'wire_f2f8aaeca58d')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_f2f8aaeca58d"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010812</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Carisa Magdaleno</span>
+                                    
+                        <button id="book-wire_f2f8aaeca58d"
+                                onclick="bookInYardi('12/8/2025 5:11 AM', '5425.0', `Nancy Ann Doyle 516 24th PL Hermosa Beach CA 90254`, 'wire_f2f8aaeca58d')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_f2f8aaeca58d" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_c38fd19b5c13" class="has-input">
@@ -1836,88 +1865,6 @@
                                 <div style="display: flex; align-items: center;">
                                     <span class="tenant-display">t0001078</span>
                                     <span class="manager-display" style="margin-left: 12px;">Carisa Magdaleno</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_d5c727b1cc58">
-                            <td class="date">11/12/2025 1:19 PM</td>
-                            <td class="amount">$1,366.77</td>
-                            <td class="originator">Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny</td>
-                            <td class="reference">t0004799</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_d5c727b1cc58"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_d5c727b1cc58"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('11/12/2025 1:19 PM', '1366.77', `Stephen Siller Tunnel To Towers F 1/oundation 2/hylan BLVD 2361 3/us/staten Island,10306 3100,ny`, 't0004799', 'wire_d5c727b1cc58')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_d5c727b1cc58"></span>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_4cc59fdb0282" class="has-input">
-                            <td class="date">11/12/2025 10:52 AM</td>
-                            <td class="amount">$3,259.44</td>
-                            <td class="originator">Jose Alejandro Portillo Karrah Ro SE Fitzgerald Portillo 2/10348 Lurline AVE 3/us/chatsworth, CA 91311-2439</td>
-                            <td class="reference">Pop Services</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010781</span>
-                                    <span class="manager-display" style="margin-left: 12px;">cole</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_dce464a01cfc" class="has-input">
-                            <td class="date">11/12/2025 5:52 AM</td>
-                            <td class="amount">$4,816.83</td>
-                            <td class="originator">Verlyn Juwono 12411 W Fielding Cir Apt 4216 Los Angeles CA 90094-2582 US</td>
-                            <td class="reference">T### - Verlyn Juwono</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010800</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Andrew Menzies</span>
                                     
                         <div style="display: flex; align-items: center; margin-left: 8px;">
                             <div style="
