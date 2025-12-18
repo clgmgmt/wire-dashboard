@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/17 3:07 PM</div>
+            <div class="last-updated">Last Updated: 12/17 4:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -842,26 +842,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_be5994dd13a8">
+                        <tr data-wire-id="wire_be5994dd13a8" class="has-input">
                             <td class="date">12/9/2025 4:29 PM</td>
                             <td class="amount">$1,405.49</td>
                             <td class="originator">Sabrina Labelle 8040 Woodrow Wilson DR Los Angeles CA 90046</td>
                             <td class="reference">316</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_be5994dd13a8"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_be5994dd13a8"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/9/2025 4:29 PM', '1405.49', `Sabrina Labelle 8040 Woodrow Wilson DR Los Angeles CA 90046`, '316', 'wire_be5994dd13a8')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_be5994dd13a8"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010752</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Aria</span>
+                                    
+                        <button id="book-wire_be5994dd13a8"
+                                onclick="bookInYardi('12/9/2025 4:29 PM', '1405.49', `Sabrina Labelle 8040 Woodrow Wilson DR Los Angeles CA 90046`, 'wire_be5994dd13a8')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_be5994dd13a8" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_319eebeada3f" class="has-input">
@@ -1194,26 +1201,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_480aef5d6084">
+                        <tr data-wire-id="wire_480aef5d6084" class="has-input">
                             <td class="date">12/1/2025 9:12 AM</td>
                             <td class="amount">$3,740.00</td>
                             <td class="originator">Blueground Us, Inc. 1209 Orange Street County Of New CA Stle Wilmington DE 19801 US</td>
                             <td class="reference">Bluegroundrent Sept Lax1324 Thanky Ou For Your Business Payment To Ven Dors For Services</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_480aef5d6084"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_480aef5d6084"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/1/2025 9:12 AM', '3740.0', `Blueground Us, Inc. 1209 Orange Street County Of New CA Stle Wilmington DE 19801 US`, 'Bluegroundrent Sept Lax1324 Thanky Ou For Your Business Payment To Ven Dors For Services', 'wire_480aef5d6084')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_480aef5d6084"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0009748</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Aria (confirmed)</span>
+                                    
+                        <button id="book-wire_480aef5d6084"
+                                onclick="bookInYardi('12/1/2025 9:12 AM', '3740.0', `Blueground Us, Inc. 1209 Orange Street County Of New CA Stle Wilmington DE 19801 US`, 'wire_480aef5d6084')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_480aef5d6084" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_0e48b6b15db9" class="has-input">
