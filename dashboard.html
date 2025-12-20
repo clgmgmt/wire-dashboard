@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/19 5:06 PM</div>
+            <div class="last-updated">Last Updated: 12/19 6:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -751,26 +751,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_8255f2df6392">
+                        <tr data-wire-id="wire_8255f2df6392" class="has-input">
                             <td class="date">12/17/2025 11:05 AM</td>
                             <td class="amount">$8,015.00</td>
                             <td class="originator">Geoffrey James Apps & Marguerite 1/mary Kramer Comm/prop 2/glencoe AVE 4141, Rm Unit 206 3/us/marina Del Rey,90292 8808,ca</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_8255f2df6392"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_8255f2df6392"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/17/2025 11:05 AM', '8015.0', `Geoffrey James Apps & Marguerite 1/mary Kramer Comm/prop 2/glencoe AVE 4141, Rm Unit 206 3/us/marina Del Rey,90292 8808,ca`, '', 'wire_8255f2df6392')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_8255f2df6392"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010843</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Carisa Magdaleno</span>
+                                    
+                        <button id="book-wire_8255f2df6392"
+                                onclick="bookInYardi('12/17/2025 11:05 AM', '8015.0', `Geoffrey James Apps & Marguerite 1/mary Kramer Comm/prop 2/glencoe AVE 4141, Rm Unit 206 3/us/marina Del Rey,90292 8808,ca`, 'wire_8255f2df6392')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_8255f2df6392" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_f5916a6b9bda" class="has-input">
