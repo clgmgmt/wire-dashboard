@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/22 9:07 AM</div>
+            <div class="last-updated">Last Updated: 12/22 10:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -692,26 +692,33 @@
                                 <span class="submit-status" id="status-wire_d1a9bd0b9f78"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_9a957ed3bcbc">
+                        <tr data-wire-id="wire_9a957ed3bcbc" class="has-input">
                             <td class="date">12/22/2025 5:17 AM</td>
                             <td class="amount">$4,462.83</td>
                             <td class="originator">Clayton Evan Carmen 1347 N Stanley AVE Apt 1 Los Angeles CA 90046 US</td>
                             <td class="reference">Reference: t0010840 - Carmen</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_9a957ed3bcbc"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_9a957ed3bcbc"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/22/2025 5:17 AM', '4462.83', `Clayton Evan Carmen 1347 N Stanley AVE Apt 1 Los Angeles CA 90046 US`, 'Reference: t0010840 - Carmen', 'wire_9a957ed3bcbc')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_9a957ed3bcbc"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010840</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
+                                    
+                        <button id="book-wire_9a957ed3bcbc"
+                                onclick="bookInYardi('12/22/2025 5:17 AM', '4462.83', `Clayton Evan Carmen 1347 N Stanley AVE Apt 1 Los Angeles CA 90046 US`, 'wire_9a957ed3bcbc')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_9a957ed3bcbc" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_3bf2f2f4ac77">
@@ -766,26 +773,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_11d8aa22865b">
+                        <tr data-wire-id="wire_11d8aa22865b" class="has-input">
                             <td class="date">12/19/2025 5:15 AM</td>
                             <td class="amount">$4,119.83</td>
                             <td class="originator">Gabrielle R Nevill 7908 Rudnick AVE Canoga Park CA 91304-4709 US</td>
                             <td class="reference">Move IN Funds - Unit 424</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_11d8aa22865b"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_11d8aa22865b"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/19/2025 5:15 AM', '4119.83', `Gabrielle R Nevill 7908 Rudnick AVE Canoga Park CA 91304-4709 US`, 'Move IN Funds - Unit 424', 'wire_11d8aa22865b')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_11d8aa22865b"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010846</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
+                                    
+                        <button id="book-wire_11d8aa22865b"
+                                onclick="bookInYardi('12/19/2025 5:15 AM', '4119.83', `Gabrielle R Nevill 7908 Rudnick AVE Canoga Park CA 91304-4709 US`, 'wire_11d8aa22865b')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_11d8aa22865b" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_eba0dc8a8abd" class="has-input">
