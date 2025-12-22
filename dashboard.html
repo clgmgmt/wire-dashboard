@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 12/22 2:07 PM</div>
+            <div class="last-updated">Last Updated: 12/22 3:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_005c73b5f72d">
+                            <td class="date">12/22/2025 2:52 PM</td>
+                            <td class="amount">$3,472.83</td>
+                            <td class="originator">Tara Maguire Colleen M Donovan 145 - 27th 5th AVE Whitestone, NY 11357-0000</td>
+                            <td class="reference">Move-in Funds</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_005c73b5f72d"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_005c73b5f72d"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('12/22/2025 2:52 PM', '3472.83', `Tara Maguire Colleen M Donovan 145 - 27th 5th AVE Whitestone, NY 11357-0000`, 'Move-in Funds', 'wire_005c73b5f72d')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_005c73b5f72d"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_d1a9bd0b9f78">
                             <td class="date">12/22/2025 5:19 AM</td>
                             <td class="amount">$2,064.00</td>
