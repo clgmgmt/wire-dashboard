@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/06 10:07 AM</div>
+            <div class="last-updated">Last Updated: 1/07 6:06 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_24487c38d61d">
+                        <tr data-wire-id="wire_24487c38d61d" class="has-input">
                             <td class="date">12/31/2025 6:59 AM</td>
                             <td class="amount">$4,097.83</td>
                             <td class="originator">Shridhar M Krishnan Jayanthi Meth Il-nair 2/3838 Dunn DR Apt 402 3/us/culver City, CA 90232 2773</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_24487c38d61d"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_24487c38d61d"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('12/31/2025 6:59 AM', '4097.83', `Shridhar M Krishnan Jayanthi Meth Il-nair 2/3838 Dunn DR Apt 402 3/us/culver City, CA 90232 2773`, '', 'wire_24487c38d61d')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_24487c38d61d"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010854</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Ashley Nguyen</span>
+                                    
+                        <button id="book-wire_24487c38d61d"
+                                onclick="bookInYardi('12/31/2025 6:59 AM', '4097.83', `Shridhar M Krishnan Jayanthi Meth Il-nair 2/3838 Dunn DR Apt 402 3/us/culver City, CA 90232 2773`, 'wire_24487c38d61d')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_24487c38d61d" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_005c73b5f72d" class="has-input">
@@ -1202,64 +1209,92 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_c01ecff61dee" class="has-input">
-                            <td class="date">12/8/2025 5:15 AM</td>
-                            <td class="amount">$4,630.83</td>
-                            <td class="originator">Crystal Loza 3333 S LA Cienega BLVD Apt 5169 Los Angeles CA 90016-4368 US</td>
-                            <td class="reference">t0010792 - Loza</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010792</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
+                        <tr data-wire-id="wire_bef24f336b32">
+                            <td class="date">1/7/2026 5:09 AM</td>
+                            <td class="amount">$15,790.33</td>
+                            <td class="originator">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
+                            <td class="reference">November Prorated AND January Rent M1 By Clg Room 302</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_bef24f336b32"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_bef24f336b32"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/7/2026 5:09 AM', '15790.33', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'November Prorated AND January Rent M1 By Clg Room 302', 'wire_bef24f336b32')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_bef24f336b32"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_f2f8aaeca58d" class="has-input">
-                            <td class="date">12/8/2025 5:11 AM</td>
-                            <td class="amount">$5,425.00</td>
-                            <td class="originator">Nancy Ann Doyle 516 24th PL Hermosa Beach CA 90254</td>
-                            <td class="reference">Move IN Funds t0010812</td>
-                            <td class="manager-input completed">
-                                <div style="display: flex; align-items: center;">
-                                    <span class="tenant-display">t0010812</span>
-                                    <span class="manager-display" style="margin-left: 12px;">Carisa Magdaleno</span>
-                                    
-                        <div style="display: flex; align-items: center; margin-left: 8px;">
-                            <div style="
-                                width: 28px;
-                                height: 28px;
-                                border-radius: 50%;
-                                background: #e6fffa;
-                                border: 3px solid #2b6cb1;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                color: #047857;
-                                font-weight: bold;
-                                font-size: 16px;">✓</div>
-                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
-                                Booked in Yardi
-                            </span>
-                        </div>
-                                </div>
+                        <tr data-wire-id="wire_d73252c0d8ff">
+                            <td class="date">1/7/2026 5:09 AM</td>
+                            <td class="amount">$2,350.00</td>
+                            <td class="originator">Gauresh Kapoor 3767 Clarington AVE Apt 224 Los Angeles CA 90034-5849 US</td>
+                            <td class="reference">Move IN Funds For Unit 417-D</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_d73252c0d8ff"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_d73252c0d8ff"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/7/2026 5:09 AM', '2350.0', `Gauresh Kapoor 3767 Clarington AVE Apt 224 Los Angeles CA 90034-5849 US`, 'Move IN Funds For Unit 417-D', 'wire_d73252c0d8ff')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_d73252c0d8ff"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_cb3e20e422d6">
+                            <td class="date">1/7/2026 5:04 AM</td>
+                            <td class="amount">$4,150.00</td>
+                            <td class="originator">Jody L Meckulch 2/20 Lucky DR 3/us/greenbrae 94904</td>
+                            <td class="reference">t0010858</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_cb3e20e422d6"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_cb3e20e422d6"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/7/2026 5:04 AM', '4150.0', `Jody L Meckulch 2/20 Lucky DR 3/us/greenbrae 94904`, 't0010858', 'wire_cb3e20e422d6')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_cb3e20e422d6"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_c51544db6d0d">
+                            <td class="date">1/6/2026 12:10 PM</td>
+                            <td class="amount">$13,518.64</td>
+                            <td class="originator">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
+                            <td class="reference">November Prorated AND January Rent M1 By Clg Room 301</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_c51544db6d0d"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_c51544db6d0d"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/6/2026 12:10 PM', '13518.64', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'November Prorated AND January Rent M1 By Clg Room 301', 'wire_c51544db6d0d')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_c51544db6d0d"></span>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_aac9cc8aa4cd">
