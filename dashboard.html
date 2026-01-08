@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/08 9:07 AM</div>
+            <div class="last-updated">Last Updated: 1/08 10:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -1179,26 +1179,33 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_b90061c96ba1">
+                        <tr data-wire-id="wire_b90061c96ba1" class="has-input">
                             <td class="date">1/8/2026 6:55 AM</td>
                             <td class="amount">$2,590.00</td>
                             <td class="originator">Sergio A Sosa Jr 267 Sandy Hills LN El Paso TX 79928 US</td>
                             <td class="reference">FBO Sergio Sosa Jr 4210 Del Rey AVE Unit 409c Marina Del Rey CA 90292 t0010861</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_b90061c96ba1"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_b90061c96ba1"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/8/2026 6:55 AM', '2590.0', `Sergio A Sosa Jr 267 Sandy Hills LN El Paso TX 79928 US`, 'FBO Sergio Sosa Jr 4210 Del Rey AVE Unit 409c Marina Del Rey CA 90292 t0010861', 'wire_b90061c96ba1')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_b90061c96ba1"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010861</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Jess Favela</span>
+                                    
+                        <button id="book-wire_b90061c96ba1"
+                                onclick="bookInYardi('1/8/2026 6:55 AM', '2590.0', `Sergio A Sosa Jr 267 Sandy Hills LN El Paso TX 79928 US`, 'wire_b90061c96ba1')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_b90061c96ba1" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_bef24f336b32">
