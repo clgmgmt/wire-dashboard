@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/08 4:03 PM</div>
+            <div class="last-updated">Last Updated: 1/09 6:06 AM</div>
         </div>
         
         <div class="account-info">
@@ -680,22 +680,23 @@
                                     <span class="tenant-display">t0010859</span>
                                     <span class="manager-display" style="margin-left: 12px;">Jess Favela</span>
                                     
-                        <button id="book-wire_0d919392adfd"
-                                onclick="bookInYardi('1/8/2026 10:12 AM', '2395.0', `Gerald A Morgan 918 E 78th ST Los Angeles, CA 90001-2914`, 'wire_0d919392adfd')"
-                                title="Book in Yardi"
-                                style="
-                                    width: 28px;
-                                    height: 28px;
-                                    border-radius: 50%;
-                                    background: white;
-                                    border: 3px solid #2b6cb1;
-                                    cursor: pointer;
-                                    transition: all 0.3s ease;
-                                    margin-left: 20px;
-                                    padding: 0;"
-                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
-                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_0d919392adfd" style="display: inline;"></div>
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
                                 </div>
                             </td>
                         </tr>
@@ -731,8 +732,38 @@
                                     <span class="tenant-display">t0010861</span>
                                     <span class="manager-display" style="margin-left: 12px;">Jess Favela</span>
                                     
-                        <button id="book-wire_b90061c96ba1"
-                                onclick="bookInYardi('1/8/2026 6:55 AM', '2590.0', `Sergio A Sosa Jr 267 Sandy Hills LN El Paso TX 79928 US`, 'wire_b90061c96ba1')"
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_bef24f336b32" class="has-input">
+                            <td class="date">1/7/2026 5:09 AM</td>
+                            <td class="amount">$15,790.33</td>
+                            <td class="originator">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
+                            <td class="reference">November Prorated AND January Rent M1 By Clg Room 302</td>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010789</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Karmine</span>
+                                    
+                        <button id="book-wire_bef24f336b32"
+                                onclick="bookInYardi('1/7/2026 5:09 AM', '15790.33', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'wire_bef24f336b32')"
                                 title="Book in Yardi"
                                 style="
                                     width: 28px;
@@ -746,52 +777,37 @@
                                     padding: 0;"
                                 onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
                                 onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_b90061c96ba1" style="display: inline;"></div>
+                        <div id="yardi-status-wire_bef24f336b32" style="display: inline;"></div>
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_bef24f336b32">
-                            <td class="date">1/7/2026 5:09 AM</td>
-                            <td class="amount">$15,790.33</td>
-                            <td class="originator">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
-                            <td class="reference">November Prorated AND January Rent M1 By Clg Room 302</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_bef24f336b32"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_bef24f336b32"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/7/2026 5:09 AM', '15790.33', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'November Prorated AND January Rent M1 By Clg Room 302', 'wire_bef24f336b32')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_bef24f336b32"></span>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_d73252c0d8ff">
+                        <tr data-wire-id="wire_d73252c0d8ff" class="has-input">
                             <td class="date">1/7/2026 5:09 AM</td>
                             <td class="amount">$2,350.00</td>
                             <td class="originator">Gauresh Kapoor 3767 Clarington AVE Apt 224 Los Angeles CA 90034-5849 US</td>
                             <td class="reference">Move IN Funds For Unit 417-D</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_d73252c0d8ff"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_d73252c0d8ff"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/7/2026 5:09 AM', '2350.0', `Gauresh Kapoor 3767 Clarington AVE Apt 224 Los Angeles CA 90034-5849 US`, 'Move IN Funds For Unit 417-D', 'wire_d73252c0d8ff')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_d73252c0d8ff"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010867</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Joslyn Y</span>
+                                    
+                        <button id="book-wire_d73252c0d8ff"
+                                onclick="bookInYardi('1/7/2026 5:09 AM', '2350.0', `Gauresh Kapoor 3767 Clarington AVE Apt 224 Los Angeles CA 90034-5849 US`, 'wire_d73252c0d8ff')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_d73252c0d8ff" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_cb3e20e422d6" class="has-input">
@@ -804,8 +820,38 @@
                                     <span class="tenant-display">t0010858</span>
                                     <span class="manager-display" style="margin-left: 12px;">Gaea Arnold</span>
                                     
-                        <button id="book-wire_cb3e20e422d6"
-                                onclick="bookInYardi('1/7/2026 5:04 AM', '4150.0', `Jody L Meckulch 2/20 Lucky DR 3/us/greenbrae 94904`, 'wire_cb3e20e422d6')"
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_c51544db6d0d" class="has-input">
+                            <td class="date">1/6/2026 12:10 PM</td>
+                            <td class="amount">$13,518.64</td>
+                            <td class="originator">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
+                            <td class="reference">November Prorated AND January Rent M1 By Clg Room 301</td>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010789</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Karmine</span>
+                                    
+                        <button id="book-wire_c51544db6d0d"
+                                onclick="bookInYardi('1/6/2026 12:10 PM', '13518.64', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'wire_c51544db6d0d')"
                                 title="Book in Yardi"
                                 style="
                                     width: 28px;
@@ -819,52 +865,37 @@
                                     padding: 0;"
                                 onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
                                 onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_cb3e20e422d6" style="display: inline;"></div>
+                        <div id="yardi-status-wire_c51544db6d0d" style="display: inline;"></div>
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_c51544db6d0d">
-                            <td class="date">1/6/2026 12:10 PM</td>
-                            <td class="amount">$13,518.64</td>
-                            <td class="originator">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
-                            <td class="reference">November Prorated AND January Rent M1 By Clg Room 301</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_c51544db6d0d"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_c51544db6d0d"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/6/2026 12:10 PM', '13518.64', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'November Prorated AND January Rent M1 By Clg Room 301', 'wire_c51544db6d0d')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_c51544db6d0d"></span>
-                            </td>
-                        </tr>
-                        <tr data-wire-id="wire_aac9cc8aa4cd">
+                        <tr data-wire-id="wire_aac9cc8aa4cd" class="has-input">
                             <td class="date">1/5/2026 5:02 AM</td>
                             <td class="amount">$4,630.83</td>
                             <td class="originator">Sean Spragley 750 Last Dance PL Henderson, Nv, 89011</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_aac9cc8aa4cd"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_aac9cc8aa4cd"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/5/2026 5:02 AM', '4630.83', `Sean Spragley 750 Last Dance PL Henderson, Nv, 89011`, '', 'wire_aac9cc8aa4cd')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_aac9cc8aa4cd"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010863</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
+                                    
+                        <button id="book-wire_aac9cc8aa4cd"
+                                onclick="bookInYardi('1/5/2026 5:02 AM', '4630.83', `Sean Spragley 750 Last Dance PL Henderson, Nv, 89011`, 'wire_aac9cc8aa4cd')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_aac9cc8aa4cd" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_24487c38d61d" class="has-input">
@@ -1656,22 +1687,23 @@
                                     <span class="tenant-display">t0009748</span>
                                     <span class="manager-display" style="margin-left: 12px;">Aria (confirmed)</span>
                                     
-                        <button id="book-wire_480aef5d6084"
-                                onclick="bookInYardi('12/1/2025 9:12 AM', '3740.0', `Blueground Us, Inc. 1209 Orange Street County Of New CA Stle Wilmington DE 19801 US`, 'wire_480aef5d6084')"
-                                title="Book in Yardi"
-                                style="
-                                    width: 28px;
-                                    height: 28px;
-                                    border-radius: 50%;
-                                    background: white;
-                                    border: 3px solid #2b6cb1;
-                                    cursor: pointer;
-                                    transition: all 0.3s ease;
-                                    margin-left: 20px;
-                                    padding: 0;"
-                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
-                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_480aef5d6084" style="display: inline;"></div>
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
                                 </div>
                             </td>
                         </tr>
