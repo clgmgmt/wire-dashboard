@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/12 10:07 AM</div>
+            <div class="last-updated">Last Updated: 1/14 8:06 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,121 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_76437a3278ec">
-                            <td class="date">1/12/2026 5:03 AM</td>
-                            <td class="amount">$4,630.83</td>
-                            <td class="originator">Michael Yuen 2/5751 Sierra Cielo RD 3/us/irvine, CA 92603-3810</td>
-                            <td class="reference">Pop Other</td>
+                        <tr data-wire-id="wire_dd376edebcce">
+                            <td class="date">1/13/2026 11:13 AM</td>
+                            <td class="amount">$3,601.83</td>
+                            <td class="originator">Ting-wei Chang 501 N 3rd ST Apt G Alhambra CA 91801-7211 US</td>
+                            <td class="reference">Move IN Funds Of 4207</td>
                             <td class="manager-input">
                                 <input type="text" 
                                        class="tenant-id-input" 
-                                       id="tenant-wire_76437a3278ec"
+                                       id="tenant-wire_dd376edebcce"
                                        placeholder="t#######" 
                                        maxlength="8">
                                 <input type="text" 
                                        class="manager-name-input" 
-                                       id="manager-wire_76437a3278ec"
+                                       id="manager-wire_dd376edebcce"
                                        placeholder="Your name">
                                 <button class="submit-btn" 
-                                        onclick="submitToSheets('1/12/2026 5:03 AM', '4630.83', `Michael Yuen 2/5751 Sierra Cielo RD 3/us/irvine, CA 92603-3810`, 'Pop Other', 'wire_76437a3278ec')">
+                                        onclick="submitToSheets('1/13/2026 11:13 AM', '3601.83', `Ting-wei Chang 501 N 3rd ST Apt G Alhambra CA 91801-7211 US`, 'Move IN Funds Of 4207', 'wire_dd376edebcce')">
                                     Submit
                                 </button>
-                                <span class="submit-status" id="status-wire_76437a3278ec"></span>
+                                <span class="submit-status" id="status-wire_dd376edebcce"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_3a0679ae2ba7">
+                            <td class="date">1/13/2026 10:48 AM</td>
+                            <td class="amount">$1,112.50</td>
+                            <td class="originator">Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US</td>
+                            <td class="reference">Ph 523-B - Rent Jan</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_3a0679ae2ba7"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_3a0679ae2ba7"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/13/2026 10:48 AM', '1112.5', `Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US`, 'Ph 523-B - Rent Jan', 'wire_3a0679ae2ba7')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_3a0679ae2ba7"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_7169aa1e34cf">
+                            <td class="date">1/13/2026 8:30 AM</td>
+                            <td class="amount">$1,768.00</td>
+                            <td class="originator">Hudson Official Llc 1155 N LA Cienega BLVD Apt 1210 Los Angeles CA 90069-2445 US</td>
+                            <td class="reference">Move IN Funds</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_7169aa1e34cf"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_7169aa1e34cf"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/13/2026 8:30 AM', '1768.0', `Hudson Official Llc 1155 N LA Cienega BLVD Apt 1210 Los Angeles CA 90069-2445 US`, 'Move IN Funds', 'wire_7169aa1e34cf')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_7169aa1e34cf"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_76437a3278ec" class="has-input">
+                            <td class="date">1/12/2026 5:03 AM</td>
+                            <td class="amount">$4,630.83</td>
+                            <td class="originator">Michael Yuen 2/5751 Sierra Cielo RD 3/us/irvine, CA 92603-3810</td>
+                            <td class="reference">Pop Other</td>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010865</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
+                                    
+                        <button id="book-wire_76437a3278ec"
+                                onclick="bookInYardi('1/12/2026 5:03 AM', '4630.83', `Michael Yuen 2/5751 Sierra Cielo RD 3/us/irvine, CA 92603-3810`, 'wire_76437a3278ec')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_76437a3278ec" style="display: inline;"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_5a08e0c4836b">
+                            <td class="date">1/12/2026 11:36 AM</td>
+                            <td class="amount">$1,825.00</td>
+                            <td class="originator">Marc Freccero 2/7808 W Manchester AVE Apt 4 3/us/playa Del Rey 90293</td>
+                            <td class="reference">T0010862- Freccero</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_5a08e0c4836b"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_5a08e0c4836b"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/12/2026 11:36 AM', '1825.0', `Marc Freccero 2/7808 W Manchester AVE Apt 4 3/us/playa Del Rey 90293`, 'T0010862- Freccero', 'wire_5a08e0c4836b')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_5a08e0c4836b"></span>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_0d919392adfd" class="has-input">
@@ -732,22 +827,23 @@
                                     <span class="tenant-display">t0010864</span>
                                     <span class="manager-display" style="margin-left: 12px;">Cole Murrell</span>
                                     
-                        <button id="book-wire_1a46ef4b32e8"
-                                onclick="bookInYardi('1/8/2026 10:11 AM', '2899.44', `Marsy Gabriela Alesna 10201 Lindley AVE Apt L193 Northr, CA 91325-1082 United States`, 'wire_1a46ef4b32e8')"
-                                title="Book in Yardi"
-                                style="
-                                    width: 28px;
-                                    height: 28px;
-                                    border-radius: 50%;
-                                    background: white;
-                                    border: 3px solid #2b6cb1;
-                                    cursor: pointer;
-                                    transition: all 0.3s ease;
-                                    margin-left: 20px;
-                                    padding: 0;"
-                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
-                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_1a46ef4b32e8" style="display: inline;"></div>
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
                                 </div>
                             </td>
                         </tr>
@@ -791,22 +887,23 @@
                                     <span class="tenant-display">t0010789</span>
                                     <span class="manager-display" style="margin-left: 12px;">Karmine</span>
                                     
-                        <button id="book-wire_bef24f336b32"
-                                onclick="bookInYardi('1/7/2026 5:09 AM', '15790.33', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'wire_bef24f336b32')"
-                                title="Book in Yardi"
-                                style="
-                                    width: 28px;
-                                    height: 28px;
-                                    border-radius: 50%;
-                                    background: white;
-                                    border: 3px solid #2b6cb1;
-                                    cursor: pointer;
-                                    transition: all 0.3s ease;
-                                    margin-left: 20px;
-                                    padding: 0;"
-                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
-                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_bef24f336b32" style="display: inline;"></div>
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
                                 </div>
                             </td>
                         </tr>
@@ -820,22 +917,23 @@
                                     <span class="tenant-display">t0010867</span>
                                     <span class="manager-display" style="margin-left: 12px;">Joslyn Y</span>
                                     
-                        <button id="book-wire_d73252c0d8ff"
-                                onclick="bookInYardi('1/7/2026 5:09 AM', '2350.0', `Gauresh Kapoor 3767 Clarington AVE Apt 224 Los Angeles CA 90034-5849 US`, 'wire_d73252c0d8ff')"
-                                title="Book in Yardi"
-                                style="
-                                    width: 28px;
-                                    height: 28px;
-                                    border-radius: 50%;
-                                    background: white;
-                                    border: 3px solid #2b6cb1;
-                                    cursor: pointer;
-                                    transition: all 0.3s ease;
-                                    margin-left: 20px;
-                                    padding: 0;"
-                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
-                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_d73252c0d8ff" style="display: inline;"></div>
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
                                 </div>
                             </td>
                         </tr>
@@ -879,22 +977,23 @@
                                     <span class="tenant-display">t0010789</span>
                                     <span class="manager-display" style="margin-left: 12px;">Karmine</span>
                                     
-                        <button id="book-wire_c51544db6d0d"
-                                onclick="bookInYardi('1/6/2026 12:10 PM', '13518.64', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'wire_c51544db6d0d')"
-                                title="Book in Yardi"
-                                style="
-                                    width: 28px;
-                                    height: 28px;
-                                    border-radius: 50%;
-                                    background: white;
-                                    border: 3px solid #2b6cb1;
-                                    cursor: pointer;
-                                    transition: all 0.3s ease;
-                                    margin-left: 20px;
-                                    padding: 0;"
-                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
-                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_c51544db6d0d" style="display: inline;"></div>
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
                                 </div>
                             </td>
                         </tr>
@@ -908,22 +1007,23 @@
                                     <span class="tenant-display">t0010863</span>
                                     <span class="manager-display" style="margin-left: 12px;">Amir Elsaeidy</span>
                                     
-                        <button id="book-wire_aac9cc8aa4cd"
-                                onclick="bookInYardi('1/5/2026 5:02 AM', '4630.83', `Sean Spragley 750 Last Dance PL Henderson, Nv, 89011`, 'wire_aac9cc8aa4cd')"
-                                title="Book in Yardi"
-                                style="
-                                    width: 28px;
-                                    height: 28px;
-                                    border-radius: 50%;
-                                    background: white;
-                                    border: 3px solid #2b6cb1;
-                                    cursor: pointer;
-                                    transition: all 0.3s ease;
-                                    margin-left: 20px;
-                                    padding: 0;"
-                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
-                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_aac9cc8aa4cd" style="display: inline;"></div>
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
                                 </div>
                             </td>
                         </tr>
@@ -937,22 +1037,23 @@
                                     <span class="tenant-display">t0010854</span>
                                     <span class="manager-display" style="margin-left: 12px;">Ashley Nguyen</span>
                                     
-                        <button id="book-wire_24487c38d61d"
-                                onclick="bookInYardi('12/31/2025 6:59 AM', '4097.83', `Shridhar M Krishnan Jayanthi Meth Il-nair 2/3838 Dunn DR Apt 402 3/us/culver City, CA 90232 2773`, 'wire_24487c38d61d')"
-                                title="Book in Yardi"
-                                style="
-                                    width: 28px;
-                                    height: 28px;
-                                    border-radius: 50%;
-                                    background: white;
-                                    border: 3px solid #2b6cb1;
-                                    cursor: pointer;
-                                    transition: all 0.3s ease;
-                                    margin-left: 20px;
-                                    padding: 0;"
-                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
-                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
-                        <div id="yardi-status-wire_24487c38d61d" style="display: inline;"></div>
+                        <div style="display: flex; align-items: center; margin-left: 8px;">
+                            <div style="
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                background: #e6fffa;
+                                border: 3px solid #2b6cb1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #047857;
+                                font-weight: bold;
+                                font-size: 16px;">✓</div>
+                            <span style="margin-left: 20px; color: #047857; font-size: 0.85em; font-weight: 600;">
+                                Booked in Yardi
+                            </span>
+                        </div>
                                 </div>
                             </td>
                         </tr>
