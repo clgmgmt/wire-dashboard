@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/14 6:07 PM</div>
+            <div class="last-updated">Last Updated: 1/16 9:08 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,50 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_3ed3137d88fc">
+                            <td class="date">1/15/2026 1:35 PM</td>
+                            <td class="amount">$1,999.44</td>
+                            <td class="originator">Katherine Contreras 2006 W Martin Luther King Jr BLVD Los Angeles, CA 90062</td>
+                            <td class="reference">t0010869 - Contreras</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_3ed3137d88fc"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_3ed3137d88fc"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/15/2026 1:35 PM', '1999.44', `Katherine Contreras 2006 W Martin Luther King Jr BLVD Los Angeles, CA 90062`, 't0010869 - Contreras', 'wire_3ed3137d88fc')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_3ed3137d88fc"></span>
+                            </td>
+                        </tr>
+                        <tr data-wire-id="wire_c126af381f67">
+                            <td class="date">1/15/2026 5:07 AM</td>
+                            <td class="amount">$3,645.00</td>
+                            <td class="originator">Sarah Ladhani 20036 Iluso AVE Walnut, CA 91789</td>
+                            <td class="reference">Move IN Funds t0010882</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_c126af381f67"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_c126af381f67"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/15/2026 5:07 AM', '3645.0', `Sarah Ladhani 20036 Iluso AVE Walnut, CA 91789`, 'Move IN Funds t0010882', 'wire_c126af381f67')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_c126af381f67"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_2c5da92b4a33" class="has-input">
                             <td class="date">1/14/2026 12:32 PM</td>
                             <td class="amount">$3,090.00</td>
