@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/22 12:07 PM</div>
+            <div class="last-updated">Last Updated: 1/22 1:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -700,48 +700,62 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_83a7be4de07d">
+                        <tr data-wire-id="wire_83a7be4de07d" class="has-input">
                             <td class="date">1/21/2026 9:12 AM</td>
                             <td class="amount">$6,590.00</td>
                             <td class="originator">Tyler Morten 13448 Beach AVE Ph6505 Marina Del Rey CA 90292</td>
                             <td class="reference">Reference t0010885 Morten</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_83a7be4de07d"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_83a7be4de07d"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/21/2026 9:12 AM', '6590.0', `Tyler Morten 13448 Beach AVE Ph6505 Marina Del Rey CA 90292`, 'Reference t0010885 Morten', 'wire_83a7be4de07d')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_83a7be4de07d"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010885</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Carisa Magdaleno</span>
+                                    
+                        <button id="book-wire_83a7be4de07d"
+                                onclick="bookInYardi('1/21/2026 9:12 AM', '6590.0', `Tyler Morten 13448 Beach AVE Ph6505 Marina Del Rey CA 90292`, 'wire_83a7be4de07d')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_83a7be4de07d" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_09a409b954c5">
+                        <tr data-wire-id="wire_09a409b954c5" class="has-input">
                             <td class="date">1/21/2026 3:02 PM</td>
                             <td class="amount">$4,127.83</td>
                             <td class="originator">Kyle Kragen 314 Skyview DR Pleasant Hill CA 94523-1058 US</td>
                             <td class="reference">t0010884 - Kragen</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_09a409b954c5"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_09a409b954c5"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/21/2026 3:02 PM', '4127.83', `Kyle Kragen 314 Skyview DR Pleasant Hill CA 94523-1058 US`, 't0010884 - Kragen', 'wire_09a409b954c5')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_09a409b954c5"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010884</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Kenneth Stone</span>
+                                    
+                        <button id="book-wire_09a409b954c5"
+                                onclick="bookInYardi('1/21/2026 3:02 PM', '4127.83', `Kyle Kragen 314 Skyview DR Pleasant Hill CA 94523-1058 US`, 'wire_09a409b954c5')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_09a409b954c5" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_c61fca99b979" class="has-input">
