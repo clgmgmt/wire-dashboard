@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/23 11:08 AM</div>
+            <div class="last-updated">Last Updated: 1/23 12:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -692,26 +692,33 @@
                                 <span class="submit-status" id="status-wire_ae50c8891742"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_1c0126a7fd15">
+                        <tr data-wire-id="wire_1c0126a7fd15" class="has-input">
                             <td class="date">1/22/2026 2:20 PM</td>
                             <td class="amount">$4,632.83</td>
                             <td class="originator">Lyon Gaming Llc 175 SW 7th ST Ste 2415 Miami FL US 33130-2966</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_1c0126a7fd15"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_1c0126a7fd15"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/22/2026 2:20 PM', '4632.83', `Lyon Gaming Llc 175 SW 7th ST Ste 2415 Miami FL US 33130-2966`, '', 'wire_1c0126a7fd15')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_1c0126a7fd15"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010878</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Rosa Hernandez</span>
+                                    
+                        <button id="book-wire_1c0126a7fd15"
+                                onclick="bookInYardi('1/22/2026 2:20 PM', '4632.83', `Lyon Gaming Llc 175 SW 7th ST Ste 2415 Miami FL US 33130-2966`, 'wire_1c0126a7fd15')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_1c0126a7fd15" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_ce3bf420691b" class="has-input">
