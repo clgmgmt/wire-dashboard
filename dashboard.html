@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/27 5:07 PM</div>
+            <div class="last-updated">Last Updated: 1/27 6:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_4fa651522c20">
+                        <tr data-wire-id="wire_4fa651522c20" class="has-input">
                             <td class="date">1/26/2026 5:58 AM</td>
                             <td class="amount">$4,016.00</td>
                             <td class="originator">Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646</td>
                             <td class="reference">Rent Vasil</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_4fa651522c20"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_4fa651522c20"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/26/2026 5:58 AM', '4016.0', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'Rent Vasil', 'wire_4fa651522c20')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_4fa651522c20"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010710</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Andrew Menzies</span>
+                                    
+                        <button id="book-wire_4fa651522c20"
+                                onclick="bookInYardi('1/26/2026 5:58 AM', '4016.0', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'wire_4fa651522c20')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_4fa651522c20" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_ae50c8891742">
