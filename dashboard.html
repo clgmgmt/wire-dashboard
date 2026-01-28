@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/28 10:07 AM</div>
+            <div class="last-updated">Last Updated: 1/28 11:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_2d813607d4eb">
+                        <tr data-wire-id="wire_2d813607d4eb" class="has-input">
                             <td class="date">1/28/2026 6:07 AM</td>
                             <td class="amount">$6,852.83</td>
                             <td class="originator">Mariana Alves 13448 Beach AVE Apt 4105, Marina Del Rey, California, 90292, US</td>
                             <td class="reference">Move IN Funds Mariana Alves: 13448 Beach Avenue, Ph6101. Marina Del R Ey 90292</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_2d813607d4eb"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_2d813607d4eb"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/28/2026 6:07 AM', '6852.83', `Mariana Alves 13448 Beach AVE Apt 4105, Marina Del Rey, California, 90292, US`, 'Move IN Funds Mariana Alves: 13448 Beach Avenue, Ph6101. Marina Del R Ey 90292', 'wire_2d813607d4eb')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_2d813607d4eb"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010901</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Holly Hesse</span>
+                                    
+                        <button id="book-wire_2d813607d4eb"
+                                onclick="bookInYardi('1/28/2026 6:07 AM', '6852.83', `Mariana Alves 13448 Beach AVE Apt 4105, Marina Del Rey, California, 90292, US`, 'wire_2d813607d4eb')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_2d813607d4eb" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_4fa651522c20" class="has-input">
