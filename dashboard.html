@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/29 3:07 PM</div>
+            <div class="last-updated">Last Updated: 1/29 4:07 PM</div>
         </div>
         
         <div class="account-info">
@@ -670,26 +670,33 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
-                        <tr data-wire-id="wire_24a8281b9984">
+                        <tr data-wire-id="wire_24a8281b9984" class="has-input">
                             <td class="date">1/29/2026 5:13 AM</td>
                             <td class="amount">$5,130.83</td>
                             <td class="originator">X709547641 Patrick M Hughes 2/109 E Bay ST Apt 2c 3/us/charleston SC 29401-2549</td>
                             <td class="reference">Ref: Residentid t0010879 - Hughes</td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_24a8281b9984"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_24a8281b9984"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('1/29/2026 5:13 AM', '5130.83', `X709547641 Patrick M Hughes 2/109 E Bay ST Apt 2c 3/us/charleston SC 29401-2549`, 'Ref: Residentid t0010879 - Hughes', 'wire_24a8281b9984')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_24a8281b9984"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010879</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Andrew Menzies</span>
+                                    
+                        <button id="book-wire_24a8281b9984"
+                                onclick="bookInYardi('1/29/2026 5:13 AM', '5130.83', `X709547641 Patrick M Hughes 2/109 E Bay ST Apt 2c 3/us/charleston SC 29401-2549`, 'wire_24a8281b9984')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_24a8281b9984" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_8b8c9b717959">
