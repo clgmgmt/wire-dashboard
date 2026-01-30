@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 1/29 6:07 PM</div>
+            <div class="last-updated">Last Updated: 1/30 6:06 AM</div>
         </div>
         
         <div class="account-info">
@@ -670,6 +670,28 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody">
+                        <tr data-wire-id="wire_304f9c61059f">
+                            <td class="date">1/30/2026 5:19 AM</td>
+                            <td class="amount">$8,101.83</td>
+                            <td class="originator">Sixfootfive Hospitality Corporation Arvid Kristian Harnqvist 3928 Bledsoe AVE Los Angeles CA 90066 US</td>
+                            <td class="reference">Arvid Harnqvist 13448 Beach AVE Ph7 314 t0010856</td>
+                            <td class="manager-input">
+                                <input type="text" 
+                                       class="tenant-id-input" 
+                                       id="tenant-wire_304f9c61059f"
+                                       placeholder="t#######" 
+                                       maxlength="8">
+                                <input type="text" 
+                                       class="manager-name-input" 
+                                       id="manager-wire_304f9c61059f"
+                                       placeholder="Your name">
+                                <button class="submit-btn" 
+                                        onclick="submitToSheets('1/30/2026 5:19 AM', '8101.83', `Sixfootfive Hospitality Corporation Arvid Kristian Harnqvist 3928 Bledsoe AVE Los Angeles CA 90066 US`, 'Arvid Harnqvist 13448 Beach AVE Ph7 314 t0010856', 'wire_304f9c61059f')">
+                                    Submit
+                                </button>
+                                <span class="submit-status" id="status-wire_304f9c61059f"></span>
+                            </td>
+                        </tr>
                         <tr data-wire-id="wire_24a8281b9984" class="has-input">
                             <td class="date">1/29/2026 5:13 AM</td>
                             <td class="amount">$5,130.83</td>
