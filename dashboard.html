@@ -636,7 +636,7 @@
             <button class="logout-btn" onclick="logout()">← Logout</button>
             <h1>Wire Transfer Receipts</h1>
             <p>CLG Management</p>
-            <div class="last-updated">Last Updated: 2/03 9:07 AM</div>
+            <div class="last-updated">Last Updated: 2/03 10:07 AM</div>
         </div>
         
         <div class="account-info">
@@ -721,26 +721,33 @@
                                 <span class="submit-status" id="status-wire_c29fbdd9d13a"></span>
                             </td>
                         </tr>
-                        <tr data-wire-id="wire_a90a5ec6592d">
+                        <tr data-wire-id="wire_a90a5ec6592d" class="has-input">
                             <td class="date">2/2/2026 5:19 PM</td>
                             <td class="amount">$4,077.83</td>
                             <td class="originator">Maria Quezada Jimenez 320 E 42nd ST Apt 2004 New York NY</td>
                             <td class="reference"></td>
-                            <td class="manager-input">
-                                <input type="text" 
-                                       class="tenant-id-input" 
-                                       id="tenant-wire_a90a5ec6592d"
-                                       placeholder="t#######" 
-                                       maxlength="8">
-                                <input type="text" 
-                                       class="manager-name-input" 
-                                       id="manager-wire_a90a5ec6592d"
-                                       placeholder="Your name">
-                                <button class="submit-btn" 
-                                        onclick="submitToSheets('2/2/2026 5:19 PM', '4077.83', `Maria Quezada Jimenez 320 E 42nd ST Apt 2004 New York NY`, '', 'wire_a90a5ec6592d')">
-                                    Submit
-                                </button>
-                                <span class="submit-status" id="status-wire_a90a5ec6592d"></span>
+                            <td class="manager-input completed">
+                                <div style="display: flex; align-items: center;">
+                                    <span class="tenant-display">t0010900</span>
+                                    <span class="manager-display" style="margin-left: 12px;">Dietrich McWhorter-Riley</span>
+                                    
+                        <button id="book-wire_a90a5ec6592d"
+                                onclick="bookInYardi('2/2/2026 5:19 PM', '4077.83', `Maria Quezada Jimenez 320 E 42nd ST Apt 2004 New York NY`, 'wire_a90a5ec6592d')"
+                                title="Book in Yardi"
+                                style="
+                                    width: 28px;
+                                    height: 28px;
+                                    border-radius: 50%;
+                                    background: white;
+                                    border: 3px solid #2b6cb1;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease;
+                                    margin-left: 20px;
+                                    padding: 0;"
+                                onmouseover="this.style.background='#f0f7ff'; this.style.transform='scale(1.1)';"
+                                onmouseout="this.style.background='white'; this.style.transform='scale(1)';"></button>
+                        <div id="yardi-status-wire_a90a5ec6592d" style="display: inline;"></div>
+                                </div>
                             </td>
                         </tr>
                         <tr data-wire-id="wire_304f9c61059f" class="has-input">
