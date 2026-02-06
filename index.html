@@ -1,167 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLG Management - Login</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #667eea;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .login-container {
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            text-align: center;
-            max-width: 450px;
-            width: 100%;
-        }
-        
-        .lock-icon {
-            color: #718096;
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-        
-        h1 {
-            color: #2c5282;
-            margin-bottom: 10px;
-            font-size: 2em;
-        }
-        
-        .subtitle {
-            color: #718096;
-            margin-bottom: 40px;
-            font-size: 1.1em;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-            text-align: left;
-        }
-        
-        label {
-            display: block;
-            color: #4a5568;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        input {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #cbd5e0;
-            border-radius: 10px;
-            font-size: 1em;
-            transition: all 0.3s ease;
-        }
-        
-        input:focus {
-            outline: none;
-            border-color: #4299e1;
-            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
-        }
-        
-        button {
-            width: 100%;
-            padding: 14px 20px;
-            background: #2c5282;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        .error-message {
-            color: #e53e3e;
-            margin-top: 15px;
-            padding: 10px;
-            background: #fed7e7;
-            border-radius: 8px;
-            display: none;
-        }
-        
-        .info-text {
-            margin-top: 30px;
-            color: #718096;
-            font-size: 0.9em;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLG Management - Login</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f0f3f7;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .bg-lines svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .login-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 380px;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+      0 1px 2px rgba(0,0,0,0.04),
+      0 4px 16px rgba(44,82,130,0.08);
+  }
+
+  .accent-bar {
+    height: 3px;
+    background: linear-gradient(90deg, #2c5282, #4299e1, #2c5282);
+    background-size: 200% 100%;
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  .card-body { padding: 40px 36px; }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .brand-mark {
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 8px;
+    background: #2c5282;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+
+  .brand-text h1 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2d3748;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 7px;
+  }
+
+  .form-group input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    color: #2d3748;
+    transition: all 0.15s;
+  }
+
+  .form-group input::placeholder { color: #cbd5e0; }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66,153,225,0.1);
+  }
+
+  .btn-login {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: #2c5282;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .btn-login:hover {
+    background: #2b6cb0;
+    box-shadow: 0 4px 14px rgba(44,82,130,0.2);
+  }
+
+  .error-message {
+    font-size: 13px;
+    font-weight: 500;
+    color: #c53030;
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: #fff5f5;
+    border: 1px solid #fed7d7;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .footer-text {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #edf2f7;
+    text-align: center;
+    font-size: 12px;
+    color: #a0aec0;
+    line-height: 1.5;
+  }
+</style>
 </head>
 <body>
-    <div class="login-container">
-        <div class="lock-icon">🔒</div>
-        <h1>Wire Transfer Receipts</h1>
-        <p class="subtitle">CLG Management Portal</p>
-        
-        <form onsubmit="return checkPassword(event)">
-            <div class="form-group">
-                <label for="password">Access Password</label>
-                <input type="password" id="password" placeholder="Enter password..." autofocus required>
-            </div>
-            
-            <button type="submit">Access Dashboard</button>
-        </form>
-        
-        <div class="error-message" id="errorMessage">
-            Incorrect password. Please try again.
+  <div class="bg-lines">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-100 200 C200 150, 400 350, 700 280 S1100 180, 1540 320" stroke="#cbd5e0" stroke-width="1" fill="none" opacity="0.5"/>
+      <path d="M-100 260 C250 210, 450 400, 750 340 S1150 230, 1540 380" stroke="#a0c4e8" stroke-width="0.8" fill="none" opacity="0.3"/>
+      <path d="M-100 400 C300 350, 500 520, 800 460 S1200 340, 1540 500" stroke="#cbd5e0" stroke-width="1" fill="none" opacity="0.4"/>
+      <path d="M-100 470 C350 430, 550 580, 850 520 S1250 400, 1540 560" stroke="#b4cfe0" stroke-width="0.8" fill="none" opacity="0.25"/>
+      <path d="M-100 620 C200 570, 500 720, 800 660 S1100 560, 1540 700" stroke="#cbd5e0" stroke-width="1" fill="none" opacity="0.5"/>
+      <path d="M-100 690 C250 650, 550 780, 850 720 S1150 620, 1540 760" stroke="#a0c4e8" stroke-width="0.8" fill="none" opacity="0.3"/>
+      <path d="M-100 100 C400 60, 600 200, 900 140 S1300 60, 1540 180" stroke="#4299e1" stroke-width="0.6" fill="none" opacity="0.1"/>
+      <path d="M-100 800 C300 760, 700 850, 1000 790 S1300 730, 1540 840" stroke="#4299e1" stroke-width="0.6" fill="none" opacity="0.1"/>
+    </svg>
+  </div>
+
+  <div class="login-card">
+    <div class="accent-bar"></div>
+    <div class="card-body">
+      <div class="brand">
+        <div class="brand-mark">CLG</div>
+        <div class="brand-text">
+          <h1>Wire Transfers Dashboard</h1>
         </div>
-        
-        <p class="info-text">
-            Authorized personnel only.<br>
-            For access issues, email Albert.
-        </p>
+      </div>
+
+      <form onsubmit="return checkPassword(event)">
+        <div class="form-group">
+          <label for="password">Access Password</label>
+          <input type="password" id="password" placeholder="Enter password..." autofocus required>
+        </div>
+        <button type="submit" class="btn-login">Sign In</button>
+      </form>
+
+      <div class="error-message" id="errorMessage">
+        Incorrect password. Please try again.
+      </div>
+
+      <div class="footer-text">
+        CLG Employees Only.<br>
+        For access issues, contact Albert.
+      </div>
     </div>
-    
-    <script>
-        function checkPassword(event) {
-            event.preventDefault();
-            
-            const password = document.getElementById('password').value;
-            const correctPassword = 'landmark';
-            
-            if (password.toLowerCase() === correctPassword) {
-                // Set authentication in session storage
-                sessionStorage.setItem('wireAuth', 'true');
-                sessionStorage.setItem('authTime', Date.now());
-                
-                // Redirect to dashboard
-                window.location.href = 'dashboard.html';
-            } else {
-                // Show error
-                document.getElementById('errorMessage').style.display = 'block';
-                document.getElementById('password').value = '';
-                
-                // Hide error after 3 seconds
-                setTimeout(() => {
-                    document.getElementById('errorMessage').style.display = 'none';
-                }, 3000);
-            }
-            
-            return false;
-        }
-    </script>
+  </div>
+
+  <script>
+    function checkPassword(event) {
+      event.preventDefault();
+      const password = document.getElementById('password').value;
+      const correctPassword = 'landmark';
+      if (password.toLowerCase() === correctPassword) {
+        sessionStorage.setItem('wireAuth', 'true');
+        sessionStorage.setItem('authTime', Date.now());
+        window.location.href = 'dashboard.html';
+      } else {
+        document.getElementById('errorMessage').style.display = 'block';
+        document.getElementById('password').value = '';
+        setTimeout(() => {
+          document.getElementById('errorMessage').style.display = 'none';
+        }, 3000);
+      }
+      return false;
+    }
+  </script>
 </body>
 </html>
