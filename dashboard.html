@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/09 9:07 AM</span>
+      <span class="meta-text">Updated 2/09 11:54 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">44</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">29</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">24</span></button>
       </div>
     </div>
 
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_a4b742214d67">
+                            <td class="td-date">2/9/2026 10:41 AM</td>
+                            <td class="td-amount">$4,602.46</td>
+                            <td class="td-tenant">Nicholas Loaiza 17632 Bessemer ST Encino, CA 91316</td>
+                            <td class="td-ref">t0010908 Loaiza Purpose:apt Down PA Yment</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_a4b742214d67" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_a4b742214d67" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/9/2026 10:41 AM', '4602.46', `Nicholas Loaiza 17632 Bessemer ST Encino, CA 91316`, 't0010908 Loaiza Purpose:apt Down PA Yment', 'wire_a4b742214d67')">Submit</button>
+                                <span class="submit-status" id="status-wire_a4b742214d67"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_e343cef2933a">
+                            <td class="td-date">2/9/2026 9:17 AM</td>
+                            <td class="td-amount">$4,602.83</td>
+                            <td class="td-tenant">Ahsen Aydogdu Candas Aydogdu 2/13701 Marina Pointe DR Apt 125 3/us/marina Del Rey, CA 90292 9240</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_e343cef2933a" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_e343cef2933a" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/9/2026 9:17 AM', '4602.83', `Ahsen Aydogdu Candas Aydogdu 2/13701 Marina Pointe DR Apt 125 3/us/marina Del Rey, CA 90292 9240`, '', 'wire_e343cef2933a')">Submit</button>
+                                <span class="submit-status" id="status-wire_e343cef2933a"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_400b2b108676">
                             <td class="td-date">2/6/2026 5:04 AM</td>
                             <td class="td-amount">$4,390.00</td>
@@ -1042,244 +1072,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010862</span>
                                 <span class="mgr-name">lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_0d919392adfd">
-                            <td class="td-date">1/8/2026 10:12 AM</td>
-                            <td class="td-amount">$2,395.00</td>
-                            <td class="td-tenant">Gerald A Morgan 918 E 78th ST Los Angeles, CA 90001-2914</td>
-                            <td class="td-ref">G.morgan 4210 Del Rey AVE 202c T001 0859</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010859</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_1a46ef4b32e8">
-                            <td class="td-date">1/8/2026 10:11 AM</td>
-                            <td class="td-amount">$2,899.44</td>
-                            <td class="td-tenant">Marsy Gabriela Alesna 10201 Lindley AVE Apt L193 Northr, CA 91325-1082 United States</td>
-                            <td class="td-ref">Move IN Deposit AND First Months Re Nt t0010864 Alesna</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010864</span>
-                                <span class="mgr-name">Cole Murrell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_b90061c96ba1">
-                            <td class="td-date">1/8/2026 6:55 AM</td>
-                            <td class="td-amount">$2,590.00</td>
-                            <td class="td-tenant">Sergio A Sosa Jr 267 Sandy Hills LN El Paso TX 79928 US</td>
-                            <td class="td-ref">FBO Sergio Sosa Jr 4210 Del Rey AVE Unit 409c Marina Del Rey CA 90292 t0010861</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010861</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_319eebeada3f">
-                            <td class="td-date">12/9/2025 8:46 AM</td>
-                            <td class="td-amount">$7,696.83</td>
-                            <td class="td-tenant">Amir A Badiei 630 Westminster AVE Venice CA 90291</td>
-                            <td class="td-ref">Amir Badiei Paniz Rahmani 4210 Delr Ey AVE Unit 510 t0010836</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010836</span>
-                                <span class="mgr-name">Avy Stockton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c5bcf59ab95f">
-                            <td class="td-date">12/9/2025 8:34 AM</td>
-                            <td class="td-amount">$2,874.00</td>
-                            <td class="td-tenant">Rebecca Culp 12721 Matteson AVE Apt 4 Los Angeles, CA 90066</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010837</span>
-                                <span class="mgr-name">Avy Stockton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_cbd0453e6425">
-                            <td class="td-date">12/8/2025 2:28 PM</td>
-                            <td class="td-amount">$4,167.83</td>
-                            <td class="td-tenant">Katie Wood 4210 Del Rey AVE 202c Marina Del Rey CA 90292</td>
-                            <td class="td-ref">Katiewood 4210 Delreyave 305b Marin A Del Rey CA 90292 t0010834</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010834</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c01ecff61dee">
-                            <td class="td-date">12/8/2025 5:15 AM</td>
-                            <td class="td-amount">$4,630.83</td>
-                            <td class="td-tenant">Crystal Loza 3333 S LA Cienega BLVD Apt 5169 Los Angeles CA 90016-4368 US</td>
-                            <td class="td-ref">t0010792 - Loza</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010792</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_f2f8aaeca58d">
-                            <td class="td-date">12/8/2025 5:11 AM</td>
-                            <td class="td-amount">$5,425.00</td>
-                            <td class="td-tenant">Nancy Ann Doyle 516 24th PL Hermosa Beach CA 90254</td>
-                            <td class="td-ref">Move IN Funds t0010812</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010812</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c38fd19b5c13">
-                            <td class="td-date">12/5/2025 10:30 AM</td>
-                            <td class="td-amount">$4,940.00</td>
-                            <td class="td-tenant">Brendan J Morais 2/4750 Lincoln BLVD Apt 360 3/us/marina Del Rey, CA 90292-9303</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010813</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_4f48f8c03f40">
-                            <td class="td-date">12/5/2025 8:38 AM</td>
-                            <td class="td-amount">$4,591.83</td>
-                            <td class="td-tenant">James Andrew Brennan Iii OR James A Brennan 3425 Motor AVE Apt Ph5 Los Angeles CA 90034-4517 US</td>
-                            <td class="td-ref">t0010799 Brennan</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010799</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c2e36459c7f3">
-                            <td class="td-date">12/4/2025 5:03 AM</td>
-                            <td class="td-amount">$4,630.83</td>
-                            <td class="td-tenant">Mary E Feuker 67 Pancoast RD Waretown NJ US 08758-2649</td>
-                            <td class="td-ref">t0010805 - Mackintosh</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010805</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_12ef721a7b52">
-                            <td class="td-date">12/3/2025 4:10 PM</td>
-                            <td class="td-amount">$4,272.83</td>
-                            <td class="td-tenant">Nicholas Whelan 2/13700 Marina Pointe DR 1724 3/us/marina Dl Rey CA 90292-9273</td>
-                            <td class="td-ref">Ref: Nicholaswhelan 11311 LA Grange AVE Unit 431los Angeles, CA 90025</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010820</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_eedf9ed25870">
-                            <td class="td-date">12/3/2025 8:53 AM</td>
-                            <td class="td-amount">$5,902.83</td>
-                            <td class="td-tenant">Leo D Romero 227 Vineyard CT San Marcos CA 92069</td>
-                            <td class="td-ref">Move IN Funds Tenant ID t0010798 Ro Mero</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010798</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_93cc802afee7">
-                            <td class="td-date">12/3/2025 6:51 AM</td>
-                            <td class="td-amount">$4,245.00</td>
-                            <td class="td-tenant">Laura Gagliardi 2/3617 Venice BLVD Apt 504 3/us/los Angeles, CA 90019 6170</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010826</span>
-                                <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_480aef5d6084">
-                            <td class="td-date">12/1/2025 9:12 AM</td>
-                            <td class="td-amount">$3,740.00</td>
-                            <td class="td-tenant">Blueground Us, Inc. 1209 Orange Street County Of New CA Stle Wilmington DE 19801 US</td>
-                            <td class="td-ref">Bluegroundrent Sept Lax1324 Thanky Ou For Your Business Payment To Ven Dors For Services</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0009748</span>
-                                <span class="mgr-name">Aria (confirmed)</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_0e48b6b15db9">
-                            <td class="td-date">12/1/2025 5:19 AM</td>
-                            <td class="td-amount">$16,927.83</td>
-                            <td class="td-tenant">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
-                            <td class="td-ref">No. 301 Tenant ID t0010788</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010788</span>
-                                <span class="mgr-name">Aria</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_db7afcf73fd1">
-                            <td class="td-date">12/1/2025 5:19 AM</td>
-                            <td class="td-amount">$19,827.83</td>
-                            <td class="td-tenant">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
-                            <td class="td-ref">No. 302 Tenant ID t0010789</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010789</span>
-                                <span class="mgr-name">Aria</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
