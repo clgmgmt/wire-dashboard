@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/09 3:07 PM</span>
+      <span class="meta-text">Updated 2/09 4:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">29</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">24</span></button>
       </div>
     </div>
@@ -664,18 +664,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_a4b742214d67">
+                          <tr class="has-input" data-wire-id="wire_a4b742214d67">
                             <td class="td-date">2/9/2026 10:41 AM</td>
                             <td class="td-amount">$4,602.46</td>
                             <td class="td-tenant">Nicholas Loaiza 17632 Bessemer ST Encino, CA 91316</td>
                             <td class="td-ref">t0010908 Loaiza Purpose:apt Down PA Yment</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a4b742214d67" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a4b742214d67" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/9/2026 10:41 AM', '4602.46', `Nicholas Loaiza 17632 Bessemer ST Encino, CA 91316`, 't0010908 Loaiza Purpose:apt Down PA Yment', 'wire_a4b742214d67')">Submit</button>
-                                <span class="submit-status" id="status-wire_a4b742214d67"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010908</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a4b742214d67"
+                                        onclick="bookInYardi('2/9/2026 10:41 AM', '4602.46', `Nicholas Loaiza 17632 Bessemer ST Encino, CA 91316`, 'wire_a4b742214d67')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a4b742214d67" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
