@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/10 3:08 PM</span>
+      <span class="meta-text">Updated 2/11 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">29</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">25</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">30</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">26</span></button>
       </div>
     </div>
 
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_a7eea65fb7f5">
+                            <td class="td-date">2/11/2026 5:08 AM</td>
+                            <td class="td-amount">$6,952.83</td>
+                            <td class="td-tenant">Neil R Gandhi 10980 Wellworth AVE Apt 302 Los Angeles CA 90024-6259 US</td>
+                            <td class="td-ref">Deposit AND First Month Rent</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_a7eea65fb7f5" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_a7eea65fb7f5" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/11/2026 5:08 AM', '6952.83', `Neil R Gandhi 10980 Wellworth AVE Apt 302 Los Angeles CA 90024-6259 US`, 'Deposit AND First Month Rent', 'wire_a7eea65fb7f5')">Submit</button>
+                                <span class="submit-status" id="status-wire_a7eea65fb7f5"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_36ecb8baf0ca">
+                            <td class="td-date">2/11/2026 5:02 AM</td>
+                            <td class="td-amount">$4,427.83</td>
+                            <td class="td-tenant">Adriana I Torres 2/12712 W Lake Houston Parkway B824 3/us/houston 77044</td>
+                            <td class="td-ref">Clg Mgmt. Moveinfunds Ref t0010675</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_36ecb8baf0ca" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_36ecb8baf0ca" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/11/2026 5:02 AM', '4427.83', `Adriana I Torres 2/12712 W Lake Houston Parkway B824 3/us/houston 77044`, 'Clg Mgmt. Moveinfunds Ref t0010675', 'wire_36ecb8baf0ca')">Submit</button>
+                                <span class="submit-status" id="status-wire_36ecb8baf0ca"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_a4b742214d67">
                             <td class="td-date">2/9/2026 10:41 AM</td>
                             <td class="td-amount">$4,602.46</td>
@@ -674,10 +704,7 @@
                                 <span class="tid-mono">t0010908</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_a4b742214d67"
-                                        onclick="bookInYardi('2/9/2026 10:41 AM', '4602.46', `Nicholas Loaiza 17632 Bessemer ST Encino, CA 91316`, 'wire_a4b742214d67')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_a4b742214d67" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -706,10 +733,7 @@
                                 <span class="tid-mono">t0010910</span>
                                 <span class="mgr-name">Kenneth Stone</span>
                                 
-                                <button class="yardi-circle" id="book-wire_400b2b108676"
-                                        onclick="bookInYardi('2/6/2026 5:04 AM', '4390.0', `Spencer Donald Jones Charlotte J Ones 2/8770 Washington BLVD Apt 410 3/us/culver City, CA 90232 2481`, 'wire_400b2b108676')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_400b2b108676" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1047,20 +1071,6 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('1/13/2026 8:30 AM', '1768.0', `Hudson Official Llc 1155 N LA Cienega BLVD Apt 1210 Los Angeles CA 90069-2445 US`, 'Move IN Funds', 'wire_7169aa1e34cf')">Submit</button>
                                 <span class="submit-status" id="status-wire_7169aa1e34cf"></span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_76437a3278ec">
-                            <td class="td-date">1/12/2026 5:03 AM</td>
-                            <td class="td-amount">$4,630.83</td>
-                            <td class="td-tenant">Michael Yuen 2/5751 Sierra Cielo RD 3/us/irvine, CA 92603-3810</td>
-                            <td class="td-ref">Pop Other</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010865</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
