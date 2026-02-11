@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/11 1:07 PM</span>
+      <span class="meta-text">Updated 2/11 2:07 PM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">31</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">32</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">26</span></button>
       </div>
     </div>
@@ -698,18 +698,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_523f19c60ad4">
+                          <tr class="has-input" data-wire-id="wire_523f19c60ad4">
                             <td class="td-date">2/11/2026 9:53 AM</td>
                             <td class="td-amount">$2,204.00</td>
                             <td class="td-tenant">Thomas Holmes 909 Haight ST Apt 6 San Francisco CA 94117</td>
                             <td class="td-ref">Move IN Funds For 802 N Vermont AVE 304 Reference t0010913 Holmes</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010913</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_523f19c60ad4"
+                                        onclick="bookInYardi('2/11/2026 9:53 AM', '2204.0', `Thomas Holmes 909 Haight ST Apt 6 San Francisco CA 94117`, 'wire_523f19c60ad4')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_523f19c60ad4" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_dd38fab7418a">
+                            <td class="td-date">2/11/2026 1:19 PM</td>
+                            <td class="td-amount">$1,999.44</td>
+                            <td class="td-tenant">Francisco J Buenrostro 7321 Lennox AVE Unit H1 Van Nuys CA 91405-6264 US</td>
+                            <td class="td-ref"></td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_523f19c60ad4" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_523f19c60ad4" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_dd38fab7418a" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_dd38fab7418a" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/11/2026 9:53 AM', '2204.0', `Thomas Holmes 909 Haight ST Apt 6 San Francisco CA 94117`, 'Move IN Funds For 802 N Vermont AVE 304 Reference t0010913 Holmes', 'wire_523f19c60ad4')">Submit</button>
-                                <span class="submit-status" id="status-wire_523f19c60ad4"></span>
+                                        onclick="submitToSheets('2/11/2026 1:19 PM', '1999.44', `Francisco J Buenrostro 7321 Lennox AVE Unit H1 Van Nuys CA 91405-6264 US`, '', 'wire_dd38fab7418a')">Submit</button>
+                                <span class="submit-status" id="status-wire_dd38fab7418a"></span>
                               </div>
                             </td>
                           </tr>
