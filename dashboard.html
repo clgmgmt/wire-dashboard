@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/11 11:07 AM</span>
+      <span class="meta-text">Updated 2/11 12:08 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">31</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">26</span></button>
       </div>
     </div>
@@ -664,33 +664,37 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_a7eea65fb7f5">
+                          <tr class="has-input" data-wire-id="wire_a7eea65fb7f5">
                             <td class="td-date">2/11/2026 5:08 AM</td>
                             <td class="td-amount">$6,952.83</td>
                             <td class="td-tenant">Neil R Gandhi 10980 Wellworth AVE Apt 302 Los Angeles CA 90024-6259 US</td>
                             <td class="td-ref">Deposit AND First Month Rent</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a7eea65fb7f5" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a7eea65fb7f5" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/11/2026 5:08 AM', '6952.83', `Neil R Gandhi 10980 Wellworth AVE Apt 302 Los Angeles CA 90024-6259 US`, 'Deposit AND First Month Rent', 'wire_a7eea65fb7f5')">Submit</button>
-                                <span class="submit-status" id="status-wire_a7eea65fb7f5"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010915</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a7eea65fb7f5"
+                                        onclick="bookInYardi('2/11/2026 5:08 AM', '6952.83', `Neil R Gandhi 10980 Wellworth AVE Apt 302 Los Angeles CA 90024-6259 US`, 'wire_a7eea65fb7f5')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a7eea65fb7f5" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_36ecb8baf0ca">
+                          <tr class="has-input" data-wire-id="wire_36ecb8baf0ca">
                             <td class="td-date">2/11/2026 5:02 AM</td>
                             <td class="td-amount">$4,427.83</td>
                             <td class="td-tenant">Adriana I Torres 2/12712 W Lake Houston Parkway B824 3/us/houston 77044</td>
                             <td class="td-ref">Clg Mgmt. Moveinfunds Ref t0010675</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_36ecb8baf0ca" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_36ecb8baf0ca" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/11/2026 5:02 AM', '4427.83', `Adriana I Torres 2/12712 W Lake Houston Parkway B824 3/us/houston 77044`, 'Clg Mgmt. Moveinfunds Ref t0010675', 'wire_36ecb8baf0ca')">Submit</button>
-                                <span class="submit-status" id="status-wire_36ecb8baf0ca"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010917</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_36ecb8baf0ca"
+                                        onclick="bookInYardi('2/11/2026 5:02 AM', '4427.83', `Adriana I Torres 2/12712 W Lake Houston Parkway B824 3/us/houston 77044`, 'wire_36ecb8baf0ca')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_36ecb8baf0ca" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
