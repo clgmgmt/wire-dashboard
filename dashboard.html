@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/12 3:07 PM</span>
+      <span class="meta-text">Updated 2/12 4:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">36</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">29</span></button>
       </div>
     </div>
@@ -696,18 +696,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_70ea4cae7027">
+                          <tr class="has-input" data-wire-id="wire_70ea4cae7027">
                             <td class="td-date">2/12/2026 1:49 PM</td>
                             <td class="td-amount">$14,302.83</td>
                             <td class="td-tenant">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
                             <td class="td-ref">Tenant Id: t0010924 - Security Depo Sit, Rent, Scep Fee - M1 By Clg Apt 423</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_70ea4cae7027" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_70ea4cae7027" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/12/2026 1:49 PM', '14302.83', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'Tenant Id: t0010924 - Security Depo Sit, Rent, Scep Fee - M1 By Clg Apt 423', 'wire_70ea4cae7027')">Submit</button>
-                                <span class="submit-status" id="status-wire_70ea4cae7027"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010924</span>
+                                <span class="mgr-name">Karmine</span>
+                                
+                                <button class="yardi-circle" id="book-wire_70ea4cae7027"
+                                        onclick="bookInYardi('2/12/2026 1:49 PM', '14302.83', `Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US`, 'wire_70ea4cae7027')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_70ea4cae7027" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
