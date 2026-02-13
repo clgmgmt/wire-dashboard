@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/12 4:07 PM</span>
+      <span class="meta-text">Updated 2/12 5:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">36</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">29</span></button>
       </div>
     </div>
@@ -681,18 +681,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_1017786a8dc7">
+                          <tr class="has-input" data-wire-id="wire_1017786a8dc7">
                             <td class="td-date">2/12/2026 11:53 AM</td>
                             <td class="td-amount">$8,020.00</td>
                             <td class="td-tenant">Kathryn Plunkett 2/3797 Ashwood AVE 3/us/los Angeles CA 90066-3561</td>
                             <td class="td-ref">Reference: T0010904- Plunkett</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_1017786a8dc7" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_1017786a8dc7" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/12/2026 11:53 AM', '8020.0', `Kathryn Plunkett 2/3797 Ashwood AVE 3/us/los Angeles CA 90066-3561`, 'Reference: T0010904- Plunkett', 'wire_1017786a8dc7')">Submit</button>
-                                <span class="submit-status" id="status-wire_1017786a8dc7"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010904</span>
+                                <span class="mgr-name">Carisa Magdaleno</span>
+                                
+                                <button class="yardi-circle" id="book-wire_1017786a8dc7"
+                                        onclick="bookInYardi('2/12/2026 11:53 AM', '8020.0', `Kathryn Plunkett 2/3797 Ashwood AVE 3/us/los Angeles CA 90066-3561`, 'wire_1017786a8dc7')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_1017786a8dc7" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
