@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/13 6:07 PM</span>
+      <span class="meta-text">Updated 2/16 6:06 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">36</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">1</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">33</span></button>
       </div>
     </div>
@@ -793,18 +793,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_e343cef2933a">
+                          <tr class="has-input" data-wire-id="wire_e343cef2933a">
                             <td class="td-date">2/9/2026 9:17 AM</td>
                             <td class="td-amount">$4,602.83</td>
                             <td class="td-tenant">Ahsen Aydogdu Candas Aydogdu 2/13701 Marina Pointe DR Apt 125 3/us/marina Del Rey, CA 90292 9240</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_e343cef2933a" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_e343cef2933a" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/9/2026 9:17 AM', '4602.83', `Ahsen Aydogdu Candas Aydogdu 2/13701 Marina Pointe DR Apt 125 3/us/marina Del Rey, CA 90292 9240`, '', 'wire_e343cef2933a')">Submit</button>
-                                <span class="submit-status" id="status-wire_e343cef2933a"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010906</span>
+                                <span class="mgr-name">Amir Elsaeidy</span>
+                                
+                                <button class="yardi-circle" id="book-wire_e343cef2933a"
+                                        onclick="bookInYardi('2/9/2026 9:17 AM', '4602.83', `Ahsen Aydogdu Candas Aydogdu 2/13701 Marina Pointe DR Apt 125 3/us/marina Del Rey, CA 90292 9240`, 'wire_e343cef2933a')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_e343cef2933a" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
