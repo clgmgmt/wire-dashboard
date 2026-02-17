@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/16 6:07 PM</span>
+      <span class="meta-text">Updated 2/17 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">36</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">29</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">1</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">33</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">26</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_680f99c81e10">
+                            <td class="td-date">2/17/2026 5:18 AM</td>
+                            <td class="td-amount">$6,650.00</td>
+                            <td class="td-tenant">Rebecca Mae Gatta 552 Brooks AVE Venice CA 90291-3008 US</td>
+                            <td class="td-ref">Move IN Funds: T0010886- Gatta</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_680f99c81e10" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_680f99c81e10" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/17/2026 5:18 AM', '6650.0', `Rebecca Mae Gatta 552 Brooks AVE Venice CA 90291-3008 US`, 'Move IN Funds: T0010886- Gatta', 'wire_680f99c81e10')">Submit</button>
+                                <span class="submit-status" id="status-wire_680f99c81e10"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_a0e3d1924003">
                             <td class="td-date">2/12/2026 5:05 AM</td>
                             <td class="td-amount">$6,846.77</td>
@@ -1057,119 +1072,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010851</span>
                                 <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_cf17bec1fb2f">
-                            <td class="td-date">1/16/2026 1:40 PM</td>
-                            <td class="td-amount">$7,192.83</td>
-                            <td class="td-tenant">V618937 Drew Orenstein 2744 Cardwell Place Us/los Angeles CA 90046-1201</td>
-                            <td class="td-ref">Ref: Drew Orenstein</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010887</span>
-                                <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_3ed3137d88fc">
-                            <td class="td-date">1/15/2026 1:35 PM</td>
-                            <td class="td-amount">$1,999.44</td>
-                            <td class="td-tenant">Katherine Contreras 2006 W Martin Luther King Jr BLVD Los Angeles, CA 90062</td>
-                            <td class="td-ref">t0010869 - Contreras</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010869</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c126af381f67">
-                            <td class="td-date">1/15/2026 5:07 AM</td>
-                            <td class="td-amount">$3,645.00</td>
-                            <td class="td-tenant">Sarah Ladhani 20036 Iluso AVE Walnut, CA 91789</td>
-                            <td class="td-ref">Move IN Funds t0010882</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010882</span>
-                                <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_2c5da92b4a33">
-                            <td class="td-date">1/14/2026 12:32 PM</td>
-                            <td class="td-amount">$3,090.00</td>
-                            <td class="td-tenant">Abigail S Mamani 3800 Mentone AVE Apt 401b Culver City CA 90232-3535 US</td>
-                            <td class="td-ref">Abigail Mamani - 13448 Beach AVE - 5107g</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010871</span>
-                                <span class="mgr-name">Avy Stockton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_dd376edebcce">
-                            <td class="td-date">1/13/2026 11:13 AM</td>
-                            <td class="td-amount">$3,601.83</td>
-                            <td class="td-tenant">Ting-wei Chang 501 N 3rd ST Apt G Alhambra CA 91801-7211 US</td>
-                            <td class="td-ref">Move IN Funds Of 4207</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010872</span>
-                                <span class="mgr-name">Avy Stockton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_3a0679ae2ba7">
-                            <td class="td-date">1/13/2026 10:48 AM</td>
-                            <td class="td-amount">$1,112.50</td>
-                            <td class="td-tenant">Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US</td>
-                            <td class="td-ref">Ph 523-B - Rent Jan</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0009823</span>
-                                <span class="mgr-name">Karmine</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="needs-input" data-wire-id="wire_7169aa1e34cf">
-                            <td class="td-date">1/13/2026 8:30 AM</td>
-                            <td class="td-amount">$1,768.00</td>
-                            <td class="td-tenant">Hudson Official Llc 1155 N LA Cienega BLVD Apt 1210 Los Angeles CA 90069-2445 US</td>
-                            <td class="td-ref">Move IN Funds</td>
-                            <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_7169aa1e34cf" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_7169aa1e34cf" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('1/13/2026 8:30 AM', '1768.0', `Hudson Official Llc 1155 N LA Cienega BLVD Apt 1210 Los Angeles CA 90069-2445 US`, 'Move IN Funds', 'wire_7169aa1e34cf')">Submit</button>
-                                <span class="submit-status" id="status-wire_7169aa1e34cf"></span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5a08e0c4836b">
-                            <td class="td-date">1/12/2026 11:36 AM</td>
-                            <td class="td-amount">$1,825.00</td>
-                            <td class="td-tenant">Marc Freccero 2/7808 W Manchester AVE Apt 4 3/us/playa Del Rey 90293</td>
-                            <td class="td-ref">T0010862- Freccero</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010862</span>
-                                <span class="mgr-name">lopez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
