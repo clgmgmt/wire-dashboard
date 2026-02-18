@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/17 6:07 PM</span>
+      <span class="meta-text">Updated 2/18 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">31</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">33</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">27</span></button>
       </div>
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_65bac4bde1cd">
+                            <td class="td-date">2/18/2026 5:53 AM</td>
+                            <td class="td-amount">$3,417.83</td>
+                            <td class="td-tenant">Yemane Bisrat 175 Bryce Run Lake Forest CA 92630 USA</td>
+                            <td class="td-ref">Luwam Yemane 4210 Del Rey Avemari N A Del Rey CA 90292 Unit 303bt Cod E t0010933</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_65bac4bde1cd" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_65bac4bde1cd" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/18/2026 5:53 AM', '3417.83', `Yemane Bisrat 175 Bryce Run Lake Forest CA 92630 USA`, 'Luwam Yemane 4210 Del Rey Avemari N A Del Rey CA 90292 Unit 303bt Cod E t0010933', 'wire_65bac4bde1cd')">Submit</button>
+                                <span class="submit-status" id="status-wire_65bac4bde1cd"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_695879936b7d">
+                            <td class="td-date">2/18/2026 5:02 AM</td>
+                            <td class="td-amount">$5,890.00</td>
+                            <td class="td-tenant">Mary Free Thomas R Free Jr 2/121 Gass AVE 3/us/las Vegas, NV 89101 6710</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_695879936b7d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_695879936b7d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/18/2026 5:02 AM', '5890.0', `Mary Free Thomas R Free Jr 2/121 Gass AVE 3/us/las Vegas, NV 89101 6710`, '', 'wire_695879936b7d')">Submit</button>
+                                <span class="submit-status" id="status-wire_695879936b7d"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_680f99c81e10">
                             <td class="td-date">2/17/2026 5:18 AM</td>
                             <td class="td-amount">$6,650.00</td>
