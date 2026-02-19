@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/18 6:07 PM</span>
+      <span class="meta-text">Updated 2/19 6:06 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">33</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">31</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">30</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_3dec8449e91f">
+                            <td class="td-date">2/19/2026 5:09 AM</td>
+                            <td class="td-amount">$1,315.00</td>
+                            <td class="td-tenant">Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US</td>
+                            <td class="td-ref">Rent Ph523-b</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_3dec8449e91f" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_3dec8449e91f" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/19/2026 5:09 AM', '1315.0', `Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US`, 'Rent Ph523-b', 'wire_3dec8449e91f')">Submit</button>
+                                <span class="submit-status" id="status-wire_3dec8449e91f"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_65bac4bde1cd">
                             <td class="td-date">2/18/2026 5:53 AM</td>
                             <td class="td-amount">$3,417.83</td>
@@ -1109,20 +1124,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010881</span>
                                 <span class="mgr-name">Sandybell Mendez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_be535d21e4e7">
-                            <td class="td-date">1/20/2026 5:08 AM</td>
-                            <td class="td-amount">$4,610.83</td>
-                            <td class="td-tenant">Gabriela C Sotomayor 2/3425 Motor AVE Apt 307 3/us/los Angeles, CA 90034 4581</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010851</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
