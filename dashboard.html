@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/20 2:07 PM</span>
+      <span class="meta-text">Updated 2/20 3:07 PM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">35</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">30</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">34</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">31</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_6d1371c07b7e">
+                            <td class="td-date">2/20/2026 2:50 PM</td>
+                            <td class="td-amount">$7,035.83</td>
+                            <td class="td-tenant">Amy L McMahon-chen Ryan N Chen 4091 Redwood AVE Apt 415 Los Angeles CA 90066-5388 US</td>
+                            <td class="td-ref">Ryan Chen & Amy McMahon-chen, R3 By Clg, 4091 Redwood Ave, Apt 418, Ref Erence: t0010929</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_6d1371c07b7e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_6d1371c07b7e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/20/2026 2:50 PM', '7035.83', `Amy L McMahon-chen Ryan N Chen 4091 Redwood AVE Apt 415 Los Angeles CA 90066-5388 US`, 'Ryan Chen & Amy McMahon-chen, R3 By Clg, 4091 Redwood Ave, Apt 418, Ref Erence: t0010929', 'wire_6d1371c07b7e')">Submit</button>
+                                <span class="submit-status" id="status-wire_6d1371c07b7e"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_3dec8449e91f">
                             <td class="td-date">2/19/2026 5:09 AM</td>
                             <td class="td-amount">$1,315.00</td>
@@ -674,10 +689,7 @@
                                 <span class="tid-mono">t0009823</span>
                                 <span class="mgr-name">Karmine</span>
                                 
-                                <button class="yardi-circle" id="book-wire_3dec8449e91f"
-                                        onclick="bookInYardi('2/19/2026 5:09 AM', '1315.0', `Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US`, 'wire_3dec8449e91f')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_3dec8449e91f" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -691,10 +703,7 @@
                                 <span class="tid-mono">t0010921</span>
                                 <span class="mgr-name">Karmine</span>
                                 
-                                <button class="yardi-circle" id="book-wire_64471e18f852"
-                                        onclick="bookInYardi('2/19/2026 3:32 PM', '1852.0', `Alyssa Romano 9595 E Thunderbird RD Apt 2124 Scottsdale,az,,us`, 'wire_64471e18f852')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_64471e18f852" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -766,10 +775,7 @@
                                 <span class="tid-mono">t0010807</span>
                                 <span class="mgr-name">Gaea Arnold</span>
                                 
-                                <button class="yardi-circle" id="book-wire_bec41931365c"
-                                        onclick="bookInYardi('2/17/2026 7:58 AM', '5745.0', `Danae M Outeiro 19 Pixley AVE Apt 18 Corte Madera CA 94925`, 'wire_bec41931365c')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_bec41931365c" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1104,34 +1110,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010891</span>
                                 <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_334c74f04d75">
-                            <td class="td-date">1/21/2026 8:48 AM</td>
-                            <td class="td-amount">$3,899.44</td>
-                            <td class="td-tenant">Megan M Vina Heather Vina 2/1200 S Grand AVE Apt 746 3/us/los Angeles, CA 90015 3974</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010875</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_83a7be4de07d">
-                            <td class="td-date">1/21/2026 9:12 AM</td>
-                            <td class="td-amount">$6,590.00</td>
-                            <td class="td-tenant">Tyler Morten 13448 Beach AVE Ph6505 Marina Del Rey CA 90292</td>
-                            <td class="td-ref">Reference t0010885 Morten</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010885</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
