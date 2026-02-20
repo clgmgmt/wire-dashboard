@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/19 3:07 PM</span>
+      <span class="meta-text">Updated 2/19 4:07 PM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">33</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">35</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">30</span></button>
       </div>
     </div>
@@ -664,18 +664,50 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_3dec8449e91f">
+                          <tr class="has-input" data-wire-id="wire_3dec8449e91f">
                             <td class="td-date">2/19/2026 5:09 AM</td>
                             <td class="td-amount">$1,315.00</td>
                             <td class="td-tenant">Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US</td>
                             <td class="td-ref">Rent Ph523-b</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0009823</span>
+                                <span class="mgr-name">Karmine</span>
+                                
+                                <button class="yardi-circle" id="book-wire_3dec8449e91f"
+                                        onclick="bookInYardi('2/19/2026 5:09 AM', '1315.0', `Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US`, 'wire_3dec8449e91f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_3dec8449e91f" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_64471e18f852">
+                            <td class="td-date">2/19/2026 3:32 PM</td>
+                            <td class="td-amount">$1,852.00</td>
+                            <td class="td-tenant">Alyssa Romano 9595 E Thunderbird RD Apt 2124 Scottsdale,az,,us</td>
+                            <td class="td-ref">The Monroe</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_3dec8449e91f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_3dec8449e91f" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_64471e18f852" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_64471e18f852" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/19/2026 5:09 AM', '1315.0', `Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US`, 'Rent Ph523-b', 'wire_3dec8449e91f')">Submit</button>
-                                <span class="submit-status" id="status-wire_3dec8449e91f"></span>
+                                        onclick="submitToSheets('2/19/2026 3:32 PM', '1852.0', `Alyssa Romano 9595 E Thunderbird RD Apt 2124 Scottsdale,az,,us`, 'The Monroe', 'wire_64471e18f852')">Submit</button>
+                                <span class="submit-status" id="status-wire_64471e18f852"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_86d7778e027e">
+                            <td class="td-date">2/19/2026 3:21 PM</td>
+                            <td class="td-amount">$1,779.44</td>
+                            <td class="td-tenant">Josephine Miranda Lopez 43705 Secure PL Lancaster CA 93536</td>
+                            <td class="td-ref">t0010928 - Miranda-lopez</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_86d7778e027e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_86d7778e027e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/19/2026 3:21 PM', '1779.44', `Josephine Miranda Lopez 43705 Secure PL Lancaster CA 93536`, 't0010928 - Miranda-lopez', 'wire_86d7778e027e')">Submit</button>
+                                <span class="submit-status" id="status-wire_86d7778e027e"></span>
                               </div>
                             </td>
                           </tr>
