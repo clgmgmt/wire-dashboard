@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/20 5:07 PM</span>
+      <span class="meta-text">Updated 2/20 6:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">34</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">31</span></button>
       </div>
     </div>
@@ -664,18 +664,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_6d1371c07b7e">
+                          <tr class="has-input" data-wire-id="wire_6d1371c07b7e">
                             <td class="td-date">2/20/2026 2:50 PM</td>
                             <td class="td-amount">$7,035.83</td>
                             <td class="td-tenant">Amy L McMahon-chen Ryan N Chen 4091 Redwood AVE Apt 415 Los Angeles CA 90066-5388 US</td>
                             <td class="td-ref">Ryan Chen & Amy McMahon-chen, R3 By Clg, 4091 Redwood Ave, Apt 418, Ref Erence: t0010929</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_6d1371c07b7e" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_6d1371c07b7e" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/20/2026 2:50 PM', '7035.83', `Amy L McMahon-chen Ryan N Chen 4091 Redwood AVE Apt 415 Los Angeles CA 90066-5388 US`, 'Ryan Chen & Amy McMahon-chen, R3 By Clg, 4091 Redwood Ave, Apt 418, Ref Erence: t0010929', 'wire_6d1371c07b7e')">Submit</button>
-                                <span class="submit-status" id="status-wire_6d1371c07b7e"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010929</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_6d1371c07b7e"
+                                        onclick="bookInYardi('2/20/2026 2:50 PM', '7035.83', `Amy L McMahon-chen Ryan N Chen 4091 Redwood AVE Apt 415 Los Angeles CA 90066-5388 US`, 'wire_6d1371c07b7e')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_6d1371c07b7e" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
