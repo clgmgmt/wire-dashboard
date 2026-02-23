@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/22 6:08 PM</span>
+      <span class="meta-text">Updated 2/23 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">34</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">1</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">30</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">31</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">25</span></button>
       </div>
     </div>
 
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_57405a0b4637">
+                            <td class="td-date">2/23/2026 5:03 AM</td>
+                            <td class="td-amount">$3,000.00</td>
+                            <td class="td-tenant">Joshua Arrow Nancy Arrow 2/3610 Midvale AVE Apt 208 3/us/los Angeles, CA 90034 6650</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_57405a0b4637" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_57405a0b4637" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/23/2026 5:03 AM', '3000.0', `Joshua Arrow Nancy Arrow 2/3610 Midvale AVE Apt 208 3/us/los Angeles, CA 90034 6650`, '', 'wire_57405a0b4637')">Submit</button>
+                                <span class="submit-status" id="status-wire_57405a0b4637"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_69f84686e63d">
+                            <td class="td-date">2/23/2026 5:02 AM</td>
+                            <td class="td-amount">$3,200.00</td>
+                            <td class="td-tenant">Eric C Kaufman 526 E 20th ST Apt MA New York NY US 10009-1350</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_69f84686e63d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_69f84686e63d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/23/2026 5:02 AM', '3200.0', `Eric C Kaufman 526 E 20th ST Apt MA New York NY US 10009-1350`, '', 'wire_69f84686e63d')">Submit</button>
+                                <span class="submit-status" id="status-wire_69f84686e63d"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_6d1371c07b7e">
                             <td class="td-date">2/20/2026 2:50 PM</td>
                             <td class="td-amount">$7,035.83</td>
@@ -1058,90 +1088,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010710</span>
                                 <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_ae50c8891742">
-                            <td class="td-date">1/23/2026 8:16 AM</td>
-                            <td class="td-amount">$8,115.00</td>
-                            <td class="td-tenant">James B McLeish 3010 Beach AVE Venice CA US 90291-4611</td>
-                            <td class="td-ref">T0010883- McLeish</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010883</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_1c0126a7fd15">
-                            <td class="td-date">1/22/2026 2:20 PM</td>
-                            <td class="td-amount">$4,632.83</td>
-                            <td class="td-tenant">Lyon Gaming Llc 175 SW 7th ST Ste 2415 Miami FL US 33130-2966</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010878</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_ce3bf420691b">
-                            <td class="td-date">1/22/2026 2:16 PM</td>
-                            <td class="td-amount">$3,595.00</td>
-                            <td class="td-tenant">Tyler J Donahue OR Iuliia Khomina 2236b Penmar AVE Venice CA 90291-4061 US</td>
-                            <td class="td-ref">T0010892- Donahue</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010892</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_57b277ad79ca">
-                            <td class="td-date">1/22/2026 3:37 PM</td>
-                            <td class="td-amount">$4,027.83</td>
-                            <td class="td-tenant">Mostafa Vahidi Pod Mahshid Rahm+ 2/7443 Langham PL 3/us/rancho Cucamonga, CA 91730 67+</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010891</span>
-                                <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_09a409b954c5">
-                            <td class="td-date">1/21/2026 3:02 PM</td>
-                            <td class="td-amount">$4,127.83</td>
-                            <td class="td-tenant">Kyle Kragen 314 Skyview DR Pleasant Hill CA 94523-1058 US</td>
-                            <td class="td-ref">t0010884 - Kragen</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010884</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c61fca99b979">
-                            <td class="td-date">1/21/2026 2:17 PM</td>
-                            <td class="td-amount">$7,895.00</td>
-                            <td class="td-tenant">Matthew Habovstak Todsubject To St+ 7181 Sitio Corazon Carlsbad CA 9200 9 United States Of America (the)+</td>
-                            <td class="td-ref">For t0010881 From Habovstak, Matt</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010881</span>
-                                <span class="mgr-name">Sandybell Mendez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
