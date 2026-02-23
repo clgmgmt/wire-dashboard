@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/20 6:07 PM</span>
+      <span class="meta-text">Updated 2/22 5:34 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">34</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">1</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">31</span></button>
       </div>
     </div>
@@ -709,18 +709,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_86d7778e027e">
+                          <tr class="has-input" data-wire-id="wire_86d7778e027e">
                             <td class="td-date">2/19/2026 3:21 PM</td>
                             <td class="td-amount">$1,779.44</td>
                             <td class="td-tenant">Josephine Miranda Lopez 43705 Secure PL Lancaster CA 93536</td>
                             <td class="td-ref">t0010928 - Miranda-lopez</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_86d7778e027e" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_86d7778e027e" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/19/2026 3:21 PM', '1779.44', `Josephine Miranda Lopez 43705 Secure PL Lancaster CA 93536`, 't0010928 - Miranda-lopez', 'wire_86d7778e027e')">Submit</button>
-                                <span class="submit-status" id="status-wire_86d7778e027e"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010928</span>
+                                <span class="mgr-name">lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_86d7778e027e"
+                                        onclick="bookInYardi('2/19/2026 3:21 PM', '1779.44', `Josephine Miranda Lopez 43705 Secure PL Lancaster CA 93536`, 'wire_86d7778e027e')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_86d7778e027e" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
