@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/24 11:08 AM</span>
+      <span class="meta-text">Updated 2/24 12:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">32</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">33</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">27</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_fadfcb85c484">
+                            <td class="td-date">2/24/2026 11:41 AM</td>
+                            <td class="td-amount">$2,250.00</td>
+                            <td class="td-tenant">It33x03669016005505245381 Emanuela Moretti Via Venti Settembre 71 It 28925 Verbania Verbano-cusio-oss</td>
+                            <td class="td-ref">Balance M1 Ph526 E Tenant ID T00109 35 Roncoroni</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_fadfcb85c484" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_fadfcb85c484" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/24/2026 11:41 AM', '2250.0', `It33x03669016005505245381 Emanuela Moretti Via Venti Settembre 71 It 28925 Verbania Verbano-cusio-oss`, 'Balance M1 Ph526 E Tenant ID T00109 35 Roncoroni', 'wire_fadfcb85c484')">Submit</button>
+                                <span class="submit-status" id="status-wire_fadfcb85c484"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_57405a0b4637">
                             <td class="td-date">2/23/2026 5:03 AM</td>
                             <td class="td-amount">$3,000.00</td>
