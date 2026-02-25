@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/25 12:07 PM</span>
+      <span class="meta-text">Updated 2/25 1:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">34</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">26</span></button>
       </div>
     </div>
@@ -664,33 +664,37 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_796950f7db2e">
+                          <tr class="has-input" data-wire-id="wire_796950f7db2e">
                             <td class="td-date">2/25/2026 11:12 AM</td>
                             <td class="td-amount">$2,079.44</td>
                             <td class="td-tenant">Gabriela Helena Diaz Andrew Glendi+ 2/1016 1/2 Carol DR 3/us/west Hollywood, CA 90069-3108+</td>
                             <td class="td-ref">Pop Services</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_796950f7db2e" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_796950f7db2e" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/25/2026 11:12 AM', '2079.44', `Gabriela Helena Diaz Andrew Glendi+ 2/1016 1/2 Carol DR 3/us/west Hollywood, CA 90069-3108+`, 'Pop Services', 'wire_796950f7db2e')">Submit</button>
-                                <span class="submit-status" id="status-wire_796950f7db2e"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010938</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_796950f7db2e"
+                                        onclick="bookInYardi('2/25/2026 11:12 AM', '2079.44', `Gabriela Helena Diaz Andrew Glendi+ 2/1016 1/2 Carol DR 3/us/west Hollywood, CA 90069-3108+`, 'wire_796950f7db2e')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_796950f7db2e" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_fadfcb85c484">
+                          <tr class="has-input" data-wire-id="wire_fadfcb85c484">
                             <td class="td-date">2/24/2026 11:41 AM</td>
                             <td class="td-amount">$2,250.00</td>
                             <td class="td-tenant">It33x03669016005505245381 Emanuela Moretti Via Venti Settembre 71 It 28925 Verbania Verbano-cusio-oss</td>
                             <td class="td-ref">Balance M1 Ph526 E Tenant ID T00109 35 Roncoroni</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_fadfcb85c484" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_fadfcb85c484" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/24/2026 11:41 AM', '2250.0', `It33x03669016005505245381 Emanuela Moretti Via Venti Settembre 71 It 28925 Verbania Verbano-cusio-oss`, 'Balance M1 Ph526 E Tenant ID T00109 35 Roncoroni', 'wire_fadfcb85c484')">Submit</button>
-                                <span class="submit-status" id="status-wire_fadfcb85c484"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010935</span>
+                                <span class="mgr-name">lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_fadfcb85c484"
+                                        onclick="bookInYardi('2/24/2026 11:41 AM', '2250.0', `It33x03669016005505245381 Emanuela Moretti Via Venti Settembre 71 It 28925 Verbania Verbano-cusio-oss`, 'wire_fadfcb85c484')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_fadfcb85c484" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
