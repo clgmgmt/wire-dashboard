@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/26 11:07 AM</span>
+      <span class="meta-text">Updated 2/26 12:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">34</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">28</span></button>
       </div>
     </div>
@@ -692,18 +692,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_136e0115ab17">
+                          <tr class="has-input" data-wire-id="wire_136e0115ab17">
                             <td class="td-date">2/24/2026 1:26 PM</td>
                             <td class="td-amount">$4,504.83</td>
                             <td class="td-tenant">William J Trimble 2355 E 7645 S Salt Lake City UT US 84121-5640</td>
                             <td class="td-ref">Initial Rent</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_136e0115ab17" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_136e0115ab17" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/24/2026 1:26 PM', '4504.83', `William J Trimble 2355 E 7645 S Salt Lake City UT US 84121-5640`, 'Initial Rent', 'wire_136e0115ab17')">Submit</button>
-                                <span class="submit-status" id="status-wire_136e0115ab17"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010931</span>
+                                <span class="mgr-name">Thomas Lofton</span>
+                                
+                                <button class="yardi-circle" id="book-wire_136e0115ab17"
+                                        onclick="bookInYardi('2/24/2026 1:26 PM', '4504.83', `William J Trimble 2355 E 7645 S Salt Lake City UT US 84121-5640`, 'wire_136e0115ab17')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_136e0115ab17" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -737,18 +739,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_0c4728f43d95">
+                          <tr class="has-input" data-wire-id="wire_0c4728f43d95">
                             <td class="td-date">2/23/2026 9:18 AM</td>
                             <td class="td-amount">$5,140.00</td>
                             <td class="td-tenant">Olen Faye 1609 Christy Hill RD Unit A8 Olympic Valley CA 96146</td>
                             <td class="td-ref">t0010919 Faye</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_0c4728f43d95" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_0c4728f43d95" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/23/2026 9:18 AM', '5140.0', `Olen Faye 1609 Christy Hill RD Unit A8 Olympic Valley CA 96146`, 't0010919 Faye', 'wire_0c4728f43d95')">Submit</button>
-                                <span class="submit-status" id="status-wire_0c4728f43d95"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010919</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_0c4728f43d95"
+                                        onclick="bookInYardi('2/23/2026 9:18 AM', '5140.0', `Olen Faye 1609 Christy Hill RD Unit A8 Olympic Valley CA 96146`, 'wire_0c4728f43d95')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_0c4728f43d95" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
