@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/27 11:07 AM</span>
+      <span class="meta-text">Updated 2/27 12:07 PM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">34</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">1</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">31</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">32</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_b166e6d48f63">
+                            <td class="td-date">2/27/2026 11:45 AM</td>
+                            <td class="td-amount">$1,750.00</td>
+                            <td class="td-tenant">Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US</td>
+                            <td class="td-ref">Didi Metuh March Rent -wr</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_b166e6d48f63" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_b166e6d48f63" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('2/27/2026 11:45 AM', '1750.0', `Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US`, 'Didi Metuh March Rent -wr', 'wire_b166e6d48f63')">Submit</button>
+                                <span class="submit-status" id="status-wire_b166e6d48f63"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_796950f7db2e">
                             <td class="td-date">2/25/2026 11:12 AM</td>
                             <td class="td-amount">$2,079.44</td>
@@ -716,10 +731,7 @@
                                 <span class="tid-mono">t0010927</span>
                                 <span class="mgr-name">Kenneth Stone</span>
                                 
-                                <button class="yardi-circle" id="book-wire_57405a0b4637"
-                                        onclick="bookInYardi('2/23/2026 5:03 AM', '3000.0', `Joshua Arrow Nancy Arrow 2/3610 Midvale AVE Apt 208 3/us/los Angeles, CA 90034 6650`, 'wire_57405a0b4637')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_57405a0b4637" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -733,10 +745,7 @@
                                 <span class="tid-mono">t0010927</span>
                                 <span class="mgr-name">Kenneth Stone</span>
                                 
-                                <button class="yardi-circle" id="book-wire_69f84686e63d"
-                                        onclick="bookInYardi('2/23/2026 5:02 AM', '3200.0', `Eric C Kaufman 526 E 20th ST Apt MA New York NY US 10009-1350`, 'wire_69f84686e63d')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_69f84686e63d" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1128,20 +1137,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0007864</span>
                                 <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_2d813607d4eb">
-                            <td class="td-date">1/28/2026 6:07 AM</td>
-                            <td class="td-amount">$6,852.83</td>
-                            <td class="td-tenant">Mariana Alves 13448 Beach AVE Apt 4105, Marina Del Rey, California, 90292, US</td>
-                            <td class="td-ref">Move IN Funds Mariana Alves: 13448 Beach Avenue, Ph6101. Marina Del R Ey 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010901</span>
-                                <span class="mgr-name">Holly Hesse</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
