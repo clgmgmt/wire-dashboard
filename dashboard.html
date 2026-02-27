@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 2/26 6:08 PM</span>
+      <span class="meta-text">Updated 2/27 6:05 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">34</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">1</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">30</span></button>
       </div>
     </div>
@@ -706,33 +706,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_57405a0b4637">
+                          <tr class="has-input" data-wire-id="wire_57405a0b4637">
                             <td class="td-date">2/23/2026 5:03 AM</td>
                             <td class="td-amount">$3,000.00</td>
                             <td class="td-tenant">Joshua Arrow Nancy Arrow 2/3610 Midvale AVE Apt 208 3/us/los Angeles, CA 90034 6650</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_57405a0b4637" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_57405a0b4637" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/23/2026 5:03 AM', '3000.0', `Joshua Arrow Nancy Arrow 2/3610 Midvale AVE Apt 208 3/us/los Angeles, CA 90034 6650`, '', 'wire_57405a0b4637')">Submit</button>
-                                <span class="submit-status" id="status-wire_57405a0b4637"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010927</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_57405a0b4637"
+                                        onclick="bookInYardi('2/23/2026 5:03 AM', '3000.0', `Joshua Arrow Nancy Arrow 2/3610 Midvale AVE Apt 208 3/us/los Angeles, CA 90034 6650`, 'wire_57405a0b4637')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_57405a0b4637" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_69f84686e63d">
+                          <tr class="has-input" data-wire-id="wire_69f84686e63d">
                             <td class="td-date">2/23/2026 5:02 AM</td>
                             <td class="td-amount">$3,200.00</td>
                             <td class="td-tenant">Eric C Kaufman 526 E 20th ST Apt MA New York NY US 10009-1350</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_69f84686e63d" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_69f84686e63d" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/23/2026 5:02 AM', '3200.0', `Eric C Kaufman 526 E 20th ST Apt MA New York NY US 10009-1350`, '', 'wire_69f84686e63d')">Submit</button>
-                                <span class="submit-status" id="status-wire_69f84686e63d"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010927</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_69f84686e63d"
+                                        onclick="bookInYardi('2/23/2026 5:02 AM', '3200.0', `Eric C Kaufman 526 E 20th ST Apt MA New York NY US 10009-1350`, 'wire_69f84686e63d')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_69f84686e63d" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -750,18 +754,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_bef7f9acd73c">
+                          <tr class="has-input" data-wire-id="wire_bef7f9acd73c">
                             <td class="td-date">2/23/2026 1:40 PM</td>
                             <td class="td-amount">$6,852.83</td>
                             <td class="td-tenant">Anne Ward 2/redwood AVE 4091, Rm Apt 517 3/us/los Angeles,90066 5389,ca,los 3/angeles</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_bef7f9acd73c" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_bef7f9acd73c" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/23/2026 1:40 PM', '6852.83', `Anne Ward 2/redwood AVE 4091, Rm Apt 517 3/us/los Angeles,90066 5389,ca,los 3/angeles`, '', 'wire_bef7f9acd73c')">Submit</button>
-                                <span class="submit-status" id="status-wire_bef7f9acd73c"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0009337</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_bef7f9acd73c"
+                                        onclick="bookInYardi('2/23/2026 1:40 PM', '6852.83', `Anne Ward 2/redwood AVE 4091, Rm Apt 517 3/us/los Angeles,90066 5389,ca,los 3/angeles`, 'wire_bef7f9acd73c')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_bef7f9acd73c" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
