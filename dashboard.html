@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/02 1:08 PM</span>
+      <span class="meta-text">Updated 3/02 2:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">38</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">29</span></button>
       </div>
     </div>
@@ -694,18 +694,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_d2bf042f7957">
+                          <tr class="has-input" data-wire-id="wire_d2bf042f7957">
                             <td class="td-date">3/2/2026 5:13 AM</td>
                             <td class="td-amount">$2,750.00</td>
                             <td class="td-tenant">Rachel E Dunham Hana H Dunham 2/28106 Cabrillo LN 3/us/valencia, CA 91354 4902</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_d2bf042f7957" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_d2bf042f7957" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/2/2026 5:13 AM', '2750.0', `Rachel E Dunham Hana H Dunham 2/28106 Cabrillo LN 3/us/valencia, CA 91354 4902`, '', 'wire_d2bf042f7957')">Submit</button>
-                                <span class="submit-status" id="status-wire_d2bf042f7957"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010954</span>
+                                <span class="mgr-name">Amir Elseidy</span>
+                                
+                                <button class="yardi-circle" id="book-wire_d2bf042f7957"
+                                        onclick="bookInYardi('3/2/2026 5:13 AM', '2750.0', `Rachel E Dunham Hana H Dunham 2/28106 Cabrillo LN 3/us/valencia, CA 91354 4902`, 'wire_d2bf042f7957')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_d2bf042f7957" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
