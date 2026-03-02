@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/02 8:07 AM</span>
+      <span class="meta-text">Updated 3/02 9:07 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">36</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">37</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">29</span></button>
       </div>
@@ -736,6 +736,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('3/2/2026 7:29 AM', '3297.83', `Devin D Swan 6259 Acacia ST Los Angeles CA 90056`, 'Devin DE Mel Swan 13448 Beach AVE U Nit 1104 Marina Del Rey CA 90292', 'wire_896b0645d32a')">Submit</button>
                                 <span class="submit-status" id="status-wire_896b0645d32a"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_9b2d01b040c7">
+                            <td class="td-date">3/2/2026 8:23 AM</td>
+                            <td class="td-amount">$3,490.00</td>
+                            <td class="td-tenant">David M Johnson 2/4230 Chase AVE 3/us/los Angeles 90066</td>
+                            <td class="td-ref">t0010947 - Johnson</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9b2d01b040c7" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9b2d01b040c7" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/2/2026 8:23 AM', '3490.0', `David M Johnson 2/4230 Chase AVE 3/us/los Angeles 90066`, 't0010947 - Johnson', 'wire_9b2d01b040c7')">Submit</button>
+                                <span class="submit-status" id="status-wire_9b2d01b040c7"></span>
                               </div>
                             </td>
                           </tr>
