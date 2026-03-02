@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/02 2:07 PM</span>
+      <span class="meta-text">Updated 3/02 3:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">38</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">39</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">29</span></button>
       </div>
@@ -772,6 +772,21 @@
                                         onclick="bookInYardi('3/2/2026 9:34 AM', '1779.44', `Pauline L Linski 2/6101 MI State Road 52 3/us/manchester,48158-9721,mi`, 'wire_d55c61d20ab2')"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_d55c61d20ab2" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_9e2ad20f376f">
+                            <td class="td-date">3/2/2026 2:37 PM</td>
+                            <td class="td-amount">$3,988.12</td>
+                            <td class="td-tenant">Peter R Breault 503 E 1st ST Apt 2 Boston MA</td>
+                            <td class="td-ref">t0010953 Breault</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9e2ad20f376f" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9e2ad20f376f" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/2/2026 2:37 PM', '3988.12', `Peter R Breault 503 E 1st ST Apt 2 Boston MA`, 't0010953 Breault', 'wire_9e2ad20f376f')">Submit</button>
+                                <span class="submit-status" id="status-wire_9e2ad20f376f"></span>
                               </div>
                             </td>
                           </tr>
