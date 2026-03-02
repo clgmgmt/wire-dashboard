@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/02 10:07 AM</span>
+      <span class="meta-text">Updated 3/02 11:08 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">38</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">29</span></button>
       </div>
     </div>
@@ -724,18 +724,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_896b0645d32a">
+                          <tr class="has-input" data-wire-id="wire_896b0645d32a">
                             <td class="td-date">3/2/2026 7:29 AM</td>
                             <td class="td-amount">$3,297.83</td>
                             <td class="td-tenant">Devin D Swan 6259 Acacia ST Los Angeles CA 90056</td>
                             <td class="td-ref">Devin DE Mel Swan 13448 Beach AVE U Nit 1104 Marina Del Rey CA 90292</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_896b0645d32a" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_896b0645d32a" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/2/2026 7:29 AM', '3297.83', `Devin D Swan 6259 Acacia ST Los Angeles CA 90056`, 'Devin DE Mel Swan 13448 Beach AVE U Nit 1104 Marina Del Rey CA 90292', 'wire_896b0645d32a')">Submit</button>
-                                <span class="submit-status" id="status-wire_896b0645d32a"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010960</span>
+                                <span class="mgr-name">Chad Hirschman</span>
+                                
+                                <button class="yardi-circle" id="book-wire_896b0645d32a"
+                                        onclick="bookInYardi('3/2/2026 7:29 AM', '3297.83', `Devin D Swan 6259 Acacia ST Los Angeles CA 90056`, 'wire_896b0645d32a')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_896b0645d32a" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
