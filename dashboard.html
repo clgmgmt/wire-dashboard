@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/03 2:07 PM</span>
+      <span class="meta-text">Updated 3/03 3:07 PM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">39</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">29</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">30</span></button>
       </div>
     </div>
 
@@ -736,10 +736,7 @@
                                 <span class="tid-mono">t0010960</span>
                                 <span class="mgr-name">Chad Hirschman</span>
                                 
-                                <button class="yardi-circle" id="book-wire_896b0645d32a"
-                                        onclick="bookInYardi('3/2/2026 7:29 AM', '3297.83', `Devin D Swan 6259 Acacia ST Los Angeles CA 90056`, 'wire_896b0645d32a')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_896b0645d32a" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -792,18 +789,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_b166e6d48f63">
+                          <tr class="has-input" data-wire-id="wire_b166e6d48f63">
                             <td class="td-date">2/27/2026 11:45 AM</td>
                             <td class="td-amount">$1,750.00</td>
                             <td class="td-tenant">Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US</td>
                             <td class="td-ref">Didi Metuh March Rent -wr</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_b166e6d48f63" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_b166e6d48f63" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('2/27/2026 11:45 AM', '1750.0', `Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US`, 'Didi Metuh March Rent -wr', 'wire_b166e6d48f63')">Submit</button>
-                                <span class="submit-status" id="status-wire_b166e6d48f63"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010890</span>
+                                <span class="mgr-name">Karmine</span>
+                                
+                                <button class="yardi-circle" id="book-wire_b166e6d48f63"
+                                        onclick="bookInYardi('2/27/2026 11:45 AM', '1750.0', `Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US`, 'wire_b166e6d48f63')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_b166e6d48f63" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
