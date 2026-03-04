@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/03 6:07 PM</span>
+      <span class="meta-text">Updated 3/04 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">39</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">40</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">34</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_5ff17bc2bfe1">
+                            <td class="td-date">3/4/2026 5:08 AM</td>
+                            <td class="td-amount">$5,645.83</td>
+                            <td class="td-tenant">Christopher B Why 3324 Castle Heights AVE Apt 221 Los Angeles CA 90034-2774 US</td>
+                            <td class="td-ref">t0010955 - Why</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_5ff17bc2bfe1" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_5ff17bc2bfe1" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/4/2026 5:08 AM', '5645.83', `Christopher B Why 3324 Castle Heights AVE Apt 221 Los Angeles CA 90034-2774 US`, 't0010955 - Why', 'wire_5ff17bc2bfe1')">Submit</button>
+                                <span class="submit-status" id="status-wire_5ff17bc2bfe1"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_34eee65d79af">
                             <td class="td-date">3/2/2026 5:21 AM</td>
                             <td class="td-amount">$6,110.00</td>
