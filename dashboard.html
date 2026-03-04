@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/03 3:07 PM</span>
+      <span class="meta-text">Updated 3/03 4:08 PM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">39</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">30</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">34</span></button>
       </div>
     </div>
 
@@ -679,18 +679,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_6ff4bfb1fd56">
+                          <tr class="has-input" data-wire-id="wire_6ff4bfb1fd56">
                             <td class="td-date">3/2/2026 5:16 AM</td>
                             <td class="td-amount">$4,305.83</td>
                             <td class="td-tenant">Todd Grayson 789 Lockearn ST Los Angeles CA 90049</td>
                             <td class="td-ref">t0010952 Grayson 503</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_6ff4bfb1fd56" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_6ff4bfb1fd56" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/2/2026 5:16 AM', '4305.83', `Todd Grayson 789 Lockearn ST Los Angeles CA 90049`, 't0010952 Grayson 503', 'wire_6ff4bfb1fd56')">Submit</button>
-                                <span class="submit-status" id="status-wire_6ff4bfb1fd56"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010952</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_6ff4bfb1fd56"
+                                        onclick="bookInYardi('3/2/2026 5:16 AM', '4305.83', `Todd Grayson 789 Lockearn ST Los Angeles CA 90049`, 'wire_6ff4bfb1fd56')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_6ff4bfb1fd56" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -704,10 +706,7 @@
                                 <span class="tid-mono">t0010954</span>
                                 <span class="mgr-name">Amir Elseidy</span>
                                 
-                                <button class="yardi-circle" id="book-wire_d2bf042f7957"
-                                        onclick="bookInYardi('3/2/2026 5:13 AM', '2750.0', `Rachel E Dunham Hana H Dunham 2/28106 Cabrillo LN 3/us/valencia, CA 91354 4902`, 'wire_d2bf042f7957')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_d2bf042f7957" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -765,10 +764,7 @@
                                 <span class="tid-mono">t0010939</span>
                                 <span class="mgr-name">lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_d55c61d20ab2"
-                                        onclick="bookInYardi('3/2/2026 9:34 AM', '1779.44', `Pauline L Linski 2/6101 MI State Road 52 3/us/manchester,48158-9721,mi`, 'wire_d55c61d20ab2')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_d55c61d20ab2" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -782,10 +778,7 @@
                                 <span class="tid-mono">t0010953</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_9e2ad20f376f"
-                                        onclick="bookInYardi('3/2/2026 2:37 PM', '3988.12', `Peter R Breault 503 E 1st ST Apt 2 Boston MA`, 'wire_9e2ad20f376f')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_9e2ad20f376f" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -799,10 +792,7 @@
                                 <span class="tid-mono">t0010890</span>
                                 <span class="mgr-name">Karmine</span>
                                 
-                                <button class="yardi-circle" id="book-wire_b166e6d48f63"
-                                        onclick="bookInYardi('2/27/2026 11:45 AM', '1750.0', `Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US`, 'wire_b166e6d48f63')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_b166e6d48f63" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
