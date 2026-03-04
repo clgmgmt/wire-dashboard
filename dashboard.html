@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/04 1:07 PM</span>
+      <span class="meta-text">Updated 3/04 2:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">39</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">40</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">33</span></button>
       </div>
@@ -692,6 +692,21 @@
                                 <span class="mgr-name">Andrew Menzies</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_cea0f78805c8">
+                            <td class="td-date">3/4/2026 1:42 PM</td>
+                            <td class="td-amount">$2,650.00</td>
+                            <td class="td-tenant">Fouad Alameddine 2/13603 Marina Pointe DR Apt D603z 3/us/marina Del Rey,90292,ca</td>
+                            <td class="td-ref">Move-in Funds</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_cea0f78805c8" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_cea0f78805c8" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/4/2026 1:42 PM', '2650.0', `Fouad Alameddine 2/13603 Marina Pointe DR Apt D603z 3/us/marina Del Rey,90292,ca`, 'Move-in Funds', 'wire_cea0f78805c8')">Submit</button>
+                                <span class="submit-status" id="status-wire_cea0f78805c8"></span>
                               </div>
                             </td>
                           </tr>
