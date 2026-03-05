@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/05 9:07 AM</span>
+      <span class="meta-text">Updated 3/05 10:07 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">40</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">33</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">32</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_ab1d892c698e">
+                            <td class="td-date">3/5/2026 9:20 AM</td>
+                            <td class="td-amount">$3,981.83</td>
+                            <td class="td-tenant">Tanya Tharani 2/3341 Mountainside DR 3/us/corona, CA 92882 8916</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_ab1d892c698e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_ab1d892c698e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/5/2026 9:20 AM', '3981.83', `Tanya Tharani 2/3341 Mountainside DR 3/us/corona, CA 92882 8916`, '', 'wire_ab1d892c698e')">Submit</button>
+                                <span class="submit-status" id="status-wire_ab1d892c698e"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_5ff17bc2bfe1">
                             <td class="td-date">3/4/2026 5:08 AM</td>
                             <td class="td-amount">$5,645.83</td>
@@ -1220,20 +1235,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010910</span>
                                 <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a90a5ec6592d">
-                            <td class="td-date">2/2/2026 5:19 PM</td>
-                            <td class="td-amount">$4,077.83</td>
-                            <td class="td-tenant">Maria Quezada Jimenez 320 E 42nd ST Apt 2004 New York NY</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010900</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
