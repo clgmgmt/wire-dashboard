@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/06 2:07 PM</span>
+      <span class="meta-text">Updated 3/06 3:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">44</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">45</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">35</span></button>
       </div>
@@ -678,6 +678,21 @@
                                         onclick="bookInYardi('3/6/2026 11:25 AM', '4540.0', `Howarth, Amber 12 Buckelew ST Sausalito, CA 94965-1143`, 'wire_ca67689de2b6')"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_ca67689de2b6" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_eb2b8b0c0e0c">
+                            <td class="td-date">3/6/2026 2:51 PM</td>
+                            <td class="td-amount">$2,495.00</td>
+                            <td class="td-tenant">Tony R Morales 2009 Los Olivios Way Austin TX US 78725-6366</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_eb2b8b0c0e0c" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_eb2b8b0c0e0c" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/6/2026 2:51 PM', '2495.0', `Tony R Morales 2009 Los Olivios Way Austin TX US 78725-6366`, '', 'wire_eb2b8b0c0e0c')">Submit</button>
+                                <span class="submit-status" id="status-wire_eb2b8b0c0e0c"></span>
                               </div>
                             </td>
                           </tr>
