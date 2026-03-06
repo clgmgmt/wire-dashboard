@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/06 11:07 AM</span>
+      <span class="meta-text">Updated 3/06 12:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">43</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">44</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">35</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_ca67689de2b6">
+                            <td class="td-date">3/6/2026 11:25 AM</td>
+                            <td class="td-amount">$4,540.00</td>
+                            <td class="td-tenant">Howarth, Amber 12 Buckelew ST Sausalito, CA 94965-1143</td>
+                            <td class="td-ref">Re: T0010967-howarth</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_ca67689de2b6" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_ca67689de2b6" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/6/2026 11:25 AM', '4540.0', `Howarth, Amber 12 Buckelew ST Sausalito, CA 94965-1143`, 'Re: T0010967-howarth', 'wire_ca67689de2b6')">Submit</button>
+                                <span class="submit-status" id="status-wire_ca67689de2b6"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_ab1d892c698e">
                             <td class="td-date">3/5/2026 9:20 AM</td>
                             <td class="td-amount">$3,981.83</td>
