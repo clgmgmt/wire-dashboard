@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/09 1:08 PM</span>
+      <span class="meta-text">Updated 3/09 2:08 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">45</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">35</span></button>
       </div>
     </div>
@@ -711,18 +711,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_8a42a2a6ed1c">
+                          <tr class="has-input" data-wire-id="wire_8a42a2a6ed1c">
                             <td class="td-date">3/5/2026 10:09 AM</td>
                             <td class="td-amount">$3,426.83</td>
                             <td class="td-tenant">Ahmed Soliman Essaadia Aharchi 2/2158 Parkside DR Apt 390 3/us/corona, CA 92879 1220</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_8a42a2a6ed1c" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_8a42a2a6ed1c" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/5/2026 10:09 AM', '3426.83', `Ahmed Soliman Essaadia Aharchi 2/2158 Parkside DR Apt 390 3/us/corona, CA 92879 1220`, '', 'wire_8a42a2a6ed1c')">Submit</button>
-                                <span class="submit-status" id="status-wire_8a42a2a6ed1c"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010959</span>
+                                <span class="mgr-name">lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_8a42a2a6ed1c"
+                                        onclick="bookInYardi('3/5/2026 10:09 AM', '3426.83', `Ahmed Soliman Essaadia Aharchi 2/2158 Parkside DR Apt 390 3/us/corona, CA 92879 1220`, 'wire_8a42a2a6ed1c')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_8a42a2a6ed1c" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -741,18 +743,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_6a340f7f67c9">
+                          <tr class="has-input" data-wire-id="wire_6a340f7f67c9">
                             <td class="td-date">3/5/2026 4:18 PM</td>
                             <td class="td-amount">$5,127.83</td>
                             <td class="td-tenant">Giovanna M Hernandez 2/3515 W Dallas ST Apt 4010 3/us/houston 77019</td>
                             <td class="td-ref">T0010948-hernandez (move-in Funds)</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_6a340f7f67c9" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_6a340f7f67c9" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/5/2026 4:18 PM', '5127.83', `Giovanna M Hernandez 2/3515 W Dallas ST Apt 4010 3/us/houston 77019`, 'T0010948-hernandez (move-in Funds)', 'wire_6a340f7f67c9')">Submit</button>
-                                <span class="submit-status" id="status-wire_6a340f7f67c9"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010948</span>
+                                <span class="mgr-name">lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_6a340f7f67c9"
+                                        onclick="bookInYardi('3/5/2026 4:18 PM', '5127.83', `Giovanna M Hernandez 2/3515 W Dallas ST Apt 4010 3/us/houston 77019`, 'wire_6a340f7f67c9')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_6a340f7f67c9" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
