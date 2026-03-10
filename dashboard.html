@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/10 12:08 PM</span>
+      <span class="meta-text">Updated 3/10 1:07 PM</span>
     </div>
   </div>
 
@@ -647,8 +647,8 @@
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">45</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">35</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">34</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_a164b4853c06">
+                            <td class="td-date">3/10/2026 12:14 PM</td>
+                            <td class="td-amount">$3,167.83</td>
+                            <td class="td-tenant">Franco Dias 800 West AVE Apt 210 Miami Beach FL 33139-5579 US</td>
+                            <td class="td-ref">Franco H Dias, 4210 Del Rey Ave, 40 5-A, Marina Del Rey, CA 90292, T001 0982</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_a164b4853c06" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_a164b4853c06" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/10/2026 12:14 PM', '3167.83', `Franco Dias 800 West AVE Apt 210 Miami Beach FL 33139-5579 US`, 'Franco H Dias, 4210 Del Rey Ave, 40 5-A, Marina Del Rey, CA 90292, T001 0982', 'wire_a164b4853c06')">Submit</button>
+                                <span class="submit-status" id="status-wire_a164b4853c06"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_ca67689de2b6">
                             <td class="td-date">3/6/2026 11:25 AM</td>
                             <td class="td-amount">$4,540.00</td>
@@ -846,18 +861,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_8b5328d0c25f">
+                          <tr class="has-input" data-wire-id="wire_8b5328d0c25f">
                             <td class="td-date">3/2/2026 5:07 AM</td>
                             <td class="td-amount">$2,035.17</td>
                             <td class="td-tenant">William J Trimble 2355 E 7645 S Salt Lake City UT US 84121-5640</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_8b5328d0c25f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_8b5328d0c25f" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/2/2026 5:07 AM', '2035.17', `William J Trimble 2355 E 7645 S Salt Lake City UT US 84121-5640`, '', 'wire_8b5328d0c25f')">Submit</button>
-                                <span class="submit-status" id="status-wire_8b5328d0c25f"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010931</span>
+                                <span class="mgr-name">Thomas Lofton</span>
+                                
+                                <button class="yardi-circle" id="book-wire_8b5328d0c25f"
+                                        onclick="bookInYardi('3/2/2026 5:07 AM', '2035.17', `William J Trimble 2355 E 7645 S Salt Lake City UT US 84121-5640`, 'wire_8b5328d0c25f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_8b5328d0c25f" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1293,20 +1310,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010906</span>
                                 <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_400b2b108676">
-                            <td class="td-date">2/6/2026 5:04 AM</td>
-                            <td class="td-amount">$4,390.00</td>
-                            <td class="td-tenant">Spencer Donald Jones Charlotte J Ones 2/8770 Washington BLVD Apt 410 3/us/culver City, CA 90232 2481</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010910</span>
-                                <span class="mgr-name">Kenneth Stone</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
