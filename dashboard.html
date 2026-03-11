@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/11 10:07 AM</span>
+      <span class="meta-text">Updated 3/11 11:07 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">47</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
       </div>
     </div>
@@ -723,18 +723,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_eb2b8b0c0e0c">
+                          <tr class="has-input" data-wire-id="wire_eb2b8b0c0e0c">
                             <td class="td-date">3/6/2026 2:51 PM</td>
                             <td class="td-amount">$2,495.00</td>
                             <td class="td-tenant">Tony R Morales 2009 Los Olivios Way Austin TX US 78725-6366</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_eb2b8b0c0e0c" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_eb2b8b0c0e0c" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/6/2026 2:51 PM', '2495.0', `Tony R Morales 2009 Los Olivios Way Austin TX US 78725-6366`, '', 'wire_eb2b8b0c0e0c')">Submit</button>
-                                <span class="submit-status" id="status-wire_eb2b8b0c0e0c"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010936</span>
+                                <span class="mgr-name">Amir Elsaeidy</span>
+                                
+                                <button class="yardi-circle" id="book-wire_eb2b8b0c0e0c"
+                                        onclick="bookInYardi('3/6/2026 2:51 PM', '2495.0', `Tony R Morales 2009 Los Olivios Way Austin TX US 78725-6366`, 'wire_eb2b8b0c0e0c')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_eb2b8b0c0e0c" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -767,18 +769,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_6f16040c1886">
+                          <tr class="has-input" data-wire-id="wire_6f16040c1886">
                             <td class="td-date">3/5/2026 4:43 PM</td>
                             <td class="td-amount">$6,197.83</td>
                             <td class="td-tenant">Ali K Khan 507 Wilshire BLVD Apt 303 Santa Monica CA 90401-1481 US</td>
                             <td class="td-ref">Ali Khan, 13448 Beach Ave. Ph6505, Marina Del Rey, CA 90292</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_6f16040c1886" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_6f16040c1886" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/5/2026 4:43 PM', '6197.83', `Ali K Khan 507 Wilshire BLVD Apt 303 Santa Monica CA 90401-1481 US`, 'Ali Khan, 13448 Beach Ave. Ph6505, Marina Del Rey, CA 90292', 'wire_6f16040c1886')">Submit</button>
-                                <span class="submit-status" id="status-wire_6f16040c1886"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010971</span>
+                                <span class="mgr-name">Amir Elsaeidy</span>
+                                
+                                <button class="yardi-circle" id="book-wire_6f16040c1886"
+                                        onclick="bookInYardi('3/5/2026 4:43 PM', '6197.83', `Ali K Khan 507 Wilshire BLVD Apt 303 Santa Monica CA 90401-1481 US`, 'wire_6f16040c1886')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_6f16040c1886" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -824,18 +828,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_cea0f78805c8">
+                          <tr class="has-input" data-wire-id="wire_cea0f78805c8">
                             <td class="td-date">3/4/2026 1:42 PM</td>
                             <td class="td-amount">$2,650.00</td>
                             <td class="td-tenant">Fouad Alameddine 2/13603 Marina Pointe DR Apt D603z 3/us/marina Del Rey,90292,ca</td>
                             <td class="td-ref">Move-in Funds</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_cea0f78805c8" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_cea0f78805c8" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/4/2026 1:42 PM', '2650.0', `Fouad Alameddine 2/13603 Marina Pointe DR Apt D603z 3/us/marina Del Rey,90292,ca`, 'Move-in Funds', 'wire_cea0f78805c8')">Submit</button>
-                                <span class="submit-status" id="status-wire_cea0f78805c8"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010970</span>
+                                <span class="mgr-name">Amir Elsaeidy</span>
+                                
+                                <button class="yardi-circle" id="book-wire_cea0f78805c8"
+                                        onclick="bookInYardi('3/4/2026 1:42 PM', '2650.0', `Fouad Alameddine 2/13603 Marina Pointe DR Apt D603z 3/us/marina Del Rey,90292,ca`, 'wire_cea0f78805c8')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_cea0f78805c8" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
