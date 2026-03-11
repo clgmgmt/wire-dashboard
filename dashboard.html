@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/10 6:07 PM</span>
+      <span class="meta-text">Updated 3/11 9:03 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">45</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">34</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">46</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_9e71555e4048">
+                            <td class="td-date">3/11/2026 5:08 AM</td>
+                            <td class="td-amount">$7,087.83</td>
+                            <td class="td-tenant">Mane Tevosian 2600 Overland AVE Apt 101 Los Angeles CA 90064</td>
+                            <td class="td-ref">t0010969 Tevosiansaroukhan</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9e71555e4048" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9e71555e4048" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/11/2026 5:08 AM', '7087.83', `Mane Tevosian 2600 Overland AVE Apt 101 Los Angeles CA 90064`, 't0010969 Tevosiansaroukhan', 'wire_9e71555e4048')">Submit</button>
+                                <span class="submit-status" id="status-wire_9e71555e4048"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_a164b4853c06">
                             <td class="td-date">3/10/2026 12:14 PM</td>
                             <td class="td-amount">$3,167.83</td>
@@ -674,10 +689,7 @@
                                 <span class="tid-mono">t0010982</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_a164b4853c06"
-                                        onclick="bookInYardi('3/10/2026 12:14 PM', '3167.83', `Franco Dias 800 West AVE Apt 210 Miami Beach FL 33139-5579 US`, 'wire_a164b4853c06')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_a164b4853c06" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -691,10 +703,7 @@
                                 <span class="tid-mono">t0010967</span>
                                 <span class="mgr-name">Gaea Arnold</span>
                                 
-                                <button class="yardi-circle" id="book-wire_ca67689de2b6"
-                                        onclick="bookInYardi('3/6/2026 11:25 AM', '4540.0', `Howarth, Amber 12 Buckelew ST Sausalito, CA 94965-1143`, 'wire_ca67689de2b6')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_ca67689de2b6" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -738,10 +747,7 @@
                                 <span class="tid-mono">t0010959</span>
                                 <span class="mgr-name">lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_8a42a2a6ed1c"
-                                        onclick="bookInYardi('3/5/2026 10:09 AM', '3426.83', `Ahmed Soliman Essaadia Aharchi 2/2158 Parkside DR Apt 390 3/us/corona, CA 92879 1220`, 'wire_8a42a2a6ed1c')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_8a42a2a6ed1c" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -770,10 +776,7 @@
                                 <span class="tid-mono">t0010948</span>
                                 <span class="mgr-name">lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_6a340f7f67c9"
-                                        onclick="bookInYardi('3/5/2026 4:18 PM', '5127.83', `Giovanna M Hernandez 2/3515 W Dallas ST Apt 4010 3/us/houston 77019`, 'wire_6a340f7f67c9')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_6a340f7f67c9" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -873,10 +876,7 @@
                                 <span class="tid-mono">t0010931</span>
                                 <span class="mgr-name">Thomas Lofton</span>
                                 
-                                <button class="yardi-circle" id="book-wire_8b5328d0c25f"
-                                        onclick="bookInYardi('3/2/2026 5:07 AM', '2035.17', `William J Trimble 2355 E 7645 S Salt Lake City UT US 84121-5640`, 'wire_8b5328d0c25f')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_8b5328d0c25f" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1142,10 +1142,7 @@
                                 <span class="tid-mono">t0010886</span>
                                 <span class="mgr-name">Carisa Magdaleno</span>
                                 
-                                <button class="yardi-circle" id="book-wire_680f99c81e10"
-                                        onclick="bookInYardi('2/17/2026 5:18 AM', '6650.0', `Rebecca Mae Gatta 552 Brooks AVE Venice CA 90291-3008 US`, 'wire_680f99c81e10')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_680f99c81e10" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
