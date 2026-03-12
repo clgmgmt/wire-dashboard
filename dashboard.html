@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/12 10:07 AM</span>
+      <span class="meta-text">Updated 3/12 11:08 AM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">46</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">47</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">39</span></button>
       </div>
     </div>
@@ -664,18 +664,35 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_17f017aff983">
+                          <tr class="has-input" data-wire-id="wire_17f017aff983">
                             <td class="td-date">3/12/2026 9:00 AM</td>
                             <td class="td-amount">$4,672.83</td>
                             <td class="td-tenant">Sean M Omalley 2/624 Glen Cir 3/us/rochester Hills, MI 48307 2909</td>
                             <td class="td-ref"></td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010981</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_17f017aff983"
+                                        onclick="bookInYardi('3/12/2026 9:00 AM', '4672.83', `Sean M Omalley 2/624 Glen Cir 3/us/rochester Hills, MI 48307 2909`, 'wire_17f017aff983')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_17f017aff983" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_84c274f4a1e8">
+                            <td class="td-date">3/12/2026 10:49 AM</td>
+                            <td class="td-amount">$5,445.00</td>
+                            <td class="td-tenant">Amalgamation Pictures Llc 2936 S LA Salle AVE Los Angeles CA 90018-3169 US</td>
+                            <td class="td-ref">t0010983 - Patrick</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_17f017aff983" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_17f017aff983" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_84c274f4a1e8" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_84c274f4a1e8" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/12/2026 9:00 AM', '4672.83', `Sean M Omalley 2/624 Glen Cir 3/us/rochester Hills, MI 48307 2909`, '', 'wire_17f017aff983')">Submit</button>
-                                <span class="submit-status" id="status-wire_17f017aff983"></span>
+                                        onclick="submitToSheets('3/12/2026 10:49 AM', '5445.0', `Amalgamation Pictures Llc 2936 S LA Salle AVE Los Angeles CA 90018-3169 US`, 't0010983 - Patrick', 'wire_84c274f4a1e8')">Submit</button>
+                                <span class="submit-status" id="status-wire_84c274f4a1e8"></span>
                               </div>
                             </td>
                           </tr>
@@ -755,18 +772,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_ab1d892c698e">
+                          <tr class="has-input" data-wire-id="wire_ab1d892c698e">
                             <td class="td-date">3/5/2026 9:20 AM</td>
                             <td class="td-amount">$3,981.83</td>
                             <td class="td-tenant">Tanya Tharani 2/3341 Mountainside DR 3/us/corona, CA 92882 8916</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_ab1d892c698e" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_ab1d892c698e" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/5/2026 9:20 AM', '3981.83', `Tanya Tharani 2/3341 Mountainside DR 3/us/corona, CA 92882 8916`, '', 'wire_ab1d892c698e')">Submit</button>
-                                <span class="submit-status" id="status-wire_ab1d892c698e"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010965</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_ab1d892c698e"
+                                        onclick="bookInYardi('3/5/2026 9:20 AM', '3981.83', `Tanya Tharani 2/3341 Mountainside DR 3/us/corona, CA 92882 8916`, 'wire_ab1d892c698e')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_ab1d892c698e" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
