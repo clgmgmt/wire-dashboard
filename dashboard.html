@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/13 8:07 AM</span>
+      <span class="meta-text">Updated 3/13 9:08 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">47</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">2</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">46</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">45</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_3717b2edfe65">
+                            <td class="td-date">3/13/2026 8:59 AM</td>
+                            <td class="td-amount">$3,959.89</td>
+                            <td class="td-tenant">Daniel P Klass 17350 Bronte PL Granada Hills,ca,91344 US</td>
+                            <td class="td-ref">Security Deposit AND Rent For Citro Nia Apartments</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_3717b2edfe65" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_3717b2edfe65" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/13/2026 8:59 AM', '3959.89', `Daniel P Klass 17350 Bronte PL Granada Hills,ca,91344 US`, 'Security Deposit AND Rent For Citro Nia Apartments', 'wire_3717b2edfe65')">Submit</button>
+                                <span class="submit-status" id="status-wire_3717b2edfe65"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_17f017aff983">
                             <td class="td-date">3/12/2026 9:00 AM</td>
                             <td class="td-amount">$4,672.83</td>
@@ -1263,34 +1278,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010896</span>
                                 <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a7eea65fb7f5">
-                            <td class="td-date">2/11/2026 5:08 AM</td>
-                            <td class="td-amount">$6,952.83</td>
-                            <td class="td-tenant">Neil R Gandhi 10980 Wellworth AVE Apt 302 Los Angeles CA 90024-6259 US</td>
-                            <td class="td-ref">Deposit AND First Month Rent</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010915</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_36ecb8baf0ca">
-                            <td class="td-date">2/11/2026 5:02 AM</td>
-                            <td class="td-amount">$4,427.83</td>
-                            <td class="td-tenant">Adriana I Torres 2/12712 W Lake Houston Parkway B824 3/us/houston 77044</td>
-                            <td class="td-ref">Clg Mgmt. Moveinfunds Ref t0010675</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010917</span>
-                                <span class="mgr-name">Kenneth Stone</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
