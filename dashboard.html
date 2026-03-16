@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/13 6:07 PM</span>
+      <span class="meta-text">Updated 3/16 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">46</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">44</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">37</span></button>
       </div>
     </div>
 
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_858c7c3e60aa">
+                            <td class="td-date">3/16/2026 5:51 AM</td>
+                            <td class="td-amount">$5,095.00</td>
+                            <td class="td-tenant">Bradley E Buresh 3640 Wildbriar LN Lincoln NE 68516-2081</td>
+                            <td class="td-ref">t0010988 - Buresh</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_858c7c3e60aa" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_858c7c3e60aa" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/16/2026 5:51 AM', '5095.0', `Bradley E Buresh 3640 Wildbriar LN Lincoln NE 68516-2081`, 't0010988 - Buresh', 'wire_858c7c3e60aa')">Submit</button>
+                                <span class="submit-status" id="status-wire_858c7c3e60aa"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_04aa29aa58ee">
+                            <td class="td-date">3/16/2026 5:08 AM</td>
+                            <td class="td-amount">$4,095.00</td>
+                            <td class="td-tenant">Bonnie Hofert 2/2479 Roscomare RD 3/us/los Angeles 90077</td>
+                            <td class="td-ref">Reference T0010986, Hofert 610</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_04aa29aa58ee" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_04aa29aa58ee" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/16/2026 5:08 AM', '4095.0', `Bonnie Hofert 2/2479 Roscomare RD 3/us/los Angeles 90077`, 'Reference T0010986, Hofert 610', 'wire_04aa29aa58ee')">Submit</button>
+                                <span class="submit-status" id="status-wire_04aa29aa58ee"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_3717b2edfe65">
                             <td class="td-date">3/13/2026 8:59 AM</td>
                             <td class="td-amount">$3,959.89</td>
@@ -1256,62 +1286,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010932</span>
                                 <span class="mgr-name">Amir Elsaiedy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a0e3d1924003">
-                            <td class="td-date">2/12/2026 5:05 AM</td>
-                            <td class="td-amount">$6,846.77</td>
-                            <td class="td-tenant">Katherine Pang 3730 Cardiff AVE Los Angeles CA 90034</td>
-                            <td class="td-ref">Katherine Pang Apt 613 Tenant ID T0 010911</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010911</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_1017786a8dc7">
-                            <td class="td-date">2/12/2026 11:53 AM</td>
-                            <td class="td-amount">$8,020.00</td>
-                            <td class="td-tenant">Kathryn Plunkett 2/3797 Ashwood AVE 3/us/los Angeles CA 90066-3561</td>
-                            <td class="td-ref">Reference: T0010904- Plunkett</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010904</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_70ea4cae7027">
-                            <td class="td-date">2/12/2026 1:49 PM</td>
-                            <td class="td-amount">$14,302.83</td>
-                            <td class="td-tenant">Np 2025, Inc. 3519 Carnation AVE Los Angeles CA 90026-1103 US</td>
-                            <td class="td-ref">Tenant Id: t0010924 - Security Depo Sit, Rent, Scep Fee - M1 By Clg Apt 423</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010924</span>
-                                <span class="mgr-name">Karmine</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_b16036c11e2f">
-                            <td class="td-date">2/12/2026 2:38 PM</td>
-                            <td class="td-amount">$3,352.83</td>
-                            <td class="td-tenant">Elizabeth Ruelas 5938 Abernathy DR Los Angeles CA 90045</td>
-                            <td class="td-ref">Move IN Funds Elizabeth Ruelas</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010896</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
