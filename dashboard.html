@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/17 1:07 PM</span>
+      <span class="meta-text">Updated 3/17 2:08 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">46</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
       </div>
     </div>
@@ -664,18 +664,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_8bcfa68ae4ea">
+                          <tr class="has-input" data-wire-id="wire_8bcfa68ae4ea">
                             <td class="td-date">3/17/2026 12:48 PM</td>
                             <td class="td-amount">$4,547.83</td>
                             <td class="td-tenant">Erica J Xerri 14060 Marquesas Way Apt 2506 Marina Del Rey,ca,,us</td>
                             <td class="td-ref">t0010972 Xerri</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_8bcfa68ae4ea" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_8bcfa68ae4ea" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/17/2026 12:48 PM', '4547.83', `Erica J Xerri 14060 Marquesas Way Apt 2506 Marina Del Rey,ca,,us`, 't0010972 Xerri', 'wire_8bcfa68ae4ea')">Submit</button>
-                                <span class="submit-status" id="status-wire_8bcfa68ae4ea"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010972</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_8bcfa68ae4ea"
+                                        onclick="bookInYardi('3/17/2026 12:48 PM', '4547.83', `Erica J Xerri 14060 Marquesas Way Apt 2506 Marina Del Rey,ca,,us`, 'wire_8bcfa68ae4ea')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_8bcfa68ae4ea" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -738,18 +740,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_288c82315157">
+                          <tr class="has-input" data-wire-id="wire_288c82315157">
                             <td class="td-date">3/13/2026 1:32 PM</td>
                             <td class="td-amount">$3,901.83</td>
                             <td class="td-tenant">Anthony J Wroblewski 13365 W Washington BLVD Apt 305 Los Angeles CA 90066-5184 US</td>
                             <td class="td-ref">t0008213 Wroblewski Krolik</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_288c82315157" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_288c82315157" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/13/2026 1:32 PM', '3901.83', `Anthony J Wroblewski 13365 W Washington BLVD Apt 305 Los Angeles CA 90066-5184 US`, 't0008213 Wroblewski Krolik', 'wire_288c82315157')">Submit</button>
-                                <span class="submit-status" id="status-wire_288c82315157"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010985</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_288c82315157"
+                                        onclick="bookInYardi('3/13/2026 1:32 PM', '3901.83', `Anthony J Wroblewski 13365 W Washington BLVD Apt 305 Los Angeles CA 90066-5184 US`, 'wire_288c82315157')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_288c82315157" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
