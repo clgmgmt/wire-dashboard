@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/17 12:07 PM</span>
+      <span class="meta-text">Updated 3/17 1:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">45</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">46</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_8bcfa68ae4ea">
+                            <td class="td-date">3/17/2026 12:48 PM</td>
+                            <td class="td-amount">$4,547.83</td>
+                            <td class="td-tenant">Erica J Xerri 14060 Marquesas Way Apt 2506 Marina Del Rey,ca,,us</td>
+                            <td class="td-ref">t0010972 Xerri</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_8bcfa68ae4ea" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_8bcfa68ae4ea" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/17/2026 12:48 PM', '4547.83', `Erica J Xerri 14060 Marquesas Way Apt 2506 Marina Del Rey,ca,,us`, 't0010972 Xerri', 'wire_8bcfa68ae4ea')">Submit</button>
+                                <span class="submit-status" id="status-wire_8bcfa68ae4ea"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_858c7c3e60aa">
                             <td class="td-date">3/16/2026 5:51 AM</td>
                             <td class="td-amount">$5,095.00</td>
