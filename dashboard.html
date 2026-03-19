@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/18 6:07 PM</span>
+      <span class="meta-text">Updated 3/19 6:10 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">50</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_217f2e13c569">
+                            <td class="td-date">3/19/2026 5:41 AM</td>
+                            <td class="td-amount">$5,947.83</td>
+                            <td class="td-tenant">Rachel Obering 5835 Echo Hollow ST Castle Rock,co,80104 US</td>
+                            <td class="td-ref">Security Deposit & 1st Month'S Rent Obering Baum Tenant ID P0178099</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_217f2e13c569" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_217f2e13c569" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/19/2026 5:41 AM', '5947.83', `Rachel Obering 5835 Echo Hollow ST Castle Rock,co,80104 US`, 'Security Deposit & 1st Month'S Rent Obering Baum Tenant ID P0178099', 'wire_217f2e13c569')">Submit</button>
+                                <span class="submit-status" id="status-wire_217f2e13c569"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_ae291db2e869">
                             <td class="td-date">3/18/2026 11:44 AM</td>
                             <td class="td-amount">$3,247.83</td>
@@ -674,10 +689,7 @@
                                 <span class="tid-mono">t0011004</span>
                                 <span class="mgr-name">Amir Elsaeidy</span>
                                 
-                                <button class="yardi-circle" id="book-wire_ae291db2e869"
-                                        onclick="bookInYardi('3/18/2026 11:44 AM', '3247.83', `Tucker Massura 17741 Neff Ranch RD Yorba Linda CA 92886`, 'wire_ae291db2e869')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_ae291db2e869" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -736,10 +748,7 @@
                                 <span class="tid-mono">t0010972</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_8bcfa68ae4ea"
-                                        onclick="bookInYardi('3/17/2026 12:48 PM', '4547.83', `Erica J Xerri 14060 Marquesas Way Apt 2506 Marina Del Rey,ca,,us`, 'wire_8bcfa68ae4ea')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_8bcfa68ae4ea" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -768,10 +777,7 @@
                                 <span class="tid-mono">t0010986</span>
                                 <span class="mgr-name">Joslyn Y</span>
                                 
-                                <button class="yardi-circle" id="book-wire_04aa29aa58ee"
-                                        onclick="bookInYardi('3/16/2026 5:08 AM', '4095.0', `Bonnie Hofert 2/2479 Roscomare RD 3/us/los Angeles 90077`, 'wire_04aa29aa58ee')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_04aa29aa58ee" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -814,10 +820,7 @@
                                 <span class="tid-mono">t0010985</span>
                                 <span class="mgr-name">Kenneth Stone</span>
                                 
-                                <button class="yardi-circle" id="book-wire_288c82315157"
-                                        onclick="bookInYardi('3/13/2026 1:32 PM', '3901.83', `Anthony J Wroblewski 13365 W Washington BLVD Apt 305 Los Angeles CA 90066-5184 US`, 'wire_288c82315157')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_288c82315157" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -831,10 +834,7 @@
                                 <span class="tid-mono">t0010987</span>
                                 <span class="mgr-name">lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_2471649f905c"
-                                        onclick="bookInYardi('3/13/2026 1:24 PM', '4326.83', `Simon John Dibble 94 Oakford RD Wayne PA 19087`, 'wire_2471649f905c')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_2471649f905c" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1337,20 +1337,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010918</span>
                                 <span class="mgr-name">Samantha Free</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_680f99c81e10">
-                            <td class="td-date">2/17/2026 5:18 AM</td>
-                            <td class="td-amount">$6,650.00</td>
-                            <td class="td-tenant">Rebecca Mae Gatta 552 Brooks AVE Venice CA 90291-3008 US</td>
-                            <td class="td-ref">Move IN Funds: T0010886- Gatta</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010886</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
