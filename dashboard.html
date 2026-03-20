@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/20 9:07 AM</span>
+      <span class="meta-text">Updated 3/20 10:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">47</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">48</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
       </div>
     </div>
 
@@ -664,18 +664,34 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_9b8c04fbbe1d">
+                          <tr class="has-input" data-wire-id="wire_9b8c04fbbe1d">
                             <td class="td-date">3/20/2026 6:45 AM</td>
                             <td class="td-amount">$4,062.83</td>
                             <td class="td-tenant">Ian Tausch 308 N 112th ST Wauwatosa, WI 53226</td>
                             <td class="td-ref">t0011012 - Tausch, 4210 Del Rey AVE 403-B, Marina Del Rey, CA 90292</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_9b8c04fbbe1d" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_9b8c04fbbe1d" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/20/2026 6:45 AM', '4062.83', `Ian Tausch 308 N 112th ST Wauwatosa, WI 53226`, 't0011012 - Tausch, 4210 Del Rey AVE 403-B, Marina Del Rey, CA 90292', 'wire_9b8c04fbbe1d')">Submit</button>
-                                <span class="submit-status" id="status-wire_9b8c04fbbe1d"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011012</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_9b8c04fbbe1d"
+                                        onclick="bookInYardi('3/20/2026 6:45 AM', '4062.83', `Ian Tausch 308 N 112th ST Wauwatosa, WI 53226`, 'wire_9b8c04fbbe1d')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_9b8c04fbbe1d" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="has-input" data-wire-id="wire_eee2df399e60">
+                            <td class="td-date">3/20/2026 9:41 AM</td>
+                            <td class="td-amount">$3,468.50</td>
+                            <td class="td-tenant">Maria Quezada Jimenez 320 E 42nd ST Apt 2004 New York NY</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010900</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
