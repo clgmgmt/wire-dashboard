@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/20 6:06 AM</span>
+      <span class="meta-text">Updated 3/20 7:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">50</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">47</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_9b8c04fbbe1d">
+                            <td class="td-date">3/20/2026 6:45 AM</td>
+                            <td class="td-amount">$4,062.83</td>
+                            <td class="td-tenant">Ian Tausch 308 N 112th ST Wauwatosa, WI 53226</td>
+                            <td class="td-ref">t0011012 - Tausch, 4210 Del Rey AVE 403-B, Marina Del Rey, CA 90292</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9b8c04fbbe1d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9b8c04fbbe1d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/20/2026 6:45 AM', '4062.83', `Ian Tausch 308 N 112th ST Wauwatosa, WI 53226`, 't0011012 - Tausch, 4210 Del Rey AVE 403-B, Marina Del Rey, CA 90292', 'wire_9b8c04fbbe1d')">Submit</button>
+                                <span class="submit-status" id="status-wire_9b8c04fbbe1d"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_217f2e13c569">
                             <td class="td-date">3/19/2026 5:41 AM</td>
                             <td class="td-amount">$5,947.83</td>
@@ -1311,62 +1326,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010928</span>
                                 <span class="mgr-name">lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_65bac4bde1cd">
-                            <td class="td-date">2/18/2026 5:53 AM</td>
-                            <td class="td-amount">$3,417.83</td>
-                            <td class="td-tenant">Yemane Bisrat 175 Bryce Run Lake Forest CA 92630 USA</td>
-                            <td class="td-ref">Luwam Yemane 4210 Del Rey Avemari N A Del Rey CA 90292 Unit 303bt Cod E t0010933</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010933</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_695879936b7d">
-                            <td class="td-date">2/18/2026 5:02 AM</td>
-                            <td class="td-amount">$5,890.00</td>
-                            <td class="td-tenant">Mary Free Thomas R Free Jr 2/121 Gass AVE 3/us/las Vegas, NV 89101 6710</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010918</span>
-                                <span class="mgr-name">Samantha Free</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_bec41931365c">
-                            <td class="td-date">2/17/2026 7:58 AM</td>
-                            <td class="td-amount">$5,745.00</td>
-                            <td class="td-tenant">Danae M Outeiro 19 Pixley AVE Apt 18 Corte Madera CA 94925</td>
-                            <td class="td-ref">T00108077 Outeiro</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010807</span>
-                                <span class="mgr-name">Gaea Arnold</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_56b1c63bfa84">
-                            <td class="td-date">2/17/2026 12:51 PM</td>
-                            <td class="td-amount">$2,845.00</td>
-                            <td class="td-tenant">Brennan J Rieger 390 Hauser BLVD Tower 46, Unit 1f Los Angeles CA 90036</td>
-                            <td class="td-ref">Clg Management Move IN Funds</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010932</span>
-                                <span class="mgr-name">Amir Elsaiedy</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
