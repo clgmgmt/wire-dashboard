@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/20 6:07 PM</span>
+      <span class="meta-text">Updated 3/23 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">48</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">46</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">39</span></button>
       </div>
     </div>
 
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_0ac8236a00eb">
+                            <td class="td-date">3/23/2026 5:10 AM</td>
+                            <td class="td-amount">$4,095.00</td>
+                            <td class="td-tenant">Sandy J Rowley 307 5th ST Pacific Grove CA 93950</td>
+                            <td class="td-ref">Sandy Rowley t0011018</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_0ac8236a00eb" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_0ac8236a00eb" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/23/2026 5:10 AM', '4095.0', `Sandy J Rowley 307 5th ST Pacific Grove CA 93950`, 'Sandy Rowley t0011018', 'wire_0ac8236a00eb')">Submit</button>
+                                <span class="submit-status" id="status-wire_0ac8236a00eb"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_b388e5afe2e2">
+                            <td class="td-date">3/23/2026 5:03 AM</td>
+                            <td class="td-amount">$3,261.83</td>
+                            <td class="td-tenant">Braden Woods 2/11210 Las Vegas BLVD Unit 3087 3/us/las Vegas 89183</td>
+                            <td class="td-ref">Move-in Funds For: t0011010 - Woods</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_b388e5afe2e2" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_b388e5afe2e2" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/23/2026 5:03 AM', '3261.83', `Braden Woods 2/11210 Las Vegas BLVD Unit 3087 3/us/las Vegas 89183`, 'Move-in Funds For: t0011010 - Woods', 'wire_b388e5afe2e2')">Submit</button>
+                                <span class="submit-status" id="status-wire_b388e5afe2e2"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_9b8c04fbbe1d">
                             <td class="td-date">3/20/2026 6:45 AM</td>
                             <td class="td-amount">$4,062.83</td>
@@ -1280,62 +1310,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0009337</span>
                                 <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_6d1371c07b7e">
-                            <td class="td-date">2/20/2026 2:50 PM</td>
-                            <td class="td-amount">$7,035.83</td>
-                            <td class="td-tenant">Amy L McMahon-chen Ryan N Chen 4091 Redwood AVE Apt 415 Los Angeles CA 90066-5388 US</td>
-                            <td class="td-ref">Ryan Chen & Amy McMahon-chen, R3 By Clg, 4091 Redwood Ave, Apt 418, Ref Erence: t0010929</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010929</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_3dec8449e91f">
-                            <td class="td-date">2/19/2026 5:09 AM</td>
-                            <td class="td-amount">$1,315.00</td>
-                            <td class="td-tenant">Jose Sobral 1221 Myra AVE Apt 323-A Los Angeles CA 90029-2264 US</td>
-                            <td class="td-ref">Rent Ph523-b</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0009823</span>
-                                <span class="mgr-name">Karmine</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_64471e18f852">
-                            <td class="td-date">2/19/2026 3:32 PM</td>
-                            <td class="td-amount">$1,852.00</td>
-                            <td class="td-tenant">Alyssa Romano 9595 E Thunderbird RD Apt 2124 Scottsdale,az,,us</td>
-                            <td class="td-ref">The Monroe</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010921</span>
-                                <span class="mgr-name">Karmine</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_86d7778e027e">
-                            <td class="td-date">2/19/2026 3:21 PM</td>
-                            <td class="td-amount">$1,779.44</td>
-                            <td class="td-tenant">Josephine Miranda Lopez 43705 Secure PL Lancaster CA 93536</td>
-                            <td class="td-ref">t0010928 - Miranda-lopez</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010928</span>
-                                <span class="mgr-name">lopez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
