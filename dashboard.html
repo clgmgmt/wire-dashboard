@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/24 6:07 PM</span>
+      <span class="meta-text">Updated 3/25 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">48</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">47</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">39</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_04a438ebc623">
+                            <td class="td-date">3/25/2026 5:43 AM</td>
+                            <td class="td-amount">$3,895.00</td>
+                            <td class="td-tenant">Connor R Lasky 319 San Rafael AVE Belvedere CA 94920</td>
+                            <td class="td-ref">Connor Lasky Apartment</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_04a438ebc623" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_04a438ebc623" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/25/2026 5:43 AM', '3895.0', `Connor R Lasky 319 San Rafael AVE Belvedere CA 94920`, 'Connor Lasky Apartment', 'wire_04a438ebc623')">Submit</button>
+                                <span class="submit-status" id="status-wire_04a438ebc623"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_7d16898fc6bc">
                             <td class="td-date">3/24/2026 10:33 AM</td>
                             <td class="td-amount">$3,430.00</td>
@@ -1284,34 +1299,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010931</span>
                                 <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_57405a0b4637">
-                            <td class="td-date">2/23/2026 5:03 AM</td>
-                            <td class="td-amount">$3,000.00</td>
-                            <td class="td-tenant">Joshua Arrow Nancy Arrow 2/3610 Midvale AVE Apt 208 3/us/los Angeles, CA 90034 6650</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010927</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_69f84686e63d">
-                            <td class="td-date">2/23/2026 5:02 AM</td>
-                            <td class="td-amount">$3,200.00</td>
-                            <td class="td-tenant">Eric C Kaufman 526 E 20th ST Apt MA New York NY US 10009-1350</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010927</span>
-                                <span class="mgr-name">Kenneth Stone</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
