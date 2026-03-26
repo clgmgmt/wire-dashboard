@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/25 6:07 PM</span>
+      <span class="meta-text">Updated 3/26 6:06 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">47</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">37</span></button>
       </div>
     </div>
 
@@ -664,33 +664,52 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_04a438ebc623">
+                          <tr class="needs-input" data-wire-id="wire_25408f4e354d">
+                            <td class="td-date">3/26/2026 5:34 AM</td>
+                            <td class="td-amount">$5,992.83</td>
+                            <td class="td-tenant">Norvanta Freight Systems Llc 2/400 S Burnside AVE Apt 11d 3/us/los Angeles, CA 90036-5474</td>
+                            <td class="td-ref">Pop Other</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_25408f4e354d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_25408f4e354d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/26/2026 5:34 AM', '5992.83', `Norvanta Freight Systems Llc 2/400 S Burnside AVE Apt 11d 3/us/los Angeles, CA 90036-5474`, 'Pop Other', 'wire_25408f4e354d')">Submit</button>
+                                <span class="submit-status" id="status-wire_25408f4e354d"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="has-input" data-wire-id="wire_04a438ebc623">
                             <td class="td-date">3/25/2026 5:43 AM</td>
                             <td class="td-amount">$3,895.00</td>
                             <td class="td-tenant">Connor R Lasky 319 San Rafael AVE Belvedere CA 94920</td>
                             <td class="td-ref">Connor Lasky Apartment</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_04a438ebc623" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_04a438ebc623" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/25/2026 5:43 AM', '3895.0', `Connor R Lasky 319 San Rafael AVE Belvedere CA 94920`, 'Connor Lasky Apartment', 'wire_04a438ebc623')">Submit</button>
-                                <span class="submit-status" id="status-wire_04a438ebc623"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011009</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_04a438ebc623"
+                                        onclick="bookInYardi('3/25/2026 5:43 AM', '3895.0', `Connor R Lasky 319 San Rafael AVE Belvedere CA 94920`, 'wire_04a438ebc623')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_04a438ebc623" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_d19b292bc310">
+                          <tr class="has-input" data-wire-id="wire_d19b292bc310">
                             <td class="td-date">3/25/2026 11:00 AM</td>
                             <td class="td-amount">$3,995.00</td>
                             <td class="td-tenant">Diana Rutherford 21a Edison AVE Corte Madera, CA 94925-1317</td>
                             <td class="td-ref">Resident Code t0011006</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_d19b292bc310" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_d19b292bc310" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/25/2026 11:00 AM', '3995.0', `Diana Rutherford 21a Edison AVE Corte Madera, CA 94925-1317`, 'Resident Code t0011006', 'wire_d19b292bc310')">Submit</button>
-                                <span class="submit-status" id="status-wire_d19b292bc310"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011006</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_d19b292bc310"
+                                        onclick="bookInYardi('3/25/2026 11:00 AM', '3995.0', `Diana Rutherford 21a Edison AVE Corte Madera, CA 94925-1317`, 'wire_d19b292bc310')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_d19b292bc310" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1316,20 +1335,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010931</span>
                                 <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_bef7f9acd73c">
-                            <td class="td-date">2/23/2026 1:40 PM</td>
-                            <td class="td-amount">$6,852.83</td>
-                            <td class="td-tenant">Anne Ward 2/redwood AVE 4091, Rm Apt 517 3/us/los Angeles,90066 5389,ca,los 3/angeles</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0009337</span>
-                                <span class="mgr-name">Kenneth Stone</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
