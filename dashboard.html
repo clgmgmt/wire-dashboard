@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/26 3:07 PM</span>
+      <span class="meta-text">Updated 3/26 4:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">50</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">10</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">11</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">36</span></button>
       </div>
     </div>
@@ -831,18 +831,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_455d7cb3ef2f">
+                          <tr class="has-input" data-wire-id="wire_455d7cb3ef2f">
                             <td class="td-date">3/23/2026 4:10 PM</td>
                             <td class="td-amount">$3,276.00</td>
                             <td class="td-tenant">Nina M Chung 3142 LA Mesa DR San Carlos CA 94070</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_455d7cb3ef2f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_455d7cb3ef2f" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/23/2026 4:10 PM', '3276.0', `Nina M Chung 3142 LA Mesa DR San Carlos CA 94070`, '', 'wire_455d7cb3ef2f')">Submit</button>
-                                <span class="submit-status" id="status-wire_455d7cb3ef2f"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011003</span>
+                                <span class="mgr-name">lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_455d7cb3ef2f"
+                                        onclick="bookInYardi('3/23/2026 4:10 PM', '3276.0', `Nina M Chung 3142 LA Mesa DR San Carlos CA 94070`, 'wire_455d7cb3ef2f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_455d7cb3ef2f" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
