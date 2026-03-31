@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/31 2:07 PM</span>
+      <span class="meta-text">Updated 3/31 3:08 PM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -691,6 +691,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('3/31/2026 6:45 AM', '4245.0', `Roberto Rodriguez OR Nadia K Rodrig Uez 2/412 Geo Meyer AVE 3/us/savannah 31401`, 't0011033 Rodriguez', 'wire_69bc1373123f')">Submit</button>
                                 <span class="submit-status" id="status-wire_69bc1373123f"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_aff509cd6bcf">
+                            <td class="td-date">3/31/2026 2:34 PM</td>
+                            <td class="td-amount">$2,325.00</td>
+                            <td class="td-tenant">Wendy Eberle 4082 Sawtelle BLVD Los Angeles CA 90066</td>
+                            <td class="td-ref">Caitlin Davis Herber 13448 Beach Av E 1501 C</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_aff509cd6bcf" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_aff509cd6bcf" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/31/2026 2:34 PM', '2325.0', `Wendy Eberle 4082 Sawtelle BLVD Los Angeles CA 90066`, 'Caitlin Davis Herber 13448 Beach Av E 1501 C', 'wire_aff509cd6bcf')">Submit</button>
+                                <span class="submit-status" id="status-wire_aff509cd6bcf"></span>
                               </div>
                             </td>
                           </tr>
@@ -1024,18 +1039,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_858c7c3e60aa">
+                          <tr class="has-input" data-wire-id="wire_858c7c3e60aa">
                             <td class="td-date">3/16/2026 5:51 AM</td>
                             <td class="td-amount">$5,095.00</td>
                             <td class="td-tenant">Bradley E Buresh 3640 Wildbriar LN Lincoln NE 68516-2081</td>
                             <td class="td-ref">t0010988 - Buresh</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_858c7c3e60aa" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_858c7c3e60aa" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/16/2026 5:51 AM', '5095.0', `Bradley E Buresh 3640 Wildbriar LN Lincoln NE 68516-2081`, 't0010988 - Buresh', 'wire_858c7c3e60aa')">Submit</button>
-                                <span class="submit-status" id="status-wire_858c7c3e60aa"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010988</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_858c7c3e60aa"
+                                        onclick="bookInYardi('3/16/2026 5:51 AM', '5095.0', `Bradley E Buresh 3640 Wildbriar LN Lincoln NE 68516-2081`, 'wire_858c7c3e60aa')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_858c7c3e60aa" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
