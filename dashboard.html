@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/31 11:07 AM</span>
+      <span class="meta-text">Updated 3/31 12:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">53</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -694,18 +694,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_6aa1e4ff5b6a">
+                          <tr class="has-input" data-wire-id="wire_6aa1e4ff5b6a">
                             <td class="td-date">3/30/2026 12:19 PM</td>
                             <td class="td-amount">$4,914.00</td>
                             <td class="td-tenant">Andrey Borshch OR Marina Borshch 54 Groton ST Staten Island NY 10312-6538 US</td>
                             <td class="td-ref">Ref: T0011022-borschch</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_6aa1e4ff5b6a" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_6aa1e4ff5b6a" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/30/2026 12:19 PM', '4914.0', `Andrey Borshch OR Marina Borshch 54 Groton ST Staten Island NY 10312-6538 US`, 'Ref: T0011022-borschch', 'wire_6aa1e4ff5b6a')">Submit</button>
-                                <span class="submit-status" id="status-wire_6aa1e4ff5b6a"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011022</span>
+                                <span class="mgr-name">Carisa Magdaleno</span>
+                                
+                                <button class="yardi-circle" id="book-wire_6aa1e4ff5b6a"
+                                        onclick="bookInYardi('3/30/2026 12:19 PM', '4914.0', `Andrey Borshch OR Marina Borshch 54 Groton ST Staten Island NY 10312-6538 US`, 'wire_6aa1e4ff5b6a')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_6aa1e4ff5b6a" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -737,18 +739,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_06cc3241cf42">
+                          <tr class="has-input" data-wire-id="wire_06cc3241cf42">
                             <td class="td-date">3/27/2026 4:25 PM</td>
                             <td class="td-amount">$6,227.61</td>
                             <td class="td-tenant">Marc Llorenz R Deleon Maria Cristina A Arnaldo 732 S Spring ST Apt 705 Los Angeles CA 90014-3051 US</td>
                             <td class="td-ref">t0011029 - Rivas-de Leon</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_06cc3241cf42" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_06cc3241cf42" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/27/2026 4:25 PM', '6227.61', `Marc Llorenz R Deleon Maria Cristina A Arnaldo 732 S Spring ST Apt 705 Los Angeles CA 90014-3051 US`, 't0011029 - Rivas-de Leon', 'wire_06cc3241cf42')">Submit</button>
-                                <span class="submit-status" id="status-wire_06cc3241cf42"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011029</span>
+                                <span class="mgr-name">Thomas Lofton</span>
+                                
+                                <button class="yardi-circle" id="book-wire_06cc3241cf42"
+                                        onclick="bookInYardi('3/27/2026 4:25 PM', '6227.61', `Marc Llorenz R Deleon Maria Cristina A Arnaldo 732 S Spring ST Apt 705 Los Angeles CA 90014-3051 US`, 'wire_06cc3241cf42')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_06cc3241cf42" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
