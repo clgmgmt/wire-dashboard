@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/31 6:08 PM</span>
+      <span class="meta-text">Updated 4/01 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">55</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_284e30a0a93e">
+                            <td class="td-date">4/1/2026 5:56 AM</td>
+                            <td class="td-amount">$7,147.83</td>
+                            <td class="td-tenant">John S Urbanik 2/412 43rd ST 3/us/brooklyn 11232</td>
+                            <td class="td-ref">John Urbanik 13448 Beach AVE Ph6108</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_284e30a0a93e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_284e30a0a93e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/1/2026 5:56 AM', '7147.83', `John S Urbanik 2/412 43rd ST 3/us/brooklyn 11232`, 'John Urbanik 13448 Beach AVE Ph6108', 'wire_284e30a0a93e')">Submit</button>
+                                <span class="submit-status" id="status-wire_284e30a0a93e"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_5ddd45682830">
                             <td class="td-date">3/31/2026 5:23 AM</td>
                             <td class="td-amount">$2,595.00</td>
@@ -1334,62 +1349,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010970</span>
                                 <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_34eee65d79af">
-                            <td class="td-date">3/2/2026 5:21 AM</td>
-                            <td class="td-amount">$6,110.00</td>
-                            <td class="td-tenant">Jacqueline M Medeiros OR Donald M Medeiros 161 Ocean Park BLVD Apt C Santa Monica CA 90405-3527 US</td>
-                            <td class="td-ref">Reference T0010944-medeiros</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010944</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_6ff4bfb1fd56">
-                            <td class="td-date">3/2/2026 5:16 AM</td>
-                            <td class="td-amount">$4,305.83</td>
-                            <td class="td-tenant">Todd Grayson 789 Lockearn ST Los Angeles CA 90049</td>
-                            <td class="td-ref">t0010952 Grayson 503</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010952</span>
-                                <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d2bf042f7957">
-                            <td class="td-date">3/2/2026 5:13 AM</td>
-                            <td class="td-amount">$2,750.00</td>
-                            <td class="td-tenant">Rachel E Dunham Hana H Dunham 2/28106 Cabrillo LN 3/us/valencia, CA 91354 4902</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010954</span>
-                                <span class="mgr-name">Amir Elseidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_8b5328d0c25f">
-                            <td class="td-date">3/2/2026 5:07 AM</td>
-                            <td class="td-amount">$2,035.17</td>
-                            <td class="td-tenant">William J Trimble 2355 E 7645 S Salt Lake City UT US 84121-5640</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010931</span>
-                                <span class="mgr-name">Thomas Lofton</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
