@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 3/31 4:07 PM</span>
+      <span class="meta-text">Updated 3/31 5:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">55</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
@@ -708,6 +708,21 @@
                                         onclick="bookInYardi('3/31/2026 2:34 PM', '2325.0', `Wendy Eberle 4082 Sawtelle BLVD Los Angeles CA 90066`, 'wire_aff509cd6bcf')"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_aff509cd6bcf" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_bd088c8c67b5">
+                            <td class="td-date">3/31/2026 4:11 PM</td>
+                            <td class="td-amount">$4,710.83</td>
+                            <td class="td-tenant">Maral Kasiri 7660 Beverly BLVD Apt 254 Los Angeles, CA 90036</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_bd088c8c67b5" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_bd088c8c67b5" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('3/31/2026 4:11 PM', '4710.83', `Maral Kasiri 7660 Beverly BLVD Apt 254 Los Angeles, CA 90036`, '', 'wire_bd088c8c67b5')">Submit</button>
+                                <span class="submit-status" id="status-wire_bd088c8c67b5"></span>
                               </div>
                             </td>
                           </tr>
