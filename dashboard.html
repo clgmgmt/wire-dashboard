@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/02 9:08 AM</span>
+      <span class="meta-text">Updated 4/02 10:07 AM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">8</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
       </div>
     </div>
@@ -679,33 +679,52 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_eacec7ae34e3">
+                          <tr class="has-input" data-wire-id="wire_eacec7ae34e3">
                             <td class="td-date">4/2/2026 6:56 AM</td>
                             <td class="td-amount">$3,397.83</td>
                             <td class="td-tenant">Vivi N Ton 2/11812 Mac Nab ST 3/us/garden Grove 92841</td>
                             <td class="td-ref">t0010966 - Ton</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_eacec7ae34e3" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_eacec7ae34e3" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/2/2026 6:56 AM', '3397.83', `Vivi N Ton 2/11812 Mac Nab ST 3/us/garden Grove 92841`, 't0010966 - Ton', 'wire_eacec7ae34e3')">Submit</button>
-                                <span class="submit-status" id="status-wire_eacec7ae34e3"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010966</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_eacec7ae34e3"
+                                        onclick="bookInYardi('4/2/2026 6:56 AM', '3397.83', `Vivi N Ton 2/11812 Mac Nab ST 3/us/garden Grove 92841`, 'wire_eacec7ae34e3')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_eacec7ae34e3" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_aa1649d930ac">
+                          <tr class="has-input" data-wire-id="wire_aa1649d930ac">
                             <td class="td-date">4/2/2026 6:21 AM</td>
                             <td class="td-amount">$3,121.25</td>
                             <td class="td-tenant">Sydney I Colfescu 412 Andri CT El Dorado Hls,ca,95762 US</td>
                             <td class="td-ref">T0009987-colfescu</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0009987</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_aa1649d930ac"
+                                        onclick="bookInYardi('4/2/2026 6:21 AM', '3121.25', `Sydney I Colfescu 412 Andri CT El Dorado Hls,ca,95762 US`, 'wire_aa1649d930ac')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_aa1649d930ac" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_db1729f85870">
+                            <td class="td-date">4/2/2026 9:58 AM</td>
+                            <td class="td-amount">$3,308.30</td>
+                            <td class="td-tenant">Daniel Willey 64 59th PL Long Beach CA 90803-4422 US</td>
+                            <td class="td-ref">Daniel Willey/4210 Del Rey AVE Apt 501/t0011038</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_aa1649d930ac" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_aa1649d930ac" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_db1729f85870" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_db1729f85870" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/2/2026 6:21 AM', '3121.25', `Sydney I Colfescu 412 Andri CT El Dorado Hls,ca,95762 US`, 'T0009987-colfescu', 'wire_aa1649d930ac')">Submit</button>
-                                <span class="submit-status" id="status-wire_aa1649d930ac"></span>
+                                        onclick="submitToSheets('4/2/2026 9:58 AM', '3308.3', `Daniel Willey 64 59th PL Long Beach CA 90803-4422 US`, 'Daniel Willey/4210 Del Rey AVE Apt 501/t0011038', 'wire_db1729f85870')">Submit</button>
+                                <span class="submit-status" id="status-wire_db1729f85870"></span>
                               </div>
                             </td>
                           </tr>
