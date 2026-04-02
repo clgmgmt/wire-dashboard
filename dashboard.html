@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/01 6:07 PM</span>
+      <span class="meta-text">Updated 4/02 6:06 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">50</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">39</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_582980e88c09">
+                            <td class="td-date">4/2/2026 5:10 AM</td>
+                            <td class="td-amount">$5,797.83</td>
+                            <td class="td-tenant">Andrew Knight 3608 Barham BLVD Apt U313 Los Angeles CA 90068</td>
+                            <td class="td-ref">P0180230 Knight</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_582980e88c09" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_582980e88c09" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/2/2026 5:10 AM', '5797.83', `Andrew Knight 3608 Barham BLVD Apt U313 Los Angeles CA 90068`, 'P0180230 Knight', 'wire_582980e88c09')">Submit</button>
+                                <span class="submit-status" id="status-wire_582980e88c09"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_284e30a0a93e">
                             <td class="td-date">4/1/2026 5:56 AM</td>
                             <td class="td-amount">$7,147.83</td>
@@ -1368,20 +1383,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010970</span>
                                 <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_9e2ad20f376f">
-                            <td class="td-date">3/2/2026 2:37 PM</td>
-                            <td class="td-amount">$3,988.12</td>
-                            <td class="td-tenant">Peter R Breault 503 E 1st ST Apt 2 Boston MA</td>
-                            <td class="td-ref">t0010953 Breault</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010953</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
