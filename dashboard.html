@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/02 11:07 AM</span>
+      <span class="meta-text">Updated 4/03 6:06 AM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">8</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">55</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">9</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
       </div>
     </div>
@@ -664,18 +664,35 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_582980e88c09">
+                          <tr class="needs-input" data-wire-id="wire_ea94000e9689">
+                            <td class="td-date">4/3/2026 5:11 AM</td>
+                            <td class="td-amount">$4,362.83</td>
+                            <td class="td-tenant">Sarah Machat 4426 Deseret Dr. Woodland Hills, CA 91364</td>
+                            <td class="td-ref">Reference Is t0011042 Machat</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_ea94000e9689" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_ea94000e9689" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/3/2026 5:11 AM', '4362.83', `Sarah Machat 4426 Deseret Dr. Woodland Hills, CA 91364`, 'Reference Is t0011042 Machat', 'wire_ea94000e9689')">Submit</button>
+                                <span class="submit-status" id="status-wire_ea94000e9689"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="has-input" data-wire-id="wire_582980e88c09">
                             <td class="td-date">4/2/2026 5:10 AM</td>
                             <td class="td-amount">$5,797.83</td>
                             <td class="td-tenant">Andrew Knight 3608 Barham BLVD Apt U313 Los Angeles CA 90068</td>
                             <td class="td-ref">P0180230 Knight</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_582980e88c09" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_582980e88c09" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/2/2026 5:10 AM', '5797.83', `Andrew Knight 3608 Barham BLVD Apt U313 Los Angeles CA 90068`, 'P0180230 Knight', 'wire_582980e88c09')">Submit</button>
-                                <span class="submit-status" id="status-wire_582980e88c09"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010993</span>
+                                <span class="mgr-name">Thomas Lofton</span>
+                                
+                                <button class="yardi-circle" id="book-wire_582980e88c09"
+                                        onclick="bookInYardi('4/2/2026 5:10 AM', '5797.83', `Andrew Knight 3608 Barham BLVD Apt U313 Los Angeles CA 90068`, 'wire_582980e88c09')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_582980e88c09" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -728,6 +745,36 @@
                               </div>
                             </td>
                           </tr>
+                          <tr class="needs-input" data-wire-id="wire_2e79ce1ceb85">
+                            <td class="td-date">4/2/2026 3:42 PM</td>
+                            <td class="td-amount">$3,467.83</td>
+                            <td class="td-tenant">Aqil N Thanawala 2/8560 E Canyon Vista DR 3/us/anaheim, CA 92808-1619</td>
+                            <td class="td-ref">Pop Other</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_2e79ce1ceb85" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_2e79ce1ceb85" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/2/2026 3:42 PM', '3467.83', `Aqil N Thanawala 2/8560 E Canyon Vista DR 3/us/anaheim, CA 92808-1619`, 'Pop Other', 'wire_2e79ce1ceb85')">Submit</button>
+                                <span class="submit-status" id="status-wire_2e79ce1ceb85"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_27a455adfd0a">
+                            <td class="td-date">4/2/2026 12:47 PM</td>
+                            <td class="td-amount">$4,285.00</td>
+                            <td class="td-tenant">Ryan T Milkovich 2/10525 Eton AVE 3/us/chatsworth, CA 91311 2327</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_27a455adfd0a" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_27a455adfd0a" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/2/2026 12:47 PM', '4285.0', `Ryan T Milkovich 2/10525 Eton AVE 3/us/chatsworth, CA 91311 2327`, '', 'wire_27a455adfd0a')">Submit</button>
+                                <span class="submit-status" id="status-wire_27a455adfd0a"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_284e30a0a93e">
                             <td class="td-date">4/1/2026 5:56 AM</td>
                             <td class="td-amount">$7,147.83</td>
@@ -775,18 +822,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_69bc1373123f">
+                          <tr class="has-input" data-wire-id="wire_69bc1373123f">
                             <td class="td-date">3/31/2026 6:45 AM</td>
                             <td class="td-amount">$4,245.00</td>
                             <td class="td-tenant">Roberto Rodriguez OR Nadia K Rodrig Uez 2/412 Geo Meyer AVE 3/us/savannah 31401</td>
                             <td class="td-ref">t0011033 Rodriguez</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_69bc1373123f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_69bc1373123f" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/31/2026 6:45 AM', '4245.0', `Roberto Rodriguez OR Nadia K Rodrig Uez 2/412 Geo Meyer AVE 3/us/savannah 31401`, 't0011033 Rodriguez', 'wire_69bc1373123f')">Submit</button>
-                                <span class="submit-status" id="status-wire_69bc1373123f"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011033</span>
+                                <span class="mgr-name">Enrique</span>
+                                
+                                <button class="yardi-circle" id="book-wire_69bc1373123f"
+                                        onclick="bookInYardi('3/31/2026 6:45 AM', '4245.0', `Roberto Rodriguez OR Nadia K Rodrig Uez 2/412 Geo Meyer AVE 3/us/savannah 31401`, 'wire_69bc1373123f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_69bc1373123f" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1164,10 +1213,7 @@
                                 <span class="tid-mono">t0010988</span>
                                 <span class="mgr-name">Gaea Arnold</span>
                                 
-                                <button class="yardi-circle" id="book-wire_858c7c3e60aa"
-                                        onclick="bookInYardi('3/16/2026 5:51 AM', '5095.0', `Bradley E Buresh 3640 Wildbriar LN Lincoln NE 68516-2081`, 'wire_858c7c3e60aa')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_858c7c3e60aa" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1390,20 +1436,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010948</span>
                                 <span class="mgr-name">lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5ff17bc2bfe1">
-                            <td class="td-date">3/4/2026 5:08 AM</td>
-                            <td class="td-amount">$5,645.83</td>
-                            <td class="td-tenant">Christopher B Why 3324 Castle Heights AVE Apt 221 Los Angeles CA 90034-2774 US</td>
-                            <td class="td-ref">t0010955 - Why</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010955</span>
-                                <span class="mgr-name">Kenneth Stone</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
