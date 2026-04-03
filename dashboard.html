@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/03 2:07 PM</span>
+      <span class="meta-text">Updated 4/03 3:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">55</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
       </div>
     </div>
@@ -664,18 +664,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_ea94000e9689">
+                          <tr class="has-input" data-wire-id="wire_ea94000e9689">
                             <td class="td-date">4/3/2026 5:11 AM</td>
                             <td class="td-amount">$4,362.83</td>
                             <td class="td-tenant">Sarah Machat 4426 Deseret Dr. Woodland Hills, CA 91364</td>
                             <td class="td-ref">Reference Is t0011042 Machat</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_ea94000e9689" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_ea94000e9689" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/3/2026 5:11 AM', '4362.83', `Sarah Machat 4426 Deseret Dr. Woodland Hills, CA 91364`, 'Reference Is t0011042 Machat', 'wire_ea94000e9689')">Submit</button>
-                                <span class="submit-status" id="status-wire_ea94000e9689"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011042</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_ea94000e9689"
+                                        onclick="bookInYardi('4/3/2026 5:11 AM', '4362.83', `Sarah Machat 4426 Deseret Dr. Woodland Hills, CA 91364`, 'wire_ea94000e9689')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_ea94000e9689" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
