@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/03 1:07 PM</span>
+      <span class="meta-text">Updated 4/03 2:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">55</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
       </div>
     </div>
@@ -679,18 +679,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_5616f2f15965">
+                          <tr class="has-input" data-wire-id="wire_5616f2f15965">
                             <td class="td-date">4/3/2026 12:37 PM</td>
                             <td class="td-amount">$4,646.83</td>
                             <td class="td-tenant">Alexander Thiele 2/4133 Redwood AVE Unit 4013 3/us/los Angeles,90066,ca</td>
                             <td class="td-ref">Security Deposit For Lease T 001096 9 - Thiele</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_5616f2f15965" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_5616f2f15965" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/3/2026 12:37 PM', '4646.83', `Alexander Thiele 2/4133 Redwood AVE Unit 4013 3/us/los Angeles,90066,ca`, 'Security Deposit For Lease T 001096 9 - Thiele', 'wire_5616f2f15965')">Submit</button>
-                                <span class="submit-status" id="status-wire_5616f2f15965"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010969</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_5616f2f15965"
+                                        onclick="bookInYardi('4/3/2026 12:37 PM', '4646.83', `Alexander Thiele 2/4133 Redwood AVE Unit 4013 3/us/los Angeles,90066,ca`, 'wire_5616f2f15965')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_5616f2f15965" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
