@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/06 9:07 AM</span>
+      <span class="meta-text">Updated 4/06 10:08 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">55</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">50</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
       </div>
     </div>
 
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_d17673434783">
+                            <td class="td-date">4/6/2026 9:57 AM</td>
+                            <td class="td-amount">$6,872.83</td>
+                            <td class="td-tenant">Michael Fierstein 1114 12th ST Apt 308 Santa Monica,ca,</td>
+                            <td class="td-ref">4210 Del Rey AVE Unit 317, Marina D El Rey, CA 90292</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d17673434783" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d17673434783" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/6/2026 9:57 AM', '6872.83', `Michael Fierstein 1114 12th ST Apt 308 Santa Monica,ca,`, '4210 Del Rey AVE Unit 317, Marina D El Rey, CA 90292', 'wire_d17673434783')">Submit</button>
+                                <span class="submit-status" id="status-wire_d17673434783"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_5920e506d6c0">
+                            <td class="td-date">4/6/2026 9:26 AM</td>
+                            <td class="td-amount">$5,629.83</td>
+                            <td class="td-tenant">Madeline Margaret Leist 4301 Vinton AVE Culver City CA 90232-3452 US</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_5920e506d6c0" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_5920e506d6c0" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/6/2026 9:26 AM', '5629.83', `Madeline Margaret Leist 4301 Vinton AVE Culver City CA 90232-3452 US`, '', 'wire_5920e506d6c0')">Submit</button>
+                                <span class="submit-status" id="status-wire_5920e506d6c0"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_ea94000e9689">
                             <td class="td-date">4/3/2026 5:11 AM</td>
                             <td class="td-amount">$4,362.83</td>
@@ -1345,104 +1375,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010982</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_ca67689de2b6">
-                            <td class="td-date">3/6/2026 11:25 AM</td>
-                            <td class="td-amount">$4,540.00</td>
-                            <td class="td-tenant">Howarth, Amber 12 Buckelew ST Sausalito, CA 94965-1143</td>
-                            <td class="td-ref">Re: T0010967-howarth</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010967</span>
-                                <span class="mgr-name">Gaea Arnold</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_eb2b8b0c0e0c">
-                            <td class="td-date">3/6/2026 2:51 PM</td>
-                            <td class="td-amount">$2,495.00</td>
-                            <td class="td-tenant">Tony R Morales 2009 Los Olivios Way Austin TX US 78725-6366</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010936</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_ab1d892c698e">
-                            <td class="td-date">3/5/2026 9:20 AM</td>
-                            <td class="td-amount">$3,981.83</td>
-                            <td class="td-tenant">Tanya Tharani 2/3341 Mountainside DR 3/us/corona, CA 92882 8916</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010965</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_8a42a2a6ed1c">
-                            <td class="td-date">3/5/2026 10:09 AM</td>
-                            <td class="td-amount">$3,426.83</td>
-                            <td class="td-tenant">Ahmed Soliman Essaadia Aharchi 2/2158 Parkside DR Apt 390 3/us/corona, CA 92879 1220</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010959</span>
-                                <span class="mgr-name">lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_6f16040c1886">
-                            <td class="td-date">3/5/2026 4:43 PM</td>
-                            <td class="td-amount">$6,197.83</td>
-                            <td class="td-tenant">Ali K Khan 507 Wilshire BLVD Apt 303 Santa Monica CA 90401-1481 US</td>
-                            <td class="td-ref">Ali Khan, 13448 Beach Ave. Ph6505, Marina Del Rey, CA 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010971</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_6a340f7f67c9">
-                            <td class="td-date">3/5/2026 4:18 PM</td>
-                            <td class="td-amount">$5,127.83</td>
-                            <td class="td-tenant">Giovanna M Hernandez 2/3515 W Dallas ST Apt 4010 3/us/houston 77019</td>
-                            <td class="td-ref">T0010948-hernandez (move-in Funds)</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010948</span>
-                                <span class="mgr-name">lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_cea0f78805c8">
-                            <td class="td-date">3/4/2026 1:42 PM</td>
-                            <td class="td-amount">$2,650.00</td>
-                            <td class="td-tenant">Fouad Alameddine 2/13603 Marina Pointe DR Apt D603z 3/us/marina Del Rey,90292,ca</td>
-                            <td class="td-ref">Move-in Funds</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010970</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
