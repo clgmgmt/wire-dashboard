@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/08 1:07 PM</span>
+      <span class="meta-text">Updated 4/08 2:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">54</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
       </div>
     </div>
@@ -898,18 +898,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_5ddd45682830">
+                          <tr class="has-input" data-wire-id="wire_5ddd45682830">
                             <td class="td-date">3/31/2026 5:23 AM</td>
                             <td class="td-amount">$2,595.00</td>
                             <td class="td-tenant">Joumana Mahieddine 808 El Camino Real Unit I Burlingame CA 94010-5006 US</td>
                             <td class="td-ref">Move IN Payment</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_5ddd45682830" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_5ddd45682830" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/31/2026 5:23 AM', '2595.0', `Joumana Mahieddine 808 El Camino Real Unit I Burlingame CA 94010-5006 US`, 'Move IN Payment', 'wire_5ddd45682830')">Submit</button>
-                                <span class="submit-status" id="status-wire_5ddd45682830"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011023</span>
+                                <span class="mgr-name">Amir Elsaeidy</span>
+                                
+                                <button class="yardi-circle" id="book-wire_5ddd45682830"
+                                        onclick="bookInYardi('3/31/2026 5:23 AM', '2595.0', `Joumana Mahieddine 808 El Camino Real Unit I Burlingame CA 94010-5006 US`, 'wire_5ddd45682830')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_5ddd45682830" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
