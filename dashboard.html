@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/08 5:07 PM</span>
+      <span class="meta-text">Updated 4/08 6:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">54</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
       </div>
     </div>
@@ -696,18 +696,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_4bb877917b79">
+                          <tr class="has-input" data-wire-id="wire_4bb877917b79">
                             <td class="td-date">4/8/2026 8:41 AM</td>
                             <td class="td-amount">$3,672.83</td>
                             <td class="td-tenant">Sungbin Kim 4006 Emerald ST Apt 101 Torrance CA 90503-3144 US</td>
                             <td class="td-ref">Sungbin Kim, 4210 Del Rey Ave. 508b Marina Del Rey CA 90292, t0011066</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_4bb877917b79" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_4bb877917b79" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/8/2026 8:41 AM', '3672.83', `Sungbin Kim 4006 Emerald ST Apt 101 Torrance CA 90503-3144 US`, 'Sungbin Kim, 4210 Del Rey Ave. 508b Marina Del Rey CA 90292, t0011066', 'wire_4bb877917b79')">Submit</button>
-                                <span class="submit-status" id="status-wire_4bb877917b79"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011066</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_4bb877917b79"
+                                        onclick="bookInYardi('4/8/2026 8:41 AM', '3672.83', `Sungbin Kim 4006 Emerald ST Apt 101 Torrance CA 90503-3144 US`, 'wire_4bb877917b79')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_4bb877917b79" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -726,18 +728,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_d17673434783">
+                          <tr class="has-input" data-wire-id="wire_d17673434783">
                             <td class="td-date">4/6/2026 9:57 AM</td>
                             <td class="td-amount">$6,872.83</td>
                             <td class="td-tenant">Michael Fierstein 1114 12th ST Apt 308 Santa Monica,ca,</td>
                             <td class="td-ref">4210 Del Rey AVE Unit 317, Marina D El Rey, CA 90292</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_d17673434783" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_d17673434783" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/6/2026 9:57 AM', '6872.83', `Michael Fierstein 1114 12th ST Apt 308 Santa Monica,ca,`, '4210 Del Rey AVE Unit 317, Marina D El Rey, CA 90292', 'wire_d17673434783')">Submit</button>
-                                <span class="submit-status" id="status-wire_d17673434783"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011071</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_d17673434783"
+                                        onclick="bookInYardi('4/6/2026 9:57 AM', '6872.83', `Michael Fierstein 1114 12th ST Apt 308 Santa Monica,ca,`, 'wire_d17673434783')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_d17673434783" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
