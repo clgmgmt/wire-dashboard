@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/10 12:07 PM</span>
+      <span class="meta-text">Updated 4/10 1:08 PM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">55</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">8</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">9</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_00e41291157e">
+                            <td class="td-date">4/10/2026 12:07 PM</td>
+                            <td class="td-amount">$4,390.00</td>
+                            <td class="td-tenant">Bradley360 Investments Llc 6709 LA Tijera BLVD # 1011 Los Angeles CA 90045-2017 US</td>
+                            <td class="td-ref">Tennent Id: t0011036</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_00e41291157e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_00e41291157e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/10/2026 12:07 PM', '4390.0', `Bradley360 Investments Llc 6709 LA Tijera BLVD # 1011 Los Angeles CA 90045-2017 US`, 'Tennent Id: t0011036', 'wire_00e41291157e')">Submit</button>
+                                <span class="submit-status" id="status-wire_00e41291157e"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_b35cea866a60">
                             <td class="td-date">4/9/2026 5:14 AM</td>
                             <td class="td-amount">$4,434.44</td>
@@ -715,18 +730,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_5bb8bad1e14f">
+                          <tr class="has-input" data-wire-id="wire_5bb8bad1e14f">
                             <td class="td-date">4/8/2026 7:45 AM</td>
                             <td class="td-amount">$3,962.83</td>
                             <td class="td-tenant">Elizabeth L Quade David A Celniker 2/5363 Manila AVE 3/us/oakland, CA 94618 1105</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_5bb8bad1e14f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_5bb8bad1e14f" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/8/2026 7:45 AM', '3962.83', `Elizabeth L Quade David A Celniker 2/5363 Manila AVE 3/us/oakland, CA 94618 1105`, '', 'wire_5bb8bad1e14f')">Submit</button>
-                                <span class="submit-status" id="status-wire_5bb8bad1e14f"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011057</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_5bb8bad1e14f"
+                                        onclick="bookInYardi('4/8/2026 7:45 AM', '3962.83', `Elizabeth L Quade David A Celniker 2/5363 Manila AVE 3/us/oakland, CA 94618 1105`, 'wire_5bb8bad1e14f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_5bb8bad1e14f" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1430,34 +1447,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010983</span>
                                 <span class="mgr-name">Carisa Magdaleno</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_9e71555e4048">
-                            <td class="td-date">3/11/2026 5:08 AM</td>
-                            <td class="td-amount">$7,087.83</td>
-                            <td class="td-tenant">Mane Tevosian 2600 Overland AVE Apt 101 Los Angeles CA 90064</td>
-                            <td class="td-ref">t0010969 Tevosiansaroukhan</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010975</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_888d39840aec">
-                            <td class="td-date">3/11/2026 9:23 AM</td>
-                            <td class="td-amount">$605.00</td>
-                            <td class="td-tenant">David M Johnson 2/4230 Chase AVE 3/us/los Angeles 90066</td>
-                            <td class="td-ref">t0010947 - Johnson</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010947</span>
-                                <span class="mgr-name">AP</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
