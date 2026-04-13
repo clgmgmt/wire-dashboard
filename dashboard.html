@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/13 7:08 AM</span>
+      <span class="meta-text">Updated 4/13 8:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">50</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">49</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_964e20d69608">
+                            <td class="td-date">4/13/2026 7:31 AM</td>
+                            <td class="td-amount">$3,201.83</td>
+                            <td class="td-tenant">Alexandra D Miller 915 L ST Ste C Sacramento CA 95814 US</td>
+                            <td class="td-ref">t0011048 - Miller ????transfer</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_964e20d69608" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_964e20d69608" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/13/2026 7:31 AM', '3201.83', `Alexandra D Miller 915 L ST Ste C Sacramento CA 95814 US`, 't0011048 - Miller ????transfer', 'wire_964e20d69608')">Submit</button>
+                                <span class="submit-status" id="status-wire_964e20d69608"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_00e41291157e">
                             <td class="td-date">4/10/2026 12:07 PM</td>
                             <td class="td-amount">$4,390.00</td>
@@ -1352,76 +1367,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010941</span>
                                 <span class="mgr-name">Gaea Arnold</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_3717b2edfe65">
-                            <td class="td-date">3/13/2026 8:59 AM</td>
-                            <td class="td-amount">$3,959.89</td>
-                            <td class="td-tenant">Daniel P Klass 17350 Bronte PL Granada Hills,ca,91344 US</td>
-                            <td class="td-ref">Security Deposit AND Rent For Citro Nia Apartments</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010974</span>
-                                <span class="mgr-name">Cole Murrell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_288c82315157">
-                            <td class="td-date">3/13/2026 1:32 PM</td>
-                            <td class="td-amount">$3,901.83</td>
-                            <td class="td-tenant">Anthony J Wroblewski 13365 W Washington BLVD Apt 305 Los Angeles CA 90066-5184 US</td>
-                            <td class="td-ref">t0008213 Wroblewski Krolik</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010985</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_2471649f905c">
-                            <td class="td-date">3/13/2026 1:24 PM</td>
-                            <td class="td-amount">$4,326.83</td>
-                            <td class="td-tenant">Simon John Dibble 94 Oakford RD Wayne PA 19087</td>
-                            <td class="td-ref">t0010987 Brumfield Move IN Funds 10 600 Santa Monica BLVD LA CA 90025</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010987</span>
-                                <span class="mgr-name">lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_17f017aff983">
-                            <td class="td-date">3/12/2026 9:00 AM</td>
-                            <td class="td-amount">$4,672.83</td>
-                            <td class="td-tenant">Sean M Omalley 2/624 Glen Cir 3/us/rochester Hills, MI 48307 2909</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010981</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_84c274f4a1e8">
-                            <td class="td-date">3/12/2026 10:49 AM</td>
-                            <td class="td-amount">$5,445.00</td>
-                            <td class="td-tenant">Amalgamation Pictures Llc 2936 S LA Salle AVE Los Angeles CA 90018-3169 US</td>
-                            <td class="td-ref">t0010983 - Patrick</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010983</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
