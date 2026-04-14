@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/14 6:06 AM</span>
+      <span class="meta-text">Updated 4/14 7:07 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">51</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_54ec8f16a463">
+                            <td class="td-date">4/14/2026 6:34 AM</td>
+                            <td class="td-amount">$2,395.00</td>
+                            <td class="td-tenant">Tracy N McHugh 2/stonewall CT 3 3/us/douglas,01516-2363,ma</td>
+                            <td class="td-ref">Joshua Gopin</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_54ec8f16a463" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_54ec8f16a463" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/14/2026 6:34 AM', '2395.0', `Tracy N McHugh 2/stonewall CT 3 3/us/douglas,01516-2363,ma`, 'Joshua Gopin', 'wire_54ec8f16a463')">Submit</button>
+                                <span class="submit-status" id="status-wire_54ec8f16a463"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_964e20d69608">
                             <td class="td-date">4/13/2026 7:31 AM</td>
                             <td class="td-amount">$3,201.83</td>
