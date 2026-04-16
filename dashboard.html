@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/16 7:08 AM</span>
+      <span class="meta-text">Updated 4/16 8:08 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">50</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">51</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_973c43caa704">
+                            <td class="td-date">4/16/2026 7:07 AM</td>
+                            <td class="td-amount">$4,477.83</td>
+                            <td class="td-tenant">Yvanna N Rivera Zamaro Carlos A Rivera 3833 Front ST Apt 7 San Diego CA 92103-3048 US</td>
+                            <td class="td-ref">Move IN Funds For t0011047 - Rivera Zamaro - Ph520</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_973c43caa704" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_973c43caa704" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/16/2026 7:07 AM', '4477.83', `Yvanna N Rivera Zamaro Carlos A Rivera 3833 Front ST Apt 7 San Diego CA 92103-3048 US`, 'Move IN Funds For t0011047 - Rivera Zamaro - Ph520', 'wire_973c43caa704')">Submit</button>
+                                <span class="submit-status" id="status-wire_973c43caa704"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_5d28f856f18b">
                             <td class="td-date">4/15/2026 4:28 PM</td>
                             <td class="td-amount">$3,277.83</td>
