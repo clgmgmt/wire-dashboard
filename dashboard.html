@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/15 4:07 PM</span>
+      <span class="meta-text">Updated 4/15 5:07 PM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">50</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">45</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_5d28f856f18b">
+                            <td class="td-date">4/15/2026 4:28 PM</td>
+                            <td class="td-amount">$3,277.83</td>
+                            <td class="td-tenant">Omar A Syed 643 E 14th ST Upland,ca,91786 US</td>
+                            <td class="td-ref">Move-in Omar Syed T-code t0011088 13448 Beach AVE Apt 5506 90292</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_5d28f856f18b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_5d28f856f18b" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/15/2026 4:28 PM', '3277.83', `Omar A Syed 643 E 14th ST Upland,ca,91786 US`, 'Move-in Omar Syed T-code t0011088 13448 Beach AVE Apt 5506 90292', 'wire_5d28f856f18b')">Submit</button>
+                                <span class="submit-status" id="status-wire_5d28f856f18b"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_54ec8f16a463">
                             <td class="td-date">4/14/2026 6:34 AM</td>
                             <td class="td-amount">$2,395.00</td>
@@ -1352,48 +1367,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010972</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_858c7c3e60aa">
-                            <td class="td-date">3/16/2026 5:51 AM</td>
-                            <td class="td-amount">$5,095.00</td>
-                            <td class="td-tenant">Bradley E Buresh 3640 Wildbriar LN Lincoln NE 68516-2081</td>
-                            <td class="td-ref">t0010988 - Buresh</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010988</span>
-                                <span class="mgr-name">Gaea Arnold</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_04aa29aa58ee">
-                            <td class="td-date">3/16/2026 5:08 AM</td>
-                            <td class="td-amount">$4,095.00</td>
-                            <td class="td-tenant">Bonnie Hofert 2/2479 Roscomare RD 3/us/los Angeles 90077</td>
-                            <td class="td-ref">Reference T0010986, Hofert 610</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010986</span>
-                                <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_04e4e878d7a4">
-                            <td class="td-date">3/16/2026 7:29 AM</td>
-                            <td class="td-amount">$5,695.00</td>
-                            <td class="td-tenant">Megan E Vandervort 23705 Moonglow CT Ramona CA 92065</td>
-                            <td class="td-ref">Move IN Funds Vandervort Thau Woodl Ark Apt 51 H t0010941 Vandervort</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010941</span>
-                                <span class="mgr-name">Gaea Arnold</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
