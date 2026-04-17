@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/17 2:07 PM</span>
+      <span class="meta-text">Updated 4/17 3:08 PM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
       </div>
     </div>
 
@@ -694,18 +694,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_c00b30c2a1a5">
+                          <tr class="has-input" data-wire-id="wire_c00b30c2a1a5">
                             <td class="td-date">4/17/2026 1:44 PM</td>
                             <td class="td-amount">$4,747.83</td>
                             <td class="td-tenant">Wei - Kronick Revocable Trust Scott Blair Kronick Trtee Li Chin We 2/630 N Las Palmas AVE 3/us/los Angeles 90004</td>
                             <td class="td-ref">G8 Movie-in Payment</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011083</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_c00b30c2a1a5"
+                                        onclick="bookInYardi('4/17/2026 1:44 PM', '4747.83', `Wei - Kronick Revocable Trust Scott Blair Kronick Trtee Li Chin We 2/630 N Las Palmas AVE 3/us/los Angeles 90004`, 'wire_c00b30c2a1a5')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_c00b30c2a1a5" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_907587bc39bb">
+                            <td class="td-date">4/17/2026 2:44 PM</td>
+                            <td class="td-amount">$4,524.83</td>
+                            <td class="td-tenant">Carl D Pahl 6240 W 3rd ST Apt 116 Los Angeles CA 90036</td>
+                            <td class="td-ref">Move IN For Pahl 606</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_c00b30c2a1a5" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_c00b30c2a1a5" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_907587bc39bb" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_907587bc39bb" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/17/2026 1:44 PM', '4747.83', `Wei - Kronick Revocable Trust Scott Blair Kronick Trtee Li Chin We 2/630 N Las Palmas AVE 3/us/los Angeles 90004`, 'G8 Movie-in Payment', 'wire_c00b30c2a1a5')">Submit</button>
-                                <span class="submit-status" id="status-wire_c00b30c2a1a5"></span>
+                                        onclick="submitToSheets('4/17/2026 2:44 PM', '4524.83', `Carl D Pahl 6240 W 3rd ST Apt 116 Los Angeles CA 90036`, 'Move IN For Pahl 606', 'wire_907587bc39bb')">Submit</button>
+                                <span class="submit-status" id="status-wire_907587bc39bb"></span>
                               </div>
                             </td>
                           </tr>
@@ -1390,34 +1407,6 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('3/19/2026 5:41 AM', '5947.83', `Rachel Obering 5835 Echo Hollow ST Castle Rock,co,80104 US`, 'Security Deposit & 1st Month'S Rent Obering Baum Tenant ID P0178099', 'wire_217f2e13c569')">Submit</button>
                                 <span class="submit-status" id="status-wire_217f2e13c569"></span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_4f10231469eb">
-                            <td class="td-date">3/18/2026 1:51 PM</td>
-                            <td class="td-amount">$3,751.83</td>
-                            <td class="td-tenant">Dmitrii Chebanov 12411 W Fielding Cir Apt 1527 Playa Vista,ca,</td>
-                            <td class="td-ref">t0011000 Chebanov</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011000</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_841af0bb77b5">
-                            <td class="td-date">3/18/2026 1:33 PM</td>
-                            <td class="td-amount">$2,660.00</td>
-                            <td class="td-tenant">Phoebe C Chess 5111 Brookridge PL Fairfax VA US 22 030</td>
-                            <td class="td-ref">Security Deposit, First Month Rent, AND Holding Deposit</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010980</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
