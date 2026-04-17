@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/16 4:08 PM</span>
+      <span class="meta-text">Updated 4/16 5:07 PM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">53</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
       </div>
     </div>
 
@@ -674,10 +674,7 @@
                                 <span class="tid-mono">t0011047</span>
                                 <span class="mgr-name">Lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_973c43caa704"
-                                        onclick="bookInYardi('4/16/2026 7:07 AM', '4477.83', `Yvanna N Rivera Zamaro Carlos A Rivera 3833 Front ST Apt 7 San Diego CA 92103-3048 US`, 'wire_973c43caa704')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_973c43caa704" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -726,18 +723,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_54ec8f16a463">
+                          <tr class="has-input" data-wire-id="wire_54ec8f16a463">
                             <td class="td-date">4/14/2026 6:34 AM</td>
                             <td class="td-amount">$2,395.00</td>
                             <td class="td-tenant">Tracy N McHugh 2/stonewall CT 3 3/us/douglas,01516-2363,ma</td>
                             <td class="td-ref">Joshua Gopin</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_54ec8f16a463" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_54ec8f16a463" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/14/2026 6:34 AM', '2395.0', `Tracy N McHugh 2/stonewall CT 3 3/us/douglas,01516-2363,ma`, 'Joshua Gopin', 'wire_54ec8f16a463')">Submit</button>
-                                <span class="submit-status" id="status-wire_54ec8f16a463"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011053</span>
+                                <span class="mgr-name">Chad Hirschman</span>
+                                
+                                <button class="yardi-circle" id="book-wire_54ec8f16a463"
+                                        onclick="bookInYardi('4/14/2026 6:34 AM', '2395.0', `Tracy N McHugh 2/stonewall CT 3 3/us/douglas,01516-2363,ma`, 'wire_54ec8f16a463')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_54ec8f16a463" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
