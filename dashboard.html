@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/17 6:07 PM</span>
+      <span class="meta-text">Updated 4/20 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">51</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
       </div>
     </div>
 
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_5c58fe5e2798">
+                            <td class="td-date">4/20/2026 5:08 AM</td>
+                            <td class="td-amount">$5,842.83</td>
+                            <td class="td-tenant">Daniel Eduardo Wulff Hellmund 2/6600 Orange ST Apt 205 3/us/los Angeles, CA 90048 4636</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_5c58fe5e2798" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_5c58fe5e2798" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/20/2026 5:08 AM', '5842.83', `Daniel Eduardo Wulff Hellmund 2/6600 Orange ST Apt 205 3/us/los Angeles, CA 90048 4636`, '', 'wire_5c58fe5e2798')">Submit</button>
+                                <span class="submit-status" id="status-wire_5c58fe5e2798"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_af2d531281b3">
+                            <td class="td-date">4/20/2026 5:05 AM</td>
+                            <td class="td-amount">$5,645.00</td>
+                            <td class="td-tenant">Tatiana Massier 2/1849 Brentwood RD 3/us/oakland, CA 94602 2008</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_af2d531281b3" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_af2d531281b3" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/20/2026 5:05 AM', '5645.0', `Tatiana Massier 2/1849 Brentwood RD 3/us/oakland, CA 94602 2008`, '', 'wire_af2d531281b3')">Submit</button>
+                                <span class="submit-status" id="status-wire_af2d531281b3"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_a3e7582257f6">
                             <td class="td-date">4/17/2026 5:16 AM</td>
                             <td class="td-amount">$6,210.00</td>
@@ -1364,49 +1394,6 @@
                                 <span class="mgr-name">lopez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_9b8c04fbbe1d">
-                            <td class="td-date">3/20/2026 6:45 AM</td>
-                            <td class="td-amount">$4,062.83</td>
-                            <td class="td-tenant">Ian Tausch 308 N 112th ST Wauwatosa, WI 53226</td>
-                            <td class="td-ref">t0011012 - Tausch, 4210 Del Rey AVE 403-B, Marina Del Rey, CA 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011012</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_eee2df399e60">
-                            <td class="td-date">3/20/2026 9:41 AM</td>
-                            <td class="td-amount">$3,468.50</td>
-                            <td class="td-tenant">Maria Quezada Jimenez 320 E 42nd ST Apt 2004 New York NY</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010900</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="needs-input" data-wire-id="wire_217f2e13c569">
-                            <td class="td-date">3/19/2026 5:41 AM</td>
-                            <td class="td-amount">$5,947.83</td>
-                            <td class="td-tenant">Rachel Obering 5835 Echo Hollow ST Castle Rock,co,80104 US</td>
-                            <td class="td-ref">Security Deposit & 1st Month'S Rent Obering Baum Tenant ID P0178099</td>
-                            <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_217f2e13c569" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_217f2e13c569" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('3/19/2026 5:41 AM', '5947.83', `Rachel Obering 5835 Echo Hollow ST Castle Rock,co,80104 US`, 'Security Deposit & 1st Month'S Rent Obering Baum Tenant ID P0178099', 'wire_217f2e13c569')">Submit</button>
-                                <span class="submit-status" id="status-wire_217f2e13c569"></span>
                               </div>
                             </td>
                           </tr>
