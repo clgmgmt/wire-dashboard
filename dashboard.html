@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/20 11:08 AM</span>
+      <span class="meta-text">Updated 4/20 12:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
       </div>
@@ -708,6 +708,21 @@
                                         onclick="bookInYardi('4/20/2026 8:19 AM', '1000.0', `Emma Al-hammoudi 942 E North Union AVE Unit 443 Midvale UT 84047-1940 US`, 'wire_32c93a032949')"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_32c93a032949" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_8266181a7fd7">
+                            <td class="td-date">4/20/2026 11:58 AM</td>
+                            <td class="td-amount">$2,091.30</td>
+                            <td class="td-tenant">Luke Russell 860 W 77th Street North DR Indianapolis IN 46260-3537 US</td>
+                            <td class="td-ref">Move IN Funds</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_8266181a7fd7" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_8266181a7fd7" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/20/2026 11:58 AM', '2091.3', `Luke Russell 860 W 77th Street North DR Indianapolis IN 46260-3537 US`, 'Move IN Funds', 'wire_8266181a7fd7')">Submit</button>
+                                <span class="submit-status" id="status-wire_8266181a7fd7"></span>
                               </div>
                             </td>
                           </tr>
