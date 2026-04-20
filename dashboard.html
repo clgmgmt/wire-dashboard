@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/20 10:07 AM</span>
+      <span class="meta-text">Updated 4/20 11:08 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">52</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
       </div>
     </div>
@@ -694,18 +694,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_32c93a032949">
+                          <tr class="has-input" data-wire-id="wire_32c93a032949">
                             <td class="td-date">4/20/2026 8:19 AM</td>
                             <td class="td-amount">$1,000.00</td>
                             <td class="td-tenant">Emma Al-hammoudi 942 E North Union AVE Unit 443 Midvale UT 84047-1940 US</td>
                             <td class="td-ref">Move IN Deposit (security & Pet Dep Osit)</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_32c93a032949" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_32c93a032949" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/20/2026 8:19 AM', '1000.0', `Emma Al-hammoudi 942 E North Union AVE Unit 443 Midvale UT 84047-1940 US`, 'Move IN Deposit (security & Pet Dep Osit)', 'wire_32c93a032949')">Submit</button>
-                                <span class="submit-status" id="status-wire_32c93a032949"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011091</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_32c93a032949"
+                                        onclick="bookInYardi('4/20/2026 8:19 AM', '1000.0', `Emma Al-hammoudi 942 E North Union AVE Unit 443 Midvale UT 84047-1940 US`, 'wire_32c93a032949')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_32c93a032949" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -849,18 +851,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_964e20d69608">
+                          <tr class="has-input" data-wire-id="wire_964e20d69608">
                             <td class="td-date">4/13/2026 7:31 AM</td>
                             <td class="td-amount">$3,201.83</td>
                             <td class="td-tenant">Alexandra D Miller 915 L ST Ste C Sacramento CA 95814 US</td>
                             <td class="td-ref">t0011048 - Miller ????transfer</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_964e20d69608" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_964e20d69608" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/13/2026 7:31 AM', '3201.83', `Alexandra D Miller 915 L ST Ste C Sacramento CA 95814 US`, 't0011048 - Miller ????transfer', 'wire_964e20d69608')">Submit</button>
-                                <span class="submit-status" id="status-wire_964e20d69608"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011048</span>
+                                <span class="mgr-name">lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_964e20d69608"
+                                        onclick="bookInYardi('4/13/2026 7:31 AM', '3201.83', `Alexandra D Miller 915 L ST Ste C Sacramento CA 95814 US`, 'wire_964e20d69608')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_964e20d69608" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
