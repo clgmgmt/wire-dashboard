@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/21 10:08 AM</span>
+      <span class="meta-text">Updated 4/21 11:07 AM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -664,18 +664,50 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_9c2919754137">
+                          <tr class="has-input" data-wire-id="wire_9c2919754137">
                             <td class="td-date">4/21/2026 6:17 AM</td>
                             <td class="td-amount">$3,201.83</td>
                             <td class="td-tenant">Haley Siana 3408 W Sunset BLVD Apt 200 Los Angeles,ca,,us</td>
                             <td class="td-ref">Haley Siana Rent AND Security Depos It</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011092</span>
+                                <span class="mgr-name">lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_9c2919754137"
+                                        onclick="bookInYardi('4/21/2026 6:17 AM', '3201.83', `Haley Siana 3408 W Sunset BLVD Apt 200 Los Angeles,ca,,us`, 'wire_9c2919754137')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_9c2919754137" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_d69e918d35e5">
+                            <td class="td-date">4/21/2026 10:59 AM</td>
+                            <td class="td-amount">$3,127.83</td>
+                            <td class="td-tenant">Kevin M Micucci 336 Kimberly Place West Islip NY 11 7951902 USA</td>
+                            <td class="td-ref">Kevin Micucci 13448 Beach AVE 4502 Mdr CA 90292 t0011101</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_9c2919754137" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_9c2919754137" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_d69e918d35e5" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d69e918d35e5" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/21/2026 6:17 AM', '3201.83', `Haley Siana 3408 W Sunset BLVD Apt 200 Los Angeles,ca,,us`, 'Haley Siana Rent AND Security Depos It', 'wire_9c2919754137')">Submit</button>
-                                <span class="submit-status" id="status-wire_9c2919754137"></span>
+                                        onclick="submitToSheets('4/21/2026 10:59 AM', '3127.83', `Kevin M Micucci 336 Kimberly Place West Islip NY 11 7951902 USA`, 'Kevin Micucci 13448 Beach AVE 4502 Mdr CA 90292 t0011101', 'wire_d69e918d35e5')">Submit</button>
+                                <span class="submit-status" id="status-wire_d69e918d35e5"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_4830d1919b66">
+                            <td class="td-date">4/21/2026 10:27 AM</td>
+                            <td class="td-amount">$2,434.44</td>
+                            <td class="td-tenant">Gisela Lanzas 18402 Halsted ST Apt 22 Northr, CA 91325-4906 United States</td>
+                            <td class="td-ref">Ref t0011085 Lanzas Quintana</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_4830d1919b66" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_4830d1919b66" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/21/2026 10:27 AM', '2434.44', `Gisela Lanzas 18402 Halsted ST Apt 22 Northr, CA 91325-4906 United States`, 'Ref t0011085 Lanzas Quintana', 'wire_4830d1919b66')">Submit</button>
+                                <span class="submit-status" id="status-wire_4830d1919b66"></span>
                               </div>
                             </td>
                           </tr>
@@ -825,18 +857,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_899c3b00576f">
+                          <tr class="has-input" data-wire-id="wire_899c3b00576f">
                             <td class="td-date">4/16/2026 11:40 AM</td>
                             <td class="td-amount">$4,816.83</td>
                             <td class="td-tenant">Si Malca Bh Development Group Inc 2/609 Broadway 3/us/santa Monica, CA 90401</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_899c3b00576f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_899c3b00576f" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/16/2026 11:40 AM', '4816.83', `Si Malca Bh Development Group Inc 2/609 Broadway 3/us/santa Monica, CA 90401`, '', 'wire_899c3b00576f')">Submit</button>
-                                <span class="submit-status" id="status-wire_899c3b00576f"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011054</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_899c3b00576f"
+                                        onclick="bookInYardi('4/16/2026 11:40 AM', '4816.83', `Si Malca Bh Development Group Inc 2/609 Broadway 3/us/santa Monica, CA 90401`, 'wire_899c3b00576f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_899c3b00576f" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
