@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/21 6:06 AM</span>
+      <span class="meta-text">Updated 4/21 7:07 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_9c2919754137">
+                            <td class="td-date">4/21/2026 6:17 AM</td>
+                            <td class="td-amount">$3,201.83</td>
+                            <td class="td-tenant">Haley Siana 3408 W Sunset BLVD Apt 200 Los Angeles,ca,,us</td>
+                            <td class="td-ref">Haley Siana Rent AND Security Depos It</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9c2919754137" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9c2919754137" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/21/2026 6:17 AM', '3201.83', `Haley Siana 3408 W Sunset BLVD Apt 200 Los Angeles,ca,,us`, 'Haley Siana Rent AND Security Depos It', 'wire_9c2919754137')">Submit</button>
+                                <span class="submit-status" id="status-wire_9c2919754137"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_5c58fe5e2798">
                             <td class="td-date">4/20/2026 5:08 AM</td>
                             <td class="td-amount">$5,842.83</td>
