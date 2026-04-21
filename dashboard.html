@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/21 2:07 PM</span>
+      <span class="meta-text">Updated 4/21 3:08 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">57</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
@@ -712,6 +712,21 @@
                                         onclick="bookInYardi('4/21/2026 10:27 AM', '2434.44', `Gisela Lanzas 18402 Halsted ST Apt 22 Northr, CA 91325-4906 United States`, 'wire_4830d1919b66')"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_4830d1919b66" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_fd28a510aeb2">
+                            <td class="td-date">4/21/2026 2:57 PM</td>
+                            <td class="td-amount">$6,575.00</td>
+                            <td class="td-tenant">Rasheed L Muhammad 11715 Bellagio RD Apt 304 Los Angeles CA 90049-2161 US</td>
+                            <td class="td-ref">T0011056-muhammad</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_fd28a510aeb2" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_fd28a510aeb2" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/21/2026 2:57 PM', '6575.0', `Rasheed L Muhammad 11715 Bellagio RD Apt 304 Los Angeles CA 90049-2161 US`, 'T0011056-muhammad', 'wire_fd28a510aeb2')">Submit</button>
+                                <span class="submit-status" id="status-wire_fd28a510aeb2"></span>
                               </div>
                             </td>
                           </tr>
