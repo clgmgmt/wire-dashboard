@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/23 6:06 AM</span>
+      <span class="meta-text">Updated 4/23 7:07 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">58</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">49</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_9f27f32a63fa">
+                            <td class="td-date">4/23/2026 6:53 AM</td>
+                            <td class="td-amount">$5,647.83</td>
+                            <td class="td-tenant">Carrie Alice Bayer Florian Bayer 2/3838 Dunn DR Apt 725 3/us/culver City, CA 90232 2980</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9f27f32a63fa" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9f27f32a63fa" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/23/2026 6:53 AM', '5647.83', `Carrie Alice Bayer Florian Bayer 2/3838 Dunn DR Apt 725 3/us/culver City, CA 90232 2980`, '', 'wire_9f27f32a63fa')">Submit</button>
+                                <span class="submit-status" id="status-wire_9f27f32a63fa"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_14569035fae1">
                             <td class="td-date">4/22/2026 5:13 AM</td>
                             <td class="td-amount">$5,195.00</td>
@@ -1466,20 +1481,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0010992</span>
                                 <span class="mgr-name">Carisa Magdaleno</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_455d7cb3ef2f">
-                            <td class="td-date">3/23/2026 4:10 PM</td>
-                            <td class="td-amount">$3,276.00</td>
-                            <td class="td-tenant">Nina M Chung 3142 LA Mesa DR San Carlos CA 94070</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011003</span>
-                                <span class="mgr-name">lopez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
