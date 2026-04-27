@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/27 9:08 AM</span>
+      <span class="meta-text">Updated 4/27 10:08 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">51</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">40</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
       </div>
     </div>
 
@@ -767,18 +767,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_1996bb5e5c8b">
+                          <tr class="has-input" data-wire-id="wire_1996bb5e5c8b">
                             <td class="td-date">4/22/2026 12:56 PM</td>
                             <td class="td-amount">$2,600.00</td>
                             <td class="td-tenant">Caitlyn Hope Loomis 2/6701 DE Soto AVE Apt 228 3/us/canoga Park, CA 91303 3832</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_1996bb5e5c8b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_1996bb5e5c8b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/22/2026 12:56 PM', '2600.0', `Caitlyn Hope Loomis 2/6701 DE Soto AVE Apt 228 3/us/canoga Park, CA 91303 3832`, '', 'wire_1996bb5e5c8b')">Submit</button>
-                                <span class="submit-status" id="status-wire_1996bb5e5c8b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011097</span>
+                                <span class="mgr-name">Chad Hirschman</span>
+                                
+                                <button class="yardi-circle" id="book-wire_1996bb5e5c8b"
+                                        onclick="bookInYardi('4/22/2026 12:56 PM', '2600.0', `Caitlyn Hope Loomis 2/6701 DE Soto AVE Apt 228 3/us/canoga Park, CA 91303 3832`, 'wire_1996bb5e5c8b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_1996bb5e5c8b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1314,10 +1316,7 @@
                                 <span class="tid-mono">t0011037</span>
                                 <span class="mgr-name">Joslyn Y</span>
                                 
-                                <button class="yardi-circle" id="book-wire_b2542e776fa8"
-                                        onclick="bookInYardi('4/1/2026 9:19 AM', '4447.83', `Jose M Lamas Maria Salome Fernandes 1759 Waterfront PL Apt 563m Pittsburgh 15222-5126 US PA`, 'wire_b2542e776fa8')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_b2542e776fa8" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
