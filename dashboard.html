@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/27 10:08 AM</span>
+      <span class="meta-text">Updated 4/27 11:07 AM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">51</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
       </div>
     </div>
@@ -694,6 +694,21 @@
                               </div>
                             </td>
                           </tr>
+                          <tr class="needs-input" data-wire-id="wire_d7e002f8f5b8">
+                            <td class="td-date">4/27/2026 10:14 AM</td>
+                            <td class="td-amount">$4,195.00</td>
+                            <td class="td-tenant">David F Otoole 525 Wheelers Farm Road Apt 4c Milfo RD CT US 06461</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d7e002f8f5b8" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d7e002f8f5b8" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/27/2026 10:14 AM', '4195.0', `David F Otoole 525 Wheelers Farm Road Apt 4c Milfo RD CT US 06461`, '', 'wire_d7e002f8f5b8')">Submit</button>
+                                <span class="submit-status" id="status-wire_d7e002f8f5b8"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_9f27f32a63fa">
                             <td class="td-date">4/23/2026 6:53 AM</td>
                             <td class="td-amount">$5,647.83</td>
@@ -737,18 +752,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_14569035fae1">
+                          <tr class="has-input" data-wire-id="wire_14569035fae1">
                             <td class="td-date">4/22/2026 5:13 AM</td>
                             <td class="td-amount">$5,195.00</td>
                             <td class="td-tenant">Eric Carlson General Delivery Manchester CA 95459-9999 US</td>
                             <td class="td-ref">Move IN Funds</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_14569035fae1" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_14569035fae1" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/22/2026 5:13 AM', '5195.0', `Eric Carlson General Delivery Manchester CA 95459-9999 US`, 'Move IN Funds', 'wire_14569035fae1')">Submit</button>
-                                <span class="submit-status" id="status-wire_14569035fae1"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011078</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_14569035fae1"
+                                        onclick="bookInYardi('4/22/2026 5:13 AM', '5195.0', `Eric Carlson General Delivery Manchester CA 95459-9999 US`, 'wire_14569035fae1')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_14569035fae1" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
