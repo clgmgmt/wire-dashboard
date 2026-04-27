@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/27 11:07 AM</span>
+      <span class="meta-text">Updated 4/27 12:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">52</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
       </div>
     </div>
@@ -723,18 +723,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_d7a6093022df">
+                          <tr class="has-input" data-wire-id="wire_d7a6093022df">
                             <td class="td-date">4/23/2026 8:15 AM</td>
                             <td class="td-amount">$2,908.30</td>
                             <td class="td-tenant">Richard Barrera 56086 Desert Gold DR Yucca Valley CA 92284</td>
                             <td class="td-ref">Richard Barreraproperty Address :4210 Del Rey Aveunit 501 Marina D El Rey CA 90292tcode:t0011038</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_d7a6093022df" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_d7a6093022df" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/23/2026 8:15 AM', '2908.3', `Richard Barrera 56086 Desert Gold DR Yucca Valley CA 92284`, 'Richard Barreraproperty Address :4210 Del Rey Aveunit 501 Marina D El Rey CA 90292tcode:t0011038', 'wire_d7a6093022df')">Submit</button>
-                                <span class="submit-status" id="status-wire_d7a6093022df"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011038</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_d7a6093022df"
+                                        onclick="bookInYardi('4/23/2026 8:15 AM', '2908.3', `Richard Barrera 56086 Desert Gold DR Yucca Valley CA 92284`, 'wire_d7a6093022df')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_d7a6093022df" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -769,18 +771,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_b934b394d079">
+                          <tr class="has-input" data-wire-id="wire_b934b394d079">
                             <td class="td-date">4/22/2026 11:05 AM</td>
                             <td class="td-amount">$5,142.83</td>
                             <td class="td-tenant">Toni P Lomax 2401 S Santa Fe AVE Apt 206 Los Angeles CA 90058 US</td>
                             <td class="td-ref">Move IN Funds, Toni Lomax, 4210 DE L Rey Ave. #603, Marina Del Rey, CA 90292, T-code. T0011094??</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_b934b394d079" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_b934b394d079" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/22/2026 11:05 AM', '5142.83', `Toni P Lomax 2401 S Santa Fe AVE Apt 206 Los Angeles CA 90058 US`, 'Move IN Funds, Toni Lomax, 4210 DE L Rey Ave. #603, Marina Del Rey, CA 90292, T-code. T0011094??', 'wire_b934b394d079')">Submit</button>
-                                <span class="submit-status" id="status-wire_b934b394d079"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011094</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_b934b394d079"
+                                        onclick="bookInYardi('4/22/2026 11:05 AM', '5142.83', `Toni P Lomax 2401 S Santa Fe AVE Apt 206 Los Angeles CA 90058 US`, 'wire_b934b394d079')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_b934b394d079" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -900,18 +904,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_8266181a7fd7">
+                          <tr class="has-input" data-wire-id="wire_8266181a7fd7">
                             <td class="td-date">4/20/2026 11:58 AM</td>
                             <td class="td-amount">$2,091.30</td>
                             <td class="td-tenant">Luke Russell 860 W 77th Street North DR Indianapolis IN 46260-3537 US</td>
                             <td class="td-ref">Move IN Funds</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_8266181a7fd7" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_8266181a7fd7" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/20/2026 11:58 AM', '2091.3', `Luke Russell 860 W 77th Street North DR Indianapolis IN 46260-3537 US`, 'Move IN Funds', 'wire_8266181a7fd7')">Submit</button>
-                                <span class="submit-status" id="status-wire_8266181a7fd7"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011038</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_8266181a7fd7"
+                                        onclick="bookInYardi('4/20/2026 11:58 AM', '2091.3', `Luke Russell 860 W 77th Street North DR Indianapolis IN 46260-3537 US`, 'wire_8266181a7fd7')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_8266181a7fd7" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1266,18 +1272,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_db1729f85870">
+                          <tr class="has-input" data-wire-id="wire_db1729f85870">
                             <td class="td-date">4/2/2026 9:58 AM</td>
                             <td class="td-amount">$3,308.30</td>
                             <td class="td-tenant">Daniel Willey 64 59th PL Long Beach CA 90803-4422 US</td>
                             <td class="td-ref">Daniel Willey/4210 Del Rey AVE Apt 501/t0011038</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_db1729f85870" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_db1729f85870" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/2/2026 9:58 AM', '3308.3', `Daniel Willey 64 59th PL Long Beach CA 90803-4422 US`, 'Daniel Willey/4210 Del Rey AVE Apt 501/t0011038', 'wire_db1729f85870')">Submit</button>
-                                <span class="submit-status" id="status-wire_db1729f85870"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011038</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_db1729f85870"
+                                        onclick="bookInYardi('4/2/2026 9:58 AM', '3308.3', `Daniel Willey 64 59th PL Long Beach CA 90803-4422 US`, 'wire_db1729f85870')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_db1729f85870" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
