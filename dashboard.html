@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/28 11:07 AM</span>
+      <span class="meta-text">Updated 4/28 12:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">54</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -679,18 +679,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a4287afd1097">
+                          <tr class="has-input" data-wire-id="wire_a4287afd1097">
                             <td class="td-date">4/27/2026 5:11 AM</td>
                             <td class="td-amount">$3,371.35</td>
                             <td class="td-tenant">Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646</td>
                             <td class="td-ref">April Rent</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a4287afd1097" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a4287afd1097" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/27/2026 5:11 AM', '3371.35', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'April Rent', 'wire_a4287afd1097')">Submit</button>
-                                <span class="submit-status" id="status-wire_a4287afd1097"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010710</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a4287afd1097"
+                                        onclick="bookInYardi('4/27/2026 5:11 AM', '3371.35', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'wire_a4287afd1097')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a4287afd1097" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
