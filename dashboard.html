@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/27 6:08 PM</span>
+      <span class="meta-text">Updated 4/28 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_d8b34f5b0ec1">
+                            <td class="td-date">4/28/2026 5:08 AM</td>
+                            <td class="td-amount">$3,649.00</td>
+                            <td class="td-tenant">Shaden Masaud 2/3838 Dunn DR Apt 606 3/us/culver City, CA 90232 2776</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d8b34f5b0ec1" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d8b34f5b0ec1" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/28/2026 5:08 AM', '3649.0', `Shaden Masaud 2/3838 Dunn DR Apt 606 3/us/culver City, CA 90232 2776`, '', 'wire_d8b34f5b0ec1')">Submit</button>
+                                <span class="submit-status" id="status-wire_d8b34f5b0ec1"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_a4287afd1097">
                             <td class="td-date">4/27/2026 5:11 AM</td>
                             <td class="td-amount">$3,371.35</td>
