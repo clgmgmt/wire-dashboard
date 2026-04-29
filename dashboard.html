@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/29 10:07 AM</span>
+      <span class="meta-text">Updated 4/29 11:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">57</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_e42be46c08a8">
+                            <td class="td-date">4/29/2026 10:14 AM</td>
+                            <td class="td-amount">$7,542.83</td>
+                            <td class="td-tenant">Scot Edward Fairfield 33 S Aberdeen ST Apt 412 Chicago IL 60607-3763 US</td>
+                            <td class="td-ref">T-code: T0011073, Move IN AND First Month Rent For 13448 Beach Ave, Uni T 6309, Marina Del Rey, CA 90292</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_e42be46c08a8" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_e42be46c08a8" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/29/2026 10:14 AM', '7542.83', `Scot Edward Fairfield 33 S Aberdeen ST Apt 412 Chicago IL 60607-3763 US`, 'T-code: T0011073, Move IN AND First Month Rent For 13448 Beach Ave, Uni T 6309, Marina Del Rey, CA 90292', 'wire_e42be46c08a8')">Submit</button>
+                                <span class="submit-status" id="status-wire_e42be46c08a8"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_d8b34f5b0ec1">
                             <td class="td-date">4/28/2026 5:08 AM</td>
                             <td class="td-amount">$3,649.00</td>
@@ -718,10 +733,7 @@
                                 <span class="tid-mono">t0010710</span>
                                 <span class="mgr-name">Andrew Menzies</span>
                                 
-                                <button class="yardi-circle" id="book-wire_a4287afd1097"
-                                        onclick="bookInYardi('4/27/2026 5:11 AM', '3371.35', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'wire_a4287afd1097')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_a4287afd1097" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
