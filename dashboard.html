@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/30 10:07 AM</span>
+      <span class="meta-text">Updated 4/30 11:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">57</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">52</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_989108a2ebe7">
+                            <td class="td-date">4/30/2026 11:04 AM</td>
+                            <td class="td-amount">$6,097.83</td>
+                            <td class="td-tenant">Charlton Henry Wheelwright 8 Cunard Apartments 1 Picture House Mews,london E17 3gw United Kingdom</td>
+                            <td class="td-ref">Reference t0011096 - Wheelwright</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_989108a2ebe7" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_989108a2ebe7" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('4/30/2026 11:04 AM', '6097.83', `Charlton Henry Wheelwright 8 Cunard Apartments 1 Picture House Mews,london E17 3gw United Kingdom`, 'Reference t0011096 - Wheelwright', 'wire_989108a2ebe7')">Submit</button>
+                                <span class="submit-status" id="status-wire_989108a2ebe7"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_e42be46c08a8">
                             <td class="td-date">4/29/2026 10:14 AM</td>
                             <td class="td-amount">$7,542.83</td>
@@ -1406,34 +1421,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011037</span>
                                 <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5ddd45682830">
-                            <td class="td-date">3/31/2026 5:23 AM</td>
-                            <td class="td-amount">$2,595.00</td>
-                            <td class="td-tenant">Joumana Mahieddine 808 El Camino Real Unit I Burlingame CA 94010-5006 US</td>
-                            <td class="td-ref">Move IN Payment</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011023</span>
-                                <span class="mgr-name">Amir Elsaeidy</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_69bc1373123f">
-                            <td class="td-date">3/31/2026 6:45 AM</td>
-                            <td class="td-amount">$4,245.00</td>
-                            <td class="td-tenant">Roberto Rodriguez OR Nadia K Rodrig Uez 2/412 Geo Meyer AVE 3/us/savannah 31401</td>
-                            <td class="td-ref">t0011033 Rodriguez</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011033</span>
-                                <span class="mgr-name">Enrique</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
