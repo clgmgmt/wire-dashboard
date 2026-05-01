@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/01 11:07 AM</span>
+      <span class="meta-text">Updated 5/01 12:07 PM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">57</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
 
@@ -681,18 +681,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_3ce6c67a2c8b">
+                          <tr class="has-input" data-wire-id="wire_3ce6c67a2c8b">
                             <td class="td-date">5/1/2026 7:06 AM</td>
                             <td class="td-amount">$4,701.83</td>
                             <td class="td-tenant">Martin Southey 2701 Biscayne BLVD Apt 5129 Miami FL 33137-5294 US</td>
                             <td class="td-ref">Reference: Martin Southey, G8, 1344 8 Beach Ave, Marina Del Rey, CA 902 92, T-code: t0011132</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_3ce6c67a2c8b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_3ce6c67a2c8b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/1/2026 7:06 AM', '4701.83', `Martin Southey 2701 Biscayne BLVD Apt 5129 Miami FL 33137-5294 US`, 'Reference: Martin Southey, G8, 1344 8 Beach Ave, Marina Del Rey, CA 902 92, T-code: t0011132', 'wire_3ce6c67a2c8b')">Submit</button>
-                                <span class="submit-status" id="status-wire_3ce6c67a2c8b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011132</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_3ce6c67a2c8b"
+                                        onclick="bookInYardi('5/1/2026 7:06 AM', '4701.83', `Martin Southey 2701 Biscayne BLVD Apt 5129 Miami FL 33137-5294 US`, 'wire_3ce6c67a2c8b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_3ce6c67a2c8b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -710,6 +712,36 @@
                                         onclick="bookInYardi('5/1/2026 6:51 AM', '2538.92', `Emma Al-hammoudi 942 E North Union AVE Unit 443 Midvale UT 84047-1940 US`, 'wire_6412839c02cb')"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_6412839c02cb" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_a70967ca2b06">
+                            <td class="td-date">5/1/2026 11:58 AM</td>
+                            <td class="td-amount">$3,517.83</td>
+                            <td class="td-tenant">Shacen Xie 4210 Del Rey AVE Apt 505b Marina Del Rey CA 90292-7759 US</td>
+                            <td class="td-ref">Shacen Xie-c1 By Clg-505b-t0011117- Xie</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_a70967ca2b06" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_a70967ca2b06" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/1/2026 11:58 AM', '3517.83', `Shacen Xie 4210 Del Rey AVE Apt 505b Marina Del Rey CA 90292-7759 US`, 'Shacen Xie-c1 By Clg-505b-t0011117- Xie', 'wire_a70967ca2b06')">Submit</button>
+                                <span class="submit-status" id="status-wire_a70967ca2b06"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_e5fe8bb1f2cb">
+                            <td class="td-date">5/1/2026 11:16 AM</td>
+                            <td class="td-amount">$7,347.83</td>
+                            <td class="td-tenant">Pavel Kharitonov Mai Ling Lee 2/10340 S Decatur BLVD Unit 3069 3/us/las Vegas 89141</td>
+                            <td class="td-ref">t0011130 - Kharitonov, Lee</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_e5fe8bb1f2cb" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_e5fe8bb1f2cb" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/1/2026 11:16 AM', '7347.83', `Pavel Kharitonov Mai Ling Lee 2/10340 S Decatur BLVD Unit 3069 3/us/las Vegas 89141`, 't0011130 - Kharitonov, Lee', 'wire_e5fe8bb1f2cb')">Submit</button>
+                                <span class="submit-status" id="status-wire_e5fe8bb1f2cb"></span>
                               </div>
                             </td>
                           </tr>
@@ -1444,20 +1476,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011030</span>
                                 <span class="mgr-name">Ernique</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_b2542e776fa8">
-                            <td class="td-date">4/1/2026 9:19 AM</td>
-                            <td class="td-amount">$4,447.83</td>
-                            <td class="td-tenant">Jose M Lamas Maria Salome Fernandes 1759 Waterfront PL Apt 563m Pittsburgh 15222-5126 US PA</td>
-                            <td class="td-ref">Moving Funds Ref: Lamas t0011037</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011037</span>
-                                <span class="mgr-name">Joslyn Y</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
