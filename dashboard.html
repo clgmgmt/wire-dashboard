@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 4/30 6:07 PM</span>
+      <span class="meta-text">Updated 5/01 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_f13d5fce21f0">
+                            <td class="td-date">5/1/2026 5:10 AM</td>
+                            <td class="td-amount">$3,448.92</td>
+                            <td class="td-tenant">Greg S Labate 32330 Via Angelica San Juan Capistrano CA 92675</td>
+                            <td class="td-ref">Siena Labate 13448 Beach AVE Apt 64 01 Mdr CA 90292 t0011132</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_f13d5fce21f0" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_f13d5fce21f0" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/1/2026 5:10 AM', '3448.92', `Greg S Labate 32330 Via Angelica San Juan Capistrano CA 92675`, 'Siena Labate 13448 Beach AVE Apt 64 01 Mdr CA 90292 t0011132', 'wire_f13d5fce21f0')">Submit</button>
+                                <span class="submit-status" id="status-wire_f13d5fce21f0"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_989108a2ebe7">
                             <td class="td-date">4/30/2026 11:04 AM</td>
                             <td class="td-amount">$6,097.83</td>
@@ -1400,20 +1415,6 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_284e30a0a93e">
-                            <td class="td-date">4/1/2026 5:56 AM</td>
-                            <td class="td-amount">$7,147.83</td>
-                            <td class="td-tenant">John S Urbanik 2/412 43rd ST 3/us/brooklyn 11232</td>
-                            <td class="td-ref">John Urbanik 13448 Beach AVE Ph6108</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011043</span>
-                                <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
                           <tr class="has-input" data-wire-id="wire_b2542e776fa8">
                             <td class="td-date">4/1/2026 9:19 AM</td>
                             <td class="td-amount">$4,447.83</td>
@@ -1423,34 +1424,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011037</span>
                                 <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_aff509cd6bcf">
-                            <td class="td-date">3/31/2026 2:34 PM</td>
-                            <td class="td-amount">$2,325.00</td>
-                            <td class="td-tenant">Wendy Eberle 4082 Sawtelle BLVD Los Angeles CA 90066</td>
-                            <td class="td-ref">Caitlin Davis Herber 13448 Beach Av E 1501 C</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011050</span>
-                                <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_bd088c8c67b5">
-                            <td class="td-date">3/31/2026 4:11 PM</td>
-                            <td class="td-amount">$4,710.83</td>
-                            <td class="td-tenant">Maral Kasiri 7660 Beverly BLVD Apt 254 Los Angeles, CA 90036</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011044</span>
-                                <span class="mgr-name">Chad Hirschman</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
