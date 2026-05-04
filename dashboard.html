@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/01 6:07 PM</span>
+      <span class="meta-text">Updated 5/04 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">57</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">8</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">39</span></button>
       </div>
     </div>
 
@@ -664,6 +664,50 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_d2fde63c181c">
+                            <td class="td-date">5/4/2026 5:30 AM</td>
+                            <td class="td-amount">$6,447.83</td>
+                            <td class="td-tenant">Ke Wan 14355 Huston ST Apt 139 Sherman Oaks CA 91423-1815 US</td>
+                            <td class="td-ref">t0011120 - Wan. Note That This Is A Move IN Fund For Ke Wan AND Chenw Ei Zhou At R3 Unit 417</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d2fde63c181c" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d2fde63c181c" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/4/2026 5:30 AM', '6447.83', `Ke Wan 14355 Huston ST Apt 139 Sherman Oaks CA 91423-1815 US`, 't0011120 - Wan. Note That This Is A Move IN Fund For Ke Wan AND Chenw Ei Zhou At R3 Unit 417', 'wire_d2fde63c181c')">Submit</button>
+                                <span class="submit-status" id="status-wire_d2fde63c181c"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_7d4139a19061">
+                            <td class="td-date">5/4/2026 5:29 AM</td>
+                            <td class="td-amount">$4,510.00</td>
+                            <td class="td-tenant">Natalie Rae James 810 Ashland AVE Apt 101 Santa Monica CA 90405 US</td>
+                            <td class="td-ref">T0011112- James</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_7d4139a19061" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_7d4139a19061" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/4/2026 5:29 AM', '4510.0', `Natalie Rae James 810 Ashland AVE Apt 101 Santa Monica CA 90405 US`, 'T0011112- James', 'wire_7d4139a19061')">Submit</button>
+                                <span class="submit-status" id="status-wire_7d4139a19061"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="has-input" data-wire-id="wire_d53fef7522a1">
+                            <td class="td-date">5/4/2026 5:25 AM</td>
+                            <td class="td-amount">$927.83</td>
+                            <td class="td-tenant">Caitlyn Hope Loomis 2/6701 DE Soto AVE Apt 228 3/us/canoga Park, CA 91303 3832</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011097</span>
+                                <span class="mgr-name">Chad Hirschman</span>
+                                
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_f13d5fce21f0">
                             <td class="td-date">5/1/2026 5:10 AM</td>
                             <td class="td-amount">$3,448.92</td>
@@ -1372,118 +1416,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011036</span>
                                 <span class="mgr-name">enrique</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_ea94000e9689">
-                            <td class="td-date">4/3/2026 5:11 AM</td>
-                            <td class="td-amount">$4,362.83</td>
-                            <td class="td-tenant">Sarah Machat 4426 Deseret Dr. Woodland Hills, CA 91364</td>
-                            <td class="td-ref">Reference Is t0011042 Machat</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011042</span>
-                                <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5616f2f15965">
-                            <td class="td-date">4/3/2026 12:37 PM</td>
-                            <td class="td-amount">$4,646.83</td>
-                            <td class="td-tenant">Alexander Thiele 2/4133 Redwood AVE Unit 4013 3/us/los Angeles,90066,ca</td>
-                            <td class="td-ref">Security Deposit For Lease T 001096 9 - Thiele</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010969</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_582980e88c09">
-                            <td class="td-date">4/2/2026 5:10 AM</td>
-                            <td class="td-amount">$5,797.83</td>
-                            <td class="td-tenant">Andrew Knight 3608 Barham BLVD Apt U313 Los Angeles CA 90068</td>
-                            <td class="td-ref">P0180230 Knight</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010993</span>
-                                <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_eacec7ae34e3">
-                            <td class="td-date">4/2/2026 6:56 AM</td>
-                            <td class="td-amount">$3,397.83</td>
-                            <td class="td-tenant">Vivi N Ton 2/11812 Mac Nab ST 3/us/garden Grove 92841</td>
-                            <td class="td-ref">t0010966 - Ton</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010966</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_aa1649d930ac">
-                            <td class="td-date">4/2/2026 6:21 AM</td>
-                            <td class="td-amount">$3,121.25</td>
-                            <td class="td-tenant">Sydney I Colfescu 412 Andri CT El Dorado Hls,ca,95762 US</td>
-                            <td class="td-ref">T0009987-colfescu</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0009987</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_db1729f85870">
-                            <td class="td-date">4/2/2026 9:58 AM</td>
-                            <td class="td-amount">$3,308.30</td>
-                            <td class="td-tenant">Daniel Willey 64 59th PL Long Beach CA 90803-4422 US</td>
-                            <td class="td-ref">Daniel Willey/4210 Del Rey AVE Apt 501/t0011038</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011038</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_2e79ce1ceb85">
-                            <td class="td-date">4/2/2026 3:42 PM</td>
-                            <td class="td-amount">$3,467.83</td>
-                            <td class="td-tenant">Aqil N Thanawala 2/8560 E Canyon Vista DR 3/us/anaheim, CA 92808-1619</td>
-                            <td class="td-ref">Pop Other</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010979</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_27a455adfd0a">
-                            <td class="td-date">4/2/2026 12:47 PM</td>
-                            <td class="td-amount">$4,285.00</td>
-                            <td class="td-tenant">Ryan T Milkovich 2/10525 Eton AVE 3/us/chatsworth, CA 91311 2327</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011030</span>
-                                <span class="mgr-name">Ernique</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
