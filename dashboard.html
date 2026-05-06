@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/05 6:07 PM</span>
+      <span class="meta-text">Updated 5/06 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">57</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">58</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">7</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_48cfe3d210bb">
+                            <td class="td-date">5/6/2026 5:06 AM</td>
+                            <td class="td-amount">$2,451.83</td>
+                            <td class="td-tenant">Angelica D Millsapsafahi 4520 Grimes PL Encino CA 91316</td>
+                            <td class="td-ref">Appt 4324 Second Payment</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_48cfe3d210bb" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_48cfe3d210bb" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/6/2026 5:06 AM', '2451.83', `Angelica D Millsapsafahi 4520 Grimes PL Encino CA 91316`, 'Appt 4324 Second Payment', 'wire_48cfe3d210bb')">Submit</button>
+                                <span class="submit-status" id="status-wire_48cfe3d210bb"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_5fa17e2185df">
                             <td class="td-date">5/5/2026 8:01 AM</td>
                             <td class="td-amount">$3,097.83</td>
