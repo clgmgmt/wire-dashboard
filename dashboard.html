@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/06 10:07 AM</span>
+      <span class="meta-text">Updated 5/06 11:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">59</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">58</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">9</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">10</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
       </div>
     </div>
 
@@ -693,6 +693,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('5/6/2026 8:27 AM', '5200.0', `Mark Berdichevsky 6827 California ST Unit B San Francisco CA 94121-1731 US`, '', 'wire_faaba4e0c839')">Submit</button>
                                 <span class="submit-status" id="status-wire_faaba4e0c839"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_958866c8fb71">
+                            <td class="td-date">5/6/2026 10:24 AM</td>
+                            <td class="td-amount">$4,322.83</td>
+                            <td class="td-tenant">Noah S Perets 2468 Greenwich ST Apt 1 San Francisco CA 94123</td>
+                            <td class="td-ref">Move IN Funds Noah Perets</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_958866c8fb71" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_958866c8fb71" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/6/2026 10:24 AM', '4322.83', `Noah S Perets 2468 Greenwich ST Apt 1 San Francisco CA 94123`, 'Move IN Funds Noah Perets', 'wire_958866c8fb71')">Submit</button>
+                                <span class="submit-status" id="status-wire_958866c8fb71"></span>
                               </div>
                             </td>
                           </tr>
@@ -745,18 +760,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_d2fde63c181c">
+                          <tr class="has-input" data-wire-id="wire_d2fde63c181c">
                             <td class="td-date">5/4/2026 5:30 AM</td>
                             <td class="td-amount">$6,447.83</td>
                             <td class="td-tenant">Ke Wan 14355 Huston ST Apt 139 Sherman Oaks CA 91423-1815 US</td>
                             <td class="td-ref">t0011120 - Wan. Note That This Is A Move IN Fund For Ke Wan AND Chenw Ei Zhou At R3 Unit 417</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_d2fde63c181c" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_d2fde63c181c" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/4/2026 5:30 AM', '6447.83', `Ke Wan 14355 Huston ST Apt 139 Sherman Oaks CA 91423-1815 US`, 't0011120 - Wan. Note That This Is A Move IN Fund For Ke Wan AND Chenw Ei Zhou At R3 Unit 417', 'wire_d2fde63c181c')">Submit</button>
-                                <span class="submit-status" id="status-wire_d2fde63c181c"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011120</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_d2fde63c181c"
+                                        onclick="bookInYardi('5/4/2026 5:30 AM', '6447.83', `Ke Wan 14355 Huston ST Apt 139 Sherman Oaks CA 91423-1815 US`, 'wire_d2fde63c181c')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_d2fde63c181c" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1488,34 +1505,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011031</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d17673434783">
-                            <td class="td-date">4/6/2026 9:57 AM</td>
-                            <td class="td-amount">$6,872.83</td>
-                            <td class="td-tenant">Michael Fierstein 1114 12th ST Apt 308 Santa Monica,ca,</td>
-                            <td class="td-ref">4210 Del Rey AVE Unit 317, Marina D El Rey, CA 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011071</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5920e506d6c0">
-                            <td class="td-date">4/6/2026 9:26 AM</td>
-                            <td class="td-amount">$5,629.83</td>
-                            <td class="td-tenant">Madeline Margaret Leist 4301 Vinton AVE Culver City CA 90232-3452 US</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011036</span>
-                                <span class="mgr-name">enrique</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
