@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/06 3:07 PM</span>
+      <span class="meta-text">Updated 5/06 4:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">62</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">10</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">11</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
       </div>
     </div>
@@ -711,18 +711,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a4a3fcf33eb0">
+                          <tr class="has-input" data-wire-id="wire_a4a3fcf33eb0">
                             <td class="td-date">5/6/2026 11:29 AM</td>
                             <td class="td-amount">$8,097.83</td>
                             <td class="td-tenant">Dinh Thanh Thai Po Box 1990 Walnut CA USA 91788-1990</td>
                             <td class="td-ref">Winston Thai 13448 Beach AVE #ph730 9, Marina Del Rey CA T-code: T00111 38</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a4a3fcf33eb0" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a4a3fcf33eb0" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/6/2026 11:29 AM', '8097.83', `Dinh Thanh Thai Po Box 1990 Walnut CA USA 91788-1990`, 'Winston Thai 13448 Beach AVE #ph730 9, Marina Del Rey CA T-code: T00111 38', 'wire_a4a3fcf33eb0')">Submit</button>
-                                <span class="submit-status" id="status-wire_a4a3fcf33eb0"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011138</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a4a3fcf33eb0"
+                                        onclick="bookInYardi('5/6/2026 11:29 AM', '8097.83', `Dinh Thanh Thai Po Box 1990 Walnut CA USA 91788-1990`, 'wire_a4a3fcf33eb0')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a4a3fcf33eb0" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
