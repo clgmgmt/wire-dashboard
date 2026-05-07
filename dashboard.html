@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/07 2:07 PM</span>
+      <span class="meta-text">Updated 5/07 3:07 PM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">64</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">11</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">52</span></button>
       </div>
     </div>
 
@@ -704,10 +704,7 @@
                                 <span class="tid-mono">t0011102</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_48cfe3d210bb"
-                                        onclick="bookInYardi('5/6/2026 5:06 AM', '2451.83', `Angelica D Millsapsafahi 4520 Grimes PL Encino CA 91316`, 'wire_48cfe3d210bb')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_48cfe3d210bb" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -751,25 +748,24 @@
                                 <span class="tid-mono">t0011138</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_a4a3fcf33eb0"
-                                        onclick="bookInYardi('5/6/2026 11:29 AM', '8097.83', `Dinh Thanh Thai Po Box 1990 Walnut CA USA 91788-1990`, 'wire_a4a3fcf33eb0')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_a4a3fcf33eb0" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_69b23e8fa798">
+                          <tr class="has-input" data-wire-id="wire_69b23e8fa798">
                             <td class="td-date">5/6/2026 11:08 AM</td>
                             <td class="td-amount">$3,822.83</td>
                             <td class="td-tenant">Lorraine Nancy Snell Pod Nicole Dee Rmount Pod Eric G Snell 2/2049 Port Bristol Cir 3/us/newport Beach, CA 92660-5414</td>
                             <td class="td-ref">Pop Other</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_69b23e8fa798" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_69b23e8fa798" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/6/2026 11:08 AM', '3822.83', `Lorraine Nancy Snell Pod Nicole Dee Rmount Pod Eric G Snell 2/2049 Port Bristol Cir 3/us/newport Beach, CA 92660-5414`, 'Pop Other', 'wire_69b23e8fa798')">Submit</button>
-                                <span class="submit-status" id="status-wire_69b23e8fa798"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011087</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_69b23e8fa798"
+                                        onclick="bookInYardi('5/6/2026 11:08 AM', '3822.83', `Lorraine Nancy Snell Pod Nicole Dee Rmount Pod Eric G Snell 2/2049 Port Bristol Cir 3/us/newport Beach, CA 92660-5414`, 'wire_69b23e8fa798')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_69b23e8fa798" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -788,18 +784,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_23735da930e4">
+                          <tr class="has-input" data-wire-id="wire_23735da930e4">
                             <td class="td-date">5/6/2026 1:39 PM</td>
                             <td class="td-amount">$2,363.00</td>
                             <td class="td-tenant">Angeline B Linares 5750 Camellia AVE Apt 7 N Hollywood CA 91601 US</td>
                             <td class="td-ref">Move IN Funds / T0011122- Linares U Nit 417</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_23735da930e4" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_23735da930e4" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/6/2026 1:39 PM', '2363.0', `Angeline B Linares 5750 Camellia AVE Apt 7 N Hollywood CA 91601 US`, 'Move IN Funds / T0011122- Linares U Nit 417', 'wire_23735da930e4')">Submit</button>
-                                <span class="submit-status" id="status-wire_23735da930e4"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011122</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_23735da930e4"
+                                        onclick="bookInYardi('5/6/2026 1:39 PM', '2363.0', `Angeline B Linares 5750 Camellia AVE Apt 7 N Hollywood CA 91601 US`, 'wire_23735da930e4')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_23735da930e4" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -813,10 +811,7 @@
                                 <span class="tid-mono">t0011142</span>
                                 <span class="mgr-name">Chad Hirschman</span>
                                 
-                                <button class="yardi-circle" id="book-wire_5fa17e2185df"
-                                        onclick="bookInYardi('5/5/2026 8:01 AM', '3097.83', `X698158721 Yan L Kaye 2/830 Linda Flora DR 3/us/los Angeles CA 90049-1629`, 'wire_5fa17e2185df')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_5fa17e2185df" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -845,10 +840,7 @@
                                 <span class="tid-mono">t0011118</span>
                                 <span class="mgr-name">Chris Leschkies</span>
                                 
-                                <button class="yardi-circle" id="book-wire_264e44590606"
-                                        onclick="bookInYardi('5/5/2026 4:08 PM', '3567.83', `Danielle Joyner 4243 Don Felipe DR Los Angeles, CA 90008`, 'wire_264e44590606')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_264e44590606" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -862,10 +854,7 @@
                                 <span class="tid-mono">t0011120</span>
                                 <span class="mgr-name">Kenneth Stone</span>
                                 
-                                <button class="yardi-circle" id="book-wire_d2fde63c181c"
-                                        onclick="bookInYardi('5/4/2026 5:30 AM', '6447.83', `Ke Wan 14355 Huston ST Apt 139 Sherman Oaks CA 91423-1815 US`, 'wire_d2fde63c181c')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_d2fde63c181c" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -944,10 +933,7 @@
                                 <span class="tid-mono">t0011132</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_f13d5fce21f0"
-                                        onclick="bookInYardi('5/1/2026 5:10 AM', '3448.92', `Greg S Labate 32330 Via Angelica San Juan Capistrano CA 92675`, 'wire_f13d5fce21f0')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_f13d5fce21f0" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1003,10 +989,7 @@
                                 <span class="tid-mono">t0011130</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_e5fe8bb1f2cb"
-                                        onclick="bookInYardi('5/1/2026 11:16 AM', '7347.83', `Pavel Kharitonov Mai Ling Lee 2/10340 S Decatur BLVD Unit 3069 3/us/las Vegas 89141`, 'wire_e5fe8bb1f2cb')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_e5fe8bb1f2cb" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1020,10 +1003,7 @@
                                 <span class="tid-mono">t0011096</span>
                                 <span class="mgr-name">Thomas Lofton</span>
                                 
-                                <button class="yardi-circle" id="book-wire_989108a2ebe7"
-                                        onclick="bookInYardi('4/30/2026 11:04 AM', '6097.83', `Charlton Henry Wheelwright 8 Cunard Apartments 1 Picture House Mews,london E17 3gw United Kingdom`, 'wire_989108a2ebe7')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_989108a2ebe7" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
