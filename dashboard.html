@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/08 10:07 AM</span>
+      <span class="meta-text">Updated 5/08 11:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">65</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">57</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">63</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">54</span></button>
       </div>
     </div>
 
@@ -679,18 +679,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_f3268393246b">
+                          <tr class="needs-input" data-wire-id="wire_6484fab1b3a0">
+                            <td class="td-date">5/8/2026 10:59 AM</td>
+                            <td class="td-amount">$5,854.44</td>
+                            <td class="td-tenant">Tristan Beltrami 11030 Pacific View DR Malibu CA 90265-2167 US</td>
+                            <td class="td-ref">t0011148 Beltrami/voci Move-in, 430 S Cloverdale Ave, Apt. 28</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_6484fab1b3a0" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_6484fab1b3a0" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/8/2026 10:59 AM', '5854.44', `Tristan Beltrami 11030 Pacific View DR Malibu CA 90265-2167 US`, 't0011148 Beltrami/voci Move-in, 430 S Cloverdale Ave, Apt. 28', 'wire_6484fab1b3a0')">Submit</button>
+                                <span class="submit-status" id="status-wire_6484fab1b3a0"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="has-input" data-wire-id="wire_f3268393246b">
                             <td class="td-date">5/7/2026 5:14 AM</td>
                             <td class="td-amount">$500.00</td>
                             <td class="td-tenant">Spencer C Garrison 232 S Berendo ST Apt 4 Los Angeles CA 90004-5775 US</td>
                             <td class="td-ref">Tenant Id: t0011133 Last Name: Garr Ison</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_f3268393246b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_f3268393246b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/7/2026 5:14 AM', '500.0', `Spencer C Garrison 232 S Berendo ST Apt 4 Los Angeles CA 90004-5775 US`, 'Tenant Id: t0011133 Last Name: Garr Ison', 'wire_f3268393246b')">Submit</button>
-                                <span class="submit-status" id="status-wire_f3268393246b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011133</span>
+                                <span class="mgr-name">David Millstein</span>
+                                
+                                <button class="yardi-circle" id="book-wire_f3268393246b"
+                                        onclick="bookInYardi('5/7/2026 5:14 AM', '500.0', `Spencer C Garrison 232 S Berendo ST Apt 4 Los Angeles CA 90004-5775 US`, 'wire_f3268393246b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_f3268393246b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -781,18 +798,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a34e24d04b40">
+                          <tr class="has-input" data-wire-id="wire_a34e24d04b40">
                             <td class="td-date">5/6/2026 12:21 PM</td>
                             <td class="td-amount">$5,699.44</td>
                             <td class="td-tenant">Spencer C Garrison 232 S Berendo ST Apt 4 Los Angeles CA 90004-5775 US</td>
                             <td class="td-ref">Tenant Id: t0011133 Last Name: Garr Ison</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a34e24d04b40" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a34e24d04b40" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/6/2026 12:21 PM', '5699.44', `Spencer C Garrison 232 S Berendo ST Apt 4 Los Angeles CA 90004-5775 US`, 'Tenant Id: t0011133 Last Name: Garr Ison', 'wire_a34e24d04b40')">Submit</button>
-                                <span class="submit-status" id="status-wire_a34e24d04b40"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011133</span>
+                                <span class="mgr-name">David Millstein</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a34e24d04b40"
+                                        onclick="bookInYardi('5/6/2026 12:21 PM', '5699.44', `Spencer C Garrison 232 S Berendo ST Apt 4 Los Angeles CA 90004-5775 US`, 'wire_a34e24d04b40')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a34e24d04b40" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1521,48 +1540,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011068</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_9fa7e6074826">
-                            <td class="td-date">4/8/2026 5:37 AM</td>
-                            <td class="td-amount">$4,147.83</td>
-                            <td class="td-tenant">Rachel L Stoffregen 1515 Abbotsford DR Naperville,il,60563 US</td>
-                            <td class="td-ref">Move IN Funds t0011028 Stoffregen</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011028</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5bb8bad1e14f">
-                            <td class="td-date">4/8/2026 7:45 AM</td>
-                            <td class="td-amount">$3,962.83</td>
-                            <td class="td-tenant">Elizabeth L Quade David A Celniker 2/5363 Manila AVE 3/us/oakland, CA 94618 1105</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011057</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_4bb877917b79">
-                            <td class="td-date">4/8/2026 8:41 AM</td>
-                            <td class="td-amount">$3,672.83</td>
-                            <td class="td-tenant">Sungbin Kim 4006 Emerald ST Apt 101 Torrance CA 90503-3144 US</td>
-                            <td class="td-ref">Sungbin Kim, 4210 Del Rey Ave. 508b Marina Del Rey CA 90292, t0011066</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011066</span>
-                                <span class="mgr-name">Jess Favela</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
