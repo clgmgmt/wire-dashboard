@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/07 6:07 PM</span>
+      <span class="meta-text">Updated 5/08 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">64</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">65</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">57</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_79a43a1d90eb">
+                            <td class="td-date">5/8/2026 5:47 AM</td>
+                            <td class="td-amount">$2,981.29</td>
+                            <td class="td-tenant">Mohammed Tanzeer Shaik 9810 Zelzah AVE Apt 336 Northridge CA 91325</td>
+                            <td class="td-ref">t0011151 Shaik</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_79a43a1d90eb" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_79a43a1d90eb" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/8/2026 5:47 AM', '2981.29', `Mohammed Tanzeer Shaik 9810 Zelzah AVE Apt 336 Northridge CA 91325`, 't0011151 Shaik', 'wire_79a43a1d90eb')">Submit</button>
+                                <span class="submit-status" id="status-wire_79a43a1d90eb"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_f3268393246b">
                             <td class="td-date">5/7/2026 5:14 AM</td>
                             <td class="td-amount">$500.00</td>
