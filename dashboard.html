@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/11 7:07 AM</span>
+      <span class="meta-text">Updated 5/11 8:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">63</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">62</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">53</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
       </div>
     </div>
 
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_7150545cb863">
+                            <td class="td-date">5/11/2026 8:03 AM</td>
+                            <td class="td-amount">$4,397.83</td>
+                            <td class="td-tenant">Roberta A Frink-sobierajski 32 Mount San Jacinto Cir Rancho Mir Age CA US</td>
+                            <td class="td-ref">13448 Beach AVE 4318mdr Mackenzie F Rink Sobierajski</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_7150545cb863" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_7150545cb863" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/11/2026 8:03 AM', '4397.83', `Roberta A Frink-sobierajski 32 Mount San Jacinto Cir Rancho Mir Age CA US`, '13448 Beach AVE 4318mdr Mackenzie F Rink Sobierajski', 'wire_7150545cb863')">Submit</button>
+                                <span class="submit-status" id="status-wire_7150545cb863"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_c620f20bdb7d">
+                            <td class="td-date">5/11/2026 7:30 AM</td>
+                            <td class="td-amount">$4,245.00</td>
+                            <td class="td-tenant">Saunders Marketing Reginald E Saund Ers 2/9485 SW 165th AVE 3/us/beaverton, OR 97007 9417</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_c620f20bdb7d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_c620f20bdb7d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/11/2026 7:30 AM', '4245.0', `Saunders Marketing Reginald E Saund Ers 2/9485 SW 165th AVE 3/us/beaverton, OR 97007 9417`, '', 'wire_c620f20bdb7d')">Submit</button>
+                                <span class="submit-status" id="status-wire_c620f20bdb7d"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_79a43a1d90eb">
                             <td class="td-date">5/8/2026 5:47 AM</td>
                             <td class="td-amount">$2,981.29</td>
@@ -1515,48 +1545,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011067</span>
                                 <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_00e41291157e">
-                            <td class="td-date">4/10/2026 12:07 PM</td>
-                            <td class="td-amount">$4,390.00</td>
-                            <td class="td-tenant">Bradley360 Investments Llc 6709 LA Tijera BLVD # 1011 Los Angeles CA 90045-2017 US</td>
-                            <td class="td-ref">Tennent Id: t0011036</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011036</span>
-                                <span class="mgr-name">Ernique</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_b35cea866a60">
-                            <td class="td-date">4/9/2026 5:14 AM</td>
-                            <td class="td-amount">$4,434.44</td>
-                            <td class="td-tenant">Maitha S Alremeithi 12244 Burbank BLVD Apt 201 Valley Village CA 91607 US</td>
-                            <td class="td-ref">t0011062 Alremeithi, Maitha</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011062</span>
-                                <span class="mgr-name">Adela Labarca</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_8bf82fd19c8e">
-                            <td class="td-date">4/9/2026 3:32 PM</td>
-                            <td class="td-amount">$3,402.83</td>
-                            <td class="td-tenant">Son-jai Paik 2/15822 El Paseo DR 3/us/whittier, CA 90603-1218</td>
-                            <td class="td-ref">Pop Services</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011068</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
