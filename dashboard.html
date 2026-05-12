@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/12 2:07 PM</span>
+      <span class="meta-text">Updated 5/12 3:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">64</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">7</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">8</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
       </div>
     </div>
@@ -713,18 +713,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_8c58d35a34dc">
+                          <tr class="has-input" data-wire-id="wire_8c58d35a34dc">
                             <td class="td-date">5/11/2026 3:32 PM</td>
                             <td class="td-amount">$6,497.83</td>
                             <td class="td-tenant">Michael Kaplan Barbara J Kaplan 2/4461 Revillo DR 3/us/san Diego, CA 92115-4139</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_8c58d35a34dc" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_8c58d35a34dc" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/11/2026 3:32 PM', '6497.83', `Michael Kaplan Barbara J Kaplan 2/4461 Revillo DR 3/us/san Diego, CA 92115-4139`, '', 'wire_8c58d35a34dc')">Submit</button>
-                                <span class="submit-status" id="status-wire_8c58d35a34dc"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011111</span>
+                                <span class="mgr-name">Thomas Lofton</span>
+                                
+                                <button class="yardi-circle" id="book-wire_8c58d35a34dc"
+                                        onclick="bookInYardi('5/11/2026 3:32 PM', '6497.83', `Michael Kaplan Barbara J Kaplan 2/4461 Revillo DR 3/us/san Diego, CA 92115-4139`, 'wire_8c58d35a34dc')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_8c58d35a34dc" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
