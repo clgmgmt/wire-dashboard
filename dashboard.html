@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/13 10:08 AM</span>
+      <span class="meta-text">Updated 5/13 11:07 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">64</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">58</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">57</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_308579264d67">
+                            <td class="td-date">5/13/2026 10:25 AM</td>
+                            <td class="td-amount">$2,225.00</td>
+                            <td class="td-tenant">Antonisamy Arokiasamy 4057 San Francisco Ter Fremont CA 9 45382111 US</td>
+                            <td class="td-ref">Antonisamy Arokiasamy 3800 S Menton E AVE 307a Culver City CA 90232</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_308579264d67" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_308579264d67" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/13/2026 10:25 AM', '2225.0', `Antonisamy Arokiasamy 4057 San Francisco Ter Fremont CA 9 45382111 US`, 'Antonisamy Arokiasamy 3800 S Menton E AVE 307a Culver City CA 90232', 'wire_308579264d67')">Submit</button>
+                                <span class="submit-status" id="status-wire_308579264d67"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_7150545cb863">
                             <td class="td-date">5/11/2026 8:03 AM</td>
                             <td class="td-amount">$4,397.83</td>
@@ -1533,20 +1548,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011053</span>
                                 <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_964e20d69608">
-                            <td class="td-date">4/13/2026 7:31 AM</td>
-                            <td class="td-amount">$3,201.83</td>
-                            <td class="td-tenant">Alexandra D Miller 915 L ST Ste C Sacramento CA 95814 US</td>
-                            <td class="td-ref">t0011048 - Miller ????transfer</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011048</span>
-                                <span class="mgr-name">lopez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
