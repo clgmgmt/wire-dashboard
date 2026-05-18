@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/18 6:06 AM</span>
+      <span class="meta-text">Updated 5/18 7:08 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">66</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">59</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">56</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_2ba9de8fe929">
+                            <td class="td-date">5/18/2026 6:53 AM</td>
+                            <td class="td-amount">$4,942.83</td>
+                            <td class="td-tenant">Simon Douek DTD 06/21/2023 6651 Drexel AVE Los Angeles CA 9004 84208 US</td>
+                            <td class="td-ref">t0011172 Simon Douek Shaya Douek</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_2ba9de8fe929" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_2ba9de8fe929" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/18/2026 6:53 AM', '4942.83', `Simon Douek DTD 06/21/2023 6651 Drexel AVE Los Angeles CA 9004 84208 US`, 't0011172 Simon Douek Shaya Douek', 'wire_2ba9de8fe929')">Submit</button>
+                                <span class="submit-status" id="status-wire_2ba9de8fe929"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_4d1b634bce55">
                             <td class="td-date">5/15/2026 5:09 AM</td>
                             <td class="td-amount">$3,060.00</td>
@@ -1484,118 +1499,6 @@
                             <td>
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011038</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a3e7582257f6">
-                            <td class="td-date">4/17/2026 5:16 AM</td>
-                            <td class="td-amount">$6,210.00</td>
-                            <td class="td-tenant">Doreen L Cortes OR Charles Melendez 6400 Crescent Park E Apt 304 Los Angeles CA 90094-2356 US</td>
-                            <td class="td-ref">Move-in Funds: t0011072 - Melendez</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011072</span>
-                                <span class="mgr-name">Carisa Magdaleno</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_b43731067b91">
-                            <td class="td-date">4/17/2026 11:27 AM</td>
-                            <td class="td-amount">$2,899.44</td>
-                            <td class="td-tenant">Gordon, Gary 106 Ragle RD Sebastopol, CA 95472</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011079</span>
-                                <span class="mgr-name">Cole Murrell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c00b30c2a1a5">
-                            <td class="td-date">4/17/2026 1:44 PM</td>
-                            <td class="td-amount">$4,747.83</td>
-                            <td class="td-tenant">Wei - Kronick Revocable Trust Scott Blair Kronick Trtee Li Chin We 2/630 N Las Palmas AVE 3/us/los Angeles 90004</td>
-                            <td class="td-ref">G8 Movie-in Payment</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011083</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_907587bc39bb">
-                            <td class="td-date">4/17/2026 2:44 PM</td>
-                            <td class="td-amount">$4,524.83</td>
-                            <td class="td-tenant">Carl D Pahl 6240 W 3rd ST Apt 116 Los Angeles CA 90036</td>
-                            <td class="td-ref">Move IN For Pahl 606</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011093</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_973c43caa704">
-                            <td class="td-date">4/16/2026 7:07 AM</td>
-                            <td class="td-amount">$4,477.83</td>
-                            <td class="td-tenant">Yvanna N Rivera Zamaro Carlos A Rivera 3833 Front ST Apt 7 San Diego CA 92103-3048 US</td>
-                            <td class="td-ref">Move IN Funds For t0011047 - Rivera Zamaro - Ph520</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011047</span>
-                                <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_f2613a68cc78">
-                            <td class="td-date">4/16/2026 10:08 AM</td>
-                            <td class="td-amount">$3,567.83</td>
-                            <td class="td-tenant">Law Office Of Debra B Yale Llc 630 Dundee RD Suite 220 Northbrook IL 60062-2750</td>
-                            <td class="td-ref">FBO Joie Yale4210 Del Rey AVE Numbe R 503bmarina Del Rey CA 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011046</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_899c3b00576f">
-                            <td class="td-date">4/16/2026 11:40 AM</td>
-                            <td class="td-amount">$4,816.83</td>
-                            <td class="td-tenant">Si Malca Bh Development Group Inc 2/609 Broadway 3/us/santa Monica, CA 90401</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011054</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5d28f856f18b">
-                            <td class="td-date">4/15/2026 4:28 PM</td>
-                            <td class="td-amount">$3,277.83</td>
-                            <td class="td-tenant">Omar A Syed 643 E 14th ST Upland,ca,91786 US</td>
-                            <td class="td-ref">Move-in Omar Syed T-code t0011088 13448 Beach AVE Apt 5506 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011088</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
