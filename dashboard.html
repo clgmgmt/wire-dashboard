@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/18 6:08 PM</span>
+      <span class="meta-text">Updated 5/19 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">59</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">61</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">51</span></button>
       </div>
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_cd28bc6c093b">
+                            <td class="td-date">5/19/2026 5:14 AM</td>
+                            <td class="td-amount">$2,250.00</td>
+                            <td class="td-tenant">Blake Lawrence Judd 713 Deer LN Sleepy Hollow IL 60118-1873 US</td>
+                            <td class="td-ref">T0011128- Judd</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_cd28bc6c093b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_cd28bc6c093b" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/19/2026 5:14 AM', '2250.0', `Blake Lawrence Judd 713 Deer LN Sleepy Hollow IL 60118-1873 US`, 'T0011128- Judd', 'wire_cd28bc6c093b')">Submit</button>
+                                <span class="submit-status" id="status-wire_cd28bc6c093b"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_1cf8586f7215">
+                            <td class="td-date">5/19/2026 5:09 AM</td>
+                            <td class="td-amount">$4,157.83</td>
+                            <td class="td-tenant">Ana V Quinteros 2/3446 11th AVE 3/us/los Angeles, CA 90018 3624</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_1cf8586f7215" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_1cf8586f7215" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/19/2026 5:09 AM', '4157.83', `Ana V Quinteros 2/3446 11th AVE 3/us/los Angeles, CA 90018 3624`, '', 'wire_1cf8586f7215')">Submit</button>
+                                <span class="submit-status" id="status-wire_1cf8586f7215"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_2ba9de8fe929">
                             <td class="td-date">5/18/2026 6:53 AM</td>
                             <td class="td-amount">$4,942.83</td>
