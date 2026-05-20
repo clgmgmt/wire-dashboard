@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/20 7:08 AM</span>
+      <span class="meta-text">Updated 5/20 8:08 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">61</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">60</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">54</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">52</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_7c4115ef7b91">
+                            <td class="td-date">5/20/2026 7:16 AM</td>
+                            <td class="td-amount">$4,651.83</td>
+                            <td class="td-tenant">The Anthony J Low Revocable Livin G Capit Mr Anthony J Low Trtee U/ 2/6715 Torres AVE 3/us/joshua Tree, CA 92252 2237</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_7c4115ef7b91" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_7c4115ef7b91" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/20/2026 7:16 AM', '4651.83', `The Anthony J Low Revocable Livin G Capit Mr Anthony J Low Trtee U/ 2/6715 Torres AVE 3/us/joshua Tree, CA 92252 2237`, '', 'wire_7c4115ef7b91')">Submit</button>
+                                <span class="submit-status" id="status-wire_7c4115ef7b91"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_cd28bc6c093b">
                             <td class="td-date">5/19/2026 5:14 AM</td>
                             <td class="td-amount">$2,250.00</td>
@@ -1464,34 +1479,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011056</span>
                                 <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5c58fe5e2798">
-                            <td class="td-date">4/20/2026 5:08 AM</td>
-                            <td class="td-amount">$5,842.83</td>
-                            <td class="td-tenant">Daniel Eduardo Wulff Hellmund 2/6600 Orange ST Apt 205 3/us/los Angeles, CA 90048 4636</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011070</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_af2d531281b3">
-                            <td class="td-date">4/20/2026 5:05 AM</td>
-                            <td class="td-amount">$5,645.00</td>
-                            <td class="td-tenant">Tatiana Massier 2/1849 Brentwood RD 3/us/oakland, CA 94602 2008</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011082</span>
-                                <span class="mgr-name">Gaea Arnold</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
