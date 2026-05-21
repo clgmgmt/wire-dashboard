@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/21 7:08 AM</span>
+      <span class="meta-text">Updated 5/21 8:08 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">60</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">58</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">52</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">49</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_018345a21373">
+                            <td class="td-date">5/21/2026 7:10 AM</td>
+                            <td class="td-amount">$4,422.83</td>
+                            <td class="td-tenant">John E Little & H Stallings Littl 1/e Jt Ten 2/bee Caves RD 3300, Rm Ste 650 247 3/us/west Lake Hills,78746 6663,tx</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_018345a21373" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_018345a21373" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/21/2026 7:10 AM', '4422.83', `John E Little & H Stallings Littl 1/e Jt Ten 2/bee Caves RD 3300, Rm Ste 650 247 3/us/west Lake Hills,78746 6663,tx`, '', 'wire_018345a21373')">Submit</button>
+                                <span class="submit-status" id="status-wire_018345a21373"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_7c4115ef7b91">
                             <td class="td-date">5/20/2026 7:16 AM</td>
                             <td class="td-amount">$4,651.83</td>
@@ -1434,20 +1449,6 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_9c2919754137">
-                            <td class="td-date">4/21/2026 6:17 AM</td>
-                            <td class="td-amount">$3,201.83</td>
-                            <td class="td-tenant">Haley Siana 3408 W Sunset BLVD Apt 200 Los Angeles,ca,,us</td>
-                            <td class="td-ref">Haley Siana Rent AND Security Depos It</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011092</span>
-                                <span class="mgr-name">lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
                           <tr class="has-input" data-wire-id="wire_d69e918d35e5">
                             <td class="td-date">4/21/2026 10:59 AM</td>
                             <td class="td-amount">$3,127.83</td>
@@ -1485,34 +1486,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011056</span>
                                 <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_32c93a032949">
-                            <td class="td-date">4/20/2026 8:19 AM</td>
-                            <td class="td-amount">$1,000.00</td>
-                            <td class="td-tenant">Emma Al-hammoudi 942 E North Union AVE Unit 443 Midvale UT 84047-1940 US</td>
-                            <td class="td-ref">Move IN Deposit (security & Pet Dep Osit)</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011091</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_8266181a7fd7">
-                            <td class="td-date">4/20/2026 11:58 AM</td>
-                            <td class="td-amount">$2,091.30</td>
-                            <td class="td-tenant">Luke Russell 860 W 77th Street North DR Indianapolis IN 46260-3537 US</td>
-                            <td class="td-ref">Move IN Funds</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011038</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
