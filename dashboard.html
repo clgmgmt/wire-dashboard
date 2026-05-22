@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/22 11:08 AM</span>
+      <span class="meta-text">Updated 5/22 12:07 PM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">60</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">51</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_2683ae9fd9b7">
+                            <td class="td-date">5/22/2026 11:13 AM</td>
+                            <td class="td-amount">$2,629.44</td>
+                            <td class="td-tenant">Ruben Lozano 9400 Corbin AVE Apt 2078 Northridge, CA 91324</td>
+                            <td class="td-ref">Reference Number-t0011201 Ruben Da Rio Lozano Purpose:new Residence</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_2683ae9fd9b7" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_2683ae9fd9b7" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/22/2026 11:13 AM', '2629.44', `Ruben Lozano 9400 Corbin AVE Apt 2078 Northridge, CA 91324`, 'Reference Number-t0011201 Ruben Da Rio Lozano Purpose:new Residence', 'wire_2683ae9fd9b7')">Submit</button>
+                                <span class="submit-status" id="status-wire_2683ae9fd9b7"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_018345a21373">
                             <td class="td-date">5/21/2026 7:10 AM</td>
                             <td class="td-amount">$4,422.83</td>
@@ -1437,34 +1452,6 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_14569035fae1">
-                            <td class="td-date">4/22/2026 5:13 AM</td>
-                            <td class="td-amount">$5,195.00</td>
-                            <td class="td-tenant">Eric Carlson General Delivery Manchester CA 95459-9999 US</td>
-                            <td class="td-ref">Move IN Funds</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011078</span>
-                                <span class="mgr-name">Gaea Arnold</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_b934b394d079">
-                            <td class="td-date">4/22/2026 11:05 AM</td>
-                            <td class="td-amount">$5,142.83</td>
-                            <td class="td-tenant">Toni P Lomax 2401 S Santa Fe AVE Apt 206 Los Angeles CA 90058 US</td>
-                            <td class="td-ref">Move IN Funds, Toni Lomax, 4210 DE L Rey Ave. #603, Marina Del Rey, CA 90292, T-code. T0011094??</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011094</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
                           <tr class="has-input" data-wire-id="wire_1996bb5e5c8b">
                             <td class="td-date">4/22/2026 12:56 PM</td>
                             <td class="td-amount">$2,600.00</td>
@@ -1474,48 +1461,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011097</span>
                                 <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d69e918d35e5">
-                            <td class="td-date">4/21/2026 10:59 AM</td>
-                            <td class="td-amount">$3,127.83</td>
-                            <td class="td-tenant">Kevin M Micucci 336 Kimberly Place West Islip NY 11 7951902 USA</td>
-                            <td class="td-ref">Kevin Micucci 13448 Beach AVE 4502 Mdr CA 90292 t0011101</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011101</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_4830d1919b66">
-                            <td class="td-date">4/21/2026 10:27 AM</td>
-                            <td class="td-amount">$2,434.44</td>
-                            <td class="td-tenant">Gisela Lanzas 18402 Halsted ST Apt 22 Northr, CA 91325-4906 United States</td>
-                            <td class="td-ref">Ref t0011085 Lanzas Quintana</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011085</span>
-                                <span class="mgr-name">Adela Labarca</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_fd28a510aeb2">
-                            <td class="td-date">4/21/2026 2:57 PM</td>
-                            <td class="td-amount">$6,575.00</td>
-                            <td class="td-tenant">Rasheed L Muhammad 11715 Bellagio RD Apt 304 Los Angeles CA 90049-2161 US</td>
-                            <td class="td-ref">T0011056-muhammad</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011056</span>
-                                <span class="mgr-name">Chris Leschkies</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
