@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/22 1:07 PM</span>
+      <span class="meta-text">Updated 5/22 2:07 PM</span>
     </div>
   </div>
 
@@ -647,8 +647,8 @@
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">56</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">45</span></button>
       </div>
     </div>
 
@@ -664,18 +664,35 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_2683ae9fd9b7">
+                          <tr class="has-input" data-wire-id="wire_2683ae9fd9b7">
                             <td class="td-date">5/22/2026 11:13 AM</td>
                             <td class="td-amount">$2,629.44</td>
                             <td class="td-tenant">Ruben Lozano 9400 Corbin AVE Apt 2078 Northridge, CA 91324</td>
                             <td class="td-ref">Reference Number-t0011201 Ruben Da Rio Lozano Purpose:new Residence</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011201</span>
+                                <span class="mgr-name">Adela Labarca</span>
+                                
+                                <button class="yardi-circle" id="book-wire_2683ae9fd9b7"
+                                        onclick="bookInYardi('5/22/2026 11:13 AM', '2629.44', `Ruben Lozano 9400 Corbin AVE Apt 2078 Northridge, CA 91324`, 'wire_2683ae9fd9b7')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_2683ae9fd9b7" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_5b5ac2fb9818">
+                            <td class="td-date">5/22/2026 1:06 PM</td>
+                            <td class="td-amount">$3,237.18</td>
+                            <td class="td-tenant">Chris Harrison 6318 Arlington AVE Los Angeles,ca,</td>
+                            <td class="td-ref">T0011179-harris</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_2683ae9fd9b7" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_2683ae9fd9b7" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_5b5ac2fb9818" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_5b5ac2fb9818" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/22/2026 11:13 AM', '2629.44', `Ruben Lozano 9400 Corbin AVE Apt 2078 Northridge, CA 91324`, 'Reference Number-t0011201 Ruben Da Rio Lozano Purpose:new Residence', 'wire_2683ae9fd9b7')">Submit</button>
-                                <span class="submit-status" id="status-wire_2683ae9fd9b7"></span>
+                                        onclick="submitToSheets('5/22/2026 1:06 PM', '3237.18', `Chris Harrison 6318 Arlington AVE Los Angeles,ca,`, 'T0011179-harris', 'wire_5b5ac2fb9818')">Submit</button>
+                                <span class="submit-status" id="status-wire_5b5ac2fb9818"></span>
                               </div>
                             </td>
                           </tr>
@@ -1447,20 +1464,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011098</span>
                                 <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_1996bb5e5c8b">
-                            <td class="td-date">4/22/2026 12:56 PM</td>
-                            <td class="td-amount">$2,600.00</td>
-                            <td class="td-tenant">Caitlyn Hope Loomis 2/6701 DE Soto AVE Apt 228 3/us/canoga Park, CA 91303 3832</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011097</span>
-                                <span class="mgr-name">Chad Hirschman</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
