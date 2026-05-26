@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/25 6:07 PM</span>
+      <span class="meta-text">Updated 5/26 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">45</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_6a9e5692b253">
+                            <td class="td-date">5/26/2026 5:11 AM</td>
+                            <td class="td-amount">$4,610.66</td>
+                            <td class="td-tenant">Carter Crossett 2730 Meyer LN Pomona,ca,91767,us</td>
+                            <td class="td-ref">t0011157 Crossett/meyer</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_6a9e5692b253" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_6a9e5692b253" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/26/2026 5:11 AM', '4610.66', `Carter Crossett 2730 Meyer LN Pomona,ca,91767,us`, 't0011157 Crossett/meyer', 'wire_6a9e5692b253')">Submit</button>
+                                <span class="submit-status" id="status-wire_6a9e5692b253"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_2683ae9fd9b7">
                             <td class="td-date">5/22/2026 11:13 AM</td>
                             <td class="td-amount">$2,629.44</td>
@@ -1422,48 +1437,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011090</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_9f27f32a63fa">
-                            <td class="td-date">4/23/2026 6:53 AM</td>
-                            <td class="td-amount">$5,647.83</td>
-                            <td class="td-tenant">Carrie Alice Bayer Florian Bayer 2/3838 Dunn DR Apt 725 3/us/culver City, CA 90232 2980</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011026</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d7a6093022df">
-                            <td class="td-date">4/23/2026 8:15 AM</td>
-                            <td class="td-amount">$2,908.30</td>
-                            <td class="td-tenant">Richard Barrera 56086 Desert Gold DR Yucca Valley CA 92284</td>
-                            <td class="td-ref">Richard Barreraproperty Address :4210 Del Rey Aveunit 501 Marina D El Rey CA 90292tcode:t0011038</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011038</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_953ff0bee6b9">
-                            <td class="td-date">4/23/2026 11:24 AM</td>
-                            <td class="td-amount">$5,727.83</td>
-                            <td class="td-tenant">Eliezer Hertz 11911 Magnolia BLVD Apt 16 Valley Vlg CA 91607-4486 US</td>
-                            <td class="td-ref">Security Deposit, Move IN Fees, AND May Rent For Unit Ph711</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011098</span>
-                                <span class="mgr-name">Joslyn Y</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
