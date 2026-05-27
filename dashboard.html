@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/27 2:08 PM</span>
+      <span class="meta-text">Updated 5/27 3:07 PM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">45</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
       </div>
     </div>
 
@@ -679,6 +679,21 @@
                               </div>
                             </td>
                           </tr>
+                          <tr class="needs-input" data-wire-id="wire_369adb80d002">
+                            <td class="td-date">5/27/2026 2:36 PM</td>
+                            <td class="td-amount">$6,567.83</td>
+                            <td class="td-tenant">Erica A Brennwald 2/beach AVE 13448, Rm Apt 3207 3/us/marina Del Rey,90292 6661,ca</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_369adb80d002" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_369adb80d002" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/27/2026 2:36 PM', '6567.83', `Erica A Brennwald 2/beach AVE 13448, Rm Apt 3207 3/us/marina Del Rey,90292 6661,ca`, '', 'wire_369adb80d002')">Submit</button>
+                                <span class="submit-status" id="status-wire_369adb80d002"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_6a9e5692b253">
                             <td class="td-date">5/26/2026 5:11 AM</td>
                             <td class="td-amount">$4,610.66</td>
@@ -689,10 +704,7 @@
                                 <span class="tid-mono">t0011157</span>
                                 <span class="mgr-name">Thomas Lofton</span>
                                 
-                                <button class="yardi-circle" id="book-wire_6a9e5692b253"
-                                        onclick="bookInYardi('5/26/2026 5:11 AM', '4610.66', `Carter Crossett 2730 Meyer LN Pomona,ca,91767,us`, 'wire_6a9e5692b253')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_6a9e5692b253" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1383,34 +1395,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011108</span>
                                 <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d7e002f8f5b8">
-                            <td class="td-date">4/27/2026 10:14 AM</td>
-                            <td class="td-amount">$4,195.00</td>
-                            <td class="td-tenant">David F Otoole 525 Wheelers Farm Road Apt 4c Milfo RD CT US 06461</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011103</span>
-                                <span class="mgr-name">Gaea Arnold</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_0c04eddedefe">
-                            <td class="td-date">4/27/2026 2:44 PM</td>
-                            <td class="td-amount">$3,447.83</td>
-                            <td class="td-tenant">Starts Pacific Inc San Jose 3625 Del Amo Blvd. Ste 335 Torrance,ca,90503 US</td>
-                            <td class="td-ref">Nana Matsumotot-code: T001109013448 Beach Ave. #5208, Marina Del Rey, CA 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011090</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
