@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/27 8:08 AM</span>
+      <span class="meta-text">Updated 5/27 9:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">45</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_8dfc3b57b3dd">
+                            <td class="td-date">5/27/2026 8:23 AM</td>
+                            <td class="td-amount">$3,850.00</td>
+                            <td class="td-tenant">Leila Bradaran 2/5989 Vista Rdg 3/us/santa Rosa, CA 95409 7315</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_8dfc3b57b3dd" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_8dfc3b57b3dd" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/27/2026 8:23 AM', '3850.0', `Leila Bradaran 2/5989 Vista Rdg 3/us/santa Rosa, CA 95409 7315`, '', 'wire_8dfc3b57b3dd')">Submit</button>
+                                <span class="submit-status" id="status-wire_8dfc3b57b3dd"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_6a9e5692b253">
                             <td class="td-date">5/26/2026 5:11 AM</td>
                             <td class="td-amount">$4,610.66</td>
@@ -1368,34 +1383,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011108</span>
                                 <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a4287afd1097">
-                            <td class="td-date">4/27/2026 5:11 AM</td>
-                            <td class="td-amount">$3,371.35</td>
-                            <td class="td-tenant">Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646</td>
-                            <td class="td-ref">April Rent</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010710</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_6b8e8d3083b5">
-                            <td class="td-date">4/27/2026 5:10 AM</td>
-                            <td class="td-amount">$2,450.00</td>
-                            <td class="td-tenant">Angelica D Millsapsafahi 4520 Grimes PL Encino CA 91316</td>
-                            <td class="td-ref">Move IN Funds</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011102</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
