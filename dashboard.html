@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/27 6:07 PM</span>
+      <span class="meta-text">Updated 5/28 6:06 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">52</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_1bd1b2362014">
+                            <td class="td-date">5/28/2026 5:18 AM</td>
+                            <td class="td-amount">$2,300.00</td>
+                            <td class="td-tenant">Evan Trumpower 3431 Tanglewood Lane Rolling Hills Estates California 90274 US</td>
+                            <td class="td-ref">Evan Trumpower 3800 S. Mentone Ave. #413d, Culver City, CA 90232</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_1bd1b2362014" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_1bd1b2362014" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/28/2026 5:18 AM', '2300.0', `Evan Trumpower 3431 Tanglewood Lane Rolling Hills Estates California 90274 US`, 'Evan Trumpower 3800 S. Mentone Ave. #413d, Culver City, CA 90232', 'wire_1bd1b2362014')">Submit</button>
+                                <span class="submit-status" id="status-wire_1bd1b2362014"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_8dfc3b57b3dd">
                             <td class="td-date">5/27/2026 8:23 AM</td>
                             <td class="td-amount">$3,850.00</td>
@@ -1359,20 +1374,6 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('4/29/2026 3:58 PM', '3799.0', ``, 'Ref: T0011105-robillard', 'wire_a7f040a9ec0f')">Submit</button>
                                 <span class="submit-status" id="status-wire_a7f040a9ec0f"></span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d8b34f5b0ec1">
-                            <td class="td-date">4/28/2026 5:08 AM</td>
-                            <td class="td-amount">$3,649.00</td>
-                            <td class="td-tenant">Shaden Masaud 2/3838 Dunn DR Apt 606 3/us/culver City, CA 90232 2776</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011084</span>
-                                <span class="mgr-name">Enrique</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
