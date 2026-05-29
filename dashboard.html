@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/29 1:07 PM</span>
+      <span class="meta-text">Updated 5/29 2:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">56</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
       </div>
     </div>
@@ -709,18 +709,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a94aceb179ab">
+                          <tr class="has-input" data-wire-id="wire_a94aceb179ab">
                             <td class="td-date">5/29/2026 12:42 PM</td>
                             <td class="td-amount">$4,402.83</td>
                             <td class="td-tenant">Jennifer Rempis-rohmer Robert J R O Hmer Pod Nicholas Dean Rohmer 2/1021 Sunset Hills LN 3/us/redlands, CA 92373 6959</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a94aceb179ab" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a94aceb179ab" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/29/2026 12:42 PM', '4402.83', `Jennifer Rempis-rohmer Robert J R O Hmer Pod Nicholas Dean Rohmer 2/1021 Sunset Hills LN 3/us/redlands, CA 92373 6959`, '', 'wire_a94aceb179ab')">Submit</button>
-                                <span class="submit-status" id="status-wire_a94aceb179ab"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011222</span>
+                                <span class="mgr-name">Enrqiue</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a94aceb179ab"
+                                        onclick="bookInYardi('5/29/2026 12:42 PM', '4402.83', `Jennifer Rempis-rohmer Robert J R O Hmer Pod Nicholas Dean Rohmer 2/1021 Sunset Hills LN 3/us/redlands, CA 92373 6959`, 'wire_a94aceb179ab')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a94aceb179ab" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -785,18 +787,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_8dfc3b57b3dd">
+                          <tr class="has-input" data-wire-id="wire_8dfc3b57b3dd">
                             <td class="td-date">5/27/2026 8:23 AM</td>
                             <td class="td-amount">$3,850.00</td>
                             <td class="td-tenant">Leila Bradaran 2/5989 Vista Rdg 3/us/santa Rosa, CA 95409 7315</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_8dfc3b57b3dd" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_8dfc3b57b3dd" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/27/2026 8:23 AM', '3850.0', `Leila Bradaran 2/5989 Vista Rdg 3/us/santa Rosa, CA 95409 7315`, '', 'wire_8dfc3b57b3dd')">Submit</button>
-                                <span class="submit-status" id="status-wire_8dfc3b57b3dd"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011150</span>
+                                <span class="mgr-name">Enrique</span>
+                                
+                                <button class="yardi-circle" id="book-wire_8dfc3b57b3dd"
+                                        onclick="bookInYardi('5/27/2026 8:23 AM', '3850.0', `Leila Bradaran 2/5989 Vista Rdg 3/us/santa Rosa, CA 95409 7315`, 'wire_8dfc3b57b3dd')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_8dfc3b57b3dd" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
