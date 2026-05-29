@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/29 10:07 AM</span>
+      <span class="meta-text">Updated 5/29 11:08 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
       </div>
     </div>
 
@@ -676,6 +676,36 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('5/29/2026 5:24 AM', '2946.42', `Ian D Roddy OR Julie Roddy 75178 Palisades PL Indian Wells CA 92210-8380 US`, 'Ian Roddy/4210 Del Rey Avenue, Apt. 315/t0011202', 'wire_d93f5f1eb633')">Submit</button>
                                 <span class="submit-status" id="status-wire_d93f5f1eb633"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_ed72c05f2590">
+                            <td class="td-date">5/29/2026 10:37 AM</td>
+                            <td class="td-amount">$6,562.83</td>
+                            <td class="td-tenant">Jennifer D Le 9434 Questa Pointe San Diego CA 921 26-5530 US</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_ed72c05f2590" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_ed72c05f2590" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/29/2026 10:37 AM', '6562.83', `Jennifer D Le 9434 Questa Pointe San Diego CA 921 26-5530 US`, '', 'wire_ed72c05f2590')">Submit</button>
+                                <span class="submit-status" id="status-wire_ed72c05f2590"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_a27cbed138f6">
+                            <td class="td-date">5/29/2026 10:34 AM</td>
+                            <td class="td-amount">$4,447.83</td>
+                            <td class="td-tenant">Nathan M Chang 16565 Murphy RD LA Mirada,ca,90638 US</td>
+                            <td class="td-ref">t0011195 - Vananh Nguyen 3838byclg 624 1st Month AND Deposit</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_a27cbed138f6" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_a27cbed138f6" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/29/2026 10:34 AM', '4447.83', `Nathan M Chang 16565 Murphy RD LA Mirada,ca,90638 US`, 't0011195 - Vananh Nguyen 3838byclg 624 1st Month AND Deposit', 'wire_a27cbed138f6')">Submit</button>
+                                <span class="submit-status" id="status-wire_a27cbed138f6"></span>
                               </div>
                             </td>
                           </tr>
@@ -910,18 +940,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_404112772008">
+                          <tr class="has-input" data-wire-id="wire_404112772008">
                             <td class="td-date">5/15/2026 1:00 PM</td>
                             <td class="td-amount">$4,095.00</td>
                             <td class="td-tenant">Giudice, Alicia 1052 Eastridge DR Napa, CA 94558-9693</td>
                             <td class="td-ref">T0011162-giudice</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_404112772008" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_404112772008" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/15/2026 1:00 PM', '4095.0', `Giudice, Alicia 1052 Eastridge DR Napa, CA 94558-9693`, 'T0011162-giudice', 'wire_404112772008')">Submit</button>
-                                <span class="submit-status" id="status-wire_404112772008"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011162</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_404112772008"
+                                        onclick="bookInYardi('5/15/2026 1:00 PM', '4095.0', `Giudice, Alicia 1052 Eastridge DR Napa, CA 94558-9693`, 'wire_404112772008')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_404112772008" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1389,20 +1421,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011096</span>
                                 <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_e42be46c08a8">
-                            <td class="td-date">4/29/2026 10:14 AM</td>
-                            <td class="td-amount">$7,542.83</td>
-                            <td class="td-tenant">Scot Edward Fairfield 33 S Aberdeen ST Apt 412 Chicago IL 60607-3763 US</td>
-                            <td class="td-ref">T-code: T0011073, Move IN AND First Month Rent For 13448 Beach Ave, Uni T 6309, Marina Del Rey, CA 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011073</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
