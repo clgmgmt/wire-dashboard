@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/29 2:07 PM</span>
+      <span class="meta-text">Updated 5/29 3:07 PM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">56</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">41</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
       </div>
     </div>
 
@@ -679,18 +679,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_ed72c05f2590">
+                          <tr class="has-input" data-wire-id="wire_ed72c05f2590">
                             <td class="td-date">5/29/2026 10:37 AM</td>
                             <td class="td-amount">$6,562.83</td>
                             <td class="td-tenant">Jennifer D Le 9434 Questa Pointe San Diego CA 921 26-5530 US</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_ed72c05f2590" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_ed72c05f2590" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/29/2026 10:37 AM', '6562.83', `Jennifer D Le 9434 Questa Pointe San Diego CA 921 26-5530 US`, '', 'wire_ed72c05f2590')">Submit</button>
-                                <span class="submit-status" id="status-wire_ed72c05f2590"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011212</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_ed72c05f2590"
+                                        onclick="bookInYardi('5/29/2026 10:37 AM', '6562.83', `Jennifer D Le 9434 Questa Pointe San Diego CA 921 26-5530 US`, 'wire_ed72c05f2590')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_ed72c05f2590" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -719,10 +721,7 @@
                                 <span class="tid-mono">t0011222</span>
                                 <span class="mgr-name">Enrqiue</span>
                                 
-                                <button class="yardi-circle" id="book-wire_a94aceb179ab"
-                                        onclick="bookInYardi('5/29/2026 12:42 PM', '4402.83', `Jennifer Rempis-rohmer Robert J R O Hmer Pod Nicholas Dean Rohmer 2/1021 Sunset Hills LN 3/us/redlands, CA 92373 6959`, 'wire_a94aceb179ab')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_a94aceb179ab" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -766,10 +765,7 @@
                                 <span class="tid-mono">t0011202</span>
                                 <span class="mgr-name">Jess Favela</span>
                                 
-                                <button class="yardi-circle" id="book-wire_7564de48a3fb"
-                                        onclick="bookInYardi('5/28/2026 11:26 AM', '2946.42', `Matthew R Herin 1778 Landana DR Concord CA 94519-14 26 US`, 'wire_7564de48a3fb')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_7564de48a3fb" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -797,10 +793,7 @@
                                 <span class="tid-mono">t0011150</span>
                                 <span class="mgr-name">Enrique</span>
                                 
-                                <button class="yardi-circle" id="book-wire_8dfc3b57b3dd"
-                                        onclick="bookInYardi('5/27/2026 8:23 AM', '3850.0', `Leila Bradaran 2/5989 Vista Rdg 3/us/santa Rosa, CA 95409 7315`, 'wire_8dfc3b57b3dd')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_8dfc3b57b3dd" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -984,10 +977,7 @@
                                 <span class="tid-mono">t0011162</span>
                                 <span class="mgr-name">Chris Leschkies</span>
                                 
-                                <button class="yardi-circle" id="book-wire_404112772008"
-                                        onclick="bookInYardi('5/15/2026 1:00 PM', '4095.0', `Giudice, Alicia 1052 Eastridge DR Napa, CA 94558-9693`, 'wire_404112772008')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_404112772008" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1155,10 +1145,7 @@
                                 <span class="tid-mono">t0011145</span>
                                 <span class="mgr-name">Kenneth Stone</span>
                                 
-                                <button class="yardi-circle" id="book-wire_7cf69932e53a"
-                                        onclick="bookInYardi('5/7/2026 11:31 AM', '5797.83', `Kirsten Craig 13448 Beach AVE Apartment 4205 Marina Del Rey CA 90292`, 'wire_7cf69932e53a')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_7cf69932e53a" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1200,10 +1187,7 @@
                                 <span class="tid-mono">t0011141</span>
                                 <span class="mgr-name">Kenneth Stone</span>
                                 
-                                <button class="yardi-circle" id="book-wire_958866c8fb71"
-                                        onclick="bookInYardi('5/6/2026 10:24 AM', '4322.83', `Noah S Perets 2468 Greenwich ST Apt 1 San Francisco CA 94123`, 'wire_958866c8fb71')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_958866c8fb71" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
