@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/28 6:07 PM</span>
+      <span class="meta-text">Updated 5/29 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_d93f5f1eb633">
+                            <td class="td-date">5/29/2026 5:24 AM</td>
+                            <td class="td-amount">$2,946.42</td>
+                            <td class="td-tenant">Ian D Roddy OR Julie Roddy 75178 Palisades PL Indian Wells CA 92210-8380 US</td>
+                            <td class="td-ref">Ian Roddy/4210 Del Rey Avenue, Apt. 315/t0011202</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d93f5f1eb633" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d93f5f1eb633" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('5/29/2026 5:24 AM', '2946.42', `Ian D Roddy OR Julie Roddy 75178 Palisades PL Indian Wells CA 92210-8380 US`, 'Ian Roddy/4210 Del Rey Avenue, Apt. 315/t0011202', 'wire_d93f5f1eb633')">Submit</button>
+                                <span class="submit-status" id="status-wire_d93f5f1eb633"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_1bd1b2362014">
                             <td class="td-date">5/28/2026 5:18 AM</td>
                             <td class="td-amount">$2,300.00</td>
@@ -1405,34 +1420,6 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('4/29/2026 3:58 PM', '3799.0', ``, 'Ref: T0011105-robillard', 'wire_a7f040a9ec0f')">Submit</button>
                                 <span class="submit-status" id="status-wire_a7f040a9ec0f"></span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_9e2ff63f8d75">
-                            <td class="td-date">4/28/2026 12:17 PM</td>
-                            <td class="td-amount">$4,408.93</td>
-                            <td class="td-tenant">Christine S Garcia 6620 Riverton AVE N Hollywood CA 91606-2209 US</td>
-                            <td class="td-ref">Clg Move IN Funds For 18550 Citroni A Street Unit 45 Northridge CA 9132 4</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011008</span>
-                                <span class="mgr-name">Cole Murrell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_62cdcffffc62">
-                            <td class="td-date">4/28/2026 12:05 PM</td>
-                            <td class="td-amount">$2,945.00</td>
-                            <td class="td-tenant">Aliya Azim 2/5416 Fair AVE Apt 1110 3/us/north Hollywood, CA 91601 2733</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011108</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
