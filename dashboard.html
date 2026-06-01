@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 5/29 6:07 PM</span>
+      <span class="meta-text">Updated 6/01 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
       </div>
     </div>
 
@@ -664,6 +664,51 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_953b36599582">
+                            <td class="td-date">6/1/2026 5:25 AM</td>
+                            <td class="td-amount">$3,597.83</td>
+                            <td class="td-tenant">Weicheng Zhang 2504 23rd ST Santa Monica CA 90405-2812 US</td>
+                            <td class="td-ref">Weicheng Zhang, 13448 Beach AVE Uni T 5321</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_953b36599582" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_953b36599582" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/1/2026 5:25 AM', '3597.83', `Weicheng Zhang 2504 23rd ST Santa Monica CA 90405-2812 US`, 'Weicheng Zhang, 13448 Beach AVE Uni T 5321', 'wire_953b36599582')">Submit</button>
+                                <span class="submit-status" id="status-wire_953b36599582"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_407ae3c12902">
+                            <td class="td-date">6/1/2026 5:20 AM</td>
+                            <td class="td-amount">$4,292.83</td>
+                            <td class="td-tenant">Paris Tennberg 800 S Pacific AVE Apt Apt 205 Los A Ngeles CA 90731 USA</td>
+                            <td class="td-ref">Paris Tennberg - Move IN Funds 3838</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_407ae3c12902" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_407ae3c12902" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/1/2026 5:20 AM', '4292.83', `Paris Tennberg 800 S Pacific AVE Apt Apt 205 Los A Ngeles CA 90731 USA`, 'Paris Tennberg - Move IN Funds 3838', 'wire_407ae3c12902')">Submit</button>
+                                <span class="submit-status" id="status-wire_407ae3c12902"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_00d16f59035a">
+                            <td class="td-date">6/1/2026 5:17 AM</td>
+                            <td class="td-amount">$4,247.83</td>
+                            <td class="td-tenant">Sergio Miguel Maldonado-chaar 2/816 NW 11th ST Apt 1104 3/us/miami 33136</td>
+                            <td class="td-ref">t0011186 - Maldonado Chaar</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_00d16f59035a" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_00d16f59035a" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/1/2026 5:17 AM', '4247.83', `Sergio Miguel Maldonado-chaar 2/816 NW 11th ST Apt 1104 3/us/miami 33136`, 't0011186 - Maldonado Chaar', 'wire_00d16f59035a')">Submit</button>
+                                <span class="submit-status" id="status-wire_00d16f59035a"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_d93f5f1eb633">
                             <td class="td-date">5/29/2026 5:24 AM</td>
                             <td class="td-amount">$2,946.42</td>
@@ -722,33 +767,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_af488b63582d">
+                          <tr class="has-input" data-wire-id="wire_af488b63582d">
                             <td class="td-date">5/29/2026 12:10 PM</td>
                             <td class="td-amount">$9,462.83</td>
                             <td class="td-tenant">Thomas Herrera-mishler Mercedes H E Rrera-mishler 2/5125 Magnolia Pond DR 3/us/sarasota, FL 34233 3277</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_af488b63582d" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_af488b63582d" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/29/2026 12:10 PM', '9462.83', `Thomas Herrera-mishler Mercedes H E Rrera-mishler 2/5125 Magnolia Pond DR 3/us/sarasota, FL 34233 3277`, '', 'wire_af488b63582d')">Submit</button>
-                                <span class="submit-status" id="status-wire_af488b63582d"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011220</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_af488b63582d"
+                                        onclick="bookInYardi('5/29/2026 12:10 PM', '9462.83', `Thomas Herrera-mishler Mercedes H E Rrera-mishler 2/5125 Magnolia Pond DR 3/us/sarasota, FL 34233 3277`, 'wire_af488b63582d')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_af488b63582d" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_1bd1b2362014">
+                          <tr class="has-input" data-wire-id="wire_1bd1b2362014">
                             <td class="td-date">5/28/2026 5:18 AM</td>
                             <td class="td-amount">$2,300.00</td>
                             <td class="td-tenant">Evan Trumpower 3431 Tanglewood Lane Rolling Hills Estates California 90274 US</td>
                             <td class="td-ref">Evan Trumpower 3800 S. Mentone Ave. #413d, Culver City, CA 90232</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_1bd1b2362014" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_1bd1b2362014" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/28/2026 5:18 AM', '2300.0', `Evan Trumpower 3431 Tanglewood Lane Rolling Hills Estates California 90274 US`, 'Evan Trumpower 3800 S. Mentone Ave. #413d, Culver City, CA 90232', 'wire_1bd1b2362014')">Submit</button>
-                                <span class="submit-status" id="status-wire_1bd1b2362014"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011209</span>
+                                <span class="mgr-name">Bronte</span>
+                                
+                                <button class="yardi-circle" id="book-wire_1bd1b2362014"
+                                        onclick="bookInYardi('5/28/2026 5:18 AM', '2300.0', `Evan Trumpower 3431 Tanglewood Lane Rolling Hills Estates California 90274 US`, 'wire_1bd1b2362014')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_1bd1b2362014" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1354,105 +1403,6 @@
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_f13d5fce21f0">
-                            <td class="td-date">5/1/2026 5:10 AM</td>
-                            <td class="td-amount">$3,448.92</td>
-                            <td class="td-tenant">Greg S Labate 32330 Via Angelica San Juan Capistrano CA 92675</td>
-                            <td class="td-ref">Siena Labate 13448 Beach AVE Apt 64 01 Mdr CA 90292 t0011132</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011132</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_3ce6c67a2c8b">
-                            <td class="td-date">5/1/2026 7:06 AM</td>
-                            <td class="td-amount">$4,701.83</td>
-                            <td class="td-tenant">Martin Southey 2701 Biscayne BLVD Apt 5129 Miami FL 33137-5294 US</td>
-                            <td class="td-ref">Reference: Martin Southey, G8, 1344 8 Beach Ave, Marina Del Rey, CA 902 92, T-code: t0011132</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011132</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_6412839c02cb">
-                            <td class="td-date">5/1/2026 6:51 AM</td>
-                            <td class="td-amount">$2,538.92</td>
-                            <td class="td-tenant">Emma Al-hammoudi 942 E North Union AVE Unit 443 Midvale UT 84047-1940 US</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011132</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a70967ca2b06">
-                            <td class="td-date">5/1/2026 11:58 AM</td>
-                            <td class="td-amount">$3,517.83</td>
-                            <td class="td-tenant">Shacen Xie 4210 Del Rey AVE Apt 505b Marina Del Rey CA 90292-7759 US</td>
-                            <td class="td-ref">Shacen Xie-c1 By Clg-505b-t0011117- Xie</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011117</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_e5fe8bb1f2cb">
-                            <td class="td-date">5/1/2026 11:16 AM</td>
-                            <td class="td-amount">$7,347.83</td>
-                            <td class="td-tenant">Pavel Kharitonov Mai Ling Lee 2/10340 S Decatur BLVD Unit 3069 3/us/las Vegas 89141</td>
-                            <td class="td-ref">t0011130 - Kharitonov, Lee</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011130</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_989108a2ebe7">
-                            <td class="td-date">4/30/2026 11:04 AM</td>
-                            <td class="td-amount">$6,097.83</td>
-                            <td class="td-tenant">Charlton Henry Wheelwright 8 Cunard Apartments 1 Picture House Mews,london E17 3gw United Kingdom</td>
-                            <td class="td-ref">Reference t0011096 - Wheelwright</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011096</span>
-                                <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="needs-input" data-wire-id="wire_a7f040a9ec0f">
-                            <td class="td-date">4/29/2026 3:58 PM</td>
-                            <td class="td-amount">$3,799.00</td>
-                            <td class="td-tenant"></td>
-                            <td class="td-ref">Ref: T0011105-robillard</td>
-                            <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a7f040a9ec0f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a7f040a9ec0f" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('4/29/2026 3:58 PM', '3799.0', ``, 'Ref: T0011105-robillard', 'wire_a7f040a9ec0f')">Submit</button>
-                                <span class="submit-status" id="status-wire_a7f040a9ec0f"></span>
                               </div>
                             </td>
                           </tr>
