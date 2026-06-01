@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/01 2:08 PM</span>
+      <span class="meta-text">Updated 6/01 3:07 PM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">58</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">59</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">45</span></button>
       </div>
     </div>
 
@@ -689,10 +689,7 @@
                                 <span class="tid-mono">t0011168</span>
                                 <span class="mgr-name">Bronte</span>
                                 
-                                <button class="yardi-circle" id="book-wire_407ae3c12902"
-                                        onclick="bookInYardi('6/1/2026 5:20 AM', '4292.83', `Paris Tennberg 800 S Pacific AVE Apt Apt 205 Los A Ngeles CA 90731 USA`, 'wire_407ae3c12902')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_407ae3c12902" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -736,10 +733,7 @@
                                 <span class="tid-mono">t0011206</span>
                                 <span class="mgr-name">Ashley/Bronte</span>
                                 
-                                <button class="yardi-circle" id="book-wire_20d5c2e4133a"
-                                        onclick="bookInYardi('6/1/2026 8:44 AM', '6042.83', `Irwin Wong 858 Country RD Monterey Park, Ca, 91755`, 'wire_20d5c2e4133a')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_20d5c2e4133a" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -775,33 +769,52 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_43803a0adb66">
+                          <tr class="has-input" data-wire-id="wire_43803a0adb66">
                             <td class="td-date">6/1/2026 9:13 AM</td>
                             <td class="td-amount">$6,492.83</td>
                             <td class="td-tenant">Julia King 7936 Dunbarton AVE Los Angeles CA 90045</td>
                             <td class="td-ref">Purpose Move IN Costs .julia King, t0011205</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_43803a0adb66" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_43803a0adb66" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/1/2026 9:13 AM', '6492.83', `Julia King 7936 Dunbarton AVE Los Angeles CA 90045`, 'Purpose Move IN Costs .julia King, t0011205', 'wire_43803a0adb66')">Submit</button>
-                                <span class="submit-status" id="status-wire_43803a0adb66"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011205</span>
+                                <span class="mgr-name">Bronte Weiss</span>
+                                
+                                <button class="yardi-circle" id="book-wire_43803a0adb66"
+                                        onclick="bookInYardi('6/1/2026 9:13 AM', '6492.83', `Julia King 7936 Dunbarton AVE Los Angeles CA 90045`, 'wire_43803a0adb66')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_43803a0adb66" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_bf67f48b44f5">
+                          <tr class="has-input" data-wire-id="wire_bf67f48b44f5">
                             <td class="td-date">6/1/2026 11:29 AM</td>
                             <td class="td-amount">$4,167.83</td>
                             <td class="td-tenant">Zhiyuan Ning 2/1230 S Olive ST Apt 314 3/us/los Angeles 90015</td>
                             <td class="td-ref">t0011187 - Ning</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011187</span>
+                                <span class="mgr-name">Bronte Weiss</span>
+                                
+                                <button class="yardi-circle" id="book-wire_bf67f48b44f5"
+                                        onclick="bookInYardi('6/1/2026 11:29 AM', '4167.83', `Zhiyuan Ning 2/1230 S Olive ST Apt 314 3/us/los Angeles 90015`, 'wire_bf67f48b44f5')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_bf67f48b44f5" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_93f64985379b">
+                            <td class="td-date">6/1/2026 2:34 PM</td>
+                            <td class="td-amount">$3,952.83</td>
+                            <td class="td-tenant">Tyler Cohan 2/656 Canyon Point Cir 3/us/golden,80403,co</td>
+                            <td class="td-ref">Reference: T0011208- Cohan</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_bf67f48b44f5" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_bf67f48b44f5" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_93f64985379b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_93f64985379b" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/1/2026 11:29 AM', '4167.83', `Zhiyuan Ning 2/1230 S Olive ST Apt 314 3/us/los Angeles 90015`, 't0011187 - Ning', 'wire_bf67f48b44f5')">Submit</button>
-                                <span class="submit-status" id="status-wire_bf67f48b44f5"></span>
+                                        onclick="submitToSheets('6/1/2026 2:34 PM', '3952.83', `Tyler Cohan 2/656 Canyon Point Cir 3/us/golden,80403,co`, 'Reference: T0011208- Cohan', 'wire_93f64985379b')">Submit</button>
+                                <span class="submit-status" id="status-wire_93f64985379b"></span>
                               </div>
                             </td>
                           </tr>
@@ -892,10 +905,7 @@
                                 <span class="tid-mono">t0011209</span>
                                 <span class="mgr-name">Bronte</span>
                                 
-                                <button class="yardi-circle" id="book-wire_1bd1b2362014"
-                                        onclick="bookInYardi('5/28/2026 5:18 AM', '2300.0', `Evan Trumpower 3431 Tanglewood Lane Rolling Hills Estates California 90274 US`, 'wire_1bd1b2362014')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_1bd1b2362014" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
