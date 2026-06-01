@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/01 11:08 AM</span>
+      <span class="meta-text">Updated 6/01 12:07 PM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">57</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">58</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">42</span></button>
       </div>
     </div>
@@ -679,18 +679,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_407ae3c12902">
+                          <tr class="has-input" data-wire-id="wire_407ae3c12902">
                             <td class="td-date">6/1/2026 5:20 AM</td>
                             <td class="td-amount">$4,292.83</td>
                             <td class="td-tenant">Paris Tennberg 800 S Pacific AVE Apt Apt 205 Los A Ngeles CA 90731 USA</td>
                             <td class="td-ref">Paris Tennberg - Move IN Funds 3838</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_407ae3c12902" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_407ae3c12902" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/1/2026 5:20 AM', '4292.83', `Paris Tennberg 800 S Pacific AVE Apt Apt 205 Los A Ngeles CA 90731 USA`, 'Paris Tennberg - Move IN Funds 3838', 'wire_407ae3c12902')">Submit</button>
-                                <span class="submit-status" id="status-wire_407ae3c12902"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011168</span>
+                                <span class="mgr-name">Bronte</span>
+                                
+                                <button class="yardi-circle" id="book-wire_407ae3c12902"
+                                        onclick="bookInYardi('6/1/2026 5:20 AM', '4292.83', `Paris Tennberg 800 S Pacific AVE Apt Apt 205 Los A Ngeles CA 90731 USA`, 'wire_407ae3c12902')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_407ae3c12902" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -724,18 +726,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_20d5c2e4133a">
+                          <tr class="has-input" data-wire-id="wire_20d5c2e4133a">
                             <td class="td-date">6/1/2026 8:44 AM</td>
                             <td class="td-amount">$6,042.83</td>
                             <td class="td-tenant">Irwin Wong 858 Country RD Monterey Park, Ca, 91755</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_20d5c2e4133a" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_20d5c2e4133a" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/1/2026 8:44 AM', '6042.83', `Irwin Wong 858 Country RD Monterey Park, Ca, 91755`, '', 'wire_20d5c2e4133a')">Submit</button>
-                                <span class="submit-status" id="status-wire_20d5c2e4133a"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011206</span>
+                                <span class="mgr-name">Ashley/Bronte</span>
+                                
+                                <button class="yardi-circle" id="book-wire_20d5c2e4133a"
+                                        onclick="bookInYardi('6/1/2026 8:44 AM', '6042.83', `Irwin Wong 858 Country RD Monterey Park, Ca, 91755`, 'wire_20d5c2e4133a')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_20d5c2e4133a" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -783,6 +787,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('6/1/2026 9:13 AM', '6492.83', `Julia King 7936 Dunbarton AVE Los Angeles CA 90045`, 'Purpose Move IN Costs .julia King, t0011205', 'wire_43803a0adb66')">Submit</button>
                                 <span class="submit-status" id="status-wire_43803a0adb66"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_bf67f48b44f5">
+                            <td class="td-date">6/1/2026 11:29 AM</td>
+                            <td class="td-amount">$4,167.83</td>
+                            <td class="td-tenant">Zhiyuan Ning 2/1230 S Olive ST Apt 314 3/us/los Angeles 90015</td>
+                            <td class="td-ref">t0011187 - Ning</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_bf67f48b44f5" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_bf67f48b44f5" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/1/2026 11:29 AM', '4167.83', `Zhiyuan Ning 2/1230 S Olive ST Apt 314 3/us/los Angeles 90015`, 't0011187 - Ning', 'wire_bf67f48b44f5')">Submit</button>
+                                <span class="submit-status" id="status-wire_bf67f48b44f5"></span>
                               </div>
                             </td>
                           </tr>
