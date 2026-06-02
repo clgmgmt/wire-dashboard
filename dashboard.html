@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/01 5:08 PM</span>
+      <span class="meta-text">Updated 6/01 6:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">59</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
       </div>
     </div>
@@ -739,18 +739,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_25176606296f">
+                          <tr class="has-input" data-wire-id="wire_25176606296f">
                             <td class="td-date">6/1/2026 8:27 AM</td>
                             <td class="td-amount">$2,847.83</td>
                             <td class="td-tenant">Elie Rizkalli 212 Lowell CT Danville CA 94526-5464 US</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_25176606296f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_25176606296f" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/1/2026 8:27 AM', '2847.83', `Elie Rizkalli 212 Lowell CT Danville CA 94526-5464 US`, '', 'wire_25176606296f')">Submit</button>
-                                <span class="submit-status" id="status-wire_25176606296f"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011221</span>
+                                <span class="mgr-name">Enrique</span>
+                                
+                                <button class="yardi-circle" id="book-wire_25176606296f"
+                                        onclick="bookInYardi('6/1/2026 8:27 AM', '2847.83', `Elie Rizkalli 212 Lowell CT Danville CA 94526-5464 US`, 'wire_25176606296f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_25176606296f" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
