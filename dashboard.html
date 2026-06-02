@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/02 10:07 AM</span>
+      <span class="meta-text">Updated 6/02 11:07 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">60</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">53</span></button>
       </div>
     </div>
 
@@ -679,18 +679,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_953b36599582">
+                          <tr class="has-input" data-wire-id="wire_953b36599582">
                             <td class="td-date">6/1/2026 5:25 AM</td>
                             <td class="td-amount">$3,597.83</td>
                             <td class="td-tenant">Weicheng Zhang 2504 23rd ST Santa Monica CA 90405-2812 US</td>
                             <td class="td-ref">Weicheng Zhang, 13448 Beach AVE Uni T 5321</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_953b36599582" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_953b36599582" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/1/2026 5:25 AM', '3597.83', `Weicheng Zhang 2504 23rd ST Santa Monica CA 90405-2812 US`, 'Weicheng Zhang, 13448 Beach AVE Uni T 5321', 'wire_953b36599582')">Submit</button>
-                                <span class="submit-status" id="status-wire_953b36599582"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011210</span>
+                                <span class="mgr-name">Chad Hirschman</span>
+                                
+                                <button class="yardi-circle" id="book-wire_953b36599582"
+                                        onclick="bookInYardi('6/1/2026 5:25 AM', '3597.83', `Weicheng Zhang 2504 23rd ST Santa Monica CA 90405-2812 US`, 'wire_953b36599582')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_953b36599582" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -733,10 +735,7 @@
                                 <span class="tid-mono">t0011213</span>
                                 <span class="mgr-name">Carisa Magdaleno</span>
                                 
-                                <button class="yardi-circle" id="book-wire_a8647a0ccb4f"
-                                        onclick="bookInYardi('6/1/2026 7:53 AM', '6895.0', `Aria Sabour 12021 Wilshire BLVD # 867 Los Angeles CA 90025-1206 US`, 'wire_a8647a0ccb4f')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_a8647a0ccb4f" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -764,10 +763,7 @@
                                 <span class="tid-mono">t0011221</span>
                                 <span class="mgr-name">Enrique</span>
                                 
-                                <button class="yardi-circle" id="book-wire_25176606296f"
-                                        onclick="bookInYardi('6/1/2026 8:27 AM', '2847.83', `Elie Rizkalli 212 Lowell CT Danville CA 94526-5464 US`, 'wire_25176606296f')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_25176606296f" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -823,10 +819,7 @@
                                 <span class="tid-mono">t0011208</span>
                                 <span class="mgr-name">Lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_93f64985379b"
-                                        onclick="bookInYardi('6/1/2026 2:34 PM', '3952.83', `Tyler Cohan 2/656 Canyon Point Cir 3/us/golden,80403,co`, 'wire_93f64985379b')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_93f64985379b" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -957,18 +950,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_369adb80d002">
+                          <tr class="has-input" data-wire-id="wire_369adb80d002">
                             <td class="td-date">5/27/2026 2:36 PM</td>
                             <td class="td-amount">$6,567.83</td>
                             <td class="td-tenant">Erica A Brennwald 2/beach AVE 13448, Rm Apt 3207 3/us/marina Del Rey,90292 6661,ca</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_369adb80d002" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_369adb80d002" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/27/2026 2:36 PM', '6567.83', `Erica A Brennwald 2/beach AVE 13448, Rm Apt 3207 3/us/marina Del Rey,90292 6661,ca`, '', 'wire_369adb80d002')">Submit</button>
-                                <span class="submit-status" id="status-wire_369adb80d002"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011193</span>
+                                <span class="mgr-name">Holly Hesse</span>
+                                
+                                <button class="yardi-circle" id="book-wire_369adb80d002"
+                                        onclick="bookInYardi('5/27/2026 2:36 PM', '6567.83', `Erica A Brennwald 2/beach AVE 13448, Rm Apt 3207 3/us/marina Del Rey,90292 6661,ca`, 'wire_369adb80d002')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_369adb80d002" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
