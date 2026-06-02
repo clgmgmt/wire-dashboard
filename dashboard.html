@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/01 4:07 PM</span>
+      <span class="meta-text">Updated 6/01 5:08 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">59</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
       </div>
     </div>
@@ -708,18 +708,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a8647a0ccb4f">
+                          <tr class="has-input" data-wire-id="wire_a8647a0ccb4f">
                             <td class="td-date">6/1/2026 7:53 AM</td>
                             <td class="td-amount">$6,895.00</td>
                             <td class="td-tenant">Aria Sabour 12021 Wilshire BLVD # 867 Los Angeles CA 90025-1206 US</td>
                             <td class="td-ref">T0011213- Sabour</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a8647a0ccb4f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a8647a0ccb4f" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/1/2026 7:53 AM', '6895.0', `Aria Sabour 12021 Wilshire BLVD # 867 Los Angeles CA 90025-1206 US`, 'T0011213- Sabour', 'wire_a8647a0ccb4f')">Submit</button>
-                                <span class="submit-status" id="status-wire_a8647a0ccb4f"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011213</span>
+                                <span class="mgr-name">Carisa Magdaleno</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a8647a0ccb4f"
+                                        onclick="bookInYardi('6/1/2026 7:53 AM', '6895.0', `Aria Sabour 12021 Wilshire BLVD # 867 Los Angeles CA 90025-1206 US`, 'wire_a8647a0ccb4f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a8647a0ccb4f" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
