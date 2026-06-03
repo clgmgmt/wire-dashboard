@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/03 1:07 PM</span>
+      <span class="meta-text">Updated 6/03 2:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">58</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">59</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
       </div>
@@ -695,6 +695,21 @@
                                         onclick="bookInYardi('6/3/2026 10:35 AM', '8697.83', `John R Williams 4236 4th AVE Sacramento CA US 95817 -3021`, 'wire_f00335a96b84')"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_f00335a96b84" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_23481030e9dc">
+                            <td class="td-date">6/3/2026 1:43 PM</td>
+                            <td class="td-amount">$3,072.91</td>
+                            <td class="td-tenant">Joshua Shayer 5350 White Oak AVE Apt 308 Encino CA 91316-4529 US</td>
+                            <td class="td-ref">Josh Shayer Move IN Funds Unit 408</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_23481030e9dc" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_23481030e9dc" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/3/2026 1:43 PM', '3072.91', `Joshua Shayer 5350 White Oak AVE Apt 308 Encino CA 91316-4529 US`, 'Josh Shayer Move IN Funds Unit 408', 'wire_23481030e9dc')">Submit</button>
+                                <span class="submit-status" id="status-wire_23481030e9dc"></span>
                               </div>
                             </td>
                           </tr>
