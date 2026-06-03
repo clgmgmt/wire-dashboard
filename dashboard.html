@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/02 6:08 PM</span>
+      <span class="meta-text">Updated 6/03 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">61</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">59</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">53</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_3f280e328853">
+                            <td class="td-date">6/3/2026 5:55 AM</td>
+                            <td class="td-amount">$1,895.00</td>
+                            <td class="td-tenant">Max Pastore 375 E 2nd ST Apt 323 Los Angeles CA US 90012-4298</td>
+                            <td class="td-ref">Reference T0011219-pastore Move IN Funds At 1221 N Myra AVE Unit 326c</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_3f280e328853" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_3f280e328853" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/3/2026 5:55 AM', '1895.0', `Max Pastore 375 E 2nd ST Apt 323 Los Angeles CA US 90012-4298`, 'Reference T0011219-pastore Move IN Funds At 1221 N Myra AVE Unit 326c', 'wire_3f280e328853')">Submit</button>
+                                <span class="submit-status" id="status-wire_3f280e328853"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_21ca6060c6fc">
                             <td class="td-date">6/2/2026 8:39 AM</td>
                             <td class="td-amount">$3,502.83</td>
@@ -1455,48 +1470,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011118</span>
                                 <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d2fde63c181c">
-                            <td class="td-date">5/4/2026 5:30 AM</td>
-                            <td class="td-amount">$6,447.83</td>
-                            <td class="td-tenant">Ke Wan 14355 Huston ST Apt 139 Sherman Oaks CA 91423-1815 US</td>
-                            <td class="td-ref">t0011120 - Wan. Note That This Is A Move IN Fund For Ke Wan AND Chenw Ei Zhou At R3 Unit 417</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011120</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_7d4139a19061">
-                            <td class="td-date">5/4/2026 5:29 AM</td>
-                            <td class="td-amount">$4,510.00</td>
-                            <td class="td-tenant">Natalie Rae James 810 Ashland AVE Apt 101 Santa Monica CA 90405 US</td>
-                            <td class="td-ref">T0011112- James</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011112</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d53fef7522a1">
-                            <td class="td-date">5/4/2026 5:25 AM</td>
-                            <td class="td-amount">$927.83</td>
-                            <td class="td-tenant">Caitlyn Hope Loomis 2/6701 DE Soto AVE Apt 228 3/us/canoga Park, CA 91303 3832</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011097</span>
-                                <span class="mgr-name">Chad Hirschman</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
