@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/05 9:07 AM</span>
+      <span class="meta-text">Updated 6/05 10:07 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">60</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">7</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">45</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">9</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
       </div>
     </div>
 
@@ -679,18 +679,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_cbf0de26fd26">
+                          <tr class="has-input" data-wire-id="wire_cbf0de26fd26">
                             <td class="td-date">6/5/2026 6:52 AM</td>
                             <td class="td-amount">$8,592.83</td>
                             <td class="td-tenant">Susanne C Pepa Spaltenstein 714 Kensington RD Santa Monica CA 9 0405-2420 US</td>
                             <td class="td-ref">t0011253 Spaltenstein 4210 Del Reya Ve U401 Marina Del Rey CA 90292</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011253</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_cbf0de26fd26"
+                                        onclick="bookInYardi('6/5/2026 6:52 AM', '8592.83', `Susanne C Pepa Spaltenstein 714 Kensington RD Santa Monica CA 9 0405-2420 US`, 'wire_cbf0de26fd26')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_cbf0de26fd26" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_906d2bf26a6c">
+                            <td class="td-date">6/5/2026 9:26 AM</td>
+                            <td class="td-amount">$4,422.82</td>
+                            <td class="td-tenant">Uyeol Jeon 73 E Lake ST Apt 3301 Chicago IL 60601-4800 US</td>
+                            <td class="td-ref">T0011203-jeon</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_cbf0de26fd26" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_cbf0de26fd26" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_906d2bf26a6c" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_906d2bf26a6c" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/5/2026 6:52 AM', '8592.83', `Susanne C Pepa Spaltenstein 714 Kensington RD Santa Monica CA 9 0405-2420 US`, 't0011253 Spaltenstein 4210 Del Reya Ve U401 Marina Del Rey CA 90292', 'wire_cbf0de26fd26')">Submit</button>
-                                <span class="submit-status" id="status-wire_cbf0de26fd26"></span>
+                                        onclick="submitToSheets('6/5/2026 9:26 AM', '4422.82', `Uyeol Jeon 73 E Lake ST Apt 3301 Chicago IL 60601-4800 US`, 'T0011203-jeon', 'wire_906d2bf26a6c')">Submit</button>
+                                <span class="submit-status" id="status-wire_906d2bf26a6c"></span>
                               </div>
                             </td>
                           </tr>
@@ -1140,18 +1157,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_5b5ac2fb9818">
+                          <tr class="has-input" data-wire-id="wire_5b5ac2fb9818">
                             <td class="td-date">5/22/2026 1:06 PM</td>
                             <td class="td-amount">$3,237.18</td>
                             <td class="td-tenant">Chris Harrison 6318 Arlington AVE Los Angeles,ca,</td>
                             <td class="td-ref">T0011179-harris</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_5b5ac2fb9818" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_5b5ac2fb9818" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/22/2026 1:06 PM', '3237.18', `Chris Harrison 6318 Arlington AVE Los Angeles,ca,`, 'T0011179-harris', 'wire_5b5ac2fb9818')">Submit</button>
-                                <span class="submit-status" id="status-wire_5b5ac2fb9818"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011179</span>
+                                <span class="mgr-name">Cole Murrell</span>
+                                
+                                <button class="yardi-circle" id="book-wire_5b5ac2fb9818"
+                                        onclick="bookInYardi('5/22/2026 1:06 PM', '3237.18', `Chris Harrison 6318 Arlington AVE Los Angeles,ca,`, 'wire_5b5ac2fb9818')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_5b5ac2fb9818" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1444,20 +1463,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011145</span>
                                 <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_faaba4e0c839">
-                            <td class="td-date">5/6/2026 8:27 AM</td>
-                            <td class="td-amount">$5,200.00</td>
-                            <td class="td-tenant">Mark Berdichevsky 6827 California ST Unit B San Francisco CA 94121-1731 US</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011115</span>
-                                <span class="mgr-name">Gaea Arnold</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
