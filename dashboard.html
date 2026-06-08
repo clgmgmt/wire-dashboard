@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/05 6:07 PM</span>
+      <span class="meta-text">Updated 6/08 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">60</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">52</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">53</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
       </div>
     </div>
 
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_ac3f00544ec6">
+                            <td class="td-date">6/8/2026 5:10 AM</td>
+                            <td class="td-amount">$2,495.00</td>
+                            <td class="td-tenant">Harish Balaji Boominathan 1616 68th ST Brooklyn NY 11204-5003 US</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_ac3f00544ec6" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_ac3f00544ec6" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/8/2026 5:10 AM', '2495.0', `Harish Balaji Boominathan 1616 68th ST Brooklyn NY 11204-5003 US`, '', 'wire_ac3f00544ec6')">Submit</button>
+                                <span class="submit-status" id="status-wire_ac3f00544ec6"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_acbbefb027e1">
+                            <td class="td-date">6/8/2026 4:44 AM</td>
+                            <td class="td-amount">$4,967.83</td>
+                            <td class="td-tenant">Ju Seung I Lee 2/800 Elgin RD Apt 1404 3/us/evanston 60201</td>
+                            <td class="td-ref">t0011227 - Lee</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_acbbefb027e1" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_acbbefb027e1" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/8/2026 4:44 AM', '4967.83', `Ju Seung I Lee 2/800 Elgin RD Apt 1404 3/us/evanston 60201`, 't0011227 - Lee', 'wire_acbbefb027e1')">Submit</button>
+                                <span class="submit-status" id="status-wire_acbbefb027e1"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_b6073abe7e04">
                             <td class="td-date">6/5/2026 5:12 AM</td>
                             <td class="td-amount">$2,673.91</td>
@@ -1368,146 +1398,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011111</span>
                                 <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_79a43a1d90eb">
-                            <td class="td-date">5/8/2026 5:47 AM</td>
-                            <td class="td-amount">$2,981.29</td>
-                            <td class="td-tenant">Mohammed Tanzeer Shaik 9810 Zelzah AVE Apt 336 Northridge CA 91325</td>
-                            <td class="td-ref">t0011151 Shaik</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011151</span>
-                                <span class="mgr-name">Cole Murrell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_6484fab1b3a0">
-                            <td class="td-date">5/8/2026 10:59 AM</td>
-                            <td class="td-amount">$5,854.44</td>
-                            <td class="td-tenant">Tristan Beltrami 11030 Pacific View DR Malibu CA 90265-2167 US</td>
-                            <td class="td-ref">t0011148 Beltrami/voci Move-in, 430 S Cloverdale Ave, Apt. 28</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011148</span>
-                                <span class="mgr-name">David Millstein</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_203421ff6e77">
-                            <td class="td-date">5/8/2026 11:06 AM</td>
-                            <td class="td-amount">$4,192.83</td>
-                            <td class="td-tenant">X845893851 Brian R Swanson 2/284 Ravenscroft DR 3/us/goleta CA 93117-2025</td>
-                            <td class="td-ref">Mara Alexandra Swanson 4210 Del Rey AVE 411a Marina Del Rey, CA 90292 T -code-t0011158-swanson</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011158</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_f3268393246b">
-                            <td class="td-date">5/7/2026 5:14 AM</td>
-                            <td class="td-amount">$500.00</td>
-                            <td class="td-tenant">Spencer C Garrison 232 S Berendo ST Apt 4 Los Angeles CA 90004-5775 US</td>
-                            <td class="td-ref">Tenant Id: t0011133 Last Name: Garr Ison</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011133</span>
-                                <span class="mgr-name">David Millstein</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_7cf69932e53a">
-                            <td class="td-date">5/7/2026 11:31 AM</td>
-                            <td class="td-amount">$5,797.83</td>
-                            <td class="td-tenant">Kirsten Craig 13448 Beach AVE Apartment 4205 Marina Del Rey CA 90292</td>
-                            <td class="td-ref">Clg Management Move IN Funds</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011145</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_958866c8fb71">
-                            <td class="td-date">5/6/2026 10:24 AM</td>
-                            <td class="td-amount">$4,322.83</td>
-                            <td class="td-tenant">Noah S Perets 2468 Greenwich ST Apt 1 San Francisco CA 94123</td>
-                            <td class="td-ref">Move IN Funds Noah Perets</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011141</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a4a3fcf33eb0">
-                            <td class="td-date">5/6/2026 11:29 AM</td>
-                            <td class="td-amount">$8,097.83</td>
-                            <td class="td-tenant">Dinh Thanh Thai Po Box 1990 Walnut CA USA 91788-1990</td>
-                            <td class="td-ref">Winston Thai 13448 Beach AVE #ph730 9, Marina Del Rey CA T-code: T00111 38</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011138</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_69b23e8fa798">
-                            <td class="td-date">5/6/2026 11:08 AM</td>
-                            <td class="td-amount">$3,822.83</td>
-                            <td class="td-tenant">Lorraine Nancy Snell Pod Nicole Dee Rmount Pod Eric G Snell 2/2049 Port Bristol Cir 3/us/newport Beach, CA 92660-5414</td>
-                            <td class="td-ref">Pop Other</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011087</span>
-                                <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a34e24d04b40">
-                            <td class="td-date">5/6/2026 12:21 PM</td>
-                            <td class="td-amount">$5,699.44</td>
-                            <td class="td-tenant">Spencer C Garrison 232 S Berendo ST Apt 4 Los Angeles CA 90004-5775 US</td>
-                            <td class="td-ref">Tenant Id: t0011133 Last Name: Garr Ison</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011133</span>
-                                <span class="mgr-name">David Millstein</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_23735da930e4">
-                            <td class="td-date">5/6/2026 1:39 PM</td>
-                            <td class="td-amount">$2,363.00</td>
-                            <td class="td-tenant">Angeline B Linares 5750 Camellia AVE Apt 7 N Hollywood CA 91601 US</td>
-                            <td class="td-ref">Move IN Funds / T0011122- Linares U Nit 417</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011122</span>
-                                <span class="mgr-name">Lopez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
