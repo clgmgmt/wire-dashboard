@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/08 3:07 PM</span>
+      <span class="meta-text">Updated 6/08 4:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
       </div>
@@ -708,6 +708,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('6/8/2026 12:01 PM', '6017.83', `Adam Yonas 929 W Jefferson BLVD Apt 3002 Los Angeles CA 90089-1621 US`, 'T001230 - Yonas', 'wire_d9cc50a296f4')">Submit</button>
                                 <span class="submit-status" id="status-wire_d9cc50a296f4"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_e967bf55d693">
+                            <td class="td-date">6/8/2026 3:14 PM</td>
+                            <td class="td-amount">$1,000.00</td>
+                            <td class="td-tenant">Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US</td>
+                            <td class="td-ref">Deposit For Unit Ph7301 For Sean An D Paula Harrell</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_e967bf55d693" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_e967bf55d693" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/8/2026 3:14 PM', '1000.0', `Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US`, 'Deposit For Unit Ph7301 For Sean An D Paula Harrell', 'wire_e967bf55d693')">Submit</button>
+                                <span class="submit-status" id="status-wire_e967bf55d693"></span>
                               </div>
                             </td>
                           </tr>
