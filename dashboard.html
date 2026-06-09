@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/08 6:08 PM</span>
+      <span class="meta-text">Updated 6/09 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">54</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">55</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_93793d9c609e">
+                            <td class="td-date">6/9/2026 5:54 AM</td>
+                            <td class="td-amount">$4,267.83</td>
+                            <td class="td-tenant">Hao Duong 3533 Chesapeake AVE Unit 403 Los Angeles California 90016 US</td>
+                            <td class="td-ref">Apartment Move IN Funds From Hao Du Ong To Wm By Clg</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_93793d9c609e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_93793d9c609e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/9/2026 5:54 AM', '4267.83', `Hao Duong 3533 Chesapeake AVE Unit 403 Los Angeles California 90016 US`, 'Apartment Move IN Funds From Hao Du Ong To Wm By Clg', 'wire_93793d9c609e')">Submit</button>
+                                <span class="submit-status" id="status-wire_93793d9c609e"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_ac3f00544ec6">
                             <td class="td-date">6/8/2026 5:10 AM</td>
                             <td class="td-amount">$2,495.00</td>
