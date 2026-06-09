@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/09 2:07 PM</span>
+      <span class="meta-text">Updated 6/09 3:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">55</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
       </div>
     </div>
@@ -711,18 +711,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_d9cc50a296f4">
+                          <tr class="has-input" data-wire-id="wire_d9cc50a296f4">
                             <td class="td-date">6/8/2026 12:01 PM</td>
                             <td class="td-amount">$6,017.83</td>
                             <td class="td-tenant">Adam Yonas 929 W Jefferson BLVD Apt 3002 Los Angeles CA 90089-1621 US</td>
                             <td class="td-ref">T001230 - Yonas</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_d9cc50a296f4" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_d9cc50a296f4" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/8/2026 12:01 PM', '6017.83', `Adam Yonas 929 W Jefferson BLVD Apt 3002 Los Angeles CA 90089-1621 US`, 'T001230 - Yonas', 'wire_d9cc50a296f4')">Submit</button>
-                                <span class="submit-status" id="status-wire_d9cc50a296f4"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011230</span>
+                                <span class="mgr-name">Diane</span>
+                                
+                                <button class="yardi-circle" id="book-wire_d9cc50a296f4"
+                                        onclick="bookInYardi('6/8/2026 12:01 PM', '6017.83', `Adam Yonas 929 W Jefferson BLVD Apt 3002 Los Angeles CA 90089-1621 US`, 'wire_d9cc50a296f4')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_d9cc50a296f4" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -886,18 +888,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_f985de22c86f">
+                          <tr class="has-input" data-wire-id="wire_f985de22c86f">
                             <td class="td-date">6/2/2026 1:57 PM</td>
                             <td class="td-amount">$3,352.83</td>
                             <td class="td-tenant">Victoria Kaleta 490 Freitas RD Danville California 94526-4161 US</td>
                             <td class="td-ref">t0011191 - Kaleta</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_f985de22c86f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_f985de22c86f" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/2/2026 1:57 PM', '3352.83', `Victoria Kaleta 490 Freitas RD Danville California 94526-4161 US`, 't0011191 - Kaleta', 'wire_f985de22c86f')">Submit</button>
-                                <span class="submit-status" id="status-wire_f985de22c86f"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011191</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_f985de22c86f"
+                                        onclick="bookInYardi('6/2/2026 1:57 PM', '3352.83', `Victoria Kaleta 490 Freitas RD Danville California 94526-4161 US`, 'wire_f985de22c86f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_f985de22c86f" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1070,18 +1074,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a27cbed138f6">
+                          <tr class="has-input" data-wire-id="wire_a27cbed138f6">
                             <td class="td-date">5/29/2026 10:34 AM</td>
                             <td class="td-amount">$4,447.83</td>
                             <td class="td-tenant">Nathan M Chang 16565 Murphy RD LA Mirada,ca,90638 US</td>
                             <td class="td-ref">t0011195 - Vananh Nguyen 3838byclg 624 1st Month AND Deposit</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a27cbed138f6" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a27cbed138f6" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('5/29/2026 10:34 AM', '4447.83', `Nathan M Chang 16565 Murphy RD LA Mirada,ca,90638 US`, 't0011195 - Vananh Nguyen 3838byclg 624 1st Month AND Deposit', 'wire_a27cbed138f6')">Submit</button>
-                                <span class="submit-status" id="status-wire_a27cbed138f6"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011195</span>
+                                <span class="mgr-name">Diane</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a27cbed138f6"
+                                        onclick="bookInYardi('5/29/2026 10:34 AM', '4447.83', `Nathan M Chang 16565 Murphy RD LA Mirada,ca,90638 US`, 'wire_a27cbed138f6')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a27cbed138f6" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
