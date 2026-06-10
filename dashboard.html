@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/10 12:07 PM</span>
+      <span class="meta-text">Updated 6/10 1:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">56</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">7</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">43</span></button>
       </div>
     </div>
@@ -664,18 +664,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_6b5f22888fdd">
+                          <tr class="has-input" data-wire-id="wire_6b5f22888fdd">
                             <td class="td-date">6/10/2026 5:14 AM</td>
                             <td class="td-amount">$4,547.83</td>
                             <td class="td-tenant">Angelica Chhikara OR Ritu Chhikara 4667 N Island Vw Clovis CA 93619-4684 US</td>
                             <td class="td-ref">Angelica Chhikara 13348 Beach Ave, T-code: t0011254</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_6b5f22888fdd" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_6b5f22888fdd" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/10/2026 5:14 AM', '4547.83', `Angelica Chhikara OR Ritu Chhikara 4667 N Island Vw Clovis CA 93619-4684 US`, 'Angelica Chhikara 13348 Beach Ave, T-code: t0011254', 'wire_6b5f22888fdd')">Submit</button>
-                                <span class="submit-status" id="status-wire_6b5f22888fdd"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011254</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_6b5f22888fdd"
+                                        onclick="bookInYardi('6/10/2026 5:14 AM', '4547.83', `Angelica Chhikara OR Ritu Chhikara 4667 N Island Vw Clovis CA 93619-4684 US`, 'wire_6b5f22888fdd')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_6b5f22888fdd" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
