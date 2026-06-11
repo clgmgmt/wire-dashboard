@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/10 6:07 PM</span>
+      <span class="meta-text">Updated 6/11 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">56</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">53</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">51</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_8043e43a428d">
+                            <td class="td-date">6/11/2026 5:09 AM</td>
+                            <td class="td-amount">$3,807.83</td>
+                            <td class="td-tenant">Matthew Pawlikowski 2/289 N El Molino AVE Apt 510 3/us/pasadena, CA 91101 4490</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_8043e43a428d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_8043e43a428d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/11/2026 5:09 AM', '3807.83', `Matthew Pawlikowski 2/289 N El Molino AVE Apt 510 3/us/pasadena, CA 91101 4490`, '', 'wire_8043e43a428d')">Submit</button>
+                                <span class="submit-status" id="status-wire_8043e43a428d"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_6b5f22888fdd">
                             <td class="td-date">6/10/2026 5:14 AM</td>
                             <td class="td-amount">$4,547.83</td>
@@ -1392,62 +1407,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011171</span>
                                 <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_7150545cb863">
-                            <td class="td-date">5/11/2026 8:03 AM</td>
-                            <td class="td-amount">$4,397.83</td>
-                            <td class="td-tenant">Roberta A Frink-sobierajski 32 Mount San Jacinto Cir Rancho Mir Age CA US</td>
-                            <td class="td-ref">13448 Beach AVE 4318mdr Mackenzie F Rink Sobierajski</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011154</span>
-                                <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c620f20bdb7d">
-                            <td class="td-date">5/11/2026 7:30 AM</td>
-                            <td class="td-amount">$4,245.00</td>
-                            <td class="td-tenant">Saunders Marketing Reginald E Saund Ers 2/9485 SW 165th AVE 3/us/beaverton, OR 97007 9417</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011127</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5b9d6a0e996a">
-                            <td class="td-date">5/11/2026 9:20 AM</td>
-                            <td class="td-amount">$4,422.83</td>
-                            <td class="td-tenant">Aidan R Duncan OR Kirsten M Duncan 17819 Victory BLVD Reseda CA 91335-6418 US</td>
-                            <td class="td-ref">Tph519 Duncan</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011123</span>
-                                <span class="mgr-name">lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_8c58d35a34dc">
-                            <td class="td-date">5/11/2026 3:32 PM</td>
-                            <td class="td-amount">$6,497.83</td>
-                            <td class="td-tenant">Michael Kaplan Barbara J Kaplan 2/4461 Revillo DR 3/us/san Diego, CA 92115-4139</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011111</span>
-                                <span class="mgr-name">Thomas Lofton</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
