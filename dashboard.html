@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/12 10:07 AM</span>
+      <span class="meta-text">Updated 6/12 11:07 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">58</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
       </div>
     </div>
@@ -745,18 +745,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_150f344a36c2">
+                          <tr class="has-input" data-wire-id="wire_150f344a36c2">
                             <td class="td-date">6/11/2026 2:20 PM</td>
                             <td class="td-amount">$4,295.00</td>
                             <td class="td-tenant">Mark C Bartlett 35 Red Hill Cir Apt D Tiburon,ca,</td>
                             <td class="td-ref">t0011192 - Bartlett</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_150f344a36c2" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_150f344a36c2" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/11/2026 2:20 PM', '4295.0', `Mark C Bartlett 35 Red Hill Cir Apt D Tiburon,ca,`, 't0011192 - Bartlett', 'wire_150f344a36c2')">Submit</button>
-                                <span class="submit-status" id="status-wire_150f344a36c2"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011192</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_150f344a36c2"
+                                        onclick="bookInYardi('6/11/2026 2:20 PM', '4295.0', `Mark C Bartlett 35 Red Hill Cir Apt D Tiburon,ca,`, 'wire_150f344a36c2')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_150f344a36c2" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1030,18 +1032,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_00d16f59035a">
+                          <tr class="has-input" data-wire-id="wire_00d16f59035a">
                             <td class="td-date">6/1/2026 5:17 AM</td>
                             <td class="td-amount">$4,247.83</td>
                             <td class="td-tenant">Sergio Miguel Maldonado-chaar 2/816 NW 11th ST Apt 1104 3/us/miami 33136</td>
                             <td class="td-ref">t0011186 - Maldonado Chaar</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_00d16f59035a" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_00d16f59035a" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/1/2026 5:17 AM', '4247.83', `Sergio Miguel Maldonado-chaar 2/816 NW 11th ST Apt 1104 3/us/miami 33136`, 't0011186 - Maldonado Chaar', 'wire_00d16f59035a')">Submit</button>
-                                <span class="submit-status" id="status-wire_00d16f59035a"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011186</span>
+                                <span class="mgr-name">Diane</span>
+                                
+                                <button class="yardi-circle" id="book-wire_00d16f59035a"
+                                        onclick="bookInYardi('6/1/2026 5:17 AM', '4247.83', `Sergio Miguel Maldonado-chaar 2/816 NW 11th ST Apt 1104 3/us/miami 33136`, 'wire_00d16f59035a')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_00d16f59035a" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
