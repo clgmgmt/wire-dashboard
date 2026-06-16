@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/16 1:08 PM</span>
+      <span class="meta-text">Updated 6/16 2:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">61</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">12</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
       </div>
     </div>
@@ -709,18 +709,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_0d5ce06e02d7">
+                          <tr class="has-input" data-wire-id="wire_0d5ce06e02d7">
                             <td class="td-date">6/16/2026 12:38 PM</td>
                             <td class="td-amount">$3,213.59</td>
                             <td class="td-tenant">Louis N. Sciaqua Iii 44784 Road 628 Ahwahnee CA 93601-9649</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_0d5ce06e02d7" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_0d5ce06e02d7" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/16/2026 12:38 PM', '3213.59', `Louis N. Sciaqua Iii 44784 Road 628 Ahwahnee CA 93601-9649`, '', 'wire_0d5ce06e02d7')">Submit</button>
-                                <span class="submit-status" id="status-wire_0d5ce06e02d7"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011165</span>
+                                <span class="mgr-name">cole murrell</span>
+                                
+                                <button class="yardi-circle" id="book-wire_0d5ce06e02d7"
+                                        onclick="bookInYardi('6/16/2026 12:38 PM', '3213.59', `Louis N. Sciaqua Iii 44784 Road 628 Ahwahnee CA 93601-9649`, 'wire_0d5ce06e02d7')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_0d5ce06e02d7" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
