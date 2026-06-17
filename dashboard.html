@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/17 11:08 AM</span>
+      <span class="meta-text">Updated 6/17 12:07 PM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">63</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">47</span></button>
       </div>
     </div>
 
@@ -681,18 +681,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_9280449b105f">
+                          <tr class="has-input" data-wire-id="wire_9280449b105f">
                             <td class="td-date">6/17/2026 5:08 AM</td>
                             <td class="td-amount">$8,487.83</td>
                             <td class="td-tenant">Alexis Cantelme 2/109 Wolcot CT 3/us/folsom, CA 95630 6503</td>
                             <td class="td-ref"></td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011223</span>
+                                <span class="mgr-name">Sandybell</span>
+                                
+                                <button class="yardi-circle" id="book-wire_9280449b105f"
+                                        onclick="bookInYardi('6/17/2026 5:08 AM', '8487.83', `Alexis Cantelme 2/109 Wolcot CT 3/us/folsom, CA 95630 6503`, 'wire_9280449b105f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_9280449b105f" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_eb8d1371b823">
+                            <td class="td-date">6/17/2026 11:26 AM</td>
+                            <td class="td-amount">$2,895.00</td>
+                            <td class="td-tenant">Ojas Awana OR Vivek Awana 31 Willocks Cir Somerset NJ 08873-7462 US</td>
+                            <td class="td-ref">Reference# T0011279-awana</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_9280449b105f" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_9280449b105f" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_eb8d1371b823" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_eb8d1371b823" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/17/2026 5:08 AM', '8487.83', `Alexis Cantelme 2/109 Wolcot CT 3/us/folsom, CA 95630 6503`, '', 'wire_9280449b105f')">Submit</button>
-                                <span class="submit-status" id="status-wire_9280449b105f"></span>
+                                        onclick="submitToSheets('6/17/2026 11:26 AM', '2895.0', `Ojas Awana OR Vivek Awana 31 Willocks Cir Somerset NJ 08873-7462 US`, 'Reference# T0011279-awana', 'wire_eb8d1371b823')">Submit</button>
+                                <span class="submit-status" id="status-wire_eb8d1371b823"></span>
                               </div>
                             </td>
                           </tr>
@@ -711,18 +728,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_5ef944633b47">
+                          <tr class="has-input" data-wire-id="wire_5ef944633b47">
                             <td class="td-date">6/16/2026 5:09 AM</td>
                             <td class="td-amount">$4,052.83</td>
                             <td class="td-tenant">Brandon Williams 1032 Park RD NW Washington,dc,20010,us</td>
                             <td class="td-ref">First Month Rent AND Security Depos It (3838 Dunn Dr. #607)</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_5ef944633b47" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_5ef944633b47" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/16/2026 5:09 AM', '4052.83', `Brandon Williams 1032 Park RD NW Washington,dc,20010,us`, 'First Month Rent AND Security Depos It (3838 Dunn Dr. #607)', 'wire_5ef944633b47')">Submit</button>
-                                <span class="submit-status" id="status-wire_5ef944633b47"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011238</span>
+                                <span class="mgr-name">Sandybell</span>
+                                
+                                <button class="yardi-circle" id="book-wire_5ef944633b47"
+                                        onclick="bookInYardi('6/16/2026 5:09 AM', '4052.83', `Brandon Williams 1032 Park RD NW Washington,dc,20010,us`, 'wire_5ef944633b47')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_5ef944633b47" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1550,20 +1569,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011181</span>
                                 <span class="mgr-name">Holly Hesse</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_2ba9de8fe929">
-                            <td class="td-date">5/18/2026 6:53 AM</td>
-                            <td class="td-amount">$4,942.83</td>
-                            <td class="td-tenant">Simon Douek DTD 06/21/2023 6651 Drexel AVE Los Angeles CA 9004 84208 US</td>
-                            <td class="td-ref">t0011172 Simon Douek Shaya Douek</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011172</span>
-                                <span class="mgr-name">Joslyn Y</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
