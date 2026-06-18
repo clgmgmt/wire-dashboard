@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/18 9:07 AM</span>
+      <span class="meta-text">Updated 6/18 10:07 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">65</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">54</span></button>
       </div>
     </div>
@@ -707,33 +707,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_eb8d1371b823">
+                          <tr class="has-input" data-wire-id="wire_eb8d1371b823">
                             <td class="td-date">6/17/2026 11:26 AM</td>
                             <td class="td-amount">$2,895.00</td>
                             <td class="td-tenant">Ojas Awana OR Vivek Awana 31 Willocks Cir Somerset NJ 08873-7462 US</td>
                             <td class="td-ref">Reference# T0011279-awana</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_eb8d1371b823" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_eb8d1371b823" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/17/2026 11:26 AM', '2895.0', `Ojas Awana OR Vivek Awana 31 Willocks Cir Somerset NJ 08873-7462 US`, 'Reference# T0011279-awana', 'wire_eb8d1371b823')">Submit</button>
-                                <span class="submit-status" id="status-wire_eb8d1371b823"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011279</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_eb8d1371b823"
+                                        onclick="bookInYardi('6/17/2026 11:26 AM', '2895.0', `Ojas Awana OR Vivek Awana 31 Willocks Cir Somerset NJ 08873-7462 US`, 'wire_eb8d1371b823')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_eb8d1371b823" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_83a9a634f6e7">
+                          <tr class="has-input" data-wire-id="wire_83a9a634f6e7">
                             <td class="td-date">6/17/2026 12:50 PM</td>
                             <td class="td-amount">$150.00</td>
                             <td class="td-tenant">Emily Minevich 250 North 10th Street Brooklyn, NY 11211</td>
                             <td class="td-ref">Additional Move IN Funds T0011269mi Nevich</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_83a9a634f6e7" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_83a9a634f6e7" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/17/2026 12:50 PM', '150.0', `Emily Minevich 250 North 10th Street Brooklyn, NY 11211`, 'Additional Move IN Funds T0011269mi Nevich', 'wire_83a9a634f6e7')">Submit</button>
-                                <span class="submit-status" id="status-wire_83a9a634f6e7"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011269</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_83a9a634f6e7"
+                                        onclick="bookInYardi('6/17/2026 12:50 PM', '150.0', `Emily Minevich 250 North 10th Street Brooklyn, NY 11211`, 'wire_83a9a634f6e7')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_83a9a634f6e7" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -768,18 +772,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_71952972592b">
+                          <tr class="has-input" data-wire-id="wire_71952972592b">
                             <td class="td-date">6/16/2026 11:35 AM</td>
                             <td class="td-amount">$3,895.00</td>
                             <td class="td-tenant">Emily Minevich 250 North 10th Street Brooklyn, NY 11211</td>
                             <td class="td-ref">T0011269minevich</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_71952972592b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_71952972592b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/16/2026 11:35 AM', '3895.0', `Emily Minevich 250 North 10th Street Brooklyn, NY 11211`, 'T0011269minevich', 'wire_71952972592b')">Submit</button>
-                                <span class="submit-status" id="status-wire_71952972592b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011269</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_71952972592b"
+                                        onclick="bookInYardi('6/16/2026 11:35 AM', '3895.0', `Emily Minevich 250 North 10th Street Brooklyn, NY 11211`, 'wire_71952972592b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_71952972592b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
