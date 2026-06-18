@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/18 12:07 PM</span>
+      <span class="meta-text">Updated 6/18 1:07 PM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">64</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">65</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">52</span></button>
       </div>
     </div>
@@ -679,18 +679,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_86c4e2bb1743">
+                          <tr class="has-input" data-wire-id="wire_86c4e2bb1743">
                             <td class="td-date">6/18/2026 12:02 PM</td>
                             <td class="td-amount">$4,651.83</td>
                             <td class="td-tenant">Metin Ardin 2/4250 Glencoe AVE Unit 1325 3/us/marina Del Rey, CA 90292-5685</td>
                             <td class="td-ref"></td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011287</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_86c4e2bb1743"
+                                        onclick="bookInYardi('6/18/2026 12:02 PM', '4651.83', `Metin Ardin 2/4250 Glencoe AVE Unit 1325 3/us/marina Del Rey, CA 90292-5685`, 'wire_86c4e2bb1743')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_86c4e2bb1743" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_c1c6ae4433ca">
+                            <td class="td-date">6/18/2026 12:30 PM</td>
+                            <td class="td-amount">$5,376.16</td>
+                            <td class="td-tenant">Hesam Ferdows OR Lorena Oropeza Ferdows Po Box 7465 Menlo Park CA 94026-7465 US</td>
+                            <td class="td-ref">For Jhila I. Ferdows Lease</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_86c4e2bb1743" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_86c4e2bb1743" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_c1c6ae4433ca" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_c1c6ae4433ca" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/18/2026 12:02 PM', '4651.83', `Metin Ardin 2/4250 Glencoe AVE Unit 1325 3/us/marina Del Rey, CA 90292-5685`, '', 'wire_86c4e2bb1743')">Submit</button>
-                                <span class="submit-status" id="status-wire_86c4e2bb1743"></span>
+                                        onclick="submitToSheets('6/18/2026 12:30 PM', '5376.16', `Hesam Ferdows OR Lorena Oropeza Ferdows Po Box 7465 Menlo Park CA 94026-7465 US`, 'For Jhila I. Ferdows Lease', 'wire_c1c6ae4433ca')">Submit</button>
+                                <span class="submit-status" id="status-wire_c1c6ae4433ca"></span>
                               </div>
                             </td>
                           </tr>
