@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/22 9:08 AM</span>
+      <span class="meta-text">Updated 6/22 10:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">63</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">7</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">64</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">49</span></button>
       </div>
     </div>
 
@@ -679,18 +679,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_c1a24e69caf3">
+                          <tr class="has-input" data-wire-id="wire_c1a24e69caf3">
                             <td class="td-date">6/22/2026 5:22 AM</td>
                             <td class="td-amount">$3,751.83</td>
                             <td class="td-tenant">Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US</td>
                             <td class="td-ref">Apartment Rent For Sean AND Paula H Arrell</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_c1a24e69caf3" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_c1a24e69caf3" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/22/2026 5:22 AM', '3751.83', `Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US`, 'Apartment Rent For Sean AND Paula H Arrell', 'wire_c1a24e69caf3')">Submit</button>
-                                <span class="submit-status" id="status-wire_c1a24e69caf3"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011236</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_c1a24e69caf3"
+                                        onclick="bookInYardi('6/22/2026 5:22 AM', '3751.83', `Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US`, 'wire_c1a24e69caf3')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_c1a24e69caf3" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -709,18 +711,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a1b51cb183b8">
+                          <tr class="has-input" data-wire-id="wire_a1b51cb183b8">
                             <td class="td-date">6/22/2026 7:37 AM</td>
                             <td class="td-amount">$2,545.00</td>
                             <td class="td-tenant">Jennifer P Petsu OR Patrice Catherine Petsu 3741 Boise AVE Los Angeles CA 90066-3603 US</td>
                             <td class="td-ref">Luke Petsu13448 Beach AVE #5510amar Ina Del Rey, CA 90292</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011285</span>
+                                <span class="mgr-name">Chad Hirschman</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a1b51cb183b8"
+                                        onclick="bookInYardi('6/22/2026 7:37 AM', '2545.0', `Jennifer P Petsu OR Patrice Catherine Petsu 3741 Boise AVE Los Angeles CA 90066-3603 US`, 'wire_a1b51cb183b8')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a1b51cb183b8" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_193c715517ba">
+                            <td class="td-date">6/22/2026 9:38 AM</td>
+                            <td class="td-amount">$5,145.00</td>
+                            <td class="td-tenant">Mark V Pettinga & Gayle L Petting 1/a Jt Ten 2/river Club DR 1436 3/us/indian River Shores,32963 391+</td>
+                            <td class="td-ref"></td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a1b51cb183b8" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a1b51cb183b8" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_193c715517ba" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_193c715517ba" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/22/2026 7:37 AM', '2545.0', `Jennifer P Petsu OR Patrice Catherine Petsu 3741 Boise AVE Los Angeles CA 90066-3603 US`, 'Luke Petsu13448 Beach AVE #5510amar Ina Del Rey, CA 90292', 'wire_a1b51cb183b8')">Submit</button>
-                                <span class="submit-status" id="status-wire_a1b51cb183b8"></span>
+                                        onclick="submitToSheets('6/22/2026 9:38 AM', '5145.0', `Mark V Pettinga & Gayle L Petting 1/a Jt Ten 2/river Club DR 1436 3/us/indian River Shores,32963 391+`, '', 'wire_193c715517ba')">Submit</button>
+                                <span class="submit-status" id="status-wire_193c715517ba"></span>
                               </div>
                             </td>
                           </tr>
@@ -828,10 +847,7 @@
                                 <span class="tid-mono">t0011269</span>
                                 <span class="mgr-name">Chris Leschkies</span>
                                 
-                                <button class="yardi-circle" id="book-wire_83a9a634f6e7"
-                                        onclick="bookInYardi('6/17/2026 12:50 PM', '150.0', `Emily Minevich 250 North 10th Street Brooklyn, NY 11211`, 'wire_83a9a634f6e7')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_83a9a634f6e7" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -845,10 +861,7 @@
                                 <span class="tid-mono">t0011265</span>
                                 <span class="mgr-name">Rosa Hernandez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_b7ef1a10f02a"
-                                        onclick="bookInYardi('6/16/2026 5:14 AM', '4701.83', `Mark Emanuel 301 E 79th ST Apt 37jk New York NY 10075-0951 US`, 'wire_b7ef1a10f02a')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_b7ef1a10f02a" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -979,10 +992,7 @@
                                 <span class="tid-mono">t0011270</span>
                                 <span class="mgr-name">Rosa Hernandez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_730591c502b4"
-                                        onclick="bookInYardi('6/12/2026 12:28 PM', '4427.83', `Won Sok Lee 19908 SE 9th ST Camas,wa,98607 US`, 'wire_730591c502b4')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_730591c502b4" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
