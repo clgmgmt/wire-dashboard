@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/23 9:08 AM</span>
+      <span class="meta-text">Updated 6/23 10:07 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">67</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">12</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">55</span></button>
       </div>
     </div>
@@ -694,18 +694,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_fe67b7172a03">
+                          <tr class="has-input" data-wire-id="wire_fe67b7172a03">
                             <td class="td-date">6/22/2026 5:22 AM</td>
                             <td class="td-amount">$3,100.00</td>
                             <td class="td-tenant">Mohammadali Naraghi 1138 20th ST Apt 12 Santa Monica CA 90403-5639 US</td>
                             <td class="td-ref">Reference T0011288naraghi</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_fe67b7172a03" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_fe67b7172a03" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/22/2026 5:22 AM', '3100.0', `Mohammadali Naraghi 1138 20th ST Apt 12 Santa Monica CA 90403-5639 US`, 'Reference T0011288naraghi', 'wire_fe67b7172a03')">Submit</button>
-                                <span class="submit-status" id="status-wire_fe67b7172a03"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011288</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_fe67b7172a03"
+                                        onclick="bookInYardi('6/22/2026 5:22 AM', '3100.0', `Mohammadali Naraghi 1138 20th ST Apt 12 Santa Monica CA 90403-5639 US`, 'wire_fe67b7172a03')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_fe67b7172a03" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -752,18 +754,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_193c715517ba">
+                          <tr class="has-input" data-wire-id="wire_193c715517ba">
                             <td class="td-date">6/22/2026 9:38 AM</td>
                             <td class="td-amount">$5,145.00</td>
                             <td class="td-tenant">Mark V Pettinga & Gayle L Petting 1/a Jt Ten 2/river Club DR 1436 3/us/indian River Shores,32963 391+</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_193c715517ba" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_193c715517ba" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/22/2026 9:38 AM', '5145.0', `Mark V Pettinga & Gayle L Petting 1/a Jt Ten 2/river Club DR 1436 3/us/indian River Shores,32963 391+`, '', 'wire_193c715517ba')">Submit</button>
-                                <span class="submit-status" id="status-wire_193c715517ba"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011274</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_193c715517ba"
+                                        onclick="bookInYardi('6/22/2026 9:38 AM', '5145.0', `Mark V Pettinga & Gayle L Petting 1/a Jt Ten 2/river Club DR 1436 3/us/indian River Shores,32963 391+`, 'wire_193c715517ba')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_193c715517ba" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
