@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/23 11:07 AM</span>
+      <span class="meta-text">Updated 6/23 12:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">67</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">55</span></button>
       </div>
     </div>
@@ -679,18 +679,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_ce92f4036409">
+                          <tr class="has-input" data-wire-id="wire_ce92f4036409">
                             <td class="td-date">6/23/2026 5:07 AM</td>
                             <td class="td-amount">$6,401.66</td>
                             <td class="td-tenant">Vitali Zahharov 11657 Chenault ST Apt. 105 Los Ange Les CA 90049-4557 US</td>
                             <td class="td-ref">t0011199 Zahharov</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_ce92f4036409" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_ce92f4036409" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/23/2026 5:07 AM', '6401.66', `Vitali Zahharov 11657 Chenault ST Apt. 105 Los Ange Les CA 90049-4557 US`, 't0011199 Zahharov', 'wire_ce92f4036409')">Submit</button>
-                                <span class="submit-status" id="status-wire_ce92f4036409"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011199</span>
+                                <span class="mgr-name">Thomas Lofton</span>
+                                
+                                <button class="yardi-circle" id="book-wire_ce92f4036409"
+                                        onclick="bookInYardi('6/23/2026 5:07 AM', '6401.66', `Vitali Zahharov 11657 Chenault ST Apt. 105 Los Ange Les CA 90049-4557 US`, 'wire_ce92f4036409')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_ce92f4036409" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -725,18 +727,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_027a3bad9fc5">
+                          <tr class="has-input" data-wire-id="wire_027a3bad9fc5">
                             <td class="td-date">6/22/2026 7:39 AM</td>
                             <td class="td-amount">$7,097.40</td>
                             <td class="td-tenant">Krystle Mei Chow 3650 Holmes Cir Hacienda Heights CA 91745-6176 US</td>
                             <td class="td-ref">t0011283 - Chow</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_027a3bad9fc5" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_027a3bad9fc5" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/22/2026 7:39 AM', '7097.4', `Krystle Mei Chow 3650 Holmes Cir Hacienda Heights CA 91745-6176 US`, 't0011283 - Chow', 'wire_027a3bad9fc5')">Submit</button>
-                                <span class="submit-status" id="status-wire_027a3bad9fc5"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011283</span>
+                                <span class="mgr-name">Thomas Lofton</span>
+                                
+                                <button class="yardi-circle" id="book-wire_027a3bad9fc5"
+                                        onclick="bookInYardi('6/22/2026 7:39 AM', '7097.4', `Krystle Mei Chow 3650 Holmes Cir Hacienda Heights CA 91745-6176 US`, 'wire_027a3bad9fc5')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_027a3bad9fc5" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
