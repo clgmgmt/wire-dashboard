@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/22 6:07 PM</span>
+      <span class="meta-text">Updated 6/23 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">65</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">67</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">12</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">55</span></button>
       </div>
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_d0826e1f2b5f">
+                            <td class="td-date">6/23/2026 5:08 AM</td>
+                            <td class="td-amount">$2,989.44</td>
+                            <td class="td-tenant">Rebecca Zait 2/5615 Mainmast Place 3/us/agoura Hills,91301,ca</td>
+                            <td class="td-ref">Security Deposit AND First Month Re Nt. Reference:t0011255 Rebecca Zait</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d0826e1f2b5f" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d0826e1f2b5f" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/23/2026 5:08 AM', '2989.44', `Rebecca Zait 2/5615 Mainmast Place 3/us/agoura Hills,91301,ca`, 'Security Deposit AND First Month Re Nt. Reference:t0011255 Rebecca Zait', 'wire_d0826e1f2b5f')">Submit</button>
+                                <span class="submit-status" id="status-wire_d0826e1f2b5f"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_ce92f4036409">
+                            <td class="td-date">6/23/2026 5:07 AM</td>
+                            <td class="td-amount">$6,401.66</td>
+                            <td class="td-tenant">Vitali Zahharov 11657 Chenault ST Apt. 105 Los Ange Les CA 90049-4557 US</td>
+                            <td class="td-ref">t0011199 Zahharov</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_ce92f4036409" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_ce92f4036409" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/23/2026 5:07 AM', '6401.66', `Vitali Zahharov 11657 Chenault ST Apt. 105 Los Ange Les CA 90049-4557 US`, 't0011199 Zahharov', 'wire_ce92f4036409')">Submit</button>
+                                <span class="submit-status" id="status-wire_ce92f4036409"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_fe67b7172a03">
                             <td class="td-date">6/22/2026 5:22 AM</td>
                             <td class="td-amount">$3,100.00</td>
