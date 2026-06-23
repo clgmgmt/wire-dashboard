@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/23 2:07 PM</span>
+      <span class="meta-text">Updated 6/23 3:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">67</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">68</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">55</span></button>
       </div>
@@ -693,6 +693,21 @@
                                         onclick="bookInYardi('6/23/2026 5:07 AM', '6401.66', `Vitali Zahharov 11657 Chenault ST Apt. 105 Los Ange Les CA 90049-4557 US`, 'wire_ce92f4036409')"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_ce92f4036409" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_04006430e836">
+                            <td class="td-date">6/23/2026 2:39 PM</td>
+                            <td class="td-amount">$4,632.83</td>
+                            <td class="td-tenant">Ryan A Thompson 369 Avondale DR Shirley NY 11967-1401 US</td>
+                            <td class="td-ref">Ryan Thompson Move IN Costs 13448 B Each AVE Unit 3323 Marina Del Rey C A 90292</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_04006430e836" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_04006430e836" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/23/2026 2:39 PM', '4632.83', `Ryan A Thompson 369 Avondale DR Shirley NY 11967-1401 US`, 'Ryan Thompson Move IN Costs 13448 B Each AVE Unit 3323 Marina Del Rey C A 90292', 'wire_04006430e836')">Submit</button>
+                                <span class="submit-status" id="status-wire_04006430e836"></span>
                               </div>
                             </td>
                           </tr>
