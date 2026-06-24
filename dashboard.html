@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/23 6:07 PM</span>
+      <span class="meta-text">Updated 6/24 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">68</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">69</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">55</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_7ae49a21b422">
+                            <td class="td-date">6/24/2026 5:09 AM</td>
+                            <td class="td-amount">$3,800.47</td>
+                            <td class="td-tenant">Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646</td>
+                            <td class="td-ref">Rent Charlie - 635</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_7ae49a21b422" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_7ae49a21b422" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/24/2026 5:09 AM', '3800.47', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'Rent Charlie - 635', 'wire_7ae49a21b422')">Submit</button>
+                                <span class="submit-status" id="status-wire_7ae49a21b422"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_d0826e1f2b5f">
                             <td class="td-date">6/23/2026 5:08 AM</td>
                             <td class="td-amount">$2,989.44</td>
