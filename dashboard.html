@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/26 2:07 PM</span>
+      <span class="meta-text">Updated 6/26 3:07 PM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">76</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">77</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">16</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">57</span></button>
       </div>
     </div>
@@ -758,18 +758,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_8c6ce7230014">
+                          <tr class="has-input" data-wire-id="wire_8c6ce7230014">
                             <td class="td-date">6/26/2026 11:12 AM</td>
                             <td class="td-amount">$2,835.00</td>
                             <td class="td-tenant">Fernando Torres 608 N Lazard ST San Fernando CA 91340-1927 US</td>
                             <td class="td-ref">Reference: Tenant Code t0011286 Fer Nando Torres 18402 Halsted ST Unit 39 Northridge, CA 91325</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011286</span>
+                                <span class="mgr-name">Adela Labarca</span>
+                                
+                                <button class="yardi-circle" id="book-wire_8c6ce7230014"
+                                        onclick="bookInYardi('6/26/2026 11:12 AM', '2835.0', `Fernando Torres 608 N Lazard ST San Fernando CA 91340-1927 US`, 'wire_8c6ce7230014')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_8c6ce7230014" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_b335c1e14614">
+                            <td class="td-date">6/26/2026 2:51 PM</td>
+                            <td class="td-amount">$4,192.83</td>
+                            <td class="td-tenant">Kristi L Stone OR Douglas S Stone 23314 Fairbranch DR Katy TX 77494-2159 US</td>
+                            <td class="td-ref">For Katie Stone At 3838 By Clg</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_8c6ce7230014" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_8c6ce7230014" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_b335c1e14614" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_b335c1e14614" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/26/2026 11:12 AM', '2835.0', `Fernando Torres 608 N Lazard ST San Fernando CA 91340-1927 US`, 'Reference: Tenant Code t0011286 Fer Nando Torres 18402 Halsted ST Unit 39 Northridge, CA 91325', 'wire_8c6ce7230014')">Submit</button>
-                                <span class="submit-status" id="status-wire_8c6ce7230014"></span>
+                                        onclick="submitToSheets('6/26/2026 2:51 PM', '4192.83', `Kristi L Stone OR Douglas S Stone 23314 Fairbranch DR Katy TX 77494-2159 US`, 'For Katie Stone At 3838 By Clg', 'wire_b335c1e14614')">Submit</button>
+                                <span class="submit-status" id="status-wire_b335c1e14614"></span>
                               </div>
                             </td>
                           </tr>
