@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/25 6:07 PM</span>
+      <span class="meta-text">Updated 6/26 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">70</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">72</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">13</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">58</span></button>
       </div>
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_3cbd4db77b7b">
+                            <td class="td-date">6/26/2026 5:42 AM</td>
+                            <td class="td-amount">$3,606.83</td>
+                            <td class="td-tenant">Peter Pinto 1170 Foothill Way Mountainside NJ 07092-2004 US</td>
+                            <td class="td-ref">Pinto t0011301</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_3cbd4db77b7b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_3cbd4db77b7b" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/26/2026 5:42 AM', '3606.83', `Peter Pinto 1170 Foothill Way Mountainside NJ 07092-2004 US`, 'Pinto t0011301', 'wire_3cbd4db77b7b')">Submit</button>
+                                <span class="submit-status" id="status-wire_3cbd4db77b7b"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_76885666456e">
+                            <td class="td-date">6/26/2026 5:41 AM</td>
+                            <td class="td-amount">$3,231.66</td>
+                            <td class="td-tenant">Austin W Carbo 500 Lipan ST Unit 410 Denver CO 80204-4928 US</td>
+                            <td class="td-ref">T0011301-carbo</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_76885666456e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_76885666456e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/26/2026 5:41 AM', '3231.66', `Austin W Carbo 500 Lipan ST Unit 410 Denver CO 80204-4928 US`, 'T0011301-carbo', 'wire_76885666456e')">Submit</button>
+                                <span class="submit-status" id="status-wire_76885666456e"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_b43e38cd5f26">
                             <td class="td-date">6/25/2026 4:17 PM</td>
                             <td class="td-amount">$5,316.83</td>
