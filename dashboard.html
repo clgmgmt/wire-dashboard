@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/26 6:07 PM</span>
+      <span class="meta-text">Updated 6/29 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">77</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">16</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">61</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">69</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">8</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">52</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_53bb90555ff2">
+                            <td class="td-date">6/29/2026 5:20 AM</td>
+                            <td class="td-amount">$4,452.83</td>
+                            <td class="td-tenant">John A DE Vilhena Rees 6107 Tarawood DR Orlando FL 32819-4423 US</td>
+                            <td class="td-ref">t0011251 - DE Vilhena Rees</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_53bb90555ff2" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_53bb90555ff2" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/29/2026 5:20 AM', '4452.83', `John A DE Vilhena Rees 6107 Tarawood DR Orlando FL 32819-4423 US`, 't0011251 - DE Vilhena Rees', 'wire_53bb90555ff2')">Submit</button>
+                                <span class="submit-status" id="status-wire_53bb90555ff2"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_3cbd4db77b7b">
                             <td class="td-date">6/26/2026 5:42 AM</td>
                             <td class="td-amount">$3,606.83</td>
@@ -692,33 +707,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_be8e2e3504c0">
+                          <tr class="has-input" data-wire-id="wire_be8e2e3504c0">
                             <td class="td-date">6/26/2026 8:40 AM</td>
                             <td class="td-amount">$4,747.83</td>
                             <td class="td-tenant">Hugo Soto 15450 SW 27th ST Miami FL 33185-5804 US</td>
                             <td class="td-ref">T0011240, Brian Soto, SW #404</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_be8e2e3504c0" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_be8e2e3504c0" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/26/2026 8:40 AM', '4747.83', `Hugo Soto 15450 SW 27th ST Miami FL 33185-5804 US`, 'T0011240, Brian Soto, SW #404', 'wire_be8e2e3504c0')">Submit</button>
-                                <span class="submit-status" id="status-wire_be8e2e3504c0"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011240</span>
+                                <span class="mgr-name">Rosa Hernandez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_be8e2e3504c0"
+                                        onclick="bookInYardi('6/26/2026 8:40 AM', '4747.83', `Hugo Soto 15450 SW 27th ST Miami FL 33185-5804 US`, 'wire_be8e2e3504c0')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_be8e2e3504c0" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_77e568b80c78">
+                          <tr class="has-input" data-wire-id="wire_77e568b80c78">
                             <td class="td-date">6/26/2026 9:28 AM</td>
                             <td class="td-amount">$4,547.83</td>
                             <td class="td-tenant">Chaojie Yuan 1625 S Magnolia AVE Unit 3165 Monrovia CA 91016-4886 US</td>
                             <td class="td-ref">T0011299, Yixuan Yang, SW #104</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_77e568b80c78" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_77e568b80c78" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/26/2026 9:28 AM', '4547.83', `Chaojie Yuan 1625 S Magnolia AVE Unit 3165 Monrovia CA 91016-4886 US`, 'T0011299, Yixuan Yang, SW #104', 'wire_77e568b80c78')">Submit</button>
-                                <span class="submit-status" id="status-wire_77e568b80c78"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011299</span>
+                                <span class="mgr-name">Rosa Hernandez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_77e568b80c78"
+                                        onclick="bookInYardi('6/26/2026 9:28 AM', '4547.83', `Chaojie Yuan 1625 S Magnolia AVE Unit 3165 Monrovia CA 91016-4886 US`, 'wire_77e568b80c78')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_77e568b80c78" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -796,33 +815,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_7ae49a21b422">
+                          <tr class="has-input" data-wire-id="wire_7ae49a21b422">
                             <td class="td-date">6/24/2026 5:09 AM</td>
                             <td class="td-amount">$3,800.47</td>
                             <td class="td-tenant">Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646</td>
                             <td class="td-ref">Rent Charlie - 635</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_7ae49a21b422" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_7ae49a21b422" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/24/2026 5:09 AM', '3800.47', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'Rent Charlie - 635', 'wire_7ae49a21b422')">Submit</button>
-                                <span class="submit-status" id="status-wire_7ae49a21b422"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0010710</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_7ae49a21b422"
+                                        onclick="bookInYardi('6/24/2026 5:09 AM', '3800.47', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'wire_7ae49a21b422')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_7ae49a21b422" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_121ad3b06cec">
+                          <tr class="has-input" data-wire-id="wire_121ad3b06cec">
                             <td class="td-date">6/24/2026 1:28 PM</td>
                             <td class="td-amount">$3,997.83</td>
                             <td class="td-tenant">Cristian Contreras 4700 Acacia ST Bell CA 90201-2603 US</td>
                             <td class="td-ref">Unit 326 Move-in Funds</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_121ad3b06cec" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_121ad3b06cec" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/24/2026 1:28 PM', '3997.83', `Cristian Contreras 4700 Acacia ST Bell CA 90201-2603 US`, 'Unit 326 Move-in Funds', 'wire_121ad3b06cec')">Submit</button>
-                                <span class="submit-status" id="status-wire_121ad3b06cec"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011291</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_121ad3b06cec"
+                                        onclick="bookInYardi('6/24/2026 1:28 PM', '3997.83', `Cristian Contreras 4700 Acacia ST Bell CA 90201-2603 US`, 'wire_121ad3b06cec')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_121ad3b06cec" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -939,33 +962,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_18826ce2e69a">
+                          <tr class="has-input" data-wire-id="wire_18826ce2e69a">
                             <td class="td-date">6/22/2026 3:00 PM</td>
                             <td class="td-amount">$4,497.83</td>
                             <td class="td-tenant">Krystal Y Lai 2525 Elm ST Apt 1801 Dallas TX 7522 6 USA</td>
                             <td class="td-ref">Add This To Wire Memo: T0011264, Kr Ystal Lai SW 421</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_18826ce2e69a" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_18826ce2e69a" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/22/2026 3:00 PM', '4497.83', `Krystal Y Lai 2525 Elm ST Apt 1801 Dallas TX 7522 6 USA`, 'Add This To Wire Memo: T0011264, Kr Ystal Lai SW 421', 'wire_18826ce2e69a')">Submit</button>
-                                <span class="submit-status" id="status-wire_18826ce2e69a"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011264</span>
+                                <span class="mgr-name">Rosa Hernandez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_18826ce2e69a"
+                                        onclick="bookInYardi('6/22/2026 3:00 PM', '4497.83', `Krystal Y Lai 2525 Elm ST Apt 1801 Dallas TX 7522 6 USA`, 'wire_18826ce2e69a')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_18826ce2e69a" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_6aa16bdea66e">
+                          <tr class="has-input" data-wire-id="wire_6aa16bdea66e">
                             <td class="td-date">6/18/2026 5:16 AM</td>
                             <td class="td-amount">$4,847.83</td>
                             <td class="td-tenant">Ona Ra 700 W 9th ST Apt 1604 Los Angeles CA 90015-4524 US</td>
                             <td class="td-ref">Ref#: T0011259-ra</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_6aa16bdea66e" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_6aa16bdea66e" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/18/2026 5:16 AM', '4847.83', `Ona Ra 700 W 9th ST Apt 1604 Los Angeles CA 90015-4524 US`, 'Ref#: T0011259-ra', 'wire_6aa16bdea66e')">Submit</button>
-                                <span class="submit-status" id="status-wire_6aa16bdea66e"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011259</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_6aa16bdea66e"
+                                        onclick="bookInYardi('6/18/2026 5:16 AM', '4847.83', `Ona Ra 700 W 9th ST Apt 1604 Los Angeles CA 90015-4524 US`, 'wire_6aa16bdea66e')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_6aa16bdea66e" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1265,18 +1292,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_93793d9c609e">
+                          <tr class="has-input" data-wire-id="wire_93793d9c609e">
                             <td class="td-date">6/9/2026 5:54 AM</td>
                             <td class="td-amount">$4,267.83</td>
                             <td class="td-tenant">Hao Duong 3533 Chesapeake AVE Unit 403 Los Angeles California 90016 US</td>
                             <td class="td-ref">Apartment Move IN Funds From Hao Du Ong To Wm By Clg</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_93793d9c609e" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_93793d9c609e" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/9/2026 5:54 AM', '4267.83', `Hao Duong 3533 Chesapeake AVE Unit 403 Los Angeles California 90016 US`, 'Apartment Move IN Funds From Hao Du Ong To Wm By Clg', 'wire_93793d9c609e')">Submit</button>
-                                <span class="submit-status" id="status-wire_93793d9c609e"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011232</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_93793d9c609e"
+                                        onclick="bookInYardi('6/9/2026 5:54 AM', '4267.83', `Hao Duong 3533 Chesapeake AVE Unit 403 Los Angeles California 90016 US`, 'wire_93793d9c609e')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_93793d9c609e" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1294,18 +1323,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_acbbefb027e1">
+                          <tr class="has-input" data-wire-id="wire_acbbefb027e1">
                             <td class="td-date">6/8/2026 4:44 AM</td>
                             <td class="td-amount">$4,967.83</td>
                             <td class="td-tenant">Ju Seung I Lee 2/800 Elgin RD Apt 1404 3/us/evanston 60201</td>
                             <td class="td-ref">t0011227 - Lee</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_acbbefb027e1" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_acbbefb027e1" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/8/2026 4:44 AM', '4967.83', `Ju Seung I Lee 2/800 Elgin RD Apt 1404 3/us/evanston 60201`, 't0011227 - Lee', 'wire_acbbefb027e1')">Submit</button>
-                                <span class="submit-status" id="status-wire_acbbefb027e1"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011227</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_acbbefb027e1"
+                                        onclick="bookInYardi('6/8/2026 4:44 AM', '4967.83', `Ju Seung I Lee 2/800 Elgin RD Apt 1404 3/us/evanston 60201`, 'wire_acbbefb027e1')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_acbbefb027e1" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1627,132 +1658,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011208</span>
                                 <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d93f5f1eb633">
-                            <td class="td-date">5/29/2026 5:24 AM</td>
-                            <td class="td-amount">$2,946.42</td>
-                            <td class="td-tenant">Ian D Roddy OR Julie Roddy 75178 Palisades PL Indian Wells CA 92210-8380 US</td>
-                            <td class="td-ref">Ian Roddy/4210 Del Rey Avenue, Apt. 315/t0011202</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011202</span>
-                                <span class="mgr-name">Jessica Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_ed72c05f2590">
-                            <td class="td-date">5/29/2026 10:37 AM</td>
-                            <td class="td-amount">$6,562.83</td>
-                            <td class="td-tenant">Jennifer D Le 9434 Questa Pointe San Diego CA 921 26-5530 US</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011212</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a27cbed138f6">
-                            <td class="td-date">5/29/2026 10:34 AM</td>
-                            <td class="td-amount">$4,447.83</td>
-                            <td class="td-tenant">Nathan M Chang 16565 Murphy RD LA Mirada,ca,90638 US</td>
-                            <td class="td-ref">t0011195 - Vananh Nguyen 3838byclg 624 1st Month AND Deposit</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011195</span>
-                                <span class="mgr-name">Diane</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a94aceb179ab">
-                            <td class="td-date">5/29/2026 12:42 PM</td>
-                            <td class="td-amount">$4,402.83</td>
-                            <td class="td-tenant">Jennifer Rempis-rohmer Robert J R O Hmer Pod Nicholas Dean Rohmer 2/1021 Sunset Hills LN 3/us/redlands, CA 92373 6959</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011222</span>
-                                <span class="mgr-name">Enrqiue</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_af488b63582d">
-                            <td class="td-date">5/29/2026 12:10 PM</td>
-                            <td class="td-amount">$9,462.83</td>
-                            <td class="td-tenant">Thomas Herrera-mishler Mercedes H E Rrera-mishler 2/5125 Magnolia Pond DR 3/us/sarasota, FL 34233 3277</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011220</span>
-                                <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_1bd1b2362014">
-                            <td class="td-date">5/28/2026 5:18 AM</td>
-                            <td class="td-amount">$2,300.00</td>
-                            <td class="td-tenant">Evan Trumpower 3431 Tanglewood Lane Rolling Hills Estates California 90274 US</td>
-                            <td class="td-ref">Evan Trumpower 3800 S. Mentone Ave. #413d, Culver City, CA 90232</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011209</span>
-                                <span class="mgr-name">Bronte</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_7564de48a3fb">
-                            <td class="td-date">5/28/2026 11:26 AM</td>
-                            <td class="td-amount">$2,946.42</td>
-                            <td class="td-tenant">Matthew R Herin 1778 Landana DR Concord CA 94519-14 26 US</td>
-                            <td class="td-ref">Matthew Herin 4210 Del Rey AVE Apt3 15 Marina Del Rey T Code t0011202</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011202</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_1f86a5b1e89d">
-                            <td class="td-date">5/28/2026 12:37 PM</td>
-                            <td class="td-amount">$2,146.00</td>
-                            <td class="td-tenant">The Anthony J Low Revocable Livin G Capit Mr Anthony J Low Trtee U/ 2/6715 Torres AVE 3/us/joshua Tree, CA 92252 2237</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011190</span>
-                                <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_369adb80d002">
-                            <td class="td-date">5/27/2026 2:36 PM</td>
-                            <td class="td-amount">$6,567.83</td>
-                            <td class="td-tenant">Erica A Brennwald 2/beach AVE 13448, Rm Apt 3207 3/us/marina Del Rey,90292 6661,ca</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011193</span>
-                                <span class="mgr-name">Holly Hesse</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
