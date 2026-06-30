@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/30 9:08 AM</span>
+      <span class="meta-text">Updated 6/30 10:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">70</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">60</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">71</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">62</span></button>
       </div>
     </div>
 
@@ -676,6 +676,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('6/30/2026 5:49 AM', '6762.83', `Preet Gangrade 2/474 Teal Plz 3/us/secaucus, NJ 07094 2216`, '', 'wire_9da5fddd372d')">Submit</button>
                                 <span class="submit-status" id="status-wire_9da5fddd372d"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_1b44f2ae61ff">
+                            <td class="td-date">6/30/2026 9:24 AM</td>
+                            <td class="td-amount">$1,564.57</td>
+                            <td class="td-tenant">Michael R Levin 8029 Herb Farm DR Bethesda MD 20817-1309 US</td>
+                            <td class="td-ref">Ref: t0011275 - Levin</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_1b44f2ae61ff" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_1b44f2ae61ff" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/30/2026 9:24 AM', '1564.57', `Michael R Levin 8029 Herb Farm DR Bethesda MD 20817-1309 US`, 'Ref: t0011275 - Levin', 'wire_1b44f2ae61ff')">Submit</button>
+                                <span class="submit-status" id="status-wire_1b44f2ae61ff"></span>
                               </div>
                             </td>
                           </tr>
@@ -819,10 +834,7 @@
                                 <span class="tid-mono">t0011319</span>
                                 <span class="mgr-name">Holly Hesse</span>
                                 
-                                <button class="yardi-circle" id="book-wire_b43e38cd5f26"
-                                        onclick="bookInYardi('6/25/2026 4:17 PM', '5316.83', `Jada Jo Jackson 13448 Beach AVE Ph6208 Marina Del R Ey CA 90292-5714 US`, 'wire_b43e38cd5f26')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_b43e38cd5f26" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -892,10 +904,7 @@
                                 <span class="tid-mono">t0011315</span>
                                 <span class="mgr-name">Holly Hesse</span>
                                 
-                                <button class="yardi-circle" id="book-wire_04006430e836"
-                                        onclick="bookInYardi('6/23/2026 2:39 PM', '4632.83', `Ryan A Thompson 369 Avondale DR Shirley NY 11967-1401 US`, 'wire_04006430e836')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_04006430e836" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
