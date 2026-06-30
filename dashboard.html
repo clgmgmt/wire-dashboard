@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/29 6:07 PM</span>
+      <span class="meta-text">Updated 6/30 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">69</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">70</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">60</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_9da5fddd372d">
+                            <td class="td-date">6/30/2026 5:49 AM</td>
+                            <td class="td-amount">$6,762.83</td>
+                            <td class="td-tenant">Preet Gangrade 2/474 Teal Plz 3/us/secaucus, NJ 07094 2216</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9da5fddd372d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9da5fddd372d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/30/2026 5:49 AM', '6762.83', `Preet Gangrade 2/474 Teal Plz 3/us/secaucus, NJ 07094 2216`, '', 'wire_9da5fddd372d')">Submit</button>
+                                <span class="submit-status" id="status-wire_9da5fddd372d"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_53bb90555ff2">
                             <td class="td-date">6/29/2026 5:20 AM</td>
                             <td class="td-amount">$4,452.83</td>
