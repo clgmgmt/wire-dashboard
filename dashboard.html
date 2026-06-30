@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 6/30 11:07 AM</span>
+      <span class="meta-text">Updated 6/30 12:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">71</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">63</span></button>
       </div>
     </div>
@@ -780,18 +780,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_d4b5756584f8">
+                          <tr class="has-input" data-wire-id="wire_d4b5756584f8">
                             <td class="td-date">6/26/2026 12:02 PM</td>
                             <td class="td-amount">$6,647.76</td>
                             <td class="td-tenant">Ojan Missaghi 950 S Fairfax Avenue Apt 420 Los An Geles CA 90036 USA</td>
                             <td class="td-ref">t0011225 Missaghi - Hatami</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_d4b5756584f8" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_d4b5756584f8" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/26/2026 12:02 PM', '6647.76', `Ojan Missaghi 950 S Fairfax Avenue Apt 420 Los An Geles CA 90036 USA`, 't0011225 Missaghi - Hatami', 'wire_d4b5756584f8')">Submit</button>
-                                <span class="submit-status" id="status-wire_d4b5756584f8"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011225</span>
+                                <span class="mgr-name">Thomas Lofton</span>
+                                
+                                <button class="yardi-circle" id="book-wire_d4b5756584f8"
+                                        onclick="bookInYardi('6/26/2026 12:02 PM', '6647.76', `Ojan Missaghi 950 S Fairfax Avenue Apt 420 Los An Geles CA 90036 USA`, 'wire_d4b5756584f8')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_d4b5756584f8" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
