@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/01 6:06 AM</span>
+      <span class="meta-text">Updated 7/01 7:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">72</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">70</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">63</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">60</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_aaebb02d9a94">
+                            <td class="td-date">7/1/2026 6:15 AM</td>
+                            <td class="td-amount">$1,914.56</td>
+                            <td class="td-tenant">Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US</td>
+                            <td class="td-ref">/inst/jonas Jehle//t0011275-jehle - Wr</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_aaebb02d9a94" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_aaebb02d9a94" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/1/2026 6:15 AM', '1914.56', `Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US`, '/inst/jonas Jehle//t0011275-jehle - Wr', 'wire_aaebb02d9a94')">Submit</button>
+                                <span class="submit-status" id="status-wire_aaebb02d9a94"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_9da5fddd372d">
                             <td class="td-date">6/30/2026 5:49 AM</td>
                             <td class="td-amount">$6,762.83</td>
@@ -1538,48 +1553,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011191</span>
                                 <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_953b36599582">
-                            <td class="td-date">6/1/2026 5:25 AM</td>
-                            <td class="td-amount">$3,597.83</td>
-                            <td class="td-tenant">Weicheng Zhang 2504 23rd ST Santa Monica CA 90405-2812 US</td>
-                            <td class="td-ref">Weicheng Zhang, 13448 Beach AVE Uni T 5321</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011210</span>
-                                <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_407ae3c12902">
-                            <td class="td-date">6/1/2026 5:20 AM</td>
-                            <td class="td-amount">$4,292.83</td>
-                            <td class="td-tenant">Paris Tennberg 800 S Pacific AVE Apt Apt 205 Los A Ngeles CA 90731 USA</td>
-                            <td class="td-ref">Paris Tennberg - Move IN Funds 3838</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011168</span>
-                                <span class="mgr-name">Bronte</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_00d16f59035a">
-                            <td class="td-date">6/1/2026 5:17 AM</td>
-                            <td class="td-amount">$4,247.83</td>
-                            <td class="td-tenant">Sergio Miguel Maldonado-chaar 2/816 NW 11th ST Apt 1104 3/us/miami 33136</td>
-                            <td class="td-ref">t0011186 - Maldonado Chaar</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011186</span>
-                                <span class="mgr-name">Diane</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
