@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/02 12:07 PM</span>
+      <span class="meta-text">Updated 7/02 1:07 PM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">67</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">53</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">54</span></button>
       </div>
     </div>
 
@@ -664,18 +664,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_2adb5a7b24a2">
+                          <tr class="has-input" data-wire-id="wire_2adb5a7b24a2">
                             <td class="td-date">7/2/2026 5:10 AM</td>
                             <td class="td-amount">$3,645.00</td>
                             <td class="td-tenant">Farnoosh Azmoodeh 2/2001 Baxter ST 3/us/los Angeles, CA 90039 3912</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_2adb5a7b24a2" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_2adb5a7b24a2" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/2/2026 5:10 AM', '3645.0', `Farnoosh Azmoodeh 2/2001 Baxter ST 3/us/los Angeles, CA 90039 3912`, '', 'wire_2adb5a7b24a2')">Submit</button>
-                                <span class="submit-status" id="status-wire_2adb5a7b24a2"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011325</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_2adb5a7b24a2"
+                                        onclick="bookInYardi('7/2/2026 5:10 AM', '3645.0', `Farnoosh Azmoodeh 2/2001 Baxter ST 3/us/los Angeles, CA 90039 3912`, 'wire_2adb5a7b24a2')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_2adb5a7b24a2" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -734,10 +736,7 @@
                                 <span class="tid-mono">t0011293</span>
                                 <span class="mgr-name">Bronte weiss</span>
                                 
-                                <button class="yardi-circle" id="book-wire_86655bbf02d4"
-                                        onclick="bookInYardi('7/1/2026 11:45 AM', '4767.83', `Jaspreet Singh OR Kulbir Kaur 1441 Kwis AVE Hacienda Heights CA 91745-2714 US`, 'wire_86655bbf02d4')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_86655bbf02d4" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
