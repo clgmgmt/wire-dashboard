@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/02 1:07 PM</span>
+      <span class="meta-text">Updated 7/02 2:07 PM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">67</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">54</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">55</span></button>
       </div>
     </div>
 
@@ -681,33 +681,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_d08b173d5f18">
+                          <tr class="has-input" data-wire-id="wire_d08b173d5f18">
                             <td class="td-date">7/2/2026 9:55 AM</td>
                             <td class="td-amount">$2,905.83</td>
                             <td class="td-tenant">Ferdinand V Perez 4253 Cheswick LN Virginia Beach VA US 23455-6532</td>
                             <td class="td-ref">Reference T0011336, Alyssa Perez, S W #411</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_d08b173d5f18" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_d08b173d5f18" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/2/2026 9:55 AM', '2905.83', `Ferdinand V Perez 4253 Cheswick LN Virginia Beach VA US 23455-6532`, 'Reference T0011336, Alyssa Perez, S W #411', 'wire_d08b173d5f18')">Submit</button>
-                                <span class="submit-status" id="status-wire_d08b173d5f18"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011336</span>
+                                <span class="mgr-name">Rosa Hernandez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_d08b173d5f18"
+                                        onclick="bookInYardi('7/2/2026 9:55 AM', '2905.83', `Ferdinand V Perez 4253 Cheswick LN Virginia Beach VA US 23455-6532`, 'wire_d08b173d5f18')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_d08b173d5f18" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_68dc9317e6b6">
+                          <tr class="has-input" data-wire-id="wire_68dc9317e6b6">
                             <td class="td-date">7/2/2026 10:38 AM</td>
                             <td class="td-amount">$4,347.83</td>
                             <td class="td-tenant">Eric L Lenting OR Gina C Guzman 4413 Cleek CT Fernandina Beach FL 32034-5323 US</td>
                             <td class="td-ref">t0011327 Kathryn Lenting SW 322</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_68dc9317e6b6" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_68dc9317e6b6" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/2/2026 10:38 AM', '4347.83', `Eric L Lenting OR Gina C Guzman 4413 Cleek CT Fernandina Beach FL 32034-5323 US`, 't0011327 Kathryn Lenting SW 322', 'wire_68dc9317e6b6')">Submit</button>
-                                <span class="submit-status" id="status-wire_68dc9317e6b6"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011327</span>
+                                <span class="mgr-name">Rosa Hernandez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_68dc9317e6b6"
+                                        onclick="bookInYardi('7/2/2026 10:38 AM', '4347.83', `Eric L Lenting OR Gina C Guzman 4413 Cleek CT Fernandina Beach FL 32034-5323 US`, 'wire_68dc9317e6b6')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_68dc9317e6b6" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -740,18 +744,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_0bbb7bcefa53">
+                          <tr class="has-input" data-wire-id="wire_0bbb7bcefa53">
                             <td class="td-date">7/1/2026 11:37 AM</td>
                             <td class="td-amount">$3,243.00</td>
                             <td class="td-tenant">Konstantin Palinkash 6927 Nagle AVE North Hollywood CA 91605-4406 US</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_0bbb7bcefa53" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_0bbb7bcefa53" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/1/2026 11:37 AM', '3243.0', `Konstantin Palinkash 6927 Nagle AVE North Hollywood CA 91605-4406 US`, '', 'wire_0bbb7bcefa53')">Submit</button>
-                                <span class="submit-status" id="status-wire_0bbb7bcefa53"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011330</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_0bbb7bcefa53"
+                                        onclick="bookInYardi('7/1/2026 11:37 AM', '3243.0', `Konstantin Palinkash 6927 Nagle AVE North Hollywood CA 91605-4406 US`, 'wire_0bbb7bcefa53')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_0bbb7bcefa53" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -795,10 +801,7 @@
                                 <span class="tid-mono">t0011308</span>
                                 <span class="mgr-name">David Millstein</span>
                                 
-                                <button class="yardi-circle" id="book-wire_39e908cb6252"
-                                        onclick="bookInYardi('6/30/2026 3:23 PM', '5644.44', `Mia R Lawrence 10912 E County Highway 30a Inlet Be Ach FL 32461-7137 US`, 'wire_39e908cb6252')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_39e908cb6252" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
