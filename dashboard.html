@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/01 6:07 PM</span>
+      <span class="meta-text">Updated 7/02 6:06 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">66</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">54</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">53</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_2adb5a7b24a2">
+                            <td class="td-date">7/2/2026 5:10 AM</td>
+                            <td class="td-amount">$3,645.00</td>
+                            <td class="td-tenant">Farnoosh Azmoodeh 2/2001 Baxter ST 3/us/los Angeles, CA 90039 3912</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_2adb5a7b24a2" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_2adb5a7b24a2" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/2/2026 5:10 AM', '3645.0', `Farnoosh Azmoodeh 2/2001 Baxter ST 3/us/los Angeles, CA 90039 3912`, '', 'wire_2adb5a7b24a2')">Submit</button>
+                                <span class="submit-status" id="status-wire_2adb5a7b24a2"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_aaebb02d9a94">
                             <td class="td-date">7/1/2026 6:15 AM</td>
                             <td class="td-amount">$1,914.56</td>
@@ -1589,20 +1604,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011191</span>
                                 <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_93f64985379b">
-                            <td class="td-date">6/1/2026 2:34 PM</td>
-                            <td class="td-amount">$3,952.83</td>
-                            <td class="td-tenant">Tyler Cohan 2/656 Canyon Point Cir 3/us/golden,80403,co</td>
-                            <td class="td-ref">Reference: T0011208- Cohan</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011208</span>
-                                <span class="mgr-name">Lopez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
