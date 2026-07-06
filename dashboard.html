@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/03 6:07 PM</span>
+      <span class="meta-text">Updated 7/06 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">67</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">60</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">61</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">51</span></button>
       </div>
     </div>
 
@@ -664,6 +664,51 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_2d7033c4f848">
+                            <td class="td-date">7/6/2026 5:12 AM</td>
+                            <td class="td-amount">$6,347.83</td>
+                            <td class="td-tenant">Harris Ronnie Monoson Jill S Monoson 11 Grace CT N Great Neck NY 11021-1431 US</td>
+                            <td class="td-ref">49018954 - Monoson</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_2d7033c4f848" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_2d7033c4f848" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/6/2026 5:12 AM', '6347.83', `Harris Ronnie Monoson Jill S Monoson 11 Grace CT N Great Neck NY 11021-1431 US`, '49018954 - Monoson', 'wire_2d7033c4f848')">Submit</button>
+                                <span class="submit-status" id="status-wire_2d7033c4f848"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_e9d22ae59a56">
+                            <td class="td-date">7/6/2026 5:10 AM</td>
+                            <td class="td-amount">$4,117.83</td>
+                            <td class="td-tenant">Joseph Biernacki 2277 Harbor BLVD Costa Mesa, CA 92626</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_e9d22ae59a56" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_e9d22ae59a56" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/6/2026 5:10 AM', '4117.83', `Joseph Biernacki 2277 Harbor BLVD Costa Mesa, CA 92626`, '', 'wire_e9d22ae59a56')">Submit</button>
+                                <span class="submit-status" id="status-wire_e9d22ae59a56"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_c756b140dd03">
+                            <td class="td-date">7/6/2026 5:02 AM</td>
+                            <td class="td-amount">$5,647.83</td>
+                            <td class="td-tenant">Erika A Foxworth 13593 Grosse Pt San Diego CA US 921 28-4761</td>
+                            <td class="td-ref">Reference - T0011310- Foxworth For Apartment #627</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_c756b140dd03" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_c756b140dd03" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/6/2026 5:02 AM', '5647.83', `Erika A Foxworth 13593 Grosse Pt San Diego CA US 921 28-4761`, 'Reference - T0011310- Foxworth For Apartment #627', 'wire_c756b140dd03')">Submit</button>
+                                <span class="submit-status" id="status-wire_c756b140dd03"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_2adb5a7b24a2">
                             <td class="td-date">7/2/2026 5:10 AM</td>
                             <td class="td-amount">$3,645.00</td>
@@ -1463,146 +1508,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011236</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_b6073abe7e04">
-                            <td class="td-date">6/5/2026 5:12 AM</td>
-                            <td class="td-amount">$2,673.91</td>
-                            <td class="td-tenant">Natalie Lamb 15878 Bella Siena Rancho Santa Fe C A 92067 US</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011216</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_cbf0de26fd26">
-                            <td class="td-date">6/5/2026 6:52 AM</td>
-                            <td class="td-amount">$8,592.83</td>
-                            <td class="td-tenant">Susanne C Pepa Spaltenstein 714 Kensington RD Santa Monica CA 9 0405-2420 US</td>
-                            <td class="td-ref">t0011253 Spaltenstein 4210 Del Reya Ve U401 Marina Del Rey CA 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011253</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_906d2bf26a6c">
-                            <td class="td-date">6/5/2026 9:26 AM</td>
-                            <td class="td-amount">$4,422.82</td>
-                            <td class="td-tenant">Uyeol Jeon 73 E Lake ST Apt 3301 Chicago IL 60601-4800 US</td>
-                            <td class="td-ref">T0011203-jeon</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011203</span>
-                                <span class="mgr-name">lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_dbb8fa61d029">
-                            <td class="td-date">6/4/2026 5:16 AM</td>
-                            <td class="td-amount">$3,193.92</td>
-                            <td class="td-tenant">Lisa O'Coyne 16726 Trade Winds Drive San Diego C A 92127 US</td>
-                            <td class="td-ref">t0011216 Ocoyne</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011216</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_66057c91b20f">
-                            <td class="td-date">6/4/2026 7:05 AM</td>
-                            <td class="td-amount">$2,917.92</td>
-                            <td class="td-tenant">Evan Galleguillos 4842 W 17th ST Los Angeles, CA 9001 9 US</td>
-                            <td class="td-ref">t0011194 - Galleguillos Checking</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011194</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_5c5ce48307b8">
-                            <td class="td-date">6/4/2026 6:37 AM</td>
-                            <td class="td-amount">$2,300.00</td>
-                            <td class="td-tenant">Vaibhav Mathur 340 Clifton PL 4b, Brooklyn, Ny, 11 216, US</td>
-                            <td class="td-ref">Ref: Tcode: T0011249vaibhav Mathur, 3800 S. Mentone AVE</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011249</span>
-                                <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_3f280e328853">
-                            <td class="td-date">6/3/2026 5:55 AM</td>
-                            <td class="td-amount">$1,895.00</td>
-                            <td class="td-tenant">Max Pastore 375 E 2nd ST Apt 323 Los Angeles CA US 90012-4298</td>
-                            <td class="td-ref">Reference T0011219-pastore Move IN Funds At 1221 N Myra AVE Unit 326c</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011219</span>
-                                <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_f00335a96b84">
-                            <td class="td-date">6/3/2026 10:35 AM</td>
-                            <td class="td-amount">$8,697.83</td>
-                            <td class="td-tenant">John R Williams 4236 4th AVE Sacramento CA US 95817 -3021</td>
-                            <td class="td-ref">John Williams 13448 Beach AVE P0011 241</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011241</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_23481030e9dc">
-                            <td class="td-date">6/3/2026 1:43 PM</td>
-                            <td class="td-amount">$3,072.91</td>
-                            <td class="td-tenant">Joshua Shayer 5350 White Oak AVE Apt 308 Encino CA 91316-4529 US</td>
-                            <td class="td-ref">Josh Shayer Move IN Funds Unit 408</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011194</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_f985de22c86f">
-                            <td class="td-date">6/2/2026 1:57 PM</td>
-                            <td class="td-amount">$3,352.83</td>
-                            <td class="td-tenant">Victoria Kaleta 490 Freitas RD Danville California 94526-4161 US</td>
-                            <td class="td-ref">t0011191 - Kaleta</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011191</span>
-                                <span class="mgr-name">Andrew Menzies</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
