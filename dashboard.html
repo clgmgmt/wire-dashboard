@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/06 6:06 PM</span>
+      <span class="meta-text">Updated 7/07 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">62</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">64</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">51</span></button>
       </div>
@@ -664,6 +664,36 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_9b2914281597">
+                            <td class="td-date">7/7/2026 5:11 AM</td>
+                            <td class="td-amount">$1,914.56</td>
+                            <td class="td-tenant">Ie92revo99036001921814 Oisin Mc Keogh Carrowbaun Ie V94 Cf5x Killaloe Co. Clare</td>
+                            <td class="td-ref">T0011275-mckeogh</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9b2914281597" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9b2914281597" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/7/2026 5:11 AM', '1914.56', `Ie92revo99036001921814 Oisin Mc Keogh Carrowbaun Ie V94 Cf5x Killaloe Co. Clare`, 'T0011275-mckeogh', 'wire_9b2914281597')">Submit</button>
+                                <span class="submit-status" id="status-wire_9b2914281597"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_560d88bc95be">
+                            <td class="td-date">7/7/2026 5:06 AM</td>
+                            <td class="td-amount">$4,452.83</td>
+                            <td class="td-tenant">Cohns Family Trust DTD 042099 3347 Van Allen PL Topanga CA 90290- 4485 US</td>
+                            <td class="td-ref">t0011329 Ethan Cohn SW 223</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_560d88bc95be" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_560d88bc95be" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/7/2026 5:06 AM', '4452.83', `Cohns Family Trust DTD 042099 3347 Van Allen PL Topanga CA 90290- 4485 US`, 't0011329 Ethan Cohn SW 223', 'wire_560d88bc95be')">Submit</button>
+                                <span class="submit-status" id="status-wire_560d88bc95be"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_2d7033c4f848">
                             <td class="td-date">7/6/2026 5:12 AM</td>
                             <td class="td-amount">$6,347.83</td>
