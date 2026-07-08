@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/08 7:07 AM</span>
+      <span class="meta-text">Updated 7/08 8:07 AM</span>
     </div>
   </div>
 
@@ -646,9 +646,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">64</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">64</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">55</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">0</span></button>
       </div>
     </div>
 
@@ -769,199 +769,213 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_2adb5a7b24a2">
+                          <tr class="needs-input" data-wire-id="wire_2adb5a7b24a2">
                             <td class="td-date">7/2/2026 5:10 AM</td>
                             <td class="td-amount">$3,645.00</td>
                             <td class="td-tenant">Farnoosh Azmoodeh 2/2001 Baxter ST 3/us/los Angeles, CA 90039 3912</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011325</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_2adb5a7b24a2" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_2adb5a7b24a2" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/2/2026 5:10 AM', '3645.0', `Farnoosh Azmoodeh 2/2001 Baxter ST 3/us/los Angeles, CA 90039 3912`, '', 'wire_2adb5a7b24a2')">Submit</button>
+                                <span class="submit-status" id="status-wire_2adb5a7b24a2"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_d08b173d5f18">
+                          <tr class="needs-input" data-wire-id="wire_d08b173d5f18">
                             <td class="td-date">7/2/2026 9:55 AM</td>
                             <td class="td-amount">$2,905.83</td>
                             <td class="td-tenant">Ferdinand V Perez 4253 Cheswick LN Virginia Beach VA US 23455-6532</td>
                             <td class="td-ref">Reference T0011336, Alyssa Perez, S W #411</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011336</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d08b173d5f18" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d08b173d5f18" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/2/2026 9:55 AM', '2905.83', `Ferdinand V Perez 4253 Cheswick LN Virginia Beach VA US 23455-6532`, 'Reference T0011336, Alyssa Perez, S W #411', 'wire_d08b173d5f18')">Submit</button>
+                                <span class="submit-status" id="status-wire_d08b173d5f18"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_68dc9317e6b6">
+                          <tr class="needs-input" data-wire-id="wire_68dc9317e6b6">
                             <td class="td-date">7/2/2026 10:38 AM</td>
                             <td class="td-amount">$4,347.83</td>
                             <td class="td-tenant">Eric L Lenting OR Gina C Guzman 4413 Cleek CT Fernandina Beach FL 32034-5323 US</td>
                             <td class="td-ref">t0011327 Kathryn Lenting SW 322</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011327</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_68dc9317e6b6" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_68dc9317e6b6" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/2/2026 10:38 AM', '4347.83', `Eric L Lenting OR Gina C Guzman 4413 Cleek CT Fernandina Beach FL 32034-5323 US`, 't0011327 Kathryn Lenting SW 322', 'wire_68dc9317e6b6')">Submit</button>
+                                <span class="submit-status" id="status-wire_68dc9317e6b6"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_aaebb02d9a94">
+                          <tr class="needs-input" data-wire-id="wire_aaebb02d9a94">
                             <td class="td-date">7/1/2026 6:15 AM</td>
                             <td class="td-amount">$1,914.56</td>
                             <td class="td-tenant">Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US</td>
                             <td class="td-ref">/inst/jonas Jehle//t0011275-jehle - Wr</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011275</span>
-                                <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_aaebb02d9a94" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_aaebb02d9a94" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/1/2026 6:15 AM', '1914.56', `Wise Us, Inc. 30 W. 26th St, 6th Floor New York NY 10010- US`, '/inst/jonas Jehle//t0011275-jehle - Wr', 'wire_aaebb02d9a94')">Submit</button>
+                                <span class="submit-status" id="status-wire_aaebb02d9a94"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_86655bbf02d4">
+                          <tr class="needs-input" data-wire-id="wire_86655bbf02d4">
                             <td class="td-date">7/1/2026 11:45 AM</td>
                             <td class="td-amount">$4,767.83</td>
                             <td class="td-tenant">Jaspreet Singh OR Kulbir Kaur 1441 Kwis AVE Hacienda Heights CA 91745-2714 US</td>
                             <td class="td-ref">T Code: T0011293- Kaur AND Bhasin S Ecurity Deposit AND Rent Unit 528</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011293</span>
-                                <span class="mgr-name">Bronte weiss</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_86655bbf02d4" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_86655bbf02d4" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/1/2026 11:45 AM', '4767.83', `Jaspreet Singh OR Kulbir Kaur 1441 Kwis AVE Hacienda Heights CA 91745-2714 US`, 'T Code: T0011293- Kaur AND Bhasin S Ecurity Deposit AND Rent Unit 528', 'wire_86655bbf02d4')">Submit</button>
+                                <span class="submit-status" id="status-wire_86655bbf02d4"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_0bbb7bcefa53">
+                          <tr class="needs-input" data-wire-id="wire_0bbb7bcefa53">
                             <td class="td-date">7/1/2026 11:37 AM</td>
                             <td class="td-amount">$3,243.00</td>
                             <td class="td-tenant">Konstantin Palinkash 6927 Nagle AVE North Hollywood CA 91605-4406 US</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011330</span>
-                                <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_0bbb7bcefa53" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_0bbb7bcefa53" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/1/2026 11:37 AM', '3243.0', `Konstantin Palinkash 6927 Nagle AVE North Hollywood CA 91605-4406 US`, '', 'wire_0bbb7bcefa53')">Submit</button>
+                                <span class="submit-status" id="status-wire_0bbb7bcefa53"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_9da5fddd372d">
+                          <tr class="needs-input" data-wire-id="wire_9da5fddd372d">
                             <td class="td-date">6/30/2026 5:49 AM</td>
                             <td class="td-amount">$6,762.83</td>
                             <td class="td-tenant">Preet Gangrade 2/474 Teal Plz 3/us/secaucus, NJ 07094 2216</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011306</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9da5fddd372d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9da5fddd372d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/30/2026 5:49 AM', '6762.83', `Preet Gangrade 2/474 Teal Plz 3/us/secaucus, NJ 07094 2216`, '', 'wire_9da5fddd372d')">Submit</button>
+                                <span class="submit-status" id="status-wire_9da5fddd372d"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_1b44f2ae61ff">
+                          <tr class="needs-input" data-wire-id="wire_1b44f2ae61ff">
                             <td class="td-date">6/30/2026 9:24 AM</td>
                             <td class="td-amount">$1,564.57</td>
                             <td class="td-tenant">Michael R Levin 8029 Herb Farm DR Bethesda MD 20817-1309 US</td>
                             <td class="td-ref">Ref: t0011275 - Levin</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011275</span>
-                                <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_1b44f2ae61ff" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_1b44f2ae61ff" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/30/2026 9:24 AM', '1564.57', `Michael R Levin 8029 Herb Farm DR Bethesda MD 20817-1309 US`, 'Ref: t0011275 - Levin', 'wire_1b44f2ae61ff')">Submit</button>
+                                <span class="submit-status" id="status-wire_1b44f2ae61ff"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_39e908cb6252">
+                          <tr class="needs-input" data-wire-id="wire_39e908cb6252">
                             <td class="td-date">6/30/2026 3:23 PM</td>
                             <td class="td-amount">$5,644.44</td>
                             <td class="td-tenant">Mia R Lawrence 10912 E County Highway 30a Inlet Be Ach FL 32461-7137 US</td>
                             <td class="td-ref">t0011308 Lawrence</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011308</span>
-                                <span class="mgr-name">David Millstein</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_39e908cb6252" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_39e908cb6252" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/30/2026 3:23 PM', '5644.44', `Mia R Lawrence 10912 E County Highway 30a Inlet Be Ach FL 32461-7137 US`, 't0011308 Lawrence', 'wire_39e908cb6252')">Submit</button>
+                                <span class="submit-status" id="status-wire_39e908cb6252"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_53bb90555ff2">
+                          <tr class="needs-input" data-wire-id="wire_53bb90555ff2">
                             <td class="td-date">6/29/2026 5:20 AM</td>
                             <td class="td-amount">$4,452.83</td>
                             <td class="td-tenant">John A DE Vilhena Rees 6107 Tarawood DR Orlando FL 32819-4423 US</td>
                             <td class="td-ref">t0011251 - DE Vilhena Rees</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011251</span>
-                                <span class="mgr-name">Joslyn Y</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_53bb90555ff2" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_53bb90555ff2" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/29/2026 5:20 AM', '4452.83', `John A DE Vilhena Rees 6107 Tarawood DR Orlando FL 32819-4423 US`, 't0011251 - DE Vilhena Rees', 'wire_53bb90555ff2')">Submit</button>
+                                <span class="submit-status" id="status-wire_53bb90555ff2"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_3cbd4db77b7b">
+                          <tr class="needs-input" data-wire-id="wire_3cbd4db77b7b">
                             <td class="td-date">6/26/2026 5:42 AM</td>
                             <td class="td-amount">$3,606.83</td>
                             <td class="td-tenant">Peter Pinto 1170 Foothill Way Mountainside NJ 07092-2004 US</td>
                             <td class="td-ref">Pinto t0011301</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011301</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_3cbd4db77b7b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_3cbd4db77b7b" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/26/2026 5:42 AM', '3606.83', `Peter Pinto 1170 Foothill Way Mountainside NJ 07092-2004 US`, 'Pinto t0011301', 'wire_3cbd4db77b7b')">Submit</button>
+                                <span class="submit-status" id="status-wire_3cbd4db77b7b"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_76885666456e">
+                          <tr class="needs-input" data-wire-id="wire_76885666456e">
                             <td class="td-date">6/26/2026 5:41 AM</td>
                             <td class="td-amount">$3,231.66</td>
                             <td class="td-tenant">Austin W Carbo 500 Lipan ST Unit 410 Denver CO 80204-4928 US</td>
                             <td class="td-ref">T0011301-carbo</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011301</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_76885666456e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_76885666456e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/26/2026 5:41 AM', '3231.66', `Austin W Carbo 500 Lipan ST Unit 410 Denver CO 80204-4928 US`, 'T0011301-carbo', 'wire_76885666456e')">Submit</button>
+                                <span class="submit-status" id="status-wire_76885666456e"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_be8e2e3504c0">
+                          <tr class="needs-input" data-wire-id="wire_be8e2e3504c0">
                             <td class="td-date">6/26/2026 8:40 AM</td>
                             <td class="td-amount">$4,747.83</td>
                             <td class="td-tenant">Hugo Soto 15450 SW 27th ST Miami FL 33185-5804 US</td>
                             <td class="td-ref">T0011240, Brian Soto, SW #404</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011240</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_be8e2e3504c0" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_be8e2e3504c0" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/26/2026 8:40 AM', '4747.83', `Hugo Soto 15450 SW 27th ST Miami FL 33185-5804 US`, 'T0011240, Brian Soto, SW #404', 'wire_be8e2e3504c0')">Submit</button>
+                                <span class="submit-status" id="status-wire_be8e2e3504c0"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_77e568b80c78">
+                          <tr class="needs-input" data-wire-id="wire_77e568b80c78">
                             <td class="td-date">6/26/2026 9:28 AM</td>
                             <td class="td-amount">$4,547.83</td>
                             <td class="td-tenant">Chaojie Yuan 1625 S Magnolia AVE Unit 3165 Monrovia CA 91016-4886 US</td>
                             <td class="td-ref">T0011299, Yixuan Yang, SW #104</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011299</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_77e568b80c78" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_77e568b80c78" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/26/2026 9:28 AM', '4547.83', `Chaojie Yuan 1625 S Magnolia AVE Unit 3165 Monrovia CA 91016-4886 US`, 'T0011299, Yixuan Yang, SW #104', 'wire_77e568b80c78')">Submit</button>
+                                <span class="submit-status" id="status-wire_77e568b80c78"></span>
                               </div>
                             </td>
                           </tr>
@@ -980,31 +994,33 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_d4b5756584f8">
+                          <tr class="needs-input" data-wire-id="wire_d4b5756584f8">
                             <td class="td-date">6/26/2026 12:02 PM</td>
                             <td class="td-amount">$6,647.76</td>
                             <td class="td-tenant">Ojan Missaghi 950 S Fairfax Avenue Apt 420 Los An Geles CA 90036 USA</td>
                             <td class="td-ref">t0011225 Missaghi - Hatami</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011225</span>
-                                <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d4b5756584f8" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d4b5756584f8" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/26/2026 12:02 PM', '6647.76', `Ojan Missaghi 950 S Fairfax Avenue Apt 420 Los An Geles CA 90036 USA`, 't0011225 Missaghi - Hatami', 'wire_d4b5756584f8')">Submit</button>
+                                <span class="submit-status" id="status-wire_d4b5756584f8"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_8c6ce7230014">
+                          <tr class="needs-input" data-wire-id="wire_8c6ce7230014">
                             <td class="td-date">6/26/2026 11:12 AM</td>
                             <td class="td-amount">$2,835.00</td>
                             <td class="td-tenant">Fernando Torres 608 N Lazard ST San Fernando CA 91340-1927 US</td>
                             <td class="td-ref">Reference: Tenant Code t0011286 Fer Nando Torres 18402 Halsted ST Unit 39 Northridge, CA 91325</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011286</span>
-                                <span class="mgr-name">Adela Labarca</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_8c6ce7230014" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_8c6ce7230014" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/26/2026 11:12 AM', '2835.0', `Fernando Torres 608 N Lazard ST San Fernando CA 91340-1927 US`, 'Reference: Tenant Code t0011286 Fer Nando Torres 18402 Halsted ST Unit 39 Northridge, CA 91325', 'wire_8c6ce7230014')">Submit</button>
+                                <span class="submit-status" id="status-wire_8c6ce7230014"></span>
                               </div>
                             </td>
                           </tr>
@@ -1023,549 +1039,588 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_b43e38cd5f26">
+                          <tr class="needs-input" data-wire-id="wire_b43e38cd5f26">
                             <td class="td-date">6/25/2026 4:17 PM</td>
                             <td class="td-amount">$5,316.83</td>
                             <td class="td-tenant">Jada Jo Jackson 13448 Beach AVE Ph6208 Marina Del R Ey CA 90292-5714 US</td>
                             <td class="td-ref">Jada Jo Jackson G8 13448 Beach Avem Arina Del Rey CA Unit 4205</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011319</span>
-                                <span class="mgr-name">Holly Hesse</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_b43e38cd5f26" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_b43e38cd5f26" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/25/2026 4:17 PM', '5316.83', `Jada Jo Jackson 13448 Beach AVE Ph6208 Marina Del R Ey CA 90292-5714 US`, 'Jada Jo Jackson G8 13448 Beach Avem Arina Del Rey CA Unit 4205', 'wire_b43e38cd5f26')">Submit</button>
+                                <span class="submit-status" id="status-wire_b43e38cd5f26"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_7ae49a21b422">
+                          <tr class="needs-input" data-wire-id="wire_7ae49a21b422">
                             <td class="td-date">6/24/2026 5:09 AM</td>
                             <td class="td-amount">$3,800.47</td>
                             <td class="td-tenant">Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646</td>
                             <td class="td-ref">Rent Charlie - 635</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0010710</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_7ae49a21b422" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_7ae49a21b422" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/24/2026 5:09 AM', '3800.47', `Michelle P Pero Vasil 2/20 Snow Inn RD 3/us/harwich Port 02646`, 'Rent Charlie - 635', 'wire_7ae49a21b422')">Submit</button>
+                                <span class="submit-status" id="status-wire_7ae49a21b422"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_121ad3b06cec">
+                          <tr class="needs-input" data-wire-id="wire_121ad3b06cec">
                             <td class="td-date">6/24/2026 1:28 PM</td>
                             <td class="td-amount">$3,997.83</td>
                             <td class="td-tenant">Cristian Contreras 4700 Acacia ST Bell CA 90201-2603 US</td>
                             <td class="td-ref">Unit 326 Move-in Funds</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011291</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_121ad3b06cec" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_121ad3b06cec" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/24/2026 1:28 PM', '3997.83', `Cristian Contreras 4700 Acacia ST Bell CA 90201-2603 US`, 'Unit 326 Move-in Funds', 'wire_121ad3b06cec')">Submit</button>
+                                <span class="submit-status" id="status-wire_121ad3b06cec"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_d0826e1f2b5f">
+                          <tr class="needs-input" data-wire-id="wire_d0826e1f2b5f">
                             <td class="td-date">6/23/2026 5:08 AM</td>
                             <td class="td-amount">$2,989.44</td>
                             <td class="td-tenant">Rebecca Zait 2/5615 Mainmast Place 3/us/agoura Hills,91301,ca</td>
                             <td class="td-ref">Security Deposit AND First Month Re Nt. Reference:t0011255 Rebecca Zait</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011255</span>
-                                <span class="mgr-name">Adela Labarca</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d0826e1f2b5f" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d0826e1f2b5f" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/23/2026 5:08 AM', '2989.44', `Rebecca Zait 2/5615 Mainmast Place 3/us/agoura Hills,91301,ca`, 'Security Deposit AND First Month Re Nt. Reference:t0011255 Rebecca Zait', 'wire_d0826e1f2b5f')">Submit</button>
+                                <span class="submit-status" id="status-wire_d0826e1f2b5f"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_ce92f4036409">
+                          <tr class="needs-input" data-wire-id="wire_ce92f4036409">
                             <td class="td-date">6/23/2026 5:07 AM</td>
                             <td class="td-amount">$6,401.66</td>
                             <td class="td-tenant">Vitali Zahharov 11657 Chenault ST Apt. 105 Los Ange Les CA 90049-4557 US</td>
                             <td class="td-ref">t0011199 Zahharov</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011199</span>
-                                <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_ce92f4036409" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_ce92f4036409" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/23/2026 5:07 AM', '6401.66', `Vitali Zahharov 11657 Chenault ST Apt. 105 Los Ange Les CA 90049-4557 US`, 't0011199 Zahharov', 'wire_ce92f4036409')">Submit</button>
+                                <span class="submit-status" id="status-wire_ce92f4036409"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_04006430e836">
+                          <tr class="needs-input" data-wire-id="wire_04006430e836">
                             <td class="td-date">6/23/2026 2:39 PM</td>
                             <td class="td-amount">$4,632.83</td>
                             <td class="td-tenant">Ryan A Thompson 369 Avondale DR Shirley NY 11967-1401 US</td>
                             <td class="td-ref">Ryan Thompson Move IN Costs 13448 B Each AVE Unit 3323 Marina Del Rey C A 90292</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011315</span>
-                                <span class="mgr-name">Holly Hesse</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_04006430e836" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_04006430e836" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/23/2026 2:39 PM', '4632.83', `Ryan A Thompson 369 Avondale DR Shirley NY 11967-1401 US`, 'Ryan Thompson Move IN Costs 13448 B Each AVE Unit 3323 Marina Del Rey C A 90292', 'wire_04006430e836')">Submit</button>
+                                <span class="submit-status" id="status-wire_04006430e836"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_fe67b7172a03">
+                          <tr class="needs-input" data-wire-id="wire_fe67b7172a03">
                             <td class="td-date">6/22/2026 5:22 AM</td>
                             <td class="td-amount">$3,100.00</td>
                             <td class="td-tenant">Mohammadali Naraghi 1138 20th ST Apt 12 Santa Monica CA 90403-5639 US</td>
                             <td class="td-ref">Reference T0011288naraghi</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011288</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_fe67b7172a03" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_fe67b7172a03" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/22/2026 5:22 AM', '3100.0', `Mohammadali Naraghi 1138 20th ST Apt 12 Santa Monica CA 90403-5639 US`, 'Reference T0011288naraghi', 'wire_fe67b7172a03')">Submit</button>
+                                <span class="submit-status" id="status-wire_fe67b7172a03"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_c1a24e69caf3">
+                          <tr class="needs-input" data-wire-id="wire_c1a24e69caf3">
                             <td class="td-date">6/22/2026 5:22 AM</td>
                             <td class="td-amount">$3,751.83</td>
                             <td class="td-tenant">Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US</td>
                             <td class="td-ref">Apartment Rent For Sean AND Paula H Arrell</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011236</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_c1a24e69caf3" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_c1a24e69caf3" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/22/2026 5:22 AM', '3751.83', `Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US`, 'Apartment Rent For Sean AND Paula H Arrell', 'wire_c1a24e69caf3')">Submit</button>
+                                <span class="submit-status" id="status-wire_c1a24e69caf3"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_027a3bad9fc5">
+                          <tr class="needs-input" data-wire-id="wire_027a3bad9fc5">
                             <td class="td-date">6/22/2026 7:39 AM</td>
                             <td class="td-amount">$7,097.40</td>
                             <td class="td-tenant">Krystle Mei Chow 3650 Holmes Cir Hacienda Heights CA 91745-6176 US</td>
                             <td class="td-ref">t0011283 - Chow</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011283</span>
-                                <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_027a3bad9fc5" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_027a3bad9fc5" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/22/2026 7:39 AM', '7097.4', `Krystle Mei Chow 3650 Holmes Cir Hacienda Heights CA 91745-6176 US`, 't0011283 - Chow', 'wire_027a3bad9fc5')">Submit</button>
+                                <span class="submit-status" id="status-wire_027a3bad9fc5"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_a1b51cb183b8">
+                          <tr class="needs-input" data-wire-id="wire_a1b51cb183b8">
                             <td class="td-date">6/22/2026 7:37 AM</td>
                             <td class="td-amount">$2,545.00</td>
                             <td class="td-tenant">Jennifer P Petsu OR Patrice Catherine Petsu 3741 Boise AVE Los Angeles CA 90066-3603 US</td>
                             <td class="td-ref">Luke Petsu13448 Beach AVE #5510amar Ina Del Rey, CA 90292</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011285</span>
-                                <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_a1b51cb183b8" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_a1b51cb183b8" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/22/2026 7:37 AM', '2545.0', `Jennifer P Petsu OR Patrice Catherine Petsu 3741 Boise AVE Los Angeles CA 90066-3603 US`, 'Luke Petsu13448 Beach AVE #5510amar Ina Del Rey, CA 90292', 'wire_a1b51cb183b8')">Submit</button>
+                                <span class="submit-status" id="status-wire_a1b51cb183b8"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_193c715517ba">
+                          <tr class="needs-input" data-wire-id="wire_193c715517ba">
                             <td class="td-date">6/22/2026 9:38 AM</td>
                             <td class="td-amount">$5,145.00</td>
                             <td class="td-tenant">Mark V Pettinga & Gayle L Petting 1/a Jt Ten 2/river Club DR 1436 3/us/indian River Shores,32963 391+</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011274</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_193c715517ba" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_193c715517ba" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/22/2026 9:38 AM', '5145.0', `Mark V Pettinga & Gayle L Petting 1/a Jt Ten 2/river Club DR 1436 3/us/indian River Shores,32963 391+`, '', 'wire_193c715517ba')">Submit</button>
+                                <span class="submit-status" id="status-wire_193c715517ba"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_18826ce2e69a">
+                          <tr class="needs-input" data-wire-id="wire_18826ce2e69a">
                             <td class="td-date">6/22/2026 3:00 PM</td>
                             <td class="td-amount">$4,497.83</td>
                             <td class="td-tenant">Krystal Y Lai 2525 Elm ST Apt 1801 Dallas TX 7522 6 USA</td>
                             <td class="td-ref">Add This To Wire Memo: T0011264, Kr Ystal Lai SW 421</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011264</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_18826ce2e69a" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_18826ce2e69a" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/22/2026 3:00 PM', '4497.83', `Krystal Y Lai 2525 Elm ST Apt 1801 Dallas TX 7522 6 USA`, 'Add This To Wire Memo: T0011264, Kr Ystal Lai SW 421', 'wire_18826ce2e69a')">Submit</button>
+                                <span class="submit-status" id="status-wire_18826ce2e69a"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_6aa16bdea66e">
+                          <tr class="needs-input" data-wire-id="wire_6aa16bdea66e">
                             <td class="td-date">6/18/2026 5:16 AM</td>
                             <td class="td-amount">$4,847.83</td>
                             <td class="td-tenant">Ona Ra 700 W 9th ST Apt 1604 Los Angeles CA 90015-4524 US</td>
                             <td class="td-ref">Ref#: T0011259-ra</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011259</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_6aa16bdea66e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_6aa16bdea66e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/18/2026 5:16 AM', '4847.83', `Ona Ra 700 W 9th ST Apt 1604 Los Angeles CA 90015-4524 US`, 'Ref#: T0011259-ra', 'wire_6aa16bdea66e')">Submit</button>
+                                <span class="submit-status" id="status-wire_6aa16bdea66e"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_86c4e2bb1743">
+                          <tr class="needs-input" data-wire-id="wire_86c4e2bb1743">
                             <td class="td-date">6/18/2026 12:02 PM</td>
                             <td class="td-amount">$4,651.83</td>
                             <td class="td-tenant">Metin Ardin 2/4250 Glencoe AVE Unit 1325 3/us/marina Del Rey, CA 90292-5685</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011287</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_86c4e2bb1743" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_86c4e2bb1743" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/18/2026 12:02 PM', '4651.83', `Metin Ardin 2/4250 Glencoe AVE Unit 1325 3/us/marina Del Rey, CA 90292-5685`, '', 'wire_86c4e2bb1743')">Submit</button>
+                                <span class="submit-status" id="status-wire_86c4e2bb1743"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_c1c6ae4433ca">
+                          <tr class="needs-input" data-wire-id="wire_c1c6ae4433ca">
                             <td class="td-date">6/18/2026 12:30 PM</td>
                             <td class="td-amount">$5,376.16</td>
                             <td class="td-tenant">Hesam Ferdows OR Lorena Oropeza Ferdows Po Box 7465 Menlo Park CA 94026-7465 US</td>
                             <td class="td-ref">For Jhila I. Ferdows Lease</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011267</span>
-                                <span class="mgr-name">Sandybell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_c1c6ae4433ca" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_c1c6ae4433ca" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/18/2026 12:30 PM', '5376.16', `Hesam Ferdows OR Lorena Oropeza Ferdows Po Box 7465 Menlo Park CA 94026-7465 US`, 'For Jhila I. Ferdows Lease', 'wire_c1c6ae4433ca')">Submit</button>
+                                <span class="submit-status" id="status-wire_c1c6ae4433ca"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_60ceabcc4d5c">
+                          <tr class="needs-input" data-wire-id="wire_60ceabcc4d5c">
                             <td class="td-date">6/17/2026 5:12 AM</td>
                             <td class="td-amount">$5,110.83</td>
                             <td class="td-tenant">Cynthia Ramirez 9612 Poseidon ST Bakersfield CA 93306 US</td>
                             <td class="td-ref">Move-in Funds</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011276</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_60ceabcc4d5c" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_60ceabcc4d5c" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/17/2026 5:12 AM', '5110.83', `Cynthia Ramirez 9612 Poseidon ST Bakersfield CA 93306 US`, 'Move-in Funds', 'wire_60ceabcc4d5c')">Submit</button>
+                                <span class="submit-status" id="status-wire_60ceabcc4d5c"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_9280449b105f">
+                          <tr class="needs-input" data-wire-id="wire_9280449b105f">
                             <td class="td-date">6/17/2026 5:08 AM</td>
                             <td class="td-amount">$8,487.83</td>
                             <td class="td-tenant">Alexis Cantelme 2/109 Wolcot CT 3/us/folsom, CA 95630 6503</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011223</span>
-                                <span class="mgr-name">Sandybell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9280449b105f" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9280449b105f" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/17/2026 5:08 AM', '8487.83', `Alexis Cantelme 2/109 Wolcot CT 3/us/folsom, CA 95630 6503`, '', 'wire_9280449b105f')">Submit</button>
+                                <span class="submit-status" id="status-wire_9280449b105f"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_eb8d1371b823">
+                          <tr class="needs-input" data-wire-id="wire_eb8d1371b823">
                             <td class="td-date">6/17/2026 11:26 AM</td>
                             <td class="td-amount">$2,895.00</td>
                             <td class="td-tenant">Ojas Awana OR Vivek Awana 31 Willocks Cir Somerset NJ 08873-7462 US</td>
                             <td class="td-ref">Reference# T0011279-awana</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011279</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_eb8d1371b823" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_eb8d1371b823" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/17/2026 11:26 AM', '2895.0', `Ojas Awana OR Vivek Awana 31 Willocks Cir Somerset NJ 08873-7462 US`, 'Reference# T0011279-awana', 'wire_eb8d1371b823')">Submit</button>
+                                <span class="submit-status" id="status-wire_eb8d1371b823"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_83a9a634f6e7">
+                          <tr class="needs-input" data-wire-id="wire_83a9a634f6e7">
                             <td class="td-date">6/17/2026 12:50 PM</td>
                             <td class="td-amount">$150.00</td>
                             <td class="td-tenant">Emily Minevich 250 North 10th Street Brooklyn, NY 11211</td>
                             <td class="td-ref">Additional Move IN Funds T0011269mi Nevich</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011269</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_83a9a634f6e7" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_83a9a634f6e7" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/17/2026 12:50 PM', '150.0', `Emily Minevich 250 North 10th Street Brooklyn, NY 11211`, 'Additional Move IN Funds T0011269mi Nevich', 'wire_83a9a634f6e7')">Submit</button>
+                                <span class="submit-status" id="status-wire_83a9a634f6e7"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_b7ef1a10f02a">
+                          <tr class="needs-input" data-wire-id="wire_b7ef1a10f02a">
                             <td class="td-date">6/16/2026 5:14 AM</td>
                             <td class="td-amount">$4,701.83</td>
                             <td class="td-tenant">Mark Emanuel 301 E 79th ST Apt 37jk New York NY 10075-0951 US</td>
                             <td class="td-ref">T0011265, Daniella Emanuel, SW 323</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011265</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_b7ef1a10f02a" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_b7ef1a10f02a" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/16/2026 5:14 AM', '4701.83', `Mark Emanuel 301 E 79th ST Apt 37jk New York NY 10075-0951 US`, 'T0011265, Daniella Emanuel, SW 323', 'wire_b7ef1a10f02a')">Submit</button>
+                                <span class="submit-status" id="status-wire_b7ef1a10f02a"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_5ef944633b47">
+                          <tr class="needs-input" data-wire-id="wire_5ef944633b47">
                             <td class="td-date">6/16/2026 5:09 AM</td>
                             <td class="td-amount">$4,052.83</td>
                             <td class="td-tenant">Brandon Williams 1032 Park RD NW Washington,dc,20010,us</td>
                             <td class="td-ref">First Month Rent AND Security Depos It (3838 Dunn Dr. #607)</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011238</span>
-                                <span class="mgr-name">Sandybell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_5ef944633b47" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_5ef944633b47" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/16/2026 5:09 AM', '4052.83', `Brandon Williams 1032 Park RD NW Washington,dc,20010,us`, 'First Month Rent AND Security Depos It (3838 Dunn Dr. #607)', 'wire_5ef944633b47')">Submit</button>
+                                <span class="submit-status" id="status-wire_5ef944633b47"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_71952972592b">
+                          <tr class="needs-input" data-wire-id="wire_71952972592b">
                             <td class="td-date">6/16/2026 11:35 AM</td>
                             <td class="td-amount">$3,895.00</td>
                             <td class="td-tenant">Emily Minevich 250 North 10th Street Brooklyn, NY 11211</td>
                             <td class="td-ref">T0011269minevich</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011269</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_71952972592b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_71952972592b" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/16/2026 11:35 AM', '3895.0', `Emily Minevich 250 North 10th Street Brooklyn, NY 11211`, 'T0011269minevich', 'wire_71952972592b')">Submit</button>
+                                <span class="submit-status" id="status-wire_71952972592b"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_0d5ce06e02d7">
+                          <tr class="needs-input" data-wire-id="wire_0d5ce06e02d7">
                             <td class="td-date">6/16/2026 12:38 PM</td>
                             <td class="td-amount">$3,213.59</td>
                             <td class="td-tenant">Louis N. Sciaqua Iii 44784 Road 628 Ahwahnee CA 93601-9649</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011165</span>
-                                <span class="mgr-name">cole murrell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_0d5ce06e02d7" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_0d5ce06e02d7" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/16/2026 12:38 PM', '3213.59', `Louis N. Sciaqua Iii 44784 Road 628 Ahwahnee CA 93601-9649`, '', 'wire_0d5ce06e02d7')">Submit</button>
+                                <span class="submit-status" id="status-wire_0d5ce06e02d7"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_fabdddcf1513">
+                          <tr class="needs-input" data-wire-id="wire_fabdddcf1513">
                             <td class="td-date">6/15/2026 5:37 AM</td>
                             <td class="td-amount">$4,901.83</td>
                             <td class="td-tenant">Ronald Coleman Jr 385 14th ST Apt 711 Oakland CA 94612-3996 US</td>
                             <td class="td-ref">Ronald Coleman, Unit 5312, T-code: t0011273</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011273</span>
-                                <span class="mgr-name">Holly Hesse</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_fabdddcf1513" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_fabdddcf1513" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/15/2026 5:37 AM', '4901.83', `Ronald Coleman Jr 385 14th ST Apt 711 Oakland CA 94612-3996 US`, 'Ronald Coleman, Unit 5312, T-code: t0011273', 'wire_fabdddcf1513')">Submit</button>
+                                <span class="submit-status" id="status-wire_fabdddcf1513"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_19de9d1afc43">
+                          <tr class="needs-input" data-wire-id="wire_19de9d1afc43">
                             <td class="td-date">6/15/2026 5:27 AM</td>
                             <td class="td-amount">$7,400.93</td>
                             <td class="td-tenant">Ehren Wiegand 2/8061 Romaine ST Apt 302 3/us/los Angeles 90046</td>
                             <td class="td-ref">Move-in Funds</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011263</span>
-                                <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_19de9d1afc43" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_19de9d1afc43" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/15/2026 5:27 AM', '7400.93', `Ehren Wiegand 2/8061 Romaine ST Apt 302 3/us/los Angeles 90046`, 'Move-in Funds', 'wire_19de9d1afc43')">Submit</button>
+                                <span class="submit-status" id="status-wire_19de9d1afc43"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_670dd0db6f04">
+                          <tr class="needs-input" data-wire-id="wire_670dd0db6f04">
                             <td class="td-date">6/15/2026 1:56 PM</td>
                             <td class="td-amount">$6,087.00</td>
                             <td class="td-tenant">Mordechai G Sadowsky 2/541 E 13th ST Apt 2 3/us/cincinnati,45202,oh</td>
                             <td class="td-ref">Ref: t0011224 - Sadowsky</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011224</span>
-                                <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_670dd0db6f04" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_670dd0db6f04" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/15/2026 1:56 PM', '6087.0', `Mordechai G Sadowsky 2/541 E 13th ST Apt 2 3/us/cincinnati,45202,oh`, 'Ref: t0011224 - Sadowsky', 'wire_670dd0db6f04')">Submit</button>
+                                <span class="submit-status" id="status-wire_670dd0db6f04"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_342f5e0462d3">
+                          <tr class="needs-input" data-wire-id="wire_342f5e0462d3">
                             <td class="td-date">6/12/2026 5:11 AM</td>
                             <td class="td-amount">$4,192.83</td>
                             <td class="td-tenant">Nathan J Rowell 227 N Pine Valley RD Winston Salem NC 27104-1807 US</td>
                             <td class="td-ref">T011196 Rowell</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011196</span>
-                                <span class="mgr-name">Ashley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_342f5e0462d3" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_342f5e0462d3" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/12/2026 5:11 AM', '4192.83', `Nathan J Rowell 227 N Pine Valley RD Winston Salem NC 27104-1807 US`, 'T011196 Rowell', 'wire_342f5e0462d3')">Submit</button>
+                                <span class="submit-status" id="status-wire_342f5e0462d3"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_53831c449d8b">
+                          <tr class="needs-input" data-wire-id="wire_53831c449d8b">
                             <td class="td-date">6/12/2026 6:41 AM</td>
                             <td class="td-amount">$4,147.83</td>
                             <td class="td-tenant">Rina W Chang David Chang 2/4904 Holt ST 3/us/bellaire, TX 77401 5723</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011272</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_53831c449d8b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_53831c449d8b" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/12/2026 6:41 AM', '4147.83', `Rina W Chang David Chang 2/4904 Holt ST 3/us/bellaire, TX 77401 5723`, '', 'wire_53831c449d8b')">Submit</button>
+                                <span class="submit-status" id="status-wire_53831c449d8b"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_730591c502b4">
+                          <tr class="needs-input" data-wire-id="wire_730591c502b4">
                             <td class="td-date">6/12/2026 12:28 PM</td>
                             <td class="td-amount">$4,427.83</td>
                             <td class="td-tenant">Won Sok Lee 19908 SE 9th ST Camas,wa,98607 US</td>
                             <td class="td-ref">Move IN Deposit Tenent/landlord T00 11270 Alexandra Lee, SW #420</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011270</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_730591c502b4" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_730591c502b4" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/12/2026 12:28 PM', '4427.83', `Won Sok Lee 19908 SE 9th ST Camas,wa,98607 US`, 'Move IN Deposit Tenent/landlord T00 11270 Alexandra Lee, SW #420', 'wire_730591c502b4')">Submit</button>
+                                <span class="submit-status" id="status-wire_730591c502b4"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_8043e43a428d">
+                          <tr class="needs-input" data-wire-id="wire_8043e43a428d">
                             <td class="td-date">6/11/2026 5:09 AM</td>
                             <td class="td-amount">$3,807.83</td>
                             <td class="td-tenant">Matthew Pawlikowski 2/289 N El Molino AVE Apt 510 3/us/pasadena, CA 91101 4490</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011218</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_8043e43a428d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_8043e43a428d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/11/2026 5:09 AM', '3807.83', `Matthew Pawlikowski 2/289 N El Molino AVE Apt 510 3/us/pasadena, CA 91101 4490`, '', 'wire_8043e43a428d')">Submit</button>
+                                <span class="submit-status" id="status-wire_8043e43a428d"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_9fb6b1f611ad">
+                          <tr class="needs-input" data-wire-id="wire_9fb6b1f611ad">
                             <td class="td-date">6/11/2026 7:13 AM</td>
                             <td class="td-amount">$2,950.00</td>
                             <td class="td-tenant">Danyna Andrea Jackson 103 Galsworthy ST Cary, NC 27518-6383</td>
                             <td class="td-ref">Other Move IN Funds - T0011258- Jac K Reference - T0011258- Jackson</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011258</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_9fb6b1f611ad" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9fb6b1f611ad" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/11/2026 7:13 AM', '2950.0', `Danyna Andrea Jackson 103 Galsworthy ST Cary, NC 27518-6383`, 'Other Move IN Funds - T0011258- Jac K Reference - T0011258- Jackson', 'wire_9fb6b1f611ad')">Submit</button>
+                                <span class="submit-status" id="status-wire_9fb6b1f611ad"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_d7a8ecbc0c28">
+                          <tr class="needs-input" data-wire-id="wire_d7a8ecbc0c28">
                             <td class="td-date">6/11/2026 8:40 AM</td>
                             <td class="td-amount">$4,522.83</td>
                             <td class="td-tenant">Christopher D Nguyen 1411 Barry AVE Apt 101 Los Angeles CA 90025-6598 US</td>
                             <td class="td-ref">t0011243 Nguyen</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011243</span>
-                                <span class="mgr-name">Bronte Weiss</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d7a8ecbc0c28" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d7a8ecbc0c28" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/11/2026 8:40 AM', '4522.83', `Christopher D Nguyen 1411 Barry AVE Apt 101 Los Angeles CA 90025-6598 US`, 't0011243 Nguyen', 'wire_d7a8ecbc0c28')">Submit</button>
+                                <span class="submit-status" id="status-wire_d7a8ecbc0c28"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_150f344a36c2">
+                          <tr class="needs-input" data-wire-id="wire_150f344a36c2">
                             <td class="td-date">6/11/2026 2:20 PM</td>
                             <td class="td-amount">$4,295.00</td>
                             <td class="td-tenant">Mark C Bartlett 35 Red Hill Cir Apt D Tiburon,ca,</td>
                             <td class="td-ref">t0011192 - Bartlett</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011192</span>
-                                <span class="mgr-name">Gaea Arnold</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_150f344a36c2" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_150f344a36c2" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/11/2026 2:20 PM', '4295.0', `Mark C Bartlett 35 Red Hill Cir Apt D Tiburon,ca,`, 't0011192 - Bartlett', 'wire_150f344a36c2')">Submit</button>
+                                <span class="submit-status" id="status-wire_150f344a36c2"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_6b5f22888fdd">
+                          <tr class="needs-input" data-wire-id="wire_6b5f22888fdd">
                             <td class="td-date">6/10/2026 5:14 AM</td>
                             <td class="td-amount">$4,547.83</td>
                             <td class="td-tenant">Angelica Chhikara OR Ritu Chhikara 4667 N Island Vw Clovis CA 93619-4684 US</td>
                             <td class="td-ref">Angelica Chhikara 13348 Beach Ave, T-code: t0011254</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011254</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_6b5f22888fdd" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_6b5f22888fdd" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/10/2026 5:14 AM', '4547.83', `Angelica Chhikara OR Ritu Chhikara 4667 N Island Vw Clovis CA 93619-4684 US`, 'Angelica Chhikara 13348 Beach Ave, T-code: t0011254', 'wire_6b5f22888fdd')">Submit</button>
+                                <span class="submit-status" id="status-wire_6b5f22888fdd"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_93793d9c609e">
+                          <tr class="needs-input" data-wire-id="wire_93793d9c609e">
                             <td class="td-date">6/9/2026 5:54 AM</td>
                             <td class="td-amount">$4,267.83</td>
                             <td class="td-tenant">Hao Duong 3533 Chesapeake AVE Unit 403 Los Angeles California 90016 US</td>
                             <td class="td-ref">Apartment Move IN Funds From Hao Du Ong To Wm By Clg</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011232</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_93793d9c609e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_93793d9c609e" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/9/2026 5:54 AM', '4267.83', `Hao Duong 3533 Chesapeake AVE Unit 403 Los Angeles California 90016 US`, 'Apartment Move IN Funds From Hao Du Ong To Wm By Clg', 'wire_93793d9c609e')">Submit</button>
+                                <span class="submit-status" id="status-wire_93793d9c609e"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_ac3f00544ec6">
+                          <tr class="needs-input" data-wire-id="wire_ac3f00544ec6">
                             <td class="td-date">6/8/2026 5:10 AM</td>
                             <td class="td-amount">$2,495.00</td>
                             <td class="td-tenant">Harish Balaji Boominathan 1616 68th ST Brooklyn NY 11204-5003 US</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011248</span>
-                                <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_ac3f00544ec6" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_ac3f00544ec6" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/8/2026 5:10 AM', '2495.0', `Harish Balaji Boominathan 1616 68th ST Brooklyn NY 11204-5003 US`, '', 'wire_ac3f00544ec6')">Submit</button>
+                                <span class="submit-status" id="status-wire_ac3f00544ec6"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_acbbefb027e1">
+                          <tr class="needs-input" data-wire-id="wire_acbbefb027e1">
                             <td class="td-date">6/8/2026 4:44 AM</td>
                             <td class="td-amount">$4,967.83</td>
                             <td class="td-tenant">Ju Seung I Lee 2/800 Elgin RD Apt 1404 3/us/evanston 60201</td>
                             <td class="td-ref">t0011227 - Lee</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011227</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_acbbefb027e1" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_acbbefb027e1" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/8/2026 4:44 AM', '4967.83', `Ju Seung I Lee 2/800 Elgin RD Apt 1404 3/us/evanston 60201`, 't0011227 - Lee', 'wire_acbbefb027e1')">Submit</button>
+                                <span class="submit-status" id="status-wire_acbbefb027e1"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_d9cc50a296f4">
+                          <tr class="needs-input" data-wire-id="wire_d9cc50a296f4">
                             <td class="td-date">6/8/2026 12:01 PM</td>
                             <td class="td-amount">$6,017.83</td>
                             <td class="td-tenant">Adam Yonas 929 W Jefferson BLVD Apt 3002 Los Angeles CA 90089-1621 US</td>
                             <td class="td-ref">T001230 - Yonas</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011230</span>
-                                <span class="mgr-name">Diane</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_d9cc50a296f4" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_d9cc50a296f4" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/8/2026 12:01 PM', '6017.83', `Adam Yonas 929 W Jefferson BLVD Apt 3002 Los Angeles CA 90089-1621 US`, 'T001230 - Yonas', 'wire_d9cc50a296f4')">Submit</button>
+                                <span class="submit-status" id="status-wire_d9cc50a296f4"></span>
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_e967bf55d693">
+                          <tr class="needs-input" data-wire-id="wire_e967bf55d693">
                             <td class="td-date">6/8/2026 3:14 PM</td>
                             <td class="td-amount">$1,000.00</td>
                             <td class="td-tenant">Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US</td>
                             <td class="td-ref">Deposit For Unit Ph7301 For Sean An D Paula Harrell</td>
                             <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011236</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_e967bf55d693" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_e967bf55d693" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('6/8/2026 3:14 PM', '1000.0', `Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US`, 'Deposit For Unit Ph7301 For Sean An D Paula Harrell', 'wire_e967bf55d693')">Submit</button>
+                                <span class="submit-status" id="status-wire_e967bf55d693"></span>
                               </div>
                             </td>
                           </tr>
