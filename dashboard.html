@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/09 6:06 AM</span>
+      <span class="meta-text">Updated 7/09 7:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">64</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">62</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">53</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_27c6f0fdc6b1">
+                            <td class="td-date">7/9/2026 6:28 AM</td>
+                            <td class="td-amount">$4,547.83</td>
+                            <td class="td-tenant">Tianyi Chou 2/2235 Hacienda RD 3/us/la Habra Heights, CA 90631 786</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_27c6f0fdc6b1" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_27c6f0fdc6b1" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/9/2026 6:28 AM', '4547.83', `Tianyi Chou 2/2235 Hacienda RD 3/us/la Habra Heights, CA 90631 786`, '', 'wire_27c6f0fdc6b1')">Submit</button>
+                                <span class="submit-status" id="status-wire_27c6f0fdc6b1"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_4f0d25daa93b">
                             <td class="td-date">7/8/2026 8:53 AM</td>
                             <td class="td-amount">$3,502.83</td>
@@ -1535,48 +1550,6 @@
                             <td>
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011254</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_93793d9c609e">
-                            <td class="td-date">6/9/2026 5:54 AM</td>
-                            <td class="td-amount">$4,267.83</td>
-                            <td class="td-tenant">Hao Duong 3533 Chesapeake AVE Unit 403 Los Angeles California 90016 US</td>
-                            <td class="td-ref">Apartment Move IN Funds From Hao Du Ong To Wm By Clg</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011232</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d9cc50a296f4">
-                            <td class="td-date">6/8/2026 12:01 PM</td>
-                            <td class="td-amount">$6,017.83</td>
-                            <td class="td-tenant">Adam Yonas 929 W Jefferson BLVD Apt 3002 Los Angeles CA 90089-1621 US</td>
-                            <td class="td-ref">T001230 - Yonas</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011230</span>
-                                <span class="mgr-name">Diane</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_e967bf55d693">
-                            <td class="td-date">6/8/2026 3:14 PM</td>
-                            <td class="td-amount">$1,000.00</td>
-                            <td class="td-tenant">Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US</td>
-                            <td class="td-ref">Deposit For Unit Ph7301 For Sean An D Paula Harrell</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011236</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
