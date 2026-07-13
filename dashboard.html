@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/13 11:07 AM</span>
+      <span class="meta-text">Updated 7/13 12:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">59</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
       </div>
     </div>
@@ -709,33 +709,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_8f92d78a4876">
+                          <tr class="has-input" data-wire-id="wire_8f92d78a4876">
                             <td class="td-date">7/13/2026 7:34 AM</td>
                             <td class="td-amount">$2,979.44</td>
                             <td class="td-tenant">Kaitlyn Said 10000 Regent ST Unit 108 Los Angel Es, CA 90034-7082 US</td>
                             <td class="td-ref">Tcode- t0011340 Move IN Funds - 1st Month Rent Parking Remainder O F Security Deposit National Savings</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_8f92d78a4876" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_8f92d78a4876" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/13/2026 7:34 AM', '2979.44', `Kaitlyn Said 10000 Regent ST Unit 108 Los Angel Es, CA 90034-7082 US`, 'Tcode- t0011340 Move IN Funds - 1st Month Rent Parking Remainder O F Security Deposit National Savings', 'wire_8f92d78a4876')">Submit</button>
-                                <span class="submit-status" id="status-wire_8f92d78a4876"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011340</span>
+                                <span class="mgr-name">Enrique</span>
+                                
+                                <button class="yardi-circle" id="book-wire_8f92d78a4876"
+                                        onclick="bookInYardi('7/13/2026 7:34 AM', '2979.44', `Kaitlyn Said 10000 Regent ST Unit 108 Los Angel Es, CA 90034-7082 US`, 'wire_8f92d78a4876')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_8f92d78a4876" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_3216efb5b3e0">
+                          <tr class="has-input" data-wire-id="wire_3216efb5b3e0">
                             <td class="td-date">7/10/2026 10:44 AM</td>
                             <td class="td-amount">$1,916.00</td>
                             <td class="td-tenant">Jonathan A Penn Lisa Meltzer Penn 2/1010 Notre Dame AVE 3/us/belmont 94002</td>
                             <td class="td-ref">Reference: T0011275- Penn</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_3216efb5b3e0" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_3216efb5b3e0" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/10/2026 10:44 AM', '1916.0', `Jonathan A Penn Lisa Meltzer Penn 2/1010 Notre Dame AVE 3/us/belmont 94002`, 'Reference: T0011275- Penn', 'wire_3216efb5b3e0')">Submit</button>
-                                <span class="submit-status" id="status-wire_3216efb5b3e0"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011275</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_3216efb5b3e0"
+                                        onclick="bookInYardi('7/10/2026 10:44 AM', '1916.0', `Jonathan A Penn Lisa Meltzer Penn 2/1010 Notre Dame AVE 3/us/belmont 94002`, 'wire_3216efb5b3e0')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_3216efb5b3e0" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
