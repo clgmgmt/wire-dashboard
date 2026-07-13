@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/10 6:07 PM</span>
+      <span class="meta-text">Updated 7/13 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">62</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">58</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">55</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
       </div>
     </div>
 
@@ -664,6 +664,51 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_6883e9fa333b">
+                            <td class="td-date">7/13/2026 5:55 AM</td>
+                            <td class="td-amount">$4,492.83</td>
+                            <td class="td-tenant">Akrem E Abdelwahab Fawzia A Abbas 2/418 Forest LN 3/us/salisbury, MD 21801 6105</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_6883e9fa333b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_6883e9fa333b" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/13/2026 5:55 AM', '4492.83', `Akrem E Abdelwahab Fawzia A Abbas 2/418 Forest LN 3/us/salisbury, MD 21801 6105`, '', 'wire_6883e9fa333b')">Submit</button>
+                                <span class="submit-status" id="status-wire_6883e9fa333b"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_b18746f61e83">
+                            <td class="td-date">7/13/2026 5:41 AM</td>
+                            <td class="td-amount">$2,597.83</td>
+                            <td class="td-tenant">Andrew Logan Nelson 2/11311 LA Grange AVE Apt 330 3/us/los Angeles, CA 90025 6868</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_b18746f61e83" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_b18746f61e83" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/13/2026 5:41 AM', '2597.83', `Andrew Logan Nelson 2/11311 LA Grange AVE Apt 330 3/us/los Angeles, CA 90025 6868`, '', 'wire_b18746f61e83')">Submit</button>
+                                <span class="submit-status" id="status-wire_b18746f61e83"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_48bbf58e4148">
+                            <td class="td-date">7/13/2026 5:08 AM</td>
+                            <td class="td-amount">$3,992.40</td>
+                            <td class="td-tenant">Matthew H Weintraub 2650 Cedar Springs RD Apt 7714 Dallas TX 75201-1481 US</td>
+                            <td class="td-ref">Move-in Funds</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_48bbf58e4148" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_48bbf58e4148" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/13/2026 5:08 AM', '3992.4', `Matthew H Weintraub 2650 Cedar Springs RD Apt 7714 Dallas TX 75201-1481 US`, 'Move-in Funds', 'wire_48bbf58e4148')">Submit</button>
+                                <span class="submit-status" id="status-wire_48bbf58e4148"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_3216efb5b3e0">
                             <td class="td-date">7/10/2026 10:44 AM</td>
                             <td class="td-amount">$1,916.00</td>
@@ -1436,104 +1481,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011224</span>
                                 <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_342f5e0462d3">
-                            <td class="td-date">6/12/2026 5:11 AM</td>
-                            <td class="td-amount">$4,192.83</td>
-                            <td class="td-tenant">Nathan J Rowell 227 N Pine Valley RD Winston Salem NC 27104-1807 US</td>
-                            <td class="td-ref">T011196 Rowell</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011196</span>
-                                <span class="mgr-name">Ashley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_53831c449d8b">
-                            <td class="td-date">6/12/2026 6:41 AM</td>
-                            <td class="td-amount">$4,147.83</td>
-                            <td class="td-tenant">Rina W Chang David Chang 2/4904 Holt ST 3/us/bellaire, TX 77401 5723</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011272</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_730591c502b4">
-                            <td class="td-date">6/12/2026 12:28 PM</td>
-                            <td class="td-amount">$4,427.83</td>
-                            <td class="td-tenant">Won Sok Lee 19908 SE 9th ST Camas,wa,98607 US</td>
-                            <td class="td-ref">Move IN Deposit Tenent/landlord T00 11270 Alexandra Lee, SW #420</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011270</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_8043e43a428d">
-                            <td class="td-date">6/11/2026 5:09 AM</td>
-                            <td class="td-amount">$3,807.83</td>
-                            <td class="td-tenant">Matthew Pawlikowski 2/289 N El Molino AVE Apt 510 3/us/pasadena, CA 91101 4490</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011218</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_9fb6b1f611ad">
-                            <td class="td-date">6/11/2026 7:13 AM</td>
-                            <td class="td-amount">$2,950.00</td>
-                            <td class="td-tenant">Danyna Andrea Jackson 103 Galsworthy ST Cary, NC 27518-6383</td>
-                            <td class="td-ref">Other Move IN Funds - T0011258- Jac K Reference - T0011258- Jackson</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011258</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_d7a8ecbc0c28">
-                            <td class="td-date">6/11/2026 8:40 AM</td>
-                            <td class="td-amount">$4,522.83</td>
-                            <td class="td-tenant">Christopher D Nguyen 1411 Barry AVE Apt 101 Los Angeles CA 90025-6598 US</td>
-                            <td class="td-ref">t0011243 Nguyen</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011243</span>
-                                <span class="mgr-name">Bronte Weiss</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_150f344a36c2">
-                            <td class="td-date">6/11/2026 2:20 PM</td>
-                            <td class="td-amount">$4,295.00</td>
-                            <td class="td-tenant">Mark C Bartlett 35 Red Hill Cir Apt D Tiburon,ca,</td>
-                            <td class="td-ref">t0011192 - Bartlett</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011192</span>
-                                <span class="mgr-name">Gaea Arnold</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
