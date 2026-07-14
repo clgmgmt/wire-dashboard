@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/14 9:08 AM</span>
+      <span class="meta-text">Updated 7/14 10:07 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">59</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">60</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_a3893cfc71c8">
+                            <td class="td-date">7/14/2026 9:38 AM</td>
+                            <td class="td-amount">$4,647.83</td>
+                            <td class="td-tenant">Jamie Kwak 2700 W El Camino Real Apt 418 Mountain View,ca,,us</td>
+                            <td class="td-ref">t0011376 Jamie Kwak Unit 630</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_a3893cfc71c8" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_a3893cfc71c8" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/14/2026 9:38 AM', '4647.83', `Jamie Kwak 2700 W El Camino Real Apt 418 Mountain View,ca,,us`, 't0011376 Jamie Kwak Unit 630', 'wire_a3893cfc71c8')">Submit</button>
+                                <span class="submit-status" id="status-wire_a3893cfc71c8"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_6883e9fa333b">
                             <td class="td-date">7/13/2026 5:55 AM</td>
                             <td class="td-amount">$4,492.83</td>
