@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/14 3:07 PM</span>
+      <span class="meta-text">Updated 7/14 4:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">60</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
       </div>
     </div>
@@ -679,18 +679,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_6883e9fa333b">
+                          <tr class="has-input" data-wire-id="wire_6883e9fa333b">
                             <td class="td-date">7/13/2026 5:55 AM</td>
                             <td class="td-amount">$4,492.83</td>
                             <td class="td-tenant">Akrem E Abdelwahab Fawzia A Abbas 2/418 Forest LN 3/us/salisbury, MD 21801 6105</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_6883e9fa333b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_6883e9fa333b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/13/2026 5:55 AM', '4492.83', `Akrem E Abdelwahab Fawzia A Abbas 2/418 Forest LN 3/us/salisbury, MD 21801 6105`, '', 'wire_6883e9fa333b')">Submit</button>
-                                <span class="submit-status" id="status-wire_6883e9fa333b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011352</span>
+                                <span class="mgr-name">Ellison Jackson</span>
+                                
+                                <button class="yardi-circle" id="book-wire_6883e9fa333b"
+                                        onclick="bookInYardi('7/13/2026 5:55 AM', '4492.83', `Akrem E Abdelwahab Fawzia A Abbas 2/418 Forest LN 3/us/salisbury, MD 21801 6105`, 'wire_6883e9fa333b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_6883e9fa333b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -843,18 +845,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_e9d22ae59a56">
+                          <tr class="has-input" data-wire-id="wire_e9d22ae59a56">
                             <td class="td-date">7/6/2026 5:10 AM</td>
                             <td class="td-amount">$4,117.83</td>
                             <td class="td-tenant">Joseph Biernacki 2277 Harbor BLVD Costa Mesa, CA 92626</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_e9d22ae59a56" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_e9d22ae59a56" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/6/2026 5:10 AM', '4117.83', `Joseph Biernacki 2277 Harbor BLVD Costa Mesa, CA 92626`, '', 'wire_e9d22ae59a56')">Submit</button>
-                                <span class="submit-status" id="status-wire_e9d22ae59a56"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011235</span>
+                                <span class="mgr-name">Jackson</span>
+                                
+                                <button class="yardi-circle" id="book-wire_e9d22ae59a56"
+                                        onclick="bookInYardi('7/6/2026 5:10 AM', '4117.83', `Joseph Biernacki 2277 Harbor BLVD Costa Mesa, CA 92626`, 'wire_e9d22ae59a56')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_e9d22ae59a56" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1098,18 +1102,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_5339be02489d">
+                          <tr class="has-input" data-wire-id="wire_5339be02489d">
                             <td class="td-date">6/26/2026 9:23 AM</td>
                             <td class="td-amount">$4,077.83</td>
                             <td class="td-tenant">Alexia S Hartogensis 3/us/greenwich,06830,ct</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_5339be02489d" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_5339be02489d" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('6/26/2026 9:23 AM', '4077.83', `Alexia S Hartogensis 3/us/greenwich,06830,ct`, '', 'wire_5339be02489d')">Submit</button>
-                                <span class="submit-status" id="status-wire_5339be02489d"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011302</span>
+                                <span class="mgr-name">Ellison</span>
+                                
+                                <button class="yardi-circle" id="book-wire_5339be02489d"
+                                        onclick="bookInYardi('6/26/2026 9:23 AM', '4077.83', `Alexia S Hartogensis 3/us/greenwich,06830,ct`, 'wire_5339be02489d')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_5339be02489d" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
