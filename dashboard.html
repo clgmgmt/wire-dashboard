@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/15 10:07 AM</span>
+      <span class="meta-text">Updated 7/15 11:07 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">62</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">7</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -709,18 +709,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_41323dcd8bb4">
+                          <tr class="has-input" data-wire-id="wire_41323dcd8bb4">
                             <td class="td-date">7/15/2026 9:53 AM</td>
                             <td class="td-amount">$2,253.44</td>
                             <td class="td-tenant">Joan M Nelson 2812 Highway 88 Minneapolis MN 5541 8-3243 US</td>
                             <td class="td-ref">T0011335nelson</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_41323dcd8bb4" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_41323dcd8bb4" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/15/2026 9:53 AM', '2253.44', `Joan M Nelson 2812 Highway 88 Minneapolis MN 5541 8-3243 US`, 'T0011335nelson', 'wire_41323dcd8bb4')">Submit</button>
-                                <span class="submit-status" id="status-wire_41323dcd8bb4"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011335</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_41323dcd8bb4"
+                                        onclick="bookInYardi('7/15/2026 9:53 AM', '2253.44', `Joan M Nelson 2812 Highway 88 Minneapolis MN 5541 8-3243 US`, 'wire_41323dcd8bb4')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_41323dcd8bb4" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
