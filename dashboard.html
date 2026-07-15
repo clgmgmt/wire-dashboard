@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/15 9:08 AM</span>
+      <span class="meta-text">Updated 7/15 10:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">63</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">62</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">48</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
 
@@ -709,6 +709,21 @@
                               </div>
                             </td>
                           </tr>
+                          <tr class="needs-input" data-wire-id="wire_41323dcd8bb4">
+                            <td class="td-date">7/15/2026 9:53 AM</td>
+                            <td class="td-amount">$2,253.44</td>
+                            <td class="td-tenant">Joan M Nelson 2812 Highway 88 Minneapolis MN 5541 8-3243 US</td>
+                            <td class="td-ref">T0011335nelson</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_41323dcd8bb4" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_41323dcd8bb4" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/15/2026 9:53 AM', '2253.44', `Joan M Nelson 2812 Highway 88 Minneapolis MN 5541 8-3243 US`, 'T0011335nelson', 'wire_41323dcd8bb4')">Submit</button>
+                                <span class="submit-status" id="status-wire_41323dcd8bb4"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_a3893cfc71c8">
                             <td class="td-date">7/14/2026 9:38 AM</td>
                             <td class="td-amount">$4,647.83</td>
@@ -756,18 +771,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_48bbf58e4148">
+                          <tr class="has-input" data-wire-id="wire_48bbf58e4148">
                             <td class="td-date">7/13/2026 5:08 AM</td>
                             <td class="td-amount">$3,992.40</td>
                             <td class="td-tenant">Matthew H Weintraub 2650 Cedar Springs RD Apt 7714 Dallas TX 75201-1481 US</td>
                             <td class="td-ref">Move-in Funds</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_48bbf58e4148" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_48bbf58e4148" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/13/2026 5:08 AM', '3992.4', `Matthew H Weintraub 2650 Cedar Springs RD Apt 7714 Dallas TX 75201-1481 US`, 'Move-in Funds', 'wire_48bbf58e4148')">Submit</button>
-                                <span class="submit-status" id="status-wire_48bbf58e4148"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011360</span>
+                                <span class="mgr-name">Thomas Lofton</span>
+                                
+                                <button class="yardi-circle" id="book-wire_48bbf58e4148"
+                                        onclick="bookInYardi('7/13/2026 5:08 AM', '3992.4', `Matthew H Weintraub 2650 Cedar Springs RD Apt 7714 Dallas TX 75201-1481 US`, 'wire_48bbf58e4148')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_48bbf58e4148" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1524,34 +1541,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011165</span>
                                 <span class="mgr-name">cole murrell</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_fabdddcf1513">
-                            <td class="td-date">6/15/2026 5:37 AM</td>
-                            <td class="td-amount">$4,901.83</td>
-                            <td class="td-tenant">Ronald Coleman Jr 385 14th ST Apt 711 Oakland CA 94612-3996 US</td>
-                            <td class="td-ref">Ronald Coleman, Unit 5312, T-code: t0011273</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011273</span>
-                                <span class="mgr-name">Holly Hesse</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_19de9d1afc43">
-                            <td class="td-date">6/15/2026 5:27 AM</td>
-                            <td class="td-amount">$7,400.93</td>
-                            <td class="td-tenant">Ehren Wiegand 2/8061 Romaine ST Apt 302 3/us/los Angeles 90046</td>
-                            <td class="td-ref">Move-in Funds</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011263</span>
-                                <span class="mgr-name">Thomas Lofton</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
