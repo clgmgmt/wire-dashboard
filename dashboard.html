@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/16 12:07 PM</span>
+      <span class="meta-text">Updated 7/16 1:07 PM</span>
     </div>
   </div>
 
@@ -647,8 +647,8 @@
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">65</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">50</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">49</span></button>
       </div>
     </div>
 
@@ -681,18 +681,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_92ff396fae53">
+                          <tr class="has-input" data-wire-id="wire_92ff396fae53">
                             <td class="td-date">7/16/2026 5:35 AM</td>
                             <td class="td-amount">$1,975.00</td>
                             <td class="td-tenant">Coleman S Alford 4824 Sunnyslope AVE Apt 306 Sherman Oaks CA 91423-2553 US</td>
                             <td class="td-ref">T0011359- Alford</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_92ff396fae53" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_92ff396fae53" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/16/2026 5:35 AM', '1975.0', `Coleman S Alford 4824 Sunnyslope AVE Apt 306 Sherman Oaks CA 91423-2553 US`, 'T0011359- Alford', 'wire_92ff396fae53')">Submit</button>
-                                <span class="submit-status" id="status-wire_92ff396fae53"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011359</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_92ff396fae53"
+                                        onclick="bookInYardi('7/16/2026 5:35 AM', '1975.0', `Coleman S Alford 4824 Sunnyslope AVE Apt 306 Sherman Oaks CA 91423-2553 US`, 'wire_92ff396fae53')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_92ff396fae53" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -708,6 +710,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('7/16/2026 10:11 AM', '5345.0', `Margaret Marie C Hebeler 2/108 Moore Creek RD 3/us/santa Cruz, CA 95060-2320`, 'Pop Other', 'wire_cecd5749b163')">Submit</button>
                                 <span class="submit-status" id="status-wire_cecd5749b163"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_637d86b55ae0">
+                            <td class="td-date">7/16/2026 12:06 PM</td>
+                            <td class="td-amount">$3,617.83</td>
+                            <td class="td-tenant">Neil Earl Kinney 4212 Country Club DR Long Beach,ca,90807</td>
+                            <td class="td-ref">Move IN Funds t0011368 Megankinney4 210del Reyunit412a</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_637d86b55ae0" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_637d86b55ae0" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/16/2026 12:06 PM', '3617.83', `Neil Earl Kinney 4212 Country Club DR Long Beach,ca,90807`, 'Move IN Funds t0011368 Megankinney4 210del Reyunit412a', 'wire_637d86b55ae0')">Submit</button>
+                                <span class="submit-status" id="status-wire_637d86b55ae0"></span>
                               </div>
                             </td>
                           </tr>
@@ -1560,20 +1577,6 @@
                             <td class="td-amount">$150.00</td>
                             <td class="td-tenant">Emily Minevich 250 North 10th Street Brooklyn, NY 11211</td>
                             <td class="td-ref">Additional Move IN Funds T0011269mi Nevich</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011269</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_71952972592b">
-                            <td class="td-date">6/16/2026 11:35 AM</td>
-                            <td class="td-amount">$3,895.00</td>
-                            <td class="td-tenant">Emily Minevich 250 North 10th Street Brooklyn, NY 11211</td>
-                            <td class="td-ref">T0011269minevich</td>
                             <td>
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011269</span>
