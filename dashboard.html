@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/17 10:07 AM</span>
+      <span class="meta-text">Updated 7/17 11:07 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">64</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">12</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">51</span></button>
       </div>
     </div>
@@ -739,18 +739,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_637d86b55ae0">
+                          <tr class="has-input" data-wire-id="wire_637d86b55ae0">
                             <td class="td-date">7/16/2026 12:06 PM</td>
                             <td class="td-amount">$3,617.83</td>
                             <td class="td-tenant">Neil Earl Kinney 4212 Country Club DR Long Beach,ca,90807</td>
                             <td class="td-ref">Move IN Funds t0011368 Megankinney4 210del Reyunit412a</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_637d86b55ae0" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_637d86b55ae0" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/16/2026 12:06 PM', '3617.83', `Neil Earl Kinney 4212 Country Club DR Long Beach,ca,90807`, 'Move IN Funds t0011368 Megankinney4 210del Reyunit412a', 'wire_637d86b55ae0')">Submit</button>
-                                <span class="submit-status" id="status-wire_637d86b55ae0"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011368</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_637d86b55ae0"
+                                        onclick="bookInYardi('7/16/2026 12:06 PM', '3617.83', `Neil Earl Kinney 4212 Country Club DR Long Beach,ca,90807`, 'wire_637d86b55ae0')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_637d86b55ae0" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
