@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/17 11:07 AM</span>
+      <span class="meta-text">Updated 7/17 12:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">64</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">51</span></button>
       </div>
     </div>
@@ -1071,18 +1071,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_c9907eecd9f9">
+                          <tr class="has-input" data-wire-id="wire_c9907eecd9f9">
                             <td class="td-date">7/6/2026 12:16 PM</td>
                             <td class="td-amount">$4,197.83</td>
                             <td class="td-tenant">Dev Kumar Maheshwari 2/888 Brannan ST Ste 150 3/us/san Francisco, CA 94103 5601</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_c9907eecd9f9" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_c9907eecd9f9" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/6/2026 12:16 PM', '4197.83', `Dev Kumar Maheshwari 2/888 Brannan ST Ste 150 3/us/san Francisco, CA 94103 5601`, '', 'wire_c9907eecd9f9')">Submit</button>
-                                <span class="submit-status" id="status-wire_c9907eecd9f9"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011314</span>
+                                <span class="mgr-name">Ellison Jackson</span>
+                                
+                                <button class="yardi-circle" id="book-wire_c9907eecd9f9"
+                                        onclick="bookInYardi('7/6/2026 12:16 PM', '4197.83', `Dev Kumar Maheshwari 2/888 Brannan ST Ste 150 3/us/san Francisco, CA 94103 5601`, 'wire_c9907eecd9f9')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_c9907eecd9f9" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
