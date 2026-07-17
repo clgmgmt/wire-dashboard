@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/17 8:07 AM</span>
+      <span class="meta-text">Updated 7/17 9:08 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">64</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">13</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">12</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">51</span></button>
       </div>
     </div>
@@ -722,18 +722,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_cecd5749b163">
+                          <tr class="has-input" data-wire-id="wire_cecd5749b163">
                             <td class="td-date">7/16/2026 10:11 AM</td>
                             <td class="td-amount">$5,345.00</td>
                             <td class="td-tenant">Margaret Marie C Hebeler 2/108 Moore Creek RD 3/us/santa Cruz, CA 95060-2320</td>
                             <td class="td-ref">Pop Other</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_cecd5749b163" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_cecd5749b163" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/16/2026 10:11 AM', '5345.0', `Margaret Marie C Hebeler 2/108 Moore Creek RD 3/us/santa Cruz, CA 95060-2320`, 'Pop Other', 'wire_cecd5749b163')">Submit</button>
-                                <span class="submit-status" id="status-wire_cecd5749b163"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011358</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_cecd5749b163"
+                                        onclick="bookInYardi('7/16/2026 10:11 AM', '5345.0', `Margaret Marie C Hebeler 2/108 Moore Creek RD 3/us/santa Cruz, CA 95060-2320`, 'wire_cecd5749b163')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_cecd5749b163" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
