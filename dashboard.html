@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/20 4:07 PM</span>
+      <span class="meta-text">Updated 7/20 5:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">69</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">13</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">10</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">12</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -777,33 +777,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_9f75e1165b9b">
+                          <tr class="has-input" data-wire-id="wire_9f75e1165b9b">
                             <td class="td-date">7/20/2026 9:48 AM</td>
                             <td class="td-amount">$2,492.83</td>
                             <td class="td-tenant">James Cook 3333 SW Hamilton Street Portland, OR 97239</td>
                             <td class="td-ref">T0011298-cook</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_9f75e1165b9b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_9f75e1165b9b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/20/2026 9:48 AM', '2492.83', `James Cook 3333 SW Hamilton Street Portland, OR 97239`, 'T0011298-cook', 'wire_9f75e1165b9b')">Submit</button>
-                                <span class="submit-status" id="status-wire_9f75e1165b9b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011298</span>
+                                <span class="mgr-name">lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_9f75e1165b9b"
+                                        onclick="bookInYardi('7/20/2026 9:48 AM', '2492.83', `James Cook 3333 SW Hamilton Street Portland, OR 97239`, 'wire_9f75e1165b9b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_9f75e1165b9b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a30c6a6f4b70">
+                          <tr class="has-input" data-wire-id="wire_a30c6a6f4b70">
                             <td class="td-date">7/20/2026 11:53 AM</td>
                             <td class="td-amount">$2,325.00</td>
                             <td class="td-tenant">Jahsiiyah Hamilton 1171 W 30th ST Los Angeles CA 90007-3153 US</td>
                             <td class="td-ref">First Month AND Deposit</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a30c6a6f4b70" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a30c6a6f4b70" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/20/2026 11:53 AM', '2325.0', `Jahsiiyah Hamilton 1171 W 30th ST Los Angeles CA 90007-3153 US`, 'First Month AND Deposit', 'wire_a30c6a6f4b70')">Submit</button>
-                                <span class="submit-status" id="status-wire_a30c6a6f4b70"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011298</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a30c6a6f4b70"
+                                        onclick="bookInYardi('7/20/2026 11:53 AM', '2325.0', `Jahsiiyah Hamilton 1171 W 30th ST Los Angeles CA 90007-3153 US`, 'wire_a30c6a6f4b70')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a30c6a6f4b70" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
