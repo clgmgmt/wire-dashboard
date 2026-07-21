@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/20 6:07 PM</span>
+      <span class="meta-text">Updated 7/21 6:06 AM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">69</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">70</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">13</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_8a1f53b69720">
+                            <td class="td-date">7/21/2026 5:03 AM</td>
+                            <td class="td-amount">$2,338.63</td>
+                            <td class="td-tenant">Anushka Mellacheruvu 2/81 Pascal LN 3/us/austin, TX 78746 2552</td>
+                            <td class="td-ref">Move IN Funds - Mellacheruvu</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_8a1f53b69720" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_8a1f53b69720" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/21/2026 5:03 AM', '2338.63', `Anushka Mellacheruvu 2/81 Pascal LN 3/us/austin, TX 78746 2552`, 'Move IN Funds - Mellacheruvu', 'wire_8a1f53b69720')">Submit</button>
+                                <span class="submit-status" id="status-wire_8a1f53b69720"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_7eecb13c7123">
                             <td class="td-date">7/20/2026 5:13 AM</td>
                             <td class="td-amount">$2,439.46</td>
