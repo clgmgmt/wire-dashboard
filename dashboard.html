@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/21 9:08 AM</span>
+      <span class="meta-text">Updated 7/21 10:07 AM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">71</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">12</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">13</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">14</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -726,18 +726,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_e8da4bb19c3b">
+                          <tr class="has-input" data-wire-id="wire_e8da4bb19c3b">
                             <td class="td-date">7/20/2026 5:09 AM</td>
                             <td class="td-amount">$4,647.83</td>
                             <td class="td-tenant">Abhimanyu Singh 2327 Avalon Way San Ramon CA 94582- 5717 US</td>
                             <td class="td-ref">t0011383 Singh</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_e8da4bb19c3b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_e8da4bb19c3b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/20/2026 5:09 AM', '4647.83', `Abhimanyu Singh 2327 Avalon Way San Ramon CA 94582- 5717 US`, 't0011383 Singh', 'wire_e8da4bb19c3b')">Submit</button>
-                                <span class="submit-status" id="status-wire_e8da4bb19c3b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011383</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_e8da4bb19c3b"
+                                        onclick="bookInYardi('7/20/2026 5:09 AM', '4647.83', `Abhimanyu Singh 2327 Avalon Way San Ramon CA 94582- 5717 US`, 'wire_e8da4bb19c3b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_e8da4bb19c3b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
