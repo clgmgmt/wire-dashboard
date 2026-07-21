@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/21 11:07 AM</span>
+      <span class="meta-text">Updated 7/21 12:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">72</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">12</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">14</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">16</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -694,18 +694,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_d6372eca454b">
+                          <tr class="has-input" data-wire-id="wire_d6372eca454b">
                             <td class="td-date">7/21/2026 10:47 AM</td>
                             <td class="td-amount">$4,347.83</td>
                             <td class="td-tenant">Casey Brady 1223 W 18th ST San Pedro CA 90731-3811 US</td>
                             <td class="td-ref">Move-in Funds</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_d6372eca454b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_d6372eca454b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/21/2026 10:47 AM', '4347.83', `Casey Brady 1223 W 18th ST San Pedro CA 90731-3811 US`, 'Move-in Funds', 'wire_d6372eca454b')">Submit</button>
-                                <span class="submit-status" id="status-wire_d6372eca454b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011366</span>
+                                <span class="mgr-name">Chad HIrschman</span>
+                                
+                                <button class="yardi-circle" id="book-wire_d6372eca454b"
+                                        onclick="bookInYardi('7/21/2026 10:47 AM', '4347.83', `Casey Brady 1223 W 18th ST San Pedro CA 90731-3811 US`, 'wire_d6372eca454b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_d6372eca454b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -892,18 +894,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_7306a20fd506">
+                          <tr class="has-input" data-wire-id="wire_7306a20fd506">
                             <td class="td-date">7/17/2026 2:42 PM</td>
                             <td class="td-amount">$2,424.00</td>
                             <td class="td-tenant">Strike Health Corporation 2/45641 Montclaire Terrace 3/us/fremont,94539,ca</td>
                             <td class="td-ref">Vikrant Karan Bajaj -13448 Beach Av E. #1501-f, Marina Del Ray, CA 9029 2 T-code:t0011386</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_7306a20fd506" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_7306a20fd506" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/17/2026 2:42 PM', '2424.0', `Strike Health Corporation 2/45641 Montclaire Terrace 3/us/fremont,94539,ca`, 'Vikrant Karan Bajaj -13448 Beach Av E. #1501-f, Marina Del Ray, CA 9029 2 T-code:t0011386', 'wire_7306a20fd506')">Submit</button>
-                                <span class="submit-status" id="status-wire_7306a20fd506"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011386</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_7306a20fd506"
+                                        onclick="bookInYardi('7/17/2026 2:42 PM', '2424.0', `Strike Health Corporation 2/45641 Montclaire Terrace 3/us/fremont,94539,ca`, 'wire_7306a20fd506')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_7306a20fd506" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
