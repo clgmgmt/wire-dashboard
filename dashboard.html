@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/21 2:07 PM</span>
+      <span class="meta-text">Updated 7/21 3:07 PM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">76</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">14</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">16</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">77</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">13</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">18</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -711,33 +711,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_74c4df1d5e8b">
+                          <tr class="has-input" data-wire-id="wire_74c4df1d5e8b">
                             <td class="td-date">7/21/2026 1:04 PM</td>
                             <td class="td-amount">$2,989.44</td>
                             <td class="td-tenant">Schaumberg, Lisa 5520 Kathleen CT Santa Rosa, CA 95409-5524</td>
                             <td class="td-ref">t0011321 Schaumberg, Sophia, 18402 Halsted ST #26, Northridge, CA 9132 5</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_74c4df1d5e8b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_74c4df1d5e8b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/21/2026 1:04 PM', '2989.44', `Schaumberg, Lisa 5520 Kathleen CT Santa Rosa, CA 95409-5524`, 't0011321 Schaumberg, Sophia, 18402 Halsted ST #26, Northridge, CA 9132 5', 'wire_74c4df1d5e8b')">Submit</button>
-                                <span class="submit-status" id="status-wire_74c4df1d5e8b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011321</span>
+                                <span class="mgr-name">AdelaLabarca</span>
+                                
+                                <button class="yardi-circle" id="book-wire_74c4df1d5e8b"
+                                        onclick="bookInYardi('7/21/2026 1:04 PM', '2989.44', `Schaumberg, Lisa 5520 Kathleen CT Santa Rosa, CA 95409-5524`, 'wire_74c4df1d5e8b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_74c4df1d5e8b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_e3aa0c77709b">
+                          <tr class="has-input" data-wire-id="wire_e3aa0c77709b">
                             <td class="td-date">7/21/2026 12:52 PM</td>
                             <td class="td-amount">$2,520.00</td>
                             <td class="td-tenant">Thomas Chen 2/29190 Bernardo Way 3/us/santa Clarita, CA 91354 2700</td>
                             <td class="td-ref">Thomas Chen 13448 Beach AVE #3510-e T-code: 10011378</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_e3aa0c77709b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_e3aa0c77709b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/21/2026 12:52 PM', '2520.0', `Thomas Chen 2/29190 Bernardo Way 3/us/santa Clarita, CA 91354 2700`, 'Thomas Chen 13448 Beach AVE #3510-e T-code: 10011378', 'wire_e3aa0c77709b')">Submit</button>
-                                <span class="submit-status" id="status-wire_e3aa0c77709b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011378</span>
+                                <span class="mgr-name">Dietrich Mcwhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_e3aa0c77709b"
+                                        onclick="bookInYardi('7/21/2026 12:52 PM', '2520.0', `Thomas Chen 2/29190 Bernardo Way 3/us/santa Clarita, CA 91354 2700`, 'wire_e3aa0c77709b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_e3aa0c77709b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -768,6 +772,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('7/21/2026 1:40 PM', '9797.83', `Russ Fields 2/2630 J ST 3/us/sacramento 95816`, 'Move IN Funds', 'wire_168a9d641997')">Submit</button>
                                 <span class="submit-status" id="status-wire_168a9d641997"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_70b62f227735">
+                            <td class="td-date">7/21/2026 2:29 PM</td>
+                            <td class="td-amount">$5,207.44</td>
+                            <td class="td-tenant">Christopher C Chrisman 2/saint Paul 255, Rm Apt 507 3/us/denver,80206-5154,co</td>
+                            <td class="td-ref">t0011375 - Chrisman</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_70b62f227735" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_70b62f227735" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/21/2026 2:29 PM', '5207.44', `Christopher C Chrisman 2/saint Paul 255, Rm Apt 507 3/us/denver,80206-5154,co`, 't0011375 - Chrisman', 'wire_70b62f227735')">Submit</button>
+                                <span class="submit-status" id="status-wire_70b62f227735"></span>
                               </div>
                             </td>
                           </tr>
