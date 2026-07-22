@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/21 6:07 PM</span>
+      <span class="meta-text">Updated 7/22 6:06 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">77</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">22</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">78</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">24</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
       </div>
     </div>
 
@@ -664,6 +664,53 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_6f6210e5147b">
+                            <td class="td-date">7/22/2026 5:10 AM</td>
+                            <td class="td-amount">$6,136.83</td>
+                            <td class="td-tenant">Kevin J Snyder 3768 Capitol AVE Unit 317b Fremont CA 94538-1476 US</td>
+                            <td class="td-ref">Move IN Funds For G8 By Clg Ph6210</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_6f6210e5147b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_6f6210e5147b" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/22/2026 5:10 AM', '6136.83', `Kevin J Snyder 3768 Capitol AVE Unit 317b Fremont CA 94538-1476 US`, 'Move IN Funds For G8 By Clg Ph6210', 'wire_6f6210e5147b')">Submit</button>
+                                <span class="submit-status" id="status-wire_6f6210e5147b"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="has-input" data-wire-id="wire_95f62ff06b6f">
+                            <td class="td-date">7/22/2026 5:06 AM</td>
+                            <td class="td-amount">$172.83</td>
+                            <td class="td-tenant">Melissa M Marquez 2/1201 S Hope ST Apt 1515 3/us/los Angeles, CA 90015 4697</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011371</span>
+                                <span class="mgr-name">Ellison Jackson</span>
+                                
+                                <button class="yardi-circle" id="book-wire_95f62ff06b6f"
+                                        onclick="bookInYardi('7/22/2026 5:06 AM', '172.83', `Melissa M Marquez 2/1201 S Hope ST Apt 1515 3/us/los Angeles, CA 90015 4697`, 'wire_95f62ff06b6f')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_95f62ff06b6f" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_7c2fbd3f4579">
+                            <td class="td-date">7/22/2026 5:02 AM</td>
+                            <td class="td-amount">$2,548.83</td>
+                            <td class="td-tenant">Io Weintraub Mishi Hosono 2/1221 Myra AVE Apt 301 3/us/los Angeles, CA 90029 2263</td>
+                            <td class="td-ref">Move IN Funds</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_7c2fbd3f4579" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_7c2fbd3f4579" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/22/2026 5:02 AM', '2548.83', `Io Weintraub Mishi Hosono 2/1221 Myra AVE Apt 301 3/us/los Angeles, CA 90029 2263`, 'Move IN Funds', 'wire_7c2fbd3f4579')">Submit</button>
+                                <span class="submit-status" id="status-wire_7c2fbd3f4579"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_8a1f53b69720">
                             <td class="td-date">7/21/2026 5:03 AM</td>
                             <td class="td-amount">$2,338.63</td>
@@ -1088,18 +1135,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_3bdd206aab75">
+                          <tr class="has-input" data-wire-id="wire_3bdd206aab75">
                             <td class="td-date">7/15/2026 5:11 AM</td>
                             <td class="td-amount">$3,897.83</td>
                             <td class="td-tenant">Alec L Shumate 838 Arden RD Pasadena CA 91106-3902 US</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_3bdd206aab75" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_3bdd206aab75" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/15/2026 5:11 AM', '3897.83', `Alec L Shumate 838 Arden RD Pasadena CA 91106-3902 US`, '', 'wire_3bdd206aab75')">Submit</button>
-                                <span class="submit-status" id="status-wire_3bdd206aab75"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011341</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_3bdd206aab75"
+                                        onclick="bookInYardi('7/15/2026 5:11 AM', '3897.83', `Alec L Shumate 838 Arden RD Pasadena CA 91106-3902 US`, 'wire_3bdd206aab75')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_3bdd206aab75" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1728,34 +1777,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011315</span>
                                 <span class="mgr-name">Holly Hesse</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_fe67b7172a03">
-                            <td class="td-date">6/22/2026 5:22 AM</td>
-                            <td class="td-amount">$3,100.00</td>
-                            <td class="td-tenant">Mohammadali Naraghi 1138 20th ST Apt 12 Santa Monica CA 90403-5639 US</td>
-                            <td class="td-ref">Reference T0011288naraghi</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011288</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c1a24e69caf3">
-                            <td class="td-date">6/22/2026 5:22 AM</td>
-                            <td class="td-amount">$3,751.83</td>
-                            <td class="td-tenant">Sean M Harrell 749 Daniel Freeman Cir Inglewood CA 90301-4145 US</td>
-                            <td class="td-ref">Apartment Rent For Sean AND Paula H Arrell</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011236</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
