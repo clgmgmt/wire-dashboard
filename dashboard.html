@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/21 4:07 PM</span>
+      <span class="meta-text">Updated 7/21 5:07 PM</span>
     </div>
   </div>
 
@@ -646,8 +646,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">77</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">21</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">22</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
@@ -764,18 +764,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_168a9d641997">
+                          <tr class="has-input" data-wire-id="wire_168a9d641997">
                             <td class="td-date">7/21/2026 1:40 PM</td>
                             <td class="td-amount">$9,797.83</td>
                             <td class="td-tenant">Russ Fields 2/2630 J ST 3/us/sacramento 95816</td>
                             <td class="td-ref">Move IN Funds</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_168a9d641997" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_168a9d641997" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/21/2026 1:40 PM', '9797.83', `Russ Fields 2/2630 J ST 3/us/sacramento 95816`, 'Move IN Funds', 'wire_168a9d641997')">Submit</button>
-                                <span class="submit-status" id="status-wire_168a9d641997"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011303</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_168a9d641997"
+                                        onclick="bookInYardi('7/21/2026 1:40 PM', '9797.83', `Russ Fields 2/2630 J ST 3/us/sacramento 95816`, 'wire_168a9d641997')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_168a9d641997" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
