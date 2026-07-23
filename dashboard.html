@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/23 12:07 PM</span>
+      <span class="meta-text">Updated 7/23 1:07 PM</span>
     </div>
   </div>
 
@@ -645,8 +645,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">74</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">75</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">26</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
       </div>
@@ -695,6 +695,21 @@
                                         onclick="bookInYardi('7/23/2026 9:08 AM', '3967.83', `Michelle Jimin Bang Eunha Bang 2/16362 Brookstone Cir 3/us/la Mirada, CA 90638 6530`, 'wire_109264abf86e')"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_109264abf86e" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_261748266b21">
+                            <td class="td-date">7/23/2026 12:44 PM</td>
+                            <td class="td-amount">$4,745.00</td>
+                            <td class="td-tenant">Russell T Paul Christina Wong 2/2246 26th AVE 3/us/san Francisco 94116</td>
+                            <td class="td-ref">t0011391 Paul</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_261748266b21" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_261748266b21" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/23/2026 12:44 PM', '4745.0', `Russell T Paul Christina Wong 2/2246 26th AVE 3/us/san Francisco 94116`, 't0011391 Paul', 'wire_261748266b21')">Submit</button>
+                                <span class="submit-status" id="status-wire_261748266b21"></span>
                               </div>
                             </td>
                           </tr>
