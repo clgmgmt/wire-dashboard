@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/23 6:06 AM</span>
+      <span class="meta-text">Updated 7/23 7:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">78</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">73</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">24</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">44</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
       </div>
     </div>
 
@@ -664,6 +664,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_967ddbebf626">
+                            <td class="td-date">7/23/2026 6:18 AM</td>
+                            <td class="td-amount">$4,751.83</td>
+                            <td class="td-tenant">Qingyang Wang 695 S Santa Fe AVE Apt 338 Los Angeles CA 90021-1351 US</td>
+                            <td class="td-ref">Qingyang Wang, 13448 Beach AVE Apt3 406, t0011395</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_967ddbebf626" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_967ddbebf626" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/23/2026 6:18 AM', '4751.83', `Qingyang Wang 695 S Santa Fe AVE Apt 338 Los Angeles CA 90021-1351 US`, 'Qingyang Wang, 13448 Beach AVE Apt3 406, t0011395', 'wire_967ddbebf626')">Submit</button>
+                                <span class="submit-status" id="status-wire_967ddbebf626"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_6f6210e5147b">
                             <td class="td-date">7/22/2026 5:10 AM</td>
                             <td class="td-amount">$6,136.83</td>
@@ -1740,34 +1755,6 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="has-input" data-wire-id="wire_d0826e1f2b5f">
-                            <td class="td-date">6/23/2026 5:08 AM</td>
-                            <td class="td-amount">$2,989.44</td>
-                            <td class="td-tenant">Rebecca Zait 2/5615 Mainmast Place 3/us/agoura Hills,91301,ca</td>
-                            <td class="td-ref">Security Deposit AND First Month Re Nt. Reference:t0011255 Rebecca Zait</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011255</span>
-                                <span class="mgr-name">Adela Labarca</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_ce92f4036409">
-                            <td class="td-date">6/23/2026 5:07 AM</td>
-                            <td class="td-amount">$6,401.66</td>
-                            <td class="td-tenant">Vitali Zahharov 11657 Chenault ST Apt. 105 Los Ange Les CA 90049-4557 US</td>
-                            <td class="td-ref">t0011199 Zahharov</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011199</span>
-                                <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
                           <tr class="has-input" data-wire-id="wire_04006430e836">
                             <td class="td-date">6/23/2026 2:39 PM</td>
                             <td class="td-amount">$4,632.83</td>
@@ -1777,62 +1764,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011315</span>
                                 <span class="mgr-name">Holly Hesse</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_027a3bad9fc5">
-                            <td class="td-date">6/22/2026 7:39 AM</td>
-                            <td class="td-amount">$7,097.40</td>
-                            <td class="td-tenant">Krystle Mei Chow 3650 Holmes Cir Hacienda Heights CA 91745-6176 US</td>
-                            <td class="td-ref">t0011283 - Chow</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011283</span>
-                                <span class="mgr-name">Thomas Lofton</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_a1b51cb183b8">
-                            <td class="td-date">6/22/2026 7:37 AM</td>
-                            <td class="td-amount">$2,545.00</td>
-                            <td class="td-tenant">Jennifer P Petsu OR Patrice Catherine Petsu 3741 Boise AVE Los Angeles CA 90066-3603 US</td>
-                            <td class="td-ref">Luke Petsu13448 Beach AVE #5510amar Ina Del Rey, CA 90292</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011285</span>
-                                <span class="mgr-name">Chad Hirschman</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_193c715517ba">
-                            <td class="td-date">6/22/2026 9:38 AM</td>
-                            <td class="td-amount">$5,145.00</td>
-                            <td class="td-tenant">Mark V Pettinga & Gayle L Petting 1/a Jt Ten 2/river Club DR 1436 3/us/indian River Shores,32963 391+</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011274</span>
-                                <span class="mgr-name">Chris Leschkies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_18826ce2e69a">
-                            <td class="td-date">6/22/2026 3:00 PM</td>
-                            <td class="td-amount">$4,497.83</td>
-                            <td class="td-tenant">Krystal Y Lai 2525 Elm ST Apt 1801 Dallas TX 7522 6 USA</td>
-                            <td class="td-ref">Add This To Wire Memo: T0011264, Kr Ystal Lai SW 421</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011264</span>
-                                <span class="mgr-name">Rosa Hernandez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
