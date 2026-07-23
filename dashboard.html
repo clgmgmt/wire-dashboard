@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/23 9:08 AM</span>
+      <span class="meta-text">Updated 7/23 10:07 AM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">73</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">74</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">11</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">24</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">25</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">38</span></button>
       </div>
     </div>
@@ -664,18 +664,35 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_967ddbebf626">
+                          <tr class="has-input" data-wire-id="wire_967ddbebf626">
                             <td class="td-date">7/23/2026 6:18 AM</td>
                             <td class="td-amount">$4,751.83</td>
                             <td class="td-tenant">Qingyang Wang 695 S Santa Fe AVE Apt 338 Los Angeles CA 90021-1351 US</td>
                             <td class="td-ref">Qingyang Wang, 13448 Beach AVE Apt3 406, t0011395</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011395</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_967ddbebf626"
+                                        onclick="bookInYardi('7/23/2026 6:18 AM', '4751.83', `Qingyang Wang 695 S Santa Fe AVE Apt 338 Los Angeles CA 90021-1351 US`, 'wire_967ddbebf626')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_967ddbebf626" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_109264abf86e">
+                            <td class="td-date">7/23/2026 9:08 AM</td>
+                            <td class="td-amount">$3,967.83</td>
+                            <td class="td-tenant">Michelle Jimin Bang Eunha Bang 2/16362 Brookstone Cir 3/us/la Mirada, CA 90638 6530</td>
+                            <td class="td-ref">Move IN Deposit</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_967ddbebf626" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_967ddbebf626" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_109264abf86e" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_109264abf86e" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/23/2026 6:18 AM', '4751.83', `Qingyang Wang 695 S Santa Fe AVE Apt 338 Los Angeles CA 90021-1351 US`, 'Qingyang Wang, 13448 Beach AVE Apt3 406, t0011395', 'wire_967ddbebf626')">Submit</button>
-                                <span class="submit-status" id="status-wire_967ddbebf626"></span>
+                                        onclick="submitToSheets('7/23/2026 9:08 AM', '3967.83', `Michelle Jimin Bang Eunha Bang 2/16362 Brookstone Cir 3/us/la Mirada, CA 90638 6530`, 'Move IN Deposit', 'wire_109264abf86e')">Submit</button>
+                                <span class="submit-status" id="status-wire_109264abf86e"></span>
                               </div>
                             </td>
                           </tr>
