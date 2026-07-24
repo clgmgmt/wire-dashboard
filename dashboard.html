@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/24 9:08 AM</span>
+      <span class="meta-text">Updated 7/24 10:07 AM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">78</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">15</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">27</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">36</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">80</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">16</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">18</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">46</span></button>
       </div>
     </div>
 
@@ -706,6 +706,36 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('7/24/2026 8:35 AM', '5852.83', `Mosaic Digital Media Llc 14 Columbia PL Mount Vernon NY 10552-1203 US`, 't0011393 - Nuruddin', 'wire_53738b81d1c7')">Submit</button>
                                 <span class="submit-status" id="status-wire_53738b81d1c7"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_bad263272856">
+                            <td class="td-date">7/24/2026 9:45 AM</td>
+                            <td class="td-amount">$2,450.00</td>
+                            <td class="td-tenant">One Buck Productions, Inc. 2/73 Madrone AVE 3/us/larkspur 94939</td>
+                            <td class="td-ref">Ethan Buckland t0011411</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_bad263272856" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_bad263272856" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/24/2026 9:45 AM', '2450.0', `One Buck Productions, Inc. 2/73 Madrone AVE 3/us/larkspur 94939`, 'Ethan Buckland t0011411', 'wire_bad263272856')">Submit</button>
+                                <span class="submit-status" id="status-wire_bad263272856"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_1b25466b9c34">
+                            <td class="td-date">7/24/2026 9:31 AM</td>
+                            <td class="td-amount">$4,967.83</td>
+                            <td class="td-tenant">Gavin Fansler 338 E 53rd ST Apt 4d New York NY 10 022-5254 US</td>
+                            <td class="td-ref">Gavin Fansler Move IN Funds</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_1b25466b9c34" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_1b25466b9c34" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/24/2026 9:31 AM', '4967.83', `Gavin Fansler 338 E 53rd ST Apt 4d New York NY 10 022-5254 US`, 'Gavin Fansler Move IN Funds', 'wire_1b25466b9c34')">Submit</button>
+                                <span class="submit-status" id="status-wire_1b25466b9c34"></span>
                               </div>
                             </td>
                           </tr>
@@ -773,18 +803,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_2e28d68898b2">
+                          <tr class="has-input" data-wire-id="wire_2e28d68898b2">
                             <td class="td-date">7/23/2026 3:20 PM</td>
                             <td class="td-amount">$2,495.00</td>
                             <td class="td-tenant">Johnny D Dunn 318 Harpers Ferry AVE Las Vegas NV 89148-2783 US</td>
                             <td class="td-ref">Johnny Dunn 4210 Del Rey AVE 309b M Arina Del Rey CA 90292 T001141</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_2e28d68898b2" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_2e28d68898b2" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/23/2026 3:20 PM', '2495.0', `Johnny D Dunn 318 Harpers Ferry AVE Las Vegas NV 89148-2783 US`, 'Johnny Dunn 4210 Del Rey AVE 309b M Arina Del Rey CA 90292 T001141', 'wire_2e28d68898b2')">Submit</button>
-                                <span class="submit-status" id="status-wire_2e28d68898b2"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011418</span>
+                                <span class="mgr-name">Jessica Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_2e28d68898b2"
+                                        onclick="bookInYardi('7/23/2026 3:20 PM', '2495.0', `Johnny D Dunn 318 Harpers Ferry AVE Las Vegas NV 89148-2783 US`, 'wire_2e28d68898b2')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_2e28d68898b2" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -815,10 +847,7 @@
                                 <span class="tid-mono">t0011371</span>
                                 <span class="mgr-name">Ellison Jackson</span>
                                 
-                                <button class="yardi-circle" id="book-wire_95f62ff06b6f"
-                                        onclick="bookInYardi('7/22/2026 5:06 AM', '172.83', `Melissa M Marquez 2/1201 S Hope ST Apt 1515 3/us/los Angeles, CA 90015 4697`, 'wire_95f62ff06b6f')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_95f62ff06b6f" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1113,10 +1142,7 @@
                                 <span class="tid-mono">t0011298</span>
                                 <span class="mgr-name">Lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_a30c6a6f4b70"
-                                        onclick="bookInYardi('7/20/2026 11:53 AM', '2325.0', `Jahsiiyah Hamilton 1171 W 30th ST Los Angeles CA 90007-3153 US`, 'wire_a30c6a6f4b70')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_a30c6a6f4b70" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1130,10 +1156,7 @@
                                 <span class="tid-mono">t0011362</span>
                                 <span class="mgr-name">Lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_c6307ae4b5aa"
-                                        onclick="bookInYardi('7/17/2026 5:32 AM', '5682.83', `Kevin Kim 645 Alta Loma DR Redlands California 92373-7335 US`, 'wire_c6307ae4b5aa')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_c6307ae4b5aa" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1147,10 +1170,7 @@
                                 <span class="tid-mono">t0011371</span>
                                 <span class="mgr-name">Ellison Jackson</span>
                                 
-                                <button class="yardi-circle" id="book-wire_52111b1de8ed"
-                                        onclick="bookInYardi('7/17/2026 6:35 AM', '4375.0', `Melissa M Marquez 2/1201 S Hope ST Apt 1515 3/us/los Angeles, CA 90015 4697`, 'wire_52111b1de8ed')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_52111b1de8ed" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1164,10 +1184,7 @@
                                 <span class="tid-mono">t0011386</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_7306a20fd506"
-                                        onclick="bookInYardi('7/17/2026 2:42 PM', '2424.0', `Strike Health Corporation 2/45641 Montclaire Terrace 3/us/fremont,94539,ca`, 'wire_7306a20fd506')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_7306a20fd506" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1209,10 +1226,7 @@
                                 <span class="tid-mono">t0011358</span>
                                 <span class="mgr-name">Chris Leschkies</span>
                                 
-                                <button class="yardi-circle" id="book-wire_cecd5749b163"
-                                        onclick="bookInYardi('7/16/2026 10:11 AM', '5345.0', `Margaret Marie C Hebeler 2/108 Moore Creek RD 3/us/santa Cruz, CA 95060-2320`, 'wire_cecd5749b163')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_cecd5749b163" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1226,10 +1240,7 @@
                                 <span class="tid-mono">t0011368</span>
                                 <span class="mgr-name">Jess Favela</span>
                                 
-                                <button class="yardi-circle" id="book-wire_637d86b55ae0"
-                                        onclick="bookInYardi('7/16/2026 12:06 PM', '3617.83', `Neil Earl Kinney 4212 Country Club DR Long Beach,ca,90807`, 'wire_637d86b55ae0')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_637d86b55ae0" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1271,10 +1282,7 @@
                                 <span class="tid-mono">t0011341</span>
                                 <span class="mgr-name">Joslyn Y</span>
                                 
-                                <button class="yardi-circle" id="book-wire_3bdd206aab75"
-                                        onclick="bookInYardi('7/15/2026 5:11 AM', '3897.83', `Alec L Shumate 838 Arden RD Pasadena CA 91106-3902 US`, 'wire_3bdd206aab75')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_3bdd206aab75" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1302,10 +1310,7 @@
                                 <span class="tid-mono">t0011344</span>
                                 <span class="mgr-name">Lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_106dd52a215b"
-                                        onclick="bookInYardi('7/15/2026 11:20 AM', '2449.46', `Laura L Ritchie-johnston 4171 E Firestone DR Chandler AZ 85249-7371 US`, 'wire_106dd52a215b')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_106dd52a215b" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1562,10 +1567,7 @@
                                 <span class="tid-mono">t0011314</span>
                                 <span class="mgr-name">Ellison Jackson</span>
                                 
-                                <button class="yardi-circle" id="book-wire_c9907eecd9f9"
-                                        onclick="bookInYardi('7/6/2026 12:16 PM', '4197.83', `Dev Kumar Maheshwari 2/888 Brannan ST Ste 150 3/us/san Francisco, CA 94103 5601`, 'wire_c9907eecd9f9')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_c9907eecd9f9" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
