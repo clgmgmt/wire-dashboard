@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/24 1:07 PM</span>
+      <span class="meta-text">Updated 7/24 2:06 PM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">82</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">83</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">15</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">66</span></button>
       </div>
     </div>
@@ -753,18 +753,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_1c5b363b77b0">
+                          <tr class="has-input" data-wire-id="wire_1c5b363b77b0">
                             <td class="td-date">7/24/2026 12:06 PM</td>
                             <td class="td-amount">$3,847.83</td>
                             <td class="td-tenant">Connor Stec 13603 Marina Pointe DR Apt A422 Marina Del Rey California 90292 US</td>
                             <td class="td-ref">Tenant Move-in Funds For T001385 - Stec</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011385</span>
+                                <span class="mgr-name">Ellison Jackson</span>
+                                
+                                <button class="yardi-circle" id="book-wire_1c5b363b77b0"
+                                        onclick="bookInYardi('7/24/2026 12:06 PM', '3847.83', `Connor Stec 13603 Marina Pointe DR Apt A422 Marina Del Rey California 90292 US`, 'wire_1c5b363b77b0')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_1c5b363b77b0" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_459d069c64dd">
+                            <td class="td-date">7/24/2026 1:42 PM</td>
+                            <td class="td-amount">$4,999.00</td>
+                            <td class="td-tenant">Nicole J. Plummer David W. Plummer 737 250th LN NE Sammamish WA 98074</td>
+                            <td class="td-ref">T0011410- Plummer</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_1c5b363b77b0" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_1c5b363b77b0" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_459d069c64dd" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_459d069c64dd" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/24/2026 12:06 PM', '3847.83', `Connor Stec 13603 Marina Pointe DR Apt A422 Marina Del Rey California 90292 US`, 'Tenant Move-in Funds For T001385 - Stec', 'wire_1c5b363b77b0')">Submit</button>
-                                <span class="submit-status" id="status-wire_1c5b363b77b0"></span>
+                                        onclick="submitToSheets('7/24/2026 1:42 PM', '4999.0', `Nicole J. Plummer David W. Plummer 737 250th LN NE Sammamish WA 98074`, 'T0011410- Plummer', 'wire_459d069c64dd')">Submit</button>
+                                <span class="submit-status" id="status-wire_459d069c64dd"></span>
                               </div>
                             </td>
                           </tr>
