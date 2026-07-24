@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/24 12:07 PM</span>
+      <span class="meta-text">Updated 7/24 1:07 PM</span>
     </div>
   </div>
 
@@ -645,10 +645,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">80</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">13</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">63</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">82</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">15</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">66</span></button>
       </div>
     </div>
 
@@ -735,6 +735,36 @@
                                 <span class="mgr-name">Enrique</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_1271b97ca8d4">
+                            <td class="td-date">7/24/2026 12:15 PM</td>
+                            <td class="td-amount">$6,797.83</td>
+                            <td class="td-tenant">Ibnat Khanam 600 Kelton AVE Apt 2 Los Angeles CA 90024-2253 US</td>
+                            <td class="td-ref">Ibnat Khanam, 13448 Beach Ave, Ph74 07, Marina Del Rey,ca 90292, T-code :t0011405</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_1271b97ca8d4" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_1271b97ca8d4" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/24/2026 12:15 PM', '6797.83', `Ibnat Khanam 600 Kelton AVE Apt 2 Los Angeles CA 90024-2253 US`, 'Ibnat Khanam, 13448 Beach Ave, Ph74 07, Marina Del Rey,ca 90292, T-code :t0011405', 'wire_1271b97ca8d4')">Submit</button>
+                                <span class="submit-status" id="status-wire_1271b97ca8d4"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_1c5b363b77b0">
+                            <td class="td-date">7/24/2026 12:06 PM</td>
+                            <td class="td-amount">$3,847.83</td>
+                            <td class="td-tenant">Connor Stec 13603 Marina Pointe DR Apt A422 Marina Del Rey California 90292 US</td>
+                            <td class="td-ref">Tenant Move-in Funds For T001385 - Stec</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_1c5b363b77b0" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_1c5b363b77b0" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/24/2026 12:06 PM', '3847.83', `Connor Stec 13603 Marina Pointe DR Apt A422 Marina Del Rey California 90292 US`, 'Tenant Move-in Funds For T001385 - Stec', 'wire_1c5b363b77b0')">Submit</button>
+                                <span class="submit-status" id="status-wire_1c5b363b77b0"></span>
                               </div>
                             </td>
                           </tr>
@@ -861,10 +891,7 @@
                                 <span class="tid-mono">t0011298</span>
                                 <span class="mgr-name">Lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_8a1f53b69720"
-                                        onclick="bookInYardi('7/21/2026 5:03 AM', '2338.63', `Anushka Mellacheruvu 2/81 Pascal LN 3/us/austin, TX 78746 2552`, 'wire_8a1f53b69720')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_8a1f53b69720" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1063,10 +1090,7 @@
                                 <span class="tid-mono">t0011298</span>
                                 <span class="mgr-name">Lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_d6439516d572"
-                                        onclick="bookInYardi('7/20/2026 7:32 AM', '2100.0', `Zidane Luca Zamorano OR Pierre Danilo Zamorano 1171 1/2 W 30th ST Los Angeles CA 90007-3153 US`, 'wire_d6439516d572')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_d6439516d572" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1080,10 +1104,7 @@
                                 <span class="tid-mono">t0011298</span>
                                 <span class="mgr-name">lopez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_9f75e1165b9b"
-                                        onclick="bookInYardi('7/20/2026 9:48 AM', '2492.83', `James Cook 3333 SW Hamilton Street Portland, OR 97239`, 'wire_9f75e1165b9b')"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_9f75e1165b9b" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
