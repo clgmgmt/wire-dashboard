@@ -636,7 +636,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/24 8:07 AM</span>
+      <span class="meta-text">Updated 7/24 9:08 AM</span>
     </div>
   </div>
 
@@ -645,9 +645,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">77</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">78</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">15</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">26</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">27</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">36</span></button>
       </div>
     </div>
@@ -691,6 +691,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets('7/24/2026 7:10 AM', '5440.0', `Mase Ventures Llc 1985 West Henderson Road 62907 Columbus OH 43220`, 'T0011400- Dragos; Rent; T0011400- D Ragos', 'wire_4b1c8ec63876')">Submit</button>
                                 <span class="submit-status" id="status-wire_4b1c8ec63876"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_53738b81d1c7">
+                            <td class="td-date">7/24/2026 8:35 AM</td>
+                            <td class="td-amount">$5,852.83</td>
+                            <td class="td-tenant">Mosaic Digital Media Llc 14 Columbia PL Mount Vernon NY 10552-1203 US</td>
+                            <td class="td-ref">t0011393 - Nuruddin</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_53738b81d1c7" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_53738b81d1c7" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets('7/24/2026 8:35 AM', '5852.83', `Mosaic Digital Media Llc 14 Columbia PL Mount Vernon NY 10552-1203 US`, 't0011393 - Nuruddin', 'wire_53738b81d1c7')">Submit</button>
+                                <span class="submit-status" id="status-wire_53738b81d1c7"></span>
                               </div>
                             </td>
                           </tr>
@@ -773,18 +788,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_6f6210e5147b">
+                          <tr class="has-input" data-wire-id="wire_6f6210e5147b">
                             <td class="td-date">7/22/2026 5:10 AM</td>
                             <td class="td-amount">$6,136.83</td>
                             <td class="td-tenant">Kevin J Snyder 3768 Capitol AVE Unit 317b Fremont CA 94538-1476 US</td>
                             <td class="td-ref">Move IN Funds For G8 By Clg Ph6210</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_6f6210e5147b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_6f6210e5147b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets('7/22/2026 5:10 AM', '6136.83', `Kevin J Snyder 3768 Capitol AVE Unit 317b Fremont CA 94538-1476 US`, 'Move IN Funds For G8 By Clg Ph6210', 'wire_6f6210e5147b')">Submit</button>
-                                <span class="submit-status" id="status-wire_6f6210e5147b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011412</span>
+                                <span class="mgr-name">Holly Hesse</span>
+                                
+                                <button class="yardi-circle" id="book-wire_6f6210e5147b"
+                                        onclick="bookInYardi('7/22/2026 5:10 AM', '6136.83', `Kevin J Snyder 3768 Capitol AVE Unit 317b Fremont CA 94538-1476 US`, 'wire_6f6210e5147b')"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_6f6210e5147b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
