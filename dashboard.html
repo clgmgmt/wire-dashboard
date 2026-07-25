@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-25T10:07:03">
+<meta name="last-updated" content="2026-07-25T11:06:09">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/25 10:07 AM</span>
+      <span class="meta-text">Updated 7/25 11:06 AM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">83</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">14</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">12</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">66</span></button>
       </div>
     </div>
@@ -721,18 +721,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_4b1c8ec63876">
+                          <tr class="has-input" data-wire-id="wire_4b1c8ec63876">
                             <td class="td-date">7/24/2026 7:10 AM</td>
                             <td class="td-amount">$5,440.00</td>
                             <td class="td-tenant">Mase Ventures Llc 1985 West Henderson Road 62907 Columbus OH 43220</td>
                             <td class="td-ref">T0011400- Dragos; Rent; T0011400- D Ragos</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_4b1c8ec63876" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_4b1c8ec63876" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/24/2026 7:10 AM&quot;, &quot;5440.0&quot;, &quot;Mase Ventures Llc 1985 West Henderson Road 62907 Columbus OH 43220&quot;, &quot;T0011400- Dragos; Rent; T0011400- D Ragos&quot;, &quot;wire_4b1c8ec63876&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_4b1c8ec63876"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011400</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_4b1c8ec63876"
+                                        onclick="bookInYardi(&quot;7/24/2026 7:10 AM&quot;, &quot;5440.0&quot;, &quot;Mase Ventures Llc 1985 West Henderson Road 62907 Columbus OH 43220&quot;, &quot;wire_4b1c8ec63876&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_4b1c8ec63876" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -814,18 +816,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_459d069c64dd">
+                          <tr class="has-input" data-wire-id="wire_459d069c64dd">
                             <td class="td-date">7/24/2026 1:42 PM</td>
                             <td class="td-amount">$4,999.00</td>
                             <td class="td-tenant">Nicole J. Plummer David W. Plummer 737 250th LN NE Sammamish WA 98074</td>
                             <td class="td-ref">T0011410- Plummer</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_459d069c64dd" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_459d069c64dd" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/24/2026 1:42 PM&quot;, &quot;4999.0&quot;, &quot;Nicole J. Plummer David W. Plummer 737 250th LN NE Sammamish WA 98074&quot;, &quot;T0011410- Plummer&quot;, &quot;wire_459d069c64dd&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_459d069c64dd"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011410</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_459d069c64dd"
+                                        onclick="bookInYardi(&quot;7/24/2026 1:42 PM&quot;, &quot;4999.0&quot;, &quot;Nicole J. Plummer David W. Plummer 737 250th LN NE Sammamish WA 98074&quot;, &quot;wire_459d069c64dd&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_459d069c64dd" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
