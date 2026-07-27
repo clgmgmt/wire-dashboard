@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-27T14:06:36">
+<meta name="last-updated" content="2026-07-27T15:06:43">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/27 2:06 PM</span>
+      <span class="meta-text">Updated 7/27 3:06 PM</span>
     </div>
   </div>
 
@@ -687,9 +687,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">81</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">18</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">82</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">17</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">63</span></button>
       </div>
     </div>
@@ -796,18 +796,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_00813d1fb58c">
+                          <tr class="has-input" data-wire-id="wire_00813d1fb58c">
                             <td class="td-date">7/27/2026 11:52 AM</td>
                             <td class="td-amount">$6,372.83</td>
                             <td class="td-tenant">Jack S Berry 464 S Bedford DR Beverly Hills,ca,</td>
                             <td class="td-ref">Reference Jack Berry 13448 Beach Av E Ph 6101 T-code t0011361</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_00813d1fb58c" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_00813d1fb58c" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/27/2026 11:52 AM&quot;, &quot;6372.83&quot;, &quot;Jack S Berry 464 S Bedford DR Beverly Hills,ca,&quot;, &quot;Reference Jack Berry 13448 Beach Av E Ph 6101 T-code t0011361&quot;, &quot;wire_00813d1fb58c&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_00813d1fb58c"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011361</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_00813d1fb58c"
+                                        onclick="bookInYardi(&quot;7/27/2026 11:52 AM&quot;, &quot;6372.83&quot;, &quot;Jack S Berry 464 S Bedford DR Beverly Hills,ca,&quot;, &quot;wire_00813d1fb58c&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_00813d1fb58c" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -823,6 +825,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets(&quot;7/27/2026 1:36 PM&quot;, &quot;5022.83&quot;, &quot;Carlo Hank Noravian 1116 Avonoak Ter Glendale CA 91206- 1512 US&quot;, &quot;T001111392 Noravian&quot;, &quot;wire_98e439a83a0c&quot;)">Submit</button>
                                 <span class="submit-status" id="status-wire_98e439a83a0c"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_7d5d6fc11e21">
+                            <td class="td-date">7/27/2026 2:10 PM</td>
+                            <td class="td-amount">$4,067.83</td>
+                            <td class="td-tenant">Pratiyush Singh 2124 Bancroft Way Unit 203 Berkeley CA 94704-1867 US</td>
+                            <td class="td-ref">Move IN Funds For Mv By Clg, Ph 173 . Reference: Pratiyush Singh, T0011 407</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_7d5d6fc11e21" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_7d5d6fc11e21" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;7/27/2026 2:10 PM&quot;, &quot;4067.83&quot;, &quot;Pratiyush Singh 2124 Bancroft Way Unit 203 Berkeley CA 94704-1867 US&quot;, &quot;Move IN Funds For Mv By Clg, Ph 173 . Reference: Pratiyush Singh, T0011 407&quot;, &quot;wire_7d5d6fc11e21&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_7d5d6fc11e21"></span>
                               </div>
                             </td>
                           </tr>
@@ -1475,18 +1492,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_345b9e728ae5">
+                          <tr class="has-input" data-wire-id="wire_345b9e728ae5">
                             <td class="td-date">7/15/2026 2:56 PM</td>
                             <td class="td-amount">$4,392.83</td>
                             <td class="td-tenant">Amy Deng 10125 Palms BLVD Apt 203 Los Angeles CA 90034-3801 US</td>
                             <td class="td-ref">t0011352 - Deng, Unit 409</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_345b9e728ae5" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_345b9e728ae5" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/15/2026 2:56 PM&quot;, &quot;4392.83&quot;, &quot;Amy Deng 10125 Palms BLVD Apt 203 Los Angeles CA 90034-3801 US&quot;, &quot;t0011352 - Deng, Unit 409&quot;, &quot;wire_345b9e728ae5&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_345b9e728ae5"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011357</span>
+                                <span class="mgr-name">SB</span>
+                                
+                                <button class="yardi-circle" id="book-wire_345b9e728ae5"
+                                        onclick="bookInYardi(&quot;7/15/2026 2:56 PM&quot;, &quot;4392.83&quot;, &quot;Amy Deng 10125 Palms BLVD Apt 203 Los Angeles CA 90034-3801 US&quot;, &quot;wire_345b9e728ae5&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_345b9e728ae5" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
