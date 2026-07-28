@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-28T12:06:24">
+<meta name="last-updated" content="2026-07-28T13:06:35">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/28 12:06 PM</span>
+      <span class="meta-text">Updated 7/28 1:06 PM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">83</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">14</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">68</span></button>
       </div>
     </div>
@@ -1094,18 +1094,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_9f1bcbb62141">
+                          <tr class="has-input" data-wire-id="wire_9f1bcbb62141">
                             <td class="td-date">7/21/2026 6:30 AM</td>
                             <td class="td-amount">$4,597.83</td>
                             <td class="td-tenant">Mary Rose Bertone 2/2940 Veteran AVE 3/us/los Angeles CA 90064-4121</td>
                             <td class="td-ref">Maryrose Tangney Unit 640</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_9f1bcbb62141" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_9f1bcbb62141" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/21/2026 6:30 AM&quot;, &quot;4597.83&quot;, &quot;Mary Rose Bertone 2/2940 Veteran AVE 3/us/los Angeles CA 90064-4121&quot;, &quot;Maryrose Tangney Unit 640&quot;, &quot;wire_9f1bcbb62141&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_9f1bcbb62141"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011346</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_9f1bcbb62141"
+                                        onclick="bookInYardi(&quot;7/21/2026 6:30 AM&quot;, &quot;4597.83&quot;, &quot;Mary Rose Bertone 2/2940 Veteran AVE 3/us/los Angeles CA 90064-4121&quot;, &quot;wire_9f1bcbb62141&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_9f1bcbb62141" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1517,18 +1519,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a3893cfc71c8">
+                          <tr class="has-input" data-wire-id="wire_a3893cfc71c8">
                             <td class="td-date">7/14/2026 9:38 AM</td>
                             <td class="td-amount">$4,647.83</td>
                             <td class="td-tenant">Jamie Kwak 2700 W El Camino Real Apt 418 Mountain View,ca,,us</td>
                             <td class="td-ref">t0011376 Jamie Kwak Unit 630</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a3893cfc71c8" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a3893cfc71c8" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/14/2026 9:38 AM&quot;, &quot;4647.83&quot;, &quot;Jamie Kwak 2700 W El Camino Real Apt 418 Mountain View,ca,,us&quot;, &quot;t0011376 Jamie Kwak Unit 630&quot;, &quot;wire_a3893cfc71c8&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_a3893cfc71c8"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011376</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a3893cfc71c8"
+                                        onclick="bookInYardi(&quot;7/14/2026 9:38 AM&quot;, &quot;4647.83&quot;, &quot;Jamie Kwak 2700 W El Camino Real Apt 418 Mountain View,ca,,us&quot;, &quot;wire_a3893cfc71c8&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a3893cfc71c8" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1603,18 +1607,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_27c6f0fdc6b1">
+                          <tr class="has-input" data-wire-id="wire_27c6f0fdc6b1">
                             <td class="td-date">7/9/2026 6:28 AM</td>
                             <td class="td-amount">$4,547.83</td>
                             <td class="td-tenant">Tianyi Chou 2/2235 Hacienda RD 3/us/la Habra Heights, CA 90631 786</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_27c6f0fdc6b1" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_27c6f0fdc6b1" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/9/2026 6:28 AM&quot;, &quot;4547.83&quot;, &quot;Tianyi Chou 2/2235 Hacienda RD 3/us/la Habra Heights, CA 90631 786&quot;, &quot;&quot;, &quot;wire_27c6f0fdc6b1&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_27c6f0fdc6b1"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011333</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_27c6f0fdc6b1"
+                                        onclick="bookInYardi(&quot;7/9/2026 6:28 AM&quot;, &quot;4547.83&quot;, &quot;Tianyi Chou 2/2235 Hacienda RD 3/us/la Habra Heights, CA 90631 786&quot;, &quot;wire_27c6f0fdc6b1&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_27c6f0fdc6b1" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1702,18 +1708,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_c756b140dd03">
+                          <tr class="has-input" data-wire-id="wire_c756b140dd03">
                             <td class="td-date">7/6/2026 5:02 AM</td>
                             <td class="td-amount">$5,647.83</td>
                             <td class="td-tenant">Erika A Foxworth 13593 Grosse Pt San Diego CA US 921 28-4761</td>
                             <td class="td-ref">Reference - T0011310- Foxworth For Apartment #627</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_c756b140dd03" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_c756b140dd03" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/6/2026 5:02 AM&quot;, &quot;5647.83&quot;, &quot;Erika A Foxworth 13593 Grosse Pt San Diego CA US 921 28-4761&quot;, &quot;Reference - T0011310- Foxworth For Apartment #627&quot;, &quot;wire_c756b140dd03&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_c756b140dd03"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011310</span>
+                                <span class="mgr-name">Andrew Menzies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_c756b140dd03"
+                                        onclick="bookInYardi(&quot;7/6/2026 5:02 AM&quot;, &quot;5647.83&quot;, &quot;Erika A Foxworth 13593 Grosse Pt San Diego CA US 921 28-4761&quot;, &quot;wire_c756b140dd03&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_c756b140dd03" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
