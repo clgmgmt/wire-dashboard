@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-27T18:07:05">
+<meta name="last-updated" content="2026-07-28T06:05:55">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/27 6:07 PM</span>
+      <span class="meta-text">Updated 7/28 6:05 AM</span>
     </div>
   </div>
 
@@ -687,8 +687,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">82</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">17</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">83</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">18</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">65</span></button>
       </div>
@@ -706,6 +706,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_be59457ac4b6">
+                            <td class="td-date">7/28/2026 5:14 AM</td>
+                            <td class="td-amount">$4,100.00</td>
+                            <td class="td-tenant">Claire D Chedekel OR Mark S Chedekel 965 Magnolia AVE Apt 19 Larkspur CA 94939-1031 US</td>
+                            <td class="td-ref">Reference# t0011363 Beneficiary Cla Ire Chedekelbeneficiary Routing 322 271627 Account 1882878269</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_be59457ac4b6" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_be59457ac4b6" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;7/28/2026 5:14 AM&quot;, &quot;4100.0&quot;, &quot;Claire D Chedekel OR Mark S Chedekel 965 Magnolia AVE Apt 19 Larkspur CA 94939-1031 US&quot;, &quot;Reference# t0011363 Beneficiary Cla Ire Chedekelbeneficiary Routing 322 271627 Account 1882878269&quot;, &quot;wire_be59457ac4b6&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_be59457ac4b6"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_1f81ef49a95b">
                             <td class="td-date">7/27/2026 5:53 AM</td>
                             <td class="td-amount">$6,642.83</td>
