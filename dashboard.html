@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-28T14:06:46">
+<meta name="last-updated" content="2026-07-28T15:06:53">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/28 2:06 PM</span>
+      <span class="meta-text">Updated 7/28 3:06 PM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">83</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">6</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">9</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">68</span></button>
       </div>
     </div>
@@ -735,33 +735,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_5dd3536b027c">
+                          <tr class="has-input" data-wire-id="wire_5dd3536b027c">
                             <td class="td-date">7/27/2026 5:36 AM</td>
                             <td class="td-amount">$8,082.33</td>
                             <td class="td-tenant">Anton Shiozaki 18204 Fairview LN Torrance,ca,90504 US</td>
                             <td class="td-ref">Move IN Funds Anton Keith Shiozaki t0011345</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_5dd3536b027c" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_5dd3536b027c" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/27/2026 5:36 AM&quot;, &quot;8082.33&quot;, &quot;Anton Shiozaki 18204 Fairview LN Torrance,ca,90504 US&quot;, &quot;Move IN Funds Anton Keith Shiozaki t0011345&quot;, &quot;wire_5dd3536b027c&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_5dd3536b027c"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011345</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_5dd3536b027c"
+                                        onclick="bookInYardi(&quot;7/27/2026 5:36 AM&quot;, &quot;8082.33&quot;, &quot;Anton Shiozaki 18204 Fairview LN Torrance,ca,90504 US&quot;, &quot;wire_5dd3536b027c&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_5dd3536b027c" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_1a819f054e45">
+                          <tr class="has-input" data-wire-id="wire_1a819f054e45">
                             <td class="td-date">7/27/2026 5:16 AM</td>
                             <td class="td-amount">$1,962.83</td>
                             <td class="td-tenant">Verlyn Juwono 10401 Washington BLVD Ph 738 Culver City CA 90232-3552 US</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_1a819f054e45" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_1a819f054e45" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/27/2026 5:16 AM&quot;, &quot;1962.83&quot;, &quot;Verlyn Juwono 10401 Washington BLVD Ph 738 Culver City CA 90232-3552 US&quot;, &quot;&quot;, &quot;wire_1a819f054e45&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_1a819f054e45"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011370</span>
+                                <span class="mgr-name">Joslyn y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_1a819f054e45"
+                                        onclick="bookInYardi(&quot;7/27/2026 5:16 AM&quot;, &quot;1962.83&quot;, &quot;Verlyn Juwono 10401 Washington BLVD Ph 738 Culver City CA 90232-3552 US&quot;, &quot;wire_1a819f054e45&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_1a819f054e45" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -841,18 +845,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_7d5d6fc11e21">
+                          <tr class="has-input" data-wire-id="wire_7d5d6fc11e21">
                             <td class="td-date">7/27/2026 2:10 PM</td>
                             <td class="td-amount">$4,067.83</td>
                             <td class="td-tenant">Pratiyush Singh 2124 Bancroft Way Unit 203 Berkeley CA 94704-1867 US</td>
                             <td class="td-ref">Move IN Funds For Mv By Clg, Ph 173 . Reference: Pratiyush Singh, T0011 407</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_7d5d6fc11e21" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_7d5d6fc11e21" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/27/2026 2:10 PM&quot;, &quot;4067.83&quot;, &quot;Pratiyush Singh 2124 Bancroft Way Unit 203 Berkeley CA 94704-1867 US&quot;, &quot;Move IN Funds For Mv By Clg, Ph 173 . Reference: Pratiyush Singh, T0011 407&quot;, &quot;wire_7d5d6fc11e21&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_7d5d6fc11e21"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011407</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_7d5d6fc11e21"
+                                        onclick="bookInYardi(&quot;7/27/2026 2:10 PM&quot;, &quot;4067.83&quot;, &quot;Pratiyush Singh 2124 Bancroft Way Unit 203 Berkeley CA 94704-1867 US&quot;, &quot;wire_7d5d6fc11e21&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_7d5d6fc11e21" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
