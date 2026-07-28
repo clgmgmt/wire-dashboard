@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-28T11:07:09">
+<meta name="last-updated" content="2026-07-28T12:06:24">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/28 11:07 AM</span>
+      <span class="meta-text">Updated 7/28 12:06 PM</span>
     </div>
   </div>
 
@@ -688,9 +688,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">83</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">15</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">65</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">14</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">68</span></button>
       </div>
     </div>
 
@@ -716,10 +716,7 @@
                                 <span class="tid-mono">t0011363</span>
                                 <span class="mgr-name">Gaea Arnold</span>
                                 
-                                <button class="yardi-circle" id="book-wire_be59457ac4b6"
-                                        onclick="bookInYardi(&quot;7/28/2026 5:14 AM&quot;, &quot;4100.0&quot;, &quot;Claire D Chedekel OR Mark S Chedekel 965 Magnolia AVE Apt 19 Larkspur CA 94939-1031 US&quot;, &quot;wire_be59457ac4b6&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_be59457ac4b6" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -783,18 +780,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_b52df322d85a">
+                          <tr class="has-input" data-wire-id="wire_b52df322d85a">
                             <td class="td-date">7/27/2026 5:08 AM</td>
                             <td class="td-amount">$8,992.83</td>
                             <td class="td-tenant">Celia Reinhart 2/brockton AVE 1301, Rm Unit 202 3/us/los Angeles,90025,ca</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_b52df322d85a" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_b52df322d85a" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/27/2026 5:08 AM&quot;, &quot;8992.83&quot;, &quot;Celia Reinhart 2/brockton AVE 1301, Rm Unit 202 3/us/los Angeles,90025,ca&quot;, &quot;&quot;, &quot;wire_b52df322d85a&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_b52df322d85a"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011404</span>
+                                <span class="mgr-name">Jessica Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_b52df322d85a"
+                                        onclick="bookInYardi(&quot;7/27/2026 5:08 AM&quot;, &quot;8992.83&quot;, &quot;Celia Reinhart 2/brockton AVE 1301, Rm Unit 202 3/us/los Angeles,90025,ca&quot;, &quot;wire_b52df322d85a&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_b52df322d85a" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -867,10 +866,7 @@
                                 <span class="tid-mono">t0011396</span>
                                 <span class="mgr-name">Thomas Lofton</span>
                                 
-                                <button class="yardi-circle" id="book-wire_886e66b89255"
-                                        onclick="bookInYardi(&quot;7/24/2026 5:10 AM&quot;, &quot;7258.91&quot;, &quot;John E Sader Pod Mark Anthony Sad E R Pod Raymond Sader 2/255 S Wilson AVE Apt 2 3/us/pasadena, CA 91106 3265&quot;, &quot;wire_886e66b89255&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_886e66b89255" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -898,10 +894,7 @@
                                 <span class="tid-mono">t0011393</span>
                                 <span class="mgr-name">Kenneth Stone</span>
                                 
-                                <button class="yardi-circle" id="book-wire_53738b81d1c7"
-                                        onclick="bookInYardi(&quot;7/24/2026 8:35 AM&quot;, &quot;5852.83&quot;, &quot;Mosaic Digital Media Llc 14 Columbia PL Mount Vernon NY 10552-1203 US&quot;, &quot;wire_53738b81d1c7&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_53738b81d1c7" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
