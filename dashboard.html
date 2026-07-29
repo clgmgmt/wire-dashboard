@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-29T11:06:59">
+<meta name="last-updated" content="2026-07-29T12:07:06">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/29 11:06 AM</span>
+      <span class="meta-text">Updated 7/29 12:07 PM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">86</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">11</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">12</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">67</span></button>
       </div>
     </div>
@@ -721,18 +721,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_c32465fceda1">
+                          <tr class="has-input" data-wire-id="wire_c32465fceda1">
                             <td class="td-date">7/29/2026 5:14 AM</td>
                             <td class="td-amount">$6,247.83</td>
                             <td class="td-tenant">Katherine A Pyle 5810 Jumilla AVE Woodland Hls CA 91367-5604 US</td>
                             <td class="td-ref">Move IN Funds</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_c32465fceda1" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_c32465fceda1" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/29/2026 5:14 AM&quot;, &quot;6247.83&quot;, &quot;Katherine A Pyle 5810 Jumilla AVE Woodland Hls CA 91367-5604 US&quot;, &quot;Move IN Funds&quot;, &quot;wire_c32465fceda1&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_c32465fceda1"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011413</span>
+                                <span class="mgr-name">Kenneth Stone</span>
+                                
+                                <button class="yardi-circle" id="book-wire_c32465fceda1"
+                                        onclick="bookInYardi(&quot;7/29/2026 5:14 AM&quot;, &quot;6247.83&quot;, &quot;Katherine A Pyle 5810 Jumilla AVE Woodland Hls CA 91367-5604 US&quot;, &quot;wire_c32465fceda1&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_c32465fceda1" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
