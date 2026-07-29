@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-29T09:06:37">
+<meta name="last-updated" content="2026-07-29T10:06:47">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/29 9:06 AM</span>
+      <span class="meta-text">Updated 7/29 10:06 AM</span>
     </div>
   </div>
 
@@ -689,8 +689,8 @@
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">86</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">9</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">9</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">68</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">10</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">67</span></button>
       </div>
     </div>
 
@@ -748,6 +748,21 @@
                                 <button class="btn-submit submit-btn"
                                         onclick="submitToSheets(&quot;7/29/2026 5:10 AM&quot;, &quot;4182.83&quot;, &quot;Peng Guo 2/11701 Gateway BLVD Apt 409 3/us/los Angeles, CA 90064 3276&quot;, &quot;Mv By Clg, Ph816, Peng Guo&quot;, &quot;wire_e7e14d9d9101&quot;)">Submit</button>
                                 <span class="submit-status" id="status-wire_e7e14d9d9101"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_a45d8a6b72a7">
+                            <td class="td-date">7/29/2026 9:53 AM</td>
+                            <td class="td-amount">$2,695.00</td>
+                            <td class="td-tenant">Janelle Dromgoole 4431 Don Ricardo DR Apt 9 Los Angeles CA 90008 US</td>
+                            <td class="td-ref">Moving IN Funds</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_a45d8a6b72a7" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_a45d8a6b72a7" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;7/29/2026 9:53 AM&quot;, &quot;2695.0&quot;, &quot;Janelle Dromgoole 4431 Don Ricardo DR Apt 9 Los Angeles CA 90008 US&quot;, &quot;Moving IN Funds&quot;, &quot;wire_a45d8a6b72a7&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_a45d8a6b72a7"></span>
                               </div>
                             </td>
                           </tr>
@@ -875,18 +890,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_98e439a83a0c">
+                          <tr class="has-input" data-wire-id="wire_98e439a83a0c">
                             <td class="td-date">7/27/2026 1:36 PM</td>
                             <td class="td-amount">$5,022.83</td>
                             <td class="td-tenant">Carlo Hank Noravian 1116 Avonoak Ter Glendale CA 91206- 1512 US</td>
                             <td class="td-ref">T001111392 Noravian</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_98e439a83a0c" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_98e439a83a0c" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/27/2026 1:36 PM&quot;, &quot;5022.83&quot;, &quot;Carlo Hank Noravian 1116 Avonoak Ter Glendale CA 91206- 1512 US&quot;, &quot;T001111392 Noravian&quot;, &quot;wire_98e439a83a0c&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_98e439a83a0c"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011392</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_98e439a83a0c"
+                                        onclick="bookInYardi(&quot;7/27/2026 1:36 PM&quot;, &quot;5022.83&quot;, &quot;Carlo Hank Noravian 1116 Avonoak Ter Glendale CA 91206- 1512 US&quot;, &quot;wire_98e439a83a0c&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_98e439a83a0c" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1927,20 +1944,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011308</span>
                                 <span class="mgr-name">David Millstein</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_53bb90555ff2">
-                            <td class="td-date">6/29/2026 5:20 AM</td>
-                            <td class="td-amount">$4,452.83</td>
-                            <td class="td-tenant">John A DE Vilhena Rees 6107 Tarawood DR Orlando FL 32819-4423 US</td>
-                            <td class="td-ref">t0011251 - DE Vilhena Rees</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011251</span>
-                                <span class="mgr-name">Joslyn Y</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
