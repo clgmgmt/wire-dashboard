@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-29T12:07:06">
+<meta name="last-updated" content="2026-07-29T13:06:15">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/29 12:07 PM</span>
+      <span class="meta-text">Updated 7/29 1:06 PM</span>
     </div>
   </div>
 
@@ -687,9 +687,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">86</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">12</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">87</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">15</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">67</span></button>
       </div>
     </div>
@@ -706,18 +706,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_accb455362a5">
+                          <tr class="has-input" data-wire-id="wire_accb455362a5">
                             <td class="td-date">7/29/2026 5:23 AM</td>
                             <td class="td-amount">$4,062.83</td>
                             <td class="td-tenant">Alia Kim Munn 2/947 W 30th ST Apt 8 3/us/los Angeles, CA 90007 2467</td>
                             <td class="td-ref">Mv By Clg Move IN Fee Ph714</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_accb455362a5" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_accb455362a5" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/29/2026 5:23 AM&quot;, &quot;4062.83&quot;, &quot;Alia Kim Munn 2/947 W 30th ST Apt 8 3/us/los Angeles, CA 90007 2467&quot;, &quot;Mv By Clg Move IN Fee Ph714&quot;, &quot;wire_accb455362a5&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_accb455362a5"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011434</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_accb455362a5"
+                                        onclick="bookInYardi(&quot;7/29/2026 5:23 AM&quot;, &quot;4062.83&quot;, &quot;Alia Kim Munn 2/947 W 30th ST Apt 8 3/us/los Angeles, CA 90007 2467&quot;, &quot;wire_accb455362a5&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_accb455362a5" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -738,33 +740,52 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_e7e14d9d9101">
+                          <tr class="has-input" data-wire-id="wire_e7e14d9d9101">
                             <td class="td-date">7/29/2026 5:10 AM</td>
                             <td class="td-amount">$4,182.83</td>
                             <td class="td-tenant">Peng Guo 2/11701 Gateway BLVD Apt 409 3/us/los Angeles, CA 90064 3276</td>
                             <td class="td-ref">Mv By Clg, Ph816, Peng Guo</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_e7e14d9d9101" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_e7e14d9d9101" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/29/2026 5:10 AM&quot;, &quot;4182.83&quot;, &quot;Peng Guo 2/11701 Gateway BLVD Apt 409 3/us/los Angeles, CA 90064 3276&quot;, &quot;Mv By Clg, Ph816, Peng Guo&quot;, &quot;wire_e7e14d9d9101&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_e7e14d9d9101"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011424</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_e7e14d9d9101"
+                                        onclick="bookInYardi(&quot;7/29/2026 5:10 AM&quot;, &quot;4182.83&quot;, &quot;Peng Guo 2/11701 Gateway BLVD Apt 409 3/us/los Angeles, CA 90064 3276&quot;, &quot;wire_e7e14d9d9101&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_e7e14d9d9101" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a45d8a6b72a7">
+                          <tr class="has-input" data-wire-id="wire_a45d8a6b72a7">
                             <td class="td-date">7/29/2026 9:53 AM</td>
                             <td class="td-amount">$2,695.00</td>
                             <td class="td-tenant">Janelle Dromgoole 4431 Don Ricardo DR Apt 9 Los Angeles CA 90008 US</td>
                             <td class="td-ref">Moving IN Funds</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011433</span>
+                                <span class="mgr-name">Joslyn Y</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a45d8a6b72a7"
+                                        onclick="bookInYardi(&quot;7/29/2026 9:53 AM&quot;, &quot;2695.0&quot;, &quot;Janelle Dromgoole 4431 Don Ricardo DR Apt 9 Los Angeles CA 90008 US&quot;, &quot;wire_a45d8a6b72a7&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a45d8a6b72a7" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_9b69c7b48ea1">
+                            <td class="td-date">7/29/2026 12:12 PM</td>
+                            <td class="td-amount">$1,850.00</td>
+                            <td class="td-tenant">Lina Sophie Fuellemann 2/1109 S Hobart BLVD 3/us/los Angeles, CA 90006 2417</td>
+                            <td class="td-ref">T0011367-fuellemann , Move IN Funds</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a45d8a6b72a7" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a45d8a6b72a7" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_9b69c7b48ea1" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_9b69c7b48ea1" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/29/2026 9:53 AM&quot;, &quot;2695.0&quot;, &quot;Janelle Dromgoole 4431 Don Ricardo DR Apt 9 Los Angeles CA 90008 US&quot;, &quot;Moving IN Funds&quot;, &quot;wire_a45d8a6b72a7&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_a45d8a6b72a7"></span>
+                                        onclick="submitToSheets(&quot;7/29/2026 12:12 PM&quot;, &quot;1850.0&quot;, &quot;Lina Sophie Fuellemann 2/1109 S Hobart BLVD 3/us/los Angeles, CA 90006 2417&quot;, &quot;T0011367-fuellemann , Move IN Funds&quot;, &quot;wire_9b69c7b48ea1&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_9b69c7b48ea1"></span>
                               </div>
                             </td>
                           </tr>
