@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-29T18:06:55">
+<meta name="last-updated" content="2026-07-30T06:05:50">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/29 6:06 PM</span>
+      <span class="meta-text">Updated 7/30 6:05 AM</span>
     </div>
   </div>
 
@@ -687,8 +687,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">87</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">90</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">82</span></button>
       </div>
@@ -706,6 +706,51 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_98a973380417">
+                            <td class="td-date">7/30/2026 6:02 AM</td>
+                            <td class="td-amount">$2,515.00</td>
+                            <td class="td-tenant">Maria C Borbon 104 W Locust ST Occoquan VA 22125 U S</td>
+                            <td class="td-ref">Clg Movein Maria Borbon 13448 Beach AVE 3306b Marina Del Rey t0011429</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_98a973380417" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_98a973380417" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;7/30/2026 6:02 AM&quot;, &quot;2515.0&quot;, &quot;Maria C Borbon 104 W Locust ST Occoquan VA 22125 U S&quot;, &quot;Clg Movein Maria Borbon 13448 Beach AVE 3306b Marina Del Rey t0011429&quot;, &quot;wire_98a973380417&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_98a973380417"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_64a961f4b6d5">
+                            <td class="td-date">7/30/2026 5:27 AM</td>
+                            <td class="td-amount">$2,797.83</td>
+                            <td class="td-tenant">Esra Zengin 945 Weyburn Ter Apt C06-b Los Angeles CA 90024-2850 US</td>
+                            <td class="td-ref">Zengin, SW 315 Move IN Funds</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_64a961f4b6d5" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_64a961f4b6d5" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;7/30/2026 5:27 AM&quot;, &quot;2797.83&quot;, &quot;Esra Zengin 945 Weyburn Ter Apt C06-b Los Angeles CA 90024-2850 US&quot;, &quot;Zengin, SW 315 Move IN Funds&quot;, &quot;wire_64a961f4b6d5&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_64a961f4b6d5"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_a7b2eb6ca403">
+                            <td class="td-date">7/30/2026 5:27 AM</td>
+                            <td class="td-amount">$5,445.00</td>
+                            <td class="td-tenant">Denelle Marie Dixon 129 Requa RD Piedmont CA 94611-4037 US</td>
+                            <td class="td-ref">Denelle Dixon t0011245</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_a7b2eb6ca403" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_a7b2eb6ca403" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;7/30/2026 5:27 AM&quot;, &quot;5445.0&quot;, &quot;Denelle Marie Dixon 129 Requa RD Piedmont CA 94611-4037 US&quot;, &quot;Denelle Dixon t0011245&quot;, &quot;wire_a7b2eb6ca403&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_a7b2eb6ca403"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_accb455362a5">
                             <td class="td-date">7/29/2026 5:23 AM</td>
                             <td class="td-amount">$4,062.83</td>
