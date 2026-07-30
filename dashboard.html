@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-30T11:07:02">
+<meta name="last-updated" content="2026-07-30T12:07:10">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/30 11:07 AM</span>
+      <span class="meta-text">Updated 7/30 12:07 PM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">89</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">81</span></button>
       </div>
     </div>
@@ -706,18 +706,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_98a973380417">
+                          <tr class="has-input" data-wire-id="wire_98a973380417">
                             <td class="td-date">7/30/2026 6:02 AM</td>
                             <td class="td-amount">$2,515.00</td>
                             <td class="td-tenant">Maria C Borbon 104 W Locust ST Occoquan VA 22125 U S</td>
                             <td class="td-ref">Clg Movein Maria Borbon 13448 Beach AVE 3306b Marina Del Rey t0011429</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_98a973380417" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_98a973380417" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/30/2026 6:02 AM&quot;, &quot;2515.0&quot;, &quot;Maria C Borbon 104 W Locust ST Occoquan VA 22125 U S&quot;, &quot;Clg Movein Maria Borbon 13448 Beach AVE 3306b Marina Del Rey t0011429&quot;, &quot;wire_98a973380417&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_98a973380417"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011429</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_98a973380417"
+                                        onclick="bookInYardi(&quot;7/30/2026 6:02 AM&quot;, &quot;2515.0&quot;, &quot;Maria C Borbon 104 W Locust ST Occoquan VA 22125 U S&quot;, &quot;wire_98a973380417&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_98a973380417" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -751,18 +753,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_1ebcb1d1b75a">
+                          <tr class="has-input" data-wire-id="wire_1ebcb1d1b75a">
                             <td class="td-date">7/30/2026 10:36 AM</td>
                             <td class="td-amount">$8,542.83</td>
                             <td class="td-tenant">Evangelos Panteli 12760 Millennium Drive # A-215 Los Angeles Ca/us</td>
                             <td class="td-ref">Evangelos Panteli, 13448 Beach Ave, Marina Del R, T-code: T0011428firs T Month&#x27;S Rent Payment Includ//ing Security Deposit</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_1ebcb1d1b75a" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_1ebcb1d1b75a" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/30/2026 10:36 AM&quot;, &quot;8542.83&quot;, &quot;Evangelos Panteli 12760 Millennium Drive # A-215 Los Angeles Ca/us&quot;, &quot;Evangelos Panteli, 13448 Beach Ave, Marina Del R, T-code: T0011428firs T Month&#x27;S Rent Payment Includ//ing Security Deposit&quot;, &quot;wire_1ebcb1d1b75a&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_1ebcb1d1b75a"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011428</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_1ebcb1d1b75a"
+                                        onclick="bookInYardi(&quot;7/30/2026 10:36 AM&quot;, &quot;8542.83&quot;, &quot;Evangelos Panteli 12760 Millennium Drive # A-215 Los Angeles Ca/us&quot;, &quot;wire_1ebcb1d1b75a&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_1ebcb1d1b75a" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
