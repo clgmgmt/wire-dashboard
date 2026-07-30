@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-30T14:06:35">
+<meta name="last-updated" content="2026-07-30T15:06:45">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/30 2:06 PM</span>
+      <span class="meta-text">Updated 7/30 3:06 PM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">91</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">81</span></button>
       </div>
     </div>
@@ -770,33 +770,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_7103fc934c0e">
+                          <tr class="has-input" data-wire-id="wire_7103fc934c0e">
                             <td class="td-date">7/30/2026 1:48 PM</td>
                             <td class="td-amount">$4,000.00</td>
                             <td class="td-tenant">Michael Zaluzny 17221 Roscoe BLVD Unit 21 Northridge California 91325-4057 US</td>
                             <td class="td-ref">T0011426-zaluzny</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_7103fc934c0e" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_7103fc934c0e" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/30/2026 1:48 PM&quot;, &quot;4000.0&quot;, &quot;Michael Zaluzny 17221 Roscoe BLVD Unit 21 Northridge California 91325-4057 US&quot;, &quot;T0011426-zaluzny&quot;, &quot;wire_7103fc934c0e&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_7103fc934c0e"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011426</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_7103fc934c0e"
+                                        onclick="bookInYardi(&quot;7/30/2026 1:48 PM&quot;, &quot;4000.0&quot;, &quot;Michael Zaluzny 17221 Roscoe BLVD Unit 21 Northridge California 91325-4057 US&quot;, &quot;wire_7103fc934c0e&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_7103fc934c0e" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_c68d5ddc39fe">
+                          <tr class="has-input" data-wire-id="wire_c68d5ddc39fe">
                             <td class="td-date">7/30/2026 1:44 PM</td>
                             <td class="td-amount">$2,535.00</td>
                             <td class="td-tenant">Andrea Gonzalez Herrera 4133 Redwood AVE Unit 2018a Los Angeles CA 90066-5625 US</td>
                             <td class="td-ref">Reference: T0011426-zaluzny</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_c68d5ddc39fe" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_c68d5ddc39fe" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/30/2026 1:44 PM&quot;, &quot;2535.0&quot;, &quot;Andrea Gonzalez Herrera 4133 Redwood AVE Unit 2018a Los Angeles CA 90066-5625 US&quot;, &quot;Reference: T0011426-zaluzny&quot;, &quot;wire_c68d5ddc39fe&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_c68d5ddc39fe"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011426</span>
+                                <span class="mgr-name">Chris Leschkies</span>
+                                
+                                <button class="yardi-circle" id="book-wire_c68d5ddc39fe"
+                                        onclick="bookInYardi(&quot;7/30/2026 1:44 PM&quot;, &quot;2535.0&quot;, &quot;Andrea Gonzalez Herrera 4133 Redwood AVE Unit 2018a Los Angeles CA 90066-5625 US&quot;, &quot;wire_c68d5ddc39fe&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_c68d5ddc39fe" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
