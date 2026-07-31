@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-30T18:07:09">
+<meta name="last-updated" content="2026-07-31T06:05:55">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/30 6:07 PM</span>
+      <span class="meta-text">Updated 7/31 6:05 AM</span>
     </div>
   </div>
 
@@ -689,8 +689,8 @@
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">91</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">85</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">84</span></button>
       </div>
     </div>
 
@@ -706,6 +706,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_175b54dc0c2d">
+                            <td class="td-date">7/31/2026 5:11 AM</td>
+                            <td class="td-amount">$4,697.83</td>
+                            <td class="td-tenant">Felice Presti Susan C Presti 2/345 Springvale RD 3/us/great Falls, VA 22066 3211</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_175b54dc0c2d" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_175b54dc0c2d" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;7/31/2026 5:11 AM&quot;, &quot;4697.83&quot;, &quot;Felice Presti Susan C Presti 2/345 Springvale RD 3/us/great Falls, VA 22066 3211&quot;, &quot;&quot;, &quot;wire_175b54dc0c2d&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_175b54dc0c2d"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_98a973380417">
                             <td class="td-date">7/30/2026 6:02 AM</td>
                             <td class="td-amount">$2,515.00</td>
@@ -876,18 +891,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_1f81ef49a95b">
+                          <tr class="has-input" data-wire-id="wire_1f81ef49a95b">
                             <td class="td-date">7/27/2026 5:53 AM</td>
                             <td class="td-amount">$6,642.83</td>
                             <td class="td-tenant">Mary Grace Avancena Mata 2/601 Wilshire BLVD Apt 415 3/us/santa Monica, CA 90401-1522</td>
                             <td class="td-ref">Pop Services</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_1f81ef49a95b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_1f81ef49a95b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/27/2026 5:53 AM&quot;, &quot;6642.83&quot;, &quot;Mary Grace Avancena Mata 2/601 Wilshire BLVD Apt 415 3/us/santa Monica, CA 90401-1522&quot;, &quot;Pop Services&quot;, &quot;wire_1f81ef49a95b&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_1f81ef49a95b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011355</span>
+                                <span class="mgr-name">Rosa Hernandez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_1f81ef49a95b"
+                                        onclick="bookInYardi(&quot;7/27/2026 5:53 AM&quot;, &quot;6642.83&quot;, &quot;Mary Grace Avancena Mata 2/601 Wilshire BLVD Apt 415 3/us/santa Monica, CA 90401-1522&quot;, &quot;wire_1f81ef49a95b&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_1f81ef49a95b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1967,20 +1984,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011330</span>
                                 <span class="mgr-name">Jess Favela</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_39e908cb6252">
-                            <td class="td-date">6/30/2026 3:23 PM</td>
-                            <td class="td-amount">$5,644.44</td>
-                            <td class="td-tenant">Mia R Lawrence 10912 E County Highway 30a Inlet Be Ach FL 32461-7137 US</td>
-                            <td class="td-ref">t0011308 Lawrence</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011308</span>
-                                <span class="mgr-name">David Millstein</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
