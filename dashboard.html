@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-31T11:05:30">
+<meta name="last-updated" content="2026-07-31T12:06:41">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/31 11:05 AM</span>
+      <span class="meta-text">Updated 7/31 12:06 PM</span>
     </div>
   </div>
 
@@ -687,9 +687,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">91</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">92</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">83</span></button>
       </div>
     </div>
@@ -738,6 +738,21 @@
                               </div>
                             </td>
                           </tr>
+                          <tr class="needs-input" data-wire-id="wire_ef5cd27a81fb">
+                            <td class="td-date">7/31/2026 11:44 AM</td>
+                            <td class="td-amount">$5,899.44</td>
+                            <td class="td-tenant">Tyra Booker 727 N LA Fayette Park PL Apt 2 Los Angeles CA 90026-2937 US</td>
+                            <td class="td-ref">Tyra Booker September 1 Rent To Clg</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_ef5cd27a81fb" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_ef5cd27a81fb" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;7/31/2026 11:44 AM&quot;, &quot;5899.44&quot;, &quot;Tyra Booker 727 N LA Fayette Park PL Apt 2 Los Angeles CA 90026-2937 US&quot;, &quot;Tyra Booker September 1 Rent To Clg&quot;, &quot;wire_ef5cd27a81fb&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_ef5cd27a81fb"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_98a973380417">
                             <td class="td-date">7/30/2026 6:02 AM</td>
                             <td class="td-amount">$2,515.00</td>
@@ -767,18 +782,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a7b2eb6ca403">
+                          <tr class="has-input" data-wire-id="wire_a7b2eb6ca403">
                             <td class="td-date">7/30/2026 5:27 AM</td>
                             <td class="td-amount">$5,445.00</td>
                             <td class="td-tenant">Denelle Marie Dixon 129 Requa RD Piedmont CA 94611-4037 US</td>
                             <td class="td-ref">Denelle Dixon t0011245</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a7b2eb6ca403" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a7b2eb6ca403" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/30/2026 5:27 AM&quot;, &quot;5445.0&quot;, &quot;Denelle Marie Dixon 129 Requa RD Piedmont CA 94611-4037 US&quot;, &quot;Denelle Dixon t0011245&quot;, &quot;wire_a7b2eb6ca403&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_a7b2eb6ca403"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011245</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a7b2eb6ca403"
+                                        onclick="bookInYardi(&quot;7/30/2026 5:27 AM&quot;, &quot;5445.0&quot;, &quot;Denelle Marie Dixon 129 Requa RD Piedmont CA 94611-4037 US&quot;, &quot;wire_a7b2eb6ca403&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a7b2eb6ca403" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
