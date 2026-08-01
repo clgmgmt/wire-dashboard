@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-07-31T16:06:28">
+<meta name="last-updated" content="2026-07-31T17:06:37">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 7/31 4:06 PM</span>
+      <span class="meta-text">Updated 7/31 5:06 PM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">91</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">7</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">84</span></button>
       </div>
     </div>
@@ -779,18 +779,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_64a961f4b6d5">
+                          <tr class="has-input" data-wire-id="wire_64a961f4b6d5">
                             <td class="td-date">7/30/2026 5:27 AM</td>
                             <td class="td-amount">$2,797.83</td>
                             <td class="td-tenant">Esra Zengin 945 Weyburn Ter Apt C06-b Los Angeles CA 90024-2850 US</td>
                             <td class="td-ref">Zengin, SW 315 Move IN Funds</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_64a961f4b6d5" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_64a961f4b6d5" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/30/2026 5:27 AM&quot;, &quot;2797.83&quot;, &quot;Esra Zengin 945 Weyburn Ter Apt C06-b Los Angeles CA 90024-2850 US&quot;, &quot;Zengin, SW 315 Move IN Funds&quot;, &quot;wire_64a961f4b6d5&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_64a961f4b6d5"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011438</span>
+                                <span class="mgr-name">Enrique</span>
+                                
+                                <button class="yardi-circle" id="book-wire_64a961f4b6d5"
+                                        onclick="bookInYardi(&quot;7/30/2026 5:27 AM&quot;, &quot;2797.83&quot;, &quot;Esra Zengin 945 Weyburn Ter Apt C06-b Los Angeles CA 90024-2850 US&quot;, &quot;wire_64a961f4b6d5&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_64a961f4b6d5" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -1748,18 +1750,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_b18746f61e83">
+                          <tr class="has-input" data-wire-id="wire_b18746f61e83">
                             <td class="td-date">7/13/2026 5:41 AM</td>
                             <td class="td-amount">$2,597.83</td>
                             <td class="td-tenant">Andrew Logan Nelson 2/11311 LA Grange AVE Apt 330 3/us/los Angeles, CA 90025 6868</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_b18746f61e83" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_b18746f61e83" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/13/2026 5:41 AM&quot;, &quot;2597.83&quot;, &quot;Andrew Logan Nelson 2/11311 LA Grange AVE Apt 330 3/us/los Angeles, CA 90025 6868&quot;, &quot;&quot;, &quot;wire_b18746f61e83&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_b18746f61e83"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011348</span>
+                                <span class="mgr-name">Rosa Hernandez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_b18746f61e83"
+                                        onclick="bookInYardi(&quot;7/13/2026 5:41 AM&quot;, &quot;2597.83&quot;, &quot;Andrew Logan Nelson 2/11311 LA Grange AVE Apt 330 3/us/los Angeles, CA 90025 6868&quot;, &quot;wire_b18746f61e83&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_b18746f61e83" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
