@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-03T11:06:57">
+<meta name="last-updated" content="2026-08-03T12:07:05">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/03 11:06 AM</span>
+      <span class="meta-text">Updated 8/03 12:07 PM</span>
     </div>
   </div>
 
@@ -687,9 +687,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">93</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">94</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">83</span></button>
       </div>
     </div>
@@ -764,18 +764,35 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_0bb713560f5b">
+                          <tr class="has-input" data-wire-id="wire_0bb713560f5b">
                             <td class="td-date">8/3/2026 5:08 AM</td>
                             <td class="td-amount">$7,562.83</td>
                             <td class="td-tenant">Anhkhoa T Nguyen 2/13448 Beach AVE Ph 7306 3/us/marina Del Rey 90292</td>
                             <td class="td-ref">T0011416, 1st Month Rent</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011416</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_0bb713560f5b"
+                                        onclick="bookInYardi(&quot;8/3/2026 5:08 AM&quot;, &quot;7562.83&quot;, &quot;Anhkhoa T Nguyen 2/13448 Beach AVE Ph 7306 3/us/marina Del Rey 90292&quot;, &quot;wire_0bb713560f5b&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_0bb713560f5b" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_4f7c3bad7414">
+                            <td class="td-date">8/3/2026 11:38 AM</td>
+                            <td class="td-amount">$6,045.00</td>
+                            <td class="td-tenant">Williams, Nicholas 965 Magnolia AVE Apt 3a Larkspur, CA 94939-1022</td>
+                            <td class="td-ref">Resident Code; t0011384</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_0bb713560f5b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_0bb713560f5b" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_4f7c3bad7414" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_4f7c3bad7414" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/3/2026 5:08 AM&quot;, &quot;7562.83&quot;, &quot;Anhkhoa T Nguyen 2/13448 Beach AVE Ph 7306 3/us/marina Del Rey 90292&quot;, &quot;T0011416, 1st Month Rent&quot;, &quot;wire_0bb713560f5b&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_0bb713560f5b"></span>
+                                        onclick="submitToSheets(&quot;8/3/2026 11:38 AM&quot;, &quot;6045.0&quot;, &quot;Williams, Nicholas 965 Magnolia AVE Apt 3a Larkspur, CA 94939-1022&quot;, &quot;Resident Code; t0011384&quot;, &quot;wire_4f7c3bad7414&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_4f7c3bad7414"></span>
                               </div>
                             </td>
                           </tr>
