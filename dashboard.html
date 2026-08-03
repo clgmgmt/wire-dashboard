@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-03T14:06:24">
+<meta name="last-updated" content="2026-08-03T15:06:32">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/03 2:06 PM</span>
+      <span class="meta-text">Updated 8/03 3:06 PM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">96</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">9</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">83</span></button>
       </div>
     </div>
@@ -720,33 +720,37 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_41a664654a13">
+                          <tr class="has-input" data-wire-id="wire_41a664654a13">
                             <td class="td-date">8/3/2026 5:19 AM</td>
                             <td class="td-amount">$3,299.44</td>
                             <td class="td-tenant">Dawn M. Pivnick-murphy Trust Dated March 24, 2016 Dawn M 10915 Hayvenhurst AVE Granada Hills CA 91344-5122 US</td>
                             <td class="td-ref">Referance Number: t0011398 Rebecca L. Murphy18402 Halsted ST Unit 30 N Orthridge, CA 91325</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_41a664654a13" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_41a664654a13" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/3/2026 5:19 AM&quot;, &quot;3299.44&quot;, &quot;Dawn M. Pivnick-murphy Trust Dated March 24, 2016 Dawn M 10915 Hayvenhurst AVE Granada Hills CA 91344-5122 US&quot;, &quot;Referance Number: t0011398 Rebecca L. Murphy18402 Halsted ST Unit 30 N Orthridge, CA 91325&quot;, &quot;wire_41a664654a13&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_41a664654a13"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011398</span>
+                                <span class="mgr-name">Murphy</span>
+                                
+                                <button class="yardi-circle" id="book-wire_41a664654a13"
+                                        onclick="bookInYardi(&quot;8/3/2026 5:19 AM&quot;, &quot;3299.44&quot;, &quot;Dawn M. Pivnick-murphy Trust Dated March 24, 2016 Dawn M 10915 Hayvenhurst AVE Granada Hills CA 91344-5122 US&quot;, &quot;wire_41a664654a13&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_41a664654a13" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_a833ce4af220">
+                          <tr class="has-input" data-wire-id="wire_a833ce4af220">
                             <td class="td-date">8/3/2026 5:09 AM</td>
                             <td class="td-amount">$4,150.00</td>
                             <td class="td-tenant">Alexandra L Welisch 2/833 Ashbury ST Apt 4 3/us/san Francisco, CA 94117 4465</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_a833ce4af220" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_a833ce4af220" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/3/2026 5:09 AM&quot;, &quot;4150.0&quot;, &quot;Alexandra L Welisch 2/833 Ashbury ST Apt 4 3/us/san Francisco, CA 94117 4465&quot;, &quot;&quot;, &quot;wire_a833ce4af220&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_a833ce4af220"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011394</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_a833ce4af220"
+                                        onclick="bookInYardi(&quot;8/3/2026 5:09 AM&quot;, &quot;4150.0&quot;, &quot;Alexandra L Welisch 2/833 Ashbury ST Apt 4 3/us/san Francisco, CA 94117 4465&quot;, &quot;wire_a833ce4af220&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_a833ce4af220" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -781,18 +785,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_4f7c3bad7414">
+                          <tr class="has-input" data-wire-id="wire_4f7c3bad7414">
                             <td class="td-date">8/3/2026 11:38 AM</td>
                             <td class="td-amount">$6,045.00</td>
                             <td class="td-tenant">Williams, Nicholas 965 Magnolia AVE Apt 3a Larkspur, CA 94939-1022</td>
                             <td class="td-ref">Resident Code; t0011384</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_4f7c3bad7414" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_4f7c3bad7414" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/3/2026 11:38 AM&quot;, &quot;6045.0&quot;, &quot;Williams, Nicholas 965 Magnolia AVE Apt 3a Larkspur, CA 94939-1022&quot;, &quot;Resident Code; t0011384&quot;, &quot;wire_4f7c3bad7414&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_4f7c3bad7414"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011384</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_4f7c3bad7414"
+                                        onclick="bookInYardi(&quot;8/3/2026 11:38 AM&quot;, &quot;6045.0&quot;, &quot;Williams, Nicholas 965 Magnolia AVE Apt 3a Larkspur, CA 94939-1022&quot;, &quot;wire_4f7c3bad7414&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_4f7c3bad7414" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -811,18 +817,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_7ca6ba281c6b">
+                          <tr class="has-input" data-wire-id="wire_7ca6ba281c6b">
                             <td class="td-date">8/3/2026 1:58 PM</td>
                             <td class="td-amount">$5,395.00</td>
                             <td class="td-tenant">Andrew Scholl C/o Laca Gylys 39 Mohawk AVE Corte Madera, Ca, 94925, US</td>
                             <td class="td-ref">Move IN Funds For Woodlark Apartmen Ts Unit 58h Resident Code 10011320.</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_7ca6ba281c6b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_7ca6ba281c6b" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/3/2026 1:58 PM&quot;, &quot;5395.0&quot;, &quot;Andrew Scholl C/o Laca Gylys 39 Mohawk AVE Corte Madera, Ca, 94925, US&quot;, &quot;Move IN Funds For Woodlark Apartmen Ts Unit 58h Resident Code 10011320.&quot;, &quot;wire_7ca6ba281c6b&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_7ca6ba281c6b"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011320</span>
+                                <span class="mgr-name">Gaea Arnold</span>
+                                
+                                <button class="yardi-circle" id="book-wire_7ca6ba281c6b"
+                                        onclick="bookInYardi(&quot;8/3/2026 1:58 PM&quot;, &quot;5395.0&quot;, &quot;Andrew Scholl C/o Laca Gylys 39 Mohawk AVE Corte Madera, Ca, 94925, US&quot;, &quot;wire_7ca6ba281c6b&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_7ca6ba281c6b" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
