@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-04T09:06:45">
+<meta name="last-updated" content="2026-08-04T10:06:57">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/04 9:06 AM</span>
+      <span class="meta-text">Updated 8/04 10:06 AM</span>
     </div>
   </div>
 
@@ -688,9 +688,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">98</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">10</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">83</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">93</span></button>
       </div>
     </div>
 
@@ -706,18 +706,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_3ad450dd2396">
+                          <tr class="has-input" data-wire-id="wire_3ad450dd2396">
                             <td class="td-date">8/4/2026 6:14 AM</td>
                             <td class="td-amount">$4,802.83</td>
                             <td class="td-tenant">Alexandra E Davila 4241 Redwood AVE Apt 2312 Los Angeles CA US 90066-5622</td>
                             <td class="td-ref">Alexandra Davila, 13448 Beach Ave, Apt 5317, Marina Del Rey 90292 T CO De: t0011441</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_3ad450dd2396" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_3ad450dd2396" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/4/2026 6:14 AM&quot;, &quot;4802.83&quot;, &quot;Alexandra E Davila 4241 Redwood AVE Apt 2312 Los Angeles CA US 90066-5622&quot;, &quot;Alexandra Davila, 13448 Beach Ave, Apt 5317, Marina Del Rey 90292 T CO De: t0011441&quot;, &quot;wire_3ad450dd2396&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_3ad450dd2396"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011441</span>
+                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
+                                
+                                <button class="yardi-circle" id="book-wire_3ad450dd2396"
+                                        onclick="bookInYardi(&quot;8/4/2026 6:14 AM&quot;, &quot;4802.83&quot;, &quot;Alexandra E Davila 4241 Redwood AVE Apt 2312 Los Angeles CA US 90066-5622&quot;, &quot;wire_3ad450dd2396&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_3ad450dd2396" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -760,10 +762,7 @@
                                 <span class="tid-mono">t0011398</span>
                                 <span class="mgr-name">Murphy</span>
                                 
-                                <button class="yardi-circle" id="book-wire_41a664654a13"
-                                        onclick="bookInYardi(&quot;8/3/2026 5:19 AM&quot;, &quot;3299.44&quot;, &quot;Dawn M. Pivnick-murphy Trust Dated March 24, 2016 Dawn M 10915 Hayvenhurst AVE Granada Hills CA 91344-5122 US&quot;, &quot;wire_41a664654a13&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_41a664654a13" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -777,10 +776,7 @@
                                 <span class="tid-mono">t0011394</span>
                                 <span class="mgr-name">Gaea Arnold</span>
                                 
-                                <button class="yardi-circle" id="book-wire_a833ce4af220"
-                                        onclick="bookInYardi(&quot;8/3/2026 5:09 AM&quot;, &quot;4150.0&quot;, &quot;Alexandra L Welisch 2/833 Ashbury ST Apt 4 3/us/san Francisco, CA 94117 4465&quot;, &quot;wire_a833ce4af220&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_a833ce4af220" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -808,10 +804,7 @@
                                 <span class="tid-mono">t0011416</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_0bb713560f5b"
-                                        onclick="bookInYardi(&quot;8/3/2026 5:08 AM&quot;, &quot;7562.83&quot;, &quot;Anhkhoa T Nguyen 2/13448 Beach AVE Ph 7306 3/us/marina Del Rey 90292&quot;, &quot;wire_0bb713560f5b&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_0bb713560f5b" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -825,10 +818,7 @@
                                 <span class="tid-mono">t0011384</span>
                                 <span class="mgr-name">Gaea Arnold</span>
                                 
-                                <button class="yardi-circle" id="book-wire_4f7c3bad7414"
-                                        onclick="bookInYardi(&quot;8/3/2026 11:38 AM&quot;, &quot;6045.0&quot;, &quot;Williams, Nicholas 965 Magnolia AVE Apt 3a Larkspur, CA 94939-1022&quot;, &quot;wire_4f7c3bad7414&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_4f7c3bad7414" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -842,10 +832,7 @@
                                 <span class="tid-mono">t0011427</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_0c4232ccb139"
-                                        onclick="bookInYardi(&quot;8/3/2026 12:56 PM&quot;, &quot;3358.97&quot;, &quot;Bradley Scott Newman Dba Newman Strength 328 S Cloverdale AVE Apt 405 Los Angeles CA 90036-6605 US&quot;, &quot;wire_0c4232ccb139&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_0c4232ccb139" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -859,10 +846,7 @@
                                 <span class="tid-mono">t0011320</span>
                                 <span class="mgr-name">Gaea Arnold</span>
                                 
-                                <button class="yardi-circle" id="book-wire_7ca6ba281c6b"
-                                        onclick="bookInYardi(&quot;8/3/2026 1:58 PM&quot;, &quot;5395.0&quot;, &quot;Andrew Scholl C/o Laca Gylys 39 Mohawk AVE Corte Madera, Ca, 94925, US&quot;, &quot;wire_7ca6ba281c6b&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_7ca6ba281c6b" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -905,10 +889,7 @@
                                 <span class="tid-mono">t0011453</span>
                                 <span class="mgr-name">David Millstein</span>
                                 
-                                <button class="yardi-circle" id="book-wire_ef5cd27a81fb"
-                                        onclick="bookInYardi(&quot;7/31/2026 11:44 AM&quot;, &quot;5899.44&quot;, &quot;Tyra Booker 727 N LA Fayette Park PL Apt 2 Los Angeles CA 90026-2937 US&quot;, &quot;wire_ef5cd27a81fb&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_ef5cd27a81fb" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -922,10 +903,7 @@
                                 <span class="tid-mono">t0011446</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_92965dad249d"
-                                        onclick="bookInYardi(&quot;7/31/2026 1:21 PM&quot;, &quot;5212.83&quot;, &quot;Zev Yoni Weinstein 1426 Main ST Ste D Venice,ca,90291 US&quot;, &quot;wire_92965dad249d&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_92965dad249d" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -953,10 +931,7 @@
                                 <span class="tid-mono">t0011438</span>
                                 <span class="mgr-name">Enrique</span>
                                 
-                                <button class="yardi-circle" id="book-wire_64a961f4b6d5"
-                                        onclick="bookInYardi(&quot;7/30/2026 5:27 AM&quot;, &quot;2797.83&quot;, &quot;Esra Zengin 945 Weyburn Ter Apt C06-b Los Angeles CA 90024-2850 US&quot;, &quot;wire_64a961f4b6d5&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_64a961f4b6d5" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -1924,10 +1899,7 @@
                                 <span class="tid-mono">t0011348</span>
                                 <span class="mgr-name">Rosa Hernandez</span>
                                 
-                                <button class="yardi-circle" id="book-wire_b18746f61e83"
-                                        onclick="bookInYardi(&quot;7/13/2026 5:41 AM&quot;, &quot;2597.83&quot;, &quot;Andrew Logan Nelson 2/11311 LA Grange AVE Apt 330 3/us/los Angeles, CA 90025 6868&quot;, &quot;wire_b18746f61e83&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_b18746f61e83" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
