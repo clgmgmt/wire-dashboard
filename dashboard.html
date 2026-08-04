@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-04T10:06:57">
+<meta name="last-updated" content="2026-08-04T11:07:05">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/04 10:06 AM</span>
+      <span class="meta-text">Updated 8/04 11:07 AM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">98</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">93</span></button>
       </div>
     </div>
@@ -850,18 +850,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_175b54dc0c2d">
+                          <tr class="has-input" data-wire-id="wire_175b54dc0c2d">
                             <td class="td-date">7/31/2026 5:11 AM</td>
                             <td class="td-amount">$4,697.83</td>
                             <td class="td-tenant">Felice Presti Susan C Presti 2/345 Springvale RD 3/us/great Falls, VA 22066 3211</td>
                             <td class="td-ref"></td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_175b54dc0c2d" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_175b54dc0c2d" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;7/31/2026 5:11 AM&quot;, &quot;4697.83&quot;, &quot;Felice Presti Susan C Presti 2/345 Springvale RD 3/us/great Falls, VA 22066 3211&quot;, &quot;&quot;, &quot;wire_175b54dc0c2d&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_175b54dc0c2d"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011443</span>
+                                <span class="mgr-name">Chad Hirschman</span>
+                                
+                                <button class="yardi-circle" id="book-wire_175b54dc0c2d"
+                                        onclick="bookInYardi(&quot;7/31/2026 5:11 AM&quot;, &quot;4697.83&quot;, &quot;Felice Presti Susan C Presti 2/345 Springvale RD 3/us/great Falls, VA 22066 3211&quot;, &quot;wire_175b54dc0c2d&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_175b54dc0c2d" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
