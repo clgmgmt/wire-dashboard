@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-05T10:06:41">
+<meta name="last-updated" content="2026-08-05T11:06:48">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/05 10:06 AM</span>
+      <span class="meta-text">Updated 8/05 11:06 AM</span>
     </div>
   </div>
 
@@ -687,10 +687,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">98</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">95</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">2</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">93</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">89</span></button>
       </div>
     </div>
 
@@ -706,6 +706,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_44190d5367f0">
+                            <td class="td-date">8/5/2026 10:35 AM</td>
+                            <td class="td-amount">$2,435.00</td>
+                            <td class="td-tenant">Duane Terrence Loynes Sr Ericka L Y Nn Loynes 2/1822 Forest AVE 3/us/memphis, TN 38112 5011</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_44190d5367f0" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_44190d5367f0" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;8/5/2026 10:35 AM&quot;, &quot;2435.0&quot;, &quot;Duane Terrence Loynes Sr Ericka L Y Nn Loynes 2/1822 Forest AVE 3/us/memphis, TN 38112 5011&quot;, &quot;&quot;, &quot;wire_44190d5367f0&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_44190d5367f0"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_3ad450dd2396">
                             <td class="td-date">8/4/2026 6:14 AM</td>
                             <td class="td-amount">$4,802.83</td>
@@ -2012,62 +2027,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011329</span>
                                 <span class="mgr-name">Cohn</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_2d7033c4f848">
-                            <td class="td-date">7/6/2026 5:12 AM</td>
-                            <td class="td-amount">$6,347.83</td>
-                            <td class="td-tenant">Harris Ronnie Monoson Jill S Monoson 11 Grace CT N Great Neck NY 11021-1431 US</td>
-                            <td class="td-ref">49018954 - Monoson</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011268</span>
-                                <span class="mgr-name">Kenneth Stone</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_e9d22ae59a56">
-                            <td class="td-date">7/6/2026 5:10 AM</td>
-                            <td class="td-amount">$4,117.83</td>
-                            <td class="td-tenant">Joseph Biernacki 2277 Harbor BLVD Costa Mesa, CA 92626</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011235</span>
-                                <span class="mgr-name">Jackson</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c756b140dd03">
-                            <td class="td-date">7/6/2026 5:02 AM</td>
-                            <td class="td-amount">$5,647.83</td>
-                            <td class="td-tenant">Erika A Foxworth 13593 Grosse Pt San Diego CA US 921 28-4761</td>
-                            <td class="td-ref">Reference - T0011310- Foxworth For Apartment #627</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011310</span>
-                                <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_496ec80f3a0f">
-                            <td class="td-date">7/6/2026 7:47 AM</td>
-                            <td class="td-amount">$3,677.83</td>
-                            <td class="td-tenant">Borba Consulting Inc. 1401 Union ST Apt 3413 San Diego CA 92101-3657 US</td>
-                            <td class="td-ref">T0011334- Borba</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011334</span>
-                                <span class="mgr-name">Lopez</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
