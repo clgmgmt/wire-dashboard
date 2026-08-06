@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-05T18:06:47">
+<meta name="last-updated" content="2026-08-06T06:05:56">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/05 6:06 PM</span>
+      <span class="meta-text">Updated 8/06 6:05 AM</span>
     </div>
   </div>
 
@@ -688,9 +688,9 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">95</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">89</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">88</span></button>
       </div>
     </div>
 
@@ -706,6 +706,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_5962632a349a">
+                            <td class="td-date">8/6/2026 5:39 AM</td>
+                            <td class="td-amount">$2,295.00</td>
+                            <td class="td-tenant">Chenyun Sun 2/50 Alice ST Apt C 3/us/arcadia, CA 91006 3500</td>
+                            <td class="td-ref">Chenyun Sun 4210 Del Rey AVE Unit 5 16d t0011454</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_5962632a349a" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_5962632a349a" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;8/6/2026 5:39 AM&quot;, &quot;2295.0&quot;, &quot;Chenyun Sun 2/50 Alice ST Apt C 3/us/arcadia, CA 91006 3500&quot;, &quot;Chenyun Sun 4210 Del Rey AVE Unit 5 16d t0011454&quot;, &quot;wire_5962632a349a&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_5962632a349a"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_44190d5367f0">
                             <td class="td-date">8/5/2026 10:35 AM</td>
                             <td class="td-amount">$2,435.00</td>
@@ -2029,20 +2044,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011329</span>
                                 <span class="mgr-name">Cohn</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_c9907eecd9f9">
-                            <td class="td-date">7/6/2026 12:16 PM</td>
-                            <td class="td-amount">$4,197.83</td>
-                            <td class="td-tenant">Dev Kumar Maheshwari 2/888 Brannan ST Ste 150 3/us/san Francisco, CA 94103 5601</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011314</span>
-                                <span class="mgr-name">Ellison Jackson</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
