@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-06T10:06:57">
+<meta name="last-updated" content="2026-08-06T11:07:09">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/06 10:06 AM</span>
+      <span class="meta-text">Updated 8/06 11:07 AM</span>
     </div>
   </div>
 
@@ -687,10 +687,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">95</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">3</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">94</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">88</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">86</span></button>
       </div>
     </div>
 
@@ -720,6 +720,21 @@
                                         onclick="bookInYardi(&quot;8/6/2026 5:39 AM&quot;, &quot;2295.0&quot;, &quot;Chenyun Sun 2/50 Alice ST Apt C 3/us/arcadia, CA 91006 3500&quot;, &quot;wire_5962632a349a&quot;)"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_5962632a349a" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_999f8b529215">
+                            <td class="td-date">8/6/2026 10:16 AM</td>
+                            <td class="td-amount">$5,932.00</td>
+                            <td class="td-tenant">Varant &amp; Melina Kalachian 860 Misty Isle DR Glendale,ca,</td>
+                            <td class="td-ref">Reference T0011457-kalachian</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_999f8b529215" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_999f8b529215" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;8/6/2026 10:16 AM&quot;, &quot;5932.0&quot;, &quot;Varant &amp; Melina Kalachian 860 Misty Isle DR Glendale,ca,&quot;, &quot;Reference T0011457-kalachian&quot;, &quot;wire_999f8b529215&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_999f8b529215"></span>
                               </div>
                             </td>
                           </tr>
@@ -2018,34 +2033,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011324</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_9b2914281597">
-                            <td class="td-date">7/7/2026 5:11 AM</td>
-                            <td class="td-amount">$1,914.56</td>
-                            <td class="td-tenant">Ie92revo99036001921814 Oisin Mc Keogh Carrowbaun Ie V94 Cf5x Killaloe Co. Clare</td>
-                            <td class="td-ref">T0011275-mckeogh</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011275</span>
-                                <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_560d88bc95be">
-                            <td class="td-date">7/7/2026 5:06 AM</td>
-                            <td class="td-amount">$4,452.83</td>
-                            <td class="td-tenant">Cohns Family Trust DTD 042099 3347 Van Allen PL Topanga CA 90290- 4485 US</td>
-                            <td class="td-ref">t0011329 Ethan Cohn SW 223</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011329</span>
-                                <span class="mgr-name">Cohn</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
