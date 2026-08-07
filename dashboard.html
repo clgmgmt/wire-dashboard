@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-07T10:07:01">
+<meta name="last-updated" content="2026-08-07T11:07:12">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/07 10:07 AM</span>
+      <span class="meta-text">Updated 8/07 11:07 AM</span>
     </div>
   </div>
 
@@ -687,10 +687,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">97</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">96</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">90</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">88</span></button>
       </div>
     </div>
 
@@ -737,6 +737,21 @@
                                         onclick="bookInYardi(&quot;8/7/2026 8:42 AM&quot;, &quot;3713.83&quot;, &quot;Ella C Meredith 2/wellesley AVE 1223 3/us/los Angeles,90025-1113,ca&quot;, &quot;wire_038db55729dc&quot;)"
                                         title="Mark as booked in Yardi"></button>
                                 <div id="yardi-status-wire_038db55729dc" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_bd831d39cdb3">
+                            <td class="td-date">8/7/2026 10:48 AM</td>
+                            <td class="td-amount">$4,667.83</td>
+                            <td class="td-tenant">Melissa A Wang 2/13479 Peach Tree Way 3/us/san Diego 92130</td>
+                            <td class="td-ref">t0011464 Wang Move IN Funds</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_bd831d39cdb3" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_bd831d39cdb3" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;8/7/2026 10:48 AM&quot;, &quot;4667.83&quot;, &quot;Melissa A Wang 2/13479 Peach Tree Way 3/us/san Diego 92130&quot;, &quot;t0011464 Wang Move IN Funds&quot;, &quot;wire_bd831d39cdb3&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_bd831d39cdb3"></span>
                               </div>
                             </td>
                           </tr>
@@ -2044,34 +2059,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011333</span>
                                 <span class="mgr-name">Andrew Menzies</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_4f0d25daa93b">
-                            <td class="td-date">7/8/2026 8:53 AM</td>
-                            <td class="td-amount">$3,502.83</td>
-                            <td class="td-tenant">Annalis J Masters 1008 Arlington AVE Torrance CA 9050 1-2241 US</td>
-                            <td class="td-ref">Annalis Masters 13448 Beach AVE 450 3 Marina Del Rey CA 90292 t0011328</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011328</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_7291eda71d25">
-                            <td class="td-date">7/8/2026 8:18 AM</td>
-                            <td class="td-amount">$4,846.83</td>
-                            <td class="td-tenant">Monica Khokhar 2/w Damsen 4023 3/us/visalia,93291,ca</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011324</span>
-                                <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
