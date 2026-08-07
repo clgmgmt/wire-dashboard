@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-07T08:06:45">
+<meta name="last-updated" content="2026-08-07T09:06:52">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/07 8:06 AM</span>
+      <span class="meta-text">Updated 8/07 9:06 AM</span>
     </div>
   </div>
 
@@ -687,9 +687,9 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">96</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">97</span></button>
         <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">90</span></button>
       </div>
     </div>
@@ -706,18 +706,35 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_67feb6519a5b">
+                          <tr class="has-input" data-wire-id="wire_67feb6519a5b">
                             <td class="td-date">8/7/2026 5:37 AM</td>
                             <td class="td-amount">$2,249.00</td>
                             <td class="td-tenant">Stephanie R Twombley 1672 Canyon Oaks DR MT Pleasant,sc,29464 US</td>
                             <td class="td-ref">Move IN Funds</td>
                             <td>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011483</span>
+                                <span class="mgr-name">Lopez</span>
+                                
+                                <button class="yardi-circle" id="book-wire_67feb6519a5b"
+                                        onclick="bookInYardi(&quot;8/7/2026 5:37 AM&quot;, &quot;2249.0&quot;, &quot;Stephanie R Twombley 1672 Canyon Oaks DR MT Pleasant,sc,29464 US&quot;, &quot;wire_67feb6519a5b&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_67feb6519a5b" style="display: inline;"></div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_038db55729dc">
+                            <td class="td-date">8/7/2026 8:42 AM</td>
+                            <td class="td-amount">$3,713.83</td>
+                            <td class="td-tenant">Ella C Meredith 2/wellesley AVE 1223 3/us/los Angeles,90025-1113,ca</td>
+                            <td class="td-ref">Ella Meredith 4210 Del Rey AVE #511 A Marina Del Rey CA t0011456</td>
+                            <td>
                               <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_67feb6519a5b" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_67feb6519a5b" placeholder="Your name" />
+                                <input class="w-tid" id="tenant-wire_038db55729dc" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_038db55729dc" placeholder="Your name" />
                                 <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/7/2026 5:37 AM&quot;, &quot;2249.0&quot;, &quot;Stephanie R Twombley 1672 Canyon Oaks DR MT Pleasant,sc,29464 US&quot;, &quot;Move IN Funds&quot;, &quot;wire_67feb6519a5b&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_67feb6519a5b"></span>
+                                        onclick="submitToSheets(&quot;8/7/2026 8:42 AM&quot;, &quot;3713.83&quot;, &quot;Ella C Meredith 2/wellesley AVE 1223 3/us/los Angeles,90025-1113,ca&quot;, &quot;Ella Meredith 4210 Del Rey AVE #511 A Marina Del Rey CA t0011456&quot;, &quot;wire_038db55729dc&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_038db55729dc"></span>
                               </div>
                             </td>
                           </tr>
