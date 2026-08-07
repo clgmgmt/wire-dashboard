@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-07T09:06:52">
+<meta name="last-updated" content="2026-08-07T10:07:01">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/07 9:06 AM</span>
+      <span class="meta-text">Updated 8/07 10:07 AM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">97</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">1</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">4</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">90</span></button>
       </div>
     </div>
@@ -723,18 +723,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_038db55729dc">
+                          <tr class="has-input" data-wire-id="wire_038db55729dc">
                             <td class="td-date">8/7/2026 8:42 AM</td>
                             <td class="td-amount">$3,713.83</td>
                             <td class="td-tenant">Ella C Meredith 2/wellesley AVE 1223 3/us/los Angeles,90025-1113,ca</td>
                             <td class="td-ref">Ella Meredith 4210 Del Rey AVE #511 A Marina Del Rey CA t0011456</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_038db55729dc" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_038db55729dc" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/7/2026 8:42 AM&quot;, &quot;3713.83&quot;, &quot;Ella C Meredith 2/wellesley AVE 1223 3/us/los Angeles,90025-1113,ca&quot;, &quot;Ella Meredith 4210 Del Rey AVE #511 A Marina Del Rey CA t0011456&quot;, &quot;wire_038db55729dc&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_038db55729dc"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011456</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_038db55729dc"
+                                        onclick="bookInYardi(&quot;8/7/2026 8:42 AM&quot;, &quot;3713.83&quot;, &quot;Ella C Meredith 2/wellesley AVE 1223 3/us/los Angeles,90025-1113,ca&quot;, &quot;wire_038db55729dc&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_038db55729dc" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -752,18 +754,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_999f8b529215">
+                          <tr class="has-input" data-wire-id="wire_999f8b529215">
                             <td class="td-date">8/6/2026 10:16 AM</td>
                             <td class="td-amount">$5,932.00</td>
                             <td class="td-tenant">Varant &amp; Melina Kalachian 860 Misty Isle DR Glendale,ca,</td>
                             <td class="td-ref">Reference T0011457-kalachian</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_999f8b529215" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_999f8b529215" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/6/2026 10:16 AM&quot;, &quot;5932.0&quot;, &quot;Varant &amp; Melina Kalachian 860 Misty Isle DR Glendale,ca,&quot;, &quot;Reference T0011457-kalachian&quot;, &quot;wire_999f8b529215&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_999f8b529215"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011457</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_999f8b529215"
+                                        onclick="bookInYardi(&quot;8/6/2026 10:16 AM&quot;, &quot;5932.0&quot;, &quot;Varant &amp; Melina Kalachian 860 Misty Isle DR Glendale,ca,&quot;, &quot;wire_999f8b529215&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_999f8b529215" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
