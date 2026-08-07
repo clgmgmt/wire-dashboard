@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-06T18:07:12">
+<meta name="last-updated" content="2026-08-07T06:05:57">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/06 6:07 PM</span>
+      <span class="meta-text">Updated 8/07 6:05 AM</span>
     </div>
   </div>
 
@@ -687,10 +687,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">95</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">4</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">86</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">96</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">6</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">0</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">90</span></button>
       </div>
     </div>
 
@@ -706,6 +706,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_67feb6519a5b">
+                            <td class="td-date">8/7/2026 5:37 AM</td>
+                            <td class="td-amount">$2,249.00</td>
+                            <td class="td-tenant">Stephanie R Twombley 1672 Canyon Oaks DR MT Pleasant,sc,29464 US</td>
+                            <td class="td-ref">Move IN Funds</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_67feb6519a5b" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_67feb6519a5b" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;8/7/2026 5:37 AM&quot;, &quot;2249.0&quot;, &quot;Stephanie R Twombley 1672 Canyon Oaks DR MT Pleasant,sc,29464 US&quot;, &quot;Move IN Funds&quot;, &quot;wire_67feb6519a5b&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_67feb6519a5b"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_5962632a349a">
                             <td class="td-date">8/6/2026 5:39 AM</td>
                             <td class="td-amount">$2,295.00</td>
@@ -716,10 +731,7 @@
                                 <span class="tid-mono">t0011454</span>
                                 <span class="mgr-name">Jess Favela</span>
                                 
-                                <button class="yardi-circle" id="book-wire_5962632a349a"
-                                        onclick="bookInYardi(&quot;8/6/2026 5:39 AM&quot;, &quot;2295.0&quot;, &quot;Chenyun Sun 2/50 Alice ST Apt C 3/us/arcadia, CA 91006 3500&quot;, &quot;wire_5962632a349a&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_5962632a349a" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -763,10 +775,7 @@
                                 <span class="tid-mono">t0011466</span>
                                 <span class="mgr-name">Dietrich McWhorter -Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_44190d5367f0"
-                                        onclick="bookInYardi(&quot;8/5/2026 10:35 AM&quot;, &quot;2435.0&quot;, &quot;Duane Terrence Loynes Sr Ericka L Y Nn Loynes 2/1822 Forest AVE 3/us/memphis, TN 38112 5011&quot;, &quot;wire_44190d5367f0&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_44190d5367f0" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -780,10 +789,7 @@
                                 <span class="tid-mono">t0011441</span>
                                 <span class="mgr-name">Dietrich McWhorter-Riley</span>
                                 
-                                <button class="yardi-circle" id="book-wire_3ad450dd2396"
-                                        onclick="bookInYardi(&quot;8/4/2026 6:14 AM&quot;, &quot;4802.83&quot;, &quot;Alexandra E Davila 4241 Redwood AVE Apt 2312 Los Angeles CA US 90066-5622&quot;, &quot;wire_3ad450dd2396&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_3ad450dd2396" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
@@ -924,10 +930,7 @@
                                 <span class="tid-mono">t0011443</span>
                                 <span class="mgr-name">Chad Hirschman</span>
                                 
-                                <button class="yardi-circle" id="book-wire_175b54dc0c2d"
-                                        onclick="bookInYardi(&quot;7/31/2026 5:11 AM&quot;, &quot;4697.83&quot;, &quot;Felice Presti Susan C Presti 2/345 Springvale RD 3/us/great Falls, VA 22066 3211&quot;, &quot;wire_175b54dc0c2d&quot;)"
-                                        title="Mark as booked in Yardi"></button>
-                                <div id="yardi-status-wire_175b54dc0c2d" style="display: inline;"></div>
+                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
                             </td>
                           </tr>
