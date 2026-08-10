@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-07T18:06:57">
+<meta name="last-updated" content="2026-08-10T06:05:46">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/07 6:06 PM</span>
+      <span class="meta-text">Updated 8/10 6:05 AM</span>
     </div>
   </div>
 
@@ -687,10 +687,10 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">96</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">5</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">97</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">8</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">3</span></button>
-        <button class="chip" data-filter="booked">Booked<span class="count">88</span></button>
+        <button class="chip" data-filter="booked">Booked<span class="count">86</span></button>
       </div>
     </div>
 
@@ -706,6 +706,51 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_e56b2a3094ec">
+                            <td class="td-date">8/10/2026 5:32 AM</td>
+                            <td class="td-amount">$5,047.83</td>
+                            <td class="td-tenant">Alec Bodolay 3655 Westwood BLVD Apt 1 Los Angeles CA 90034-6737 US</td>
+                            <td class="td-ref">t0011296 - Bodolay</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_e56b2a3094ec" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_e56b2a3094ec" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;8/10/2026 5:32 AM&quot;, &quot;5047.83&quot;, &quot;Alec Bodolay 3655 Westwood BLVD Apt 1 Los Angeles CA 90034-6737 US&quot;, &quot;t0011296 - Bodolay&quot;, &quot;wire_e56b2a3094ec&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_e56b2a3094ec"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_7762c88d7536">
+                            <td class="td-date">8/10/2026 5:31 AM</td>
+                            <td class="td-amount">$3,862.83</td>
+                            <td class="td-tenant">Ashley E Choi 9111 Briar Forest DR Houston TX 77024-7213 US</td>
+                            <td class="td-ref">Message For Deposit</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_7762c88d7536" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_7762c88d7536" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;8/10/2026 5:31 AM&quot;, &quot;3862.83&quot;, &quot;Ashley E Choi 9111 Briar Forest DR Houston TX 77024-7213 US&quot;, &quot;Message For Deposit&quot;, &quot;wire_7762c88d7536&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_7762c88d7536"></span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr class="needs-input" data-wire-id="wire_0a70ca1bbd96">
+                            <td class="td-date">8/10/2026 5:22 AM</td>
+                            <td class="td-amount">$4,212.83</td>
+                            <td class="td-tenant">Joseph A Killeen MS Aimee C Kille E N 2/3784 Carnegie DR 3/us/oceanside, CA 92056 6303</td>
+                            <td class="td-ref"></td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_0a70ca1bbd96" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_0a70ca1bbd96" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;8/10/2026 5:22 AM&quot;, &quot;4212.83&quot;, &quot;Joseph A Killeen MS Aimee C Kille E N 2/3784 Carnegie DR 3/us/oceanside, CA 92056 6303&quot;, &quot;&quot;, &quot;wire_0a70ca1bbd96&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_0a70ca1bbd96"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="has-input" data-wire-id="wire_67feb6519a5b">
                             <td class="td-date">8/7/2026 5:37 AM</td>
                             <td class="td-amount">$2,249.00</td>
@@ -2031,34 +2076,6 @@
                               <div class="status-assigned">
                                 <span class="tid-mono">t0011340</span>
                                 <span class="mgr-name">Enrique</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_3216efb5b3e0">
-                            <td class="td-date">7/10/2026 10:44 AM</td>
-                            <td class="td-amount">$1,916.00</td>
-                            <td class="td-tenant">Jonathan A Penn Lisa Meltzer Penn 2/1010 Notre Dame AVE 3/us/belmont 94002</td>
-                            <td class="td-ref">Reference: T0011275- Penn</td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011275</span>
-                                <span class="mgr-name">Lopez</span>
-                                
-                                <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr class="has-input" data-wire-id="wire_27c6f0fdc6b1">
-                            <td class="td-date">7/9/2026 6:28 AM</td>
-                            <td class="td-amount">$4,547.83</td>
-                            <td class="td-tenant">Tianyi Chou 2/2235 Hacienda RD 3/us/la Habra Heights, CA 90631 786</td>
-                            <td class="td-ref"></td>
-                            <td>
-                              <div class="status-assigned">
-                                <span class="tid-mono">t0011333</span>
-                                <span class="mgr-name">Andrew Menzies</span>
                                 
                                 <span class="badge-booked"><span class="dot">&#10003;</span>Booked</span>
                               </div>
