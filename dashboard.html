@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-10T18:07:10">
+<meta name="last-updated" content="2026-08-11T06:05:53">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/10 6:07 PM</span>
+      <span class="meta-text">Updated 8/11 6:05 AM</span>
     </div>
   </div>
 
@@ -687,8 +687,8 @@
       <input class="search-input" type="text" id="searchInput" placeholder="Search by amount or tenant..." />
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
-        <button class="chip active" data-filter="all">All<span class="count">103</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">12</span></button>
+        <button class="chip active" data-filter="all">All<span class="count">104</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">13</span></button>
         <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">86</span></button>
       </div>
@@ -706,6 +706,21 @@
           </tr>
         </thead>
         <tbody id="tableBody">
+                          <tr class="needs-input" data-wire-id="wire_bb8a9d973461">
+                            <td class="td-date">8/11/2026 5:33 AM</td>
+                            <td class="td-amount">$2,273.21</td>
+                            <td class="td-tenant">Leo Ellenson 1400 Shore DR Anchorage Alaska 99515-3205 US</td>
+                            <td class="td-ref">Leo Ellenson, 4210 Del Rey AVE 416, Marina Del Rey, CA 90292, t0011473 , Move In!</td>
+                            <td>
+                              <div class="status-pending">
+                                <input class="w-tid" id="tenant-wire_bb8a9d973461" placeholder="t#######" maxlength="8" />
+                                <input class="w-name" id="manager-wire_bb8a9d973461" placeholder="Your name" />
+                                <button class="btn-submit submit-btn"
+                                        onclick="submitToSheets(&quot;8/11/2026 5:33 AM&quot;, &quot;2273.21&quot;, &quot;Leo Ellenson 1400 Shore DR Anchorage Alaska 99515-3205 US&quot;, &quot;Leo Ellenson, 4210 Del Rey AVE 416, Marina Del Rey, CA 90292, t0011473 , Move In!&quot;, &quot;wire_bb8a9d973461&quot;)">Submit</button>
+                                <span class="submit-status" id="status-wire_bb8a9d973461"></span>
+                              </div>
+                            </td>
+                          </tr>
                           <tr class="needs-input" data-wire-id="wire_e56b2a3094ec">
                             <td class="td-date">8/10/2026 5:32 AM</td>
                             <td class="td-amount">$5,047.83</td>
