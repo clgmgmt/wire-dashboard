@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="300">
 <meta name="robots" content="noindex, nofollow">
-<meta name="last-updated" content="2026-08-11T09:07:05">
+<meta name="last-updated" content="2026-08-11T10:06:15">
 <title>Wire Transfers Dashboard - CLG Management</title>
 <style>
   :root {
@@ -678,7 +678,7 @@
     </div>
     <div class="topbar-right">
       <div class="pulse-dot"></div>
-      <span class="meta-text">Updated 8/11 9:07 AM</span>
+      <span class="meta-text">Updated 8/11 10:06 AM</span>
     </div>
   </div>
 
@@ -688,8 +688,8 @@
       <div id="searchStatus" class="search-status"></div>
       <div class="chip-group">
         <button class="chip active" data-filter="all">All<span class="count">104</span></button>
-        <button class="chip" data-filter="needs-input">Needs Input<span class="count">13</span></button>
-        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">5</span></button>
+        <button class="chip" data-filter="needs-input">Needs Input<span class="count">10</span></button>
+        <button class="chip" data-filter="pending-yardi">Pending Yardi<span class="count">8</span></button>
         <button class="chip" data-filter="booked">Booked<span class="count">86</span></button>
       </div>
     </div>
@@ -706,18 +706,20 @@
           </tr>
         </thead>
         <tbody id="tableBody">
-                          <tr class="needs-input" data-wire-id="wire_bb8a9d973461">
+                          <tr class="has-input" data-wire-id="wire_bb8a9d973461">
                             <td class="td-date">8/11/2026 5:33 AM</td>
                             <td class="td-amount">$2,273.21</td>
                             <td class="td-tenant">Leo Ellenson 1400 Shore DR Anchorage Alaska 99515-3205 US</td>
                             <td class="td-ref">Leo Ellenson, 4210 Del Rey AVE 416, Marina Del Rey, CA 90292, t0011473 , Move In!</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_bb8a9d973461" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_bb8a9d973461" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/11/2026 5:33 AM&quot;, &quot;2273.21&quot;, &quot;Leo Ellenson 1400 Shore DR Anchorage Alaska 99515-3205 US&quot;, &quot;Leo Ellenson, 4210 Del Rey AVE 416, Marina Del Rey, CA 90292, t0011473 , Move In!&quot;, &quot;wire_bb8a9d973461&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_bb8a9d973461"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011473</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_bb8a9d973461"
+                                        onclick="bookInYardi(&quot;8/11/2026 5:33 AM&quot;, &quot;2273.21&quot;, &quot;Leo Ellenson 1400 Shore DR Anchorage Alaska 99515-3205 US&quot;, &quot;wire_bb8a9d973461&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_bb8a9d973461" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -766,18 +768,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_173314d2c07e">
+                          <tr class="has-input" data-wire-id="wire_173314d2c07e">
                             <td class="td-date">8/10/2026 6:06 AM</td>
                             <td class="td-amount">$2,273.21</td>
                             <td class="td-tenant">Mario F Sumali 2/10016 Academy Knolls DR NE 3/us/albuquerque,87111 1735,nm</td>
                             <td class="td-ref">Reference: Mario Sumali, 4210 Del R Ey Ave. 416, Marina Del Rey T-code:</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_173314d2c07e" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_173314d2c07e" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/10/2026 6:06 AM&quot;, &quot;2273.21&quot;, &quot;Mario F Sumali 2/10016 Academy Knolls DR NE 3/us/albuquerque,87111 1735,nm&quot;, &quot;Reference: Mario Sumali, 4210 Del R Ey Ave. 416, Marina Del Rey T-code:&quot;, &quot;wire_173314d2c07e&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_173314d2c07e"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011473</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_173314d2c07e"
+                                        onclick="bookInYardi(&quot;8/10/2026 6:06 AM&quot;, &quot;2273.21&quot;, &quot;Mario F Sumali 2/10016 Academy Knolls DR NE 3/us/albuquerque,87111 1735,nm&quot;, &quot;wire_173314d2c07e&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_173314d2c07e" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
@@ -843,18 +847,20 @@
                               </div>
                             </td>
                           </tr>
-                          <tr class="needs-input" data-wire-id="wire_1aa4e617170c">
+                          <tr class="has-input" data-wire-id="wire_1aa4e617170c">
                             <td class="td-date">8/10/2026 11:43 AM</td>
                             <td class="td-amount">$2,273.21</td>
                             <td class="td-tenant">Luis Bustamante &amp; Alicia Ricardez R Ev Liv Tr DTD 06022010 3603 Stone R Iver Cir Stockton CA 95219-3146 US</td>
                             <td class="td-ref">Diego Bustamante 4210 Del Rey AVE 9 0292 No 416 Marina Del Rey t0011473</td>
                             <td>
-                              <div class="status-pending">
-                                <input class="w-tid" id="tenant-wire_1aa4e617170c" placeholder="t#######" maxlength="8" />
-                                <input class="w-name" id="manager-wire_1aa4e617170c" placeholder="Your name" />
-                                <button class="btn-submit submit-btn"
-                                        onclick="submitToSheets(&quot;8/10/2026 11:43 AM&quot;, &quot;2273.21&quot;, &quot;Luis Bustamante &amp; Alicia Ricardez R Ev Liv Tr DTD 06022010 3603 Stone R Iver Cir Stockton CA 95219-3146 US&quot;, &quot;Diego Bustamante 4210 Del Rey AVE 9 0292 No 416 Marina Del Rey t0011473&quot;, &quot;wire_1aa4e617170c&quot;)">Submit</button>
-                                <span class="submit-status" id="status-wire_1aa4e617170c"></span>
+                              <div class="status-assigned">
+                                <span class="tid-mono">t0011473</span>
+                                <span class="mgr-name">Jess Favela</span>
+                                
+                                <button class="yardi-circle" id="book-wire_1aa4e617170c"
+                                        onclick="bookInYardi(&quot;8/10/2026 11:43 AM&quot;, &quot;2273.21&quot;, &quot;Luis Bustamante &amp; Alicia Ricardez R Ev Liv Tr DTD 06022010 3603 Stone R Iver Cir Stockton CA 95219-3146 US&quot;, &quot;wire_1aa4e617170c&quot;)"
+                                        title="Mark as booked in Yardi"></button>
+                                <div id="yardi-status-wire_1aa4e617170c" style="display: inline;"></div>
                               </div>
                             </td>
                           </tr>
